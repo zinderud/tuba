@@ -1,0 +1,38 @@
+﻿SET DURUMLARI:
+
+A:  Setin Ameliyathanede olduğunu gösterir. Streil depo cıkısında setin durumu A olur.
+    Kirli lan girişindi A durumundaki setler cağrılır
+
+S:  Steril depoda sterilizasyonu bitmiş ve çıkıs yaptırılmış setleri gösterir. 
+    Kirli alandan çağrıldığında kontrol edilmeden temiz alana aktarılır.
+
+K:  Kirli Alandan alınan set onaylandığında durumu K olur(Kirli alan setidir).
+    Kirli Makineye yuklenmeye hazırdır.
+
+Km: Set Kirli makineye atıldığında durumu Km olarak guncellenir.
+    Setin Kirli Makinede Çalısır vazıyette olduğunu gösterir.
+
+T: Kirli  makinenin durmasıyla setin durumu T olur. 
+   Temiz alan onaylanmamış set olduğunu gösterir. Setin Durumu Ts olmadan(onaylanmadan) otoklavlara atılamaz.
+
+Ts: Temiz alan akatarılan T durumundaki setlerin Yetkili tarafından onaylanmasıyla durumu Ts olur. 
+    Otoklava atılmaya hazır temiz alan set durumudur.
+
+Tm: Set, Temiz alanda Otolava atılmasıyla durumu Tm olur. Çalısan otoklavdaki setin durumudur.
+
+Tb: Çalışması biten otoklavdaki setin durumudur. Yetkili tarafından onaylanmadan steril depoya aktarımı yapılmaz.
+
+D:  Çalışması biten otoklavın yetkili tarafından onaylanmasıyla setin durumu S olur. Steril depoda bulunan setin durumudur.
+
+
+ALET DURUM BİLDİLERİ:
+
+0: TAM :kullanılabilir
+1: EKSİK
+2: ARIZALI
+3: KULLANILAMAZ DURUMDA
+
+
+
+
+

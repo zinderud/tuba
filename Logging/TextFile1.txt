@@ -1,0 +1,8 @@
+﻿ ILogger logger = new Logger();
+
+                logger.EnterMethod("Main");
+
+                logger.LogInfoMessage("Hello World");
+                logger.LogError("The world is upside down!");
+
+                logger.LeaveMethod("Main");

@@ -1,0 +1,49 @@
+﻿<Application x:Class="AnaEkran.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+           
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           
+             StartupUri="Views\AnaMenuView.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <vm:ViewModelLocator xmlns:vm="clr-namespace:AnaEkran" x:Key="Locator" />
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources\Dictionaries\UstMenuButtons.xaml"/>
+                <ResourceDictionary Source="Resources\Dictionaries\DatePicker.xaml"/>
+                <ResourceDictionary Source="Resources\Dictionaries\ListBoxStyle.xaml"/>
+                <ResourceDictionary Source="Resources\Dictionaries\Simple Styles.xaml"/>
+                <ResourceDictionary Source="Resources/Dictionaries/Buttons.xaml"/>
+                <ResourceDictionary Source="Resources/Dictionaries/Combobox.xaml"/>
+                <ResourceDictionary Source="Resources/Dictionaries/DataGrid.xaml"/>
+                <ResourceDictionary Source="Resources/Dictionaries/W8.xaml" />
+                <ResourceDictionary Source="Resources/Dictionaries/CheckBoxs.xaml" />
+                <ResourceDictionary Source="Resources/Dictionaries/Zinderud.Windows.Controls.Chart.xaml"/>
+                <ResourceDictionary Source="Resources/Dictionaries/Zinderud.Windows.Controls.Data.xaml"/>
+                <ResourceDictionary Source="Resources/Dictionaries/Zinderud.Windows.Controls.GridView.xaml"/>
+                <ResourceDictionary Source="Resources/Dictionaries/Zinderud.Windows.Controls.Input.xaml"/>
+                <ResourceDictionary Source="Resources/Dictionaries/Zinderud.Windows.Controls.Navigation.xaml"/>
+                <ResourceDictionary Source="Resources/Dictionaries/Zinderud.Windows.Controls.xaml"/>
+                <ResourceDictionary Source="Resources/Dictionaries/System.Windows.xaml"/>
+                <!--<ResourceDictionary Source="Resources/Dictionaries/Rapor.xaml" />-->
+                <ResourceDictionary Source="Resources/Dictionaries/HeaderTemplates.xaml" />
+                <ResourceDictionary Source="Resources/Dictionaries/Colours.xaml" />
+                <ResourceDictionary Source="Resources/Dictionaries/Fonts.xaml" />
+                <ResourceDictionary Source="Resources/Dictionaries/Controls.xaml" />
+
+                <!--<ResourceDictionary Source="pack://application:,,,/ZindeUI.Metro;component/Styles/Controls.AnimatedSingleRowTabControl.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/ZindeUI.Metro;component/Styles/Accents/Blue.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/ZindeUI.Metro;component/Styles/Accents/BaseLight.xaml" />-->
+                <!--<ResourceDictionary Source="pack://application:,,,/ZindeUI.Metro;component/Styles/Colours.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/ZindeUI.Metro;component/Styles/Fonts.xaml" />-->
+                <!--<ResourceDictionary Source="pack://application:,,,/ZindeUI.Metro;component/Styles/Controls.xaml" />-->
+                <!--<ResourceDictionary Source="pack://application:,,,/ZindeUI.Metro;component/Styles/Controls.AnimatedSingleRowTabControl.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/ZindeUI.Metro;component/Styles/Accents/Blue.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/ZindeUI.Metro;component/Styles/Accents/BaseLight.xaml" />-->
+
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+       
+    </Application.Resources>
+</Application>

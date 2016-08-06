@@ -1,0 +1,12 @@
+﻿<Window x:Class="AnaEkran.Views.Raporlar.Urun.UrunListeRaporSayfasi"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:urun="clr-namespace:AnaEkran.Views.Raporlar.Urun"
+        Title="UrunListeRaporSayfasi"  >
+    <Grid>
+        <!--<DocumentViewer>
+            <FixedDocument Loaded="FixedDocument_Loaded"/>
+        </DocumentViewer>-->
+        <urun:UrunListesiView></urun:UrunListesiView>
+    </Grid>
+</Window>

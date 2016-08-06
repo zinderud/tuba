@@ -1,0 +1,8 @@
+﻿<Window x:Class="AnaEkran.Views.Baglantilar.Urun.UrunAdetListesiSayfasi"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:baglantilar="clr-namespace:AnaEkran.Views.Baglantilar"
+        Title="UrunAdetListesiSayfasi"  >
+    <Grid>
+        <baglantilar:UrunStokDepoİliskisiView></baglantilar:UrunStokDepoİliskisiView>    </Grid>
+</Window>

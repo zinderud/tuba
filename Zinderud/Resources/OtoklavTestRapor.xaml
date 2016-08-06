@@ -1,0 +1,597 @@
+﻿<FlowDocument xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+              xmlns:xrd="clr-namespace:CodeReason.Reports.Document;assembly=CodeReason.Reports" 
+              xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+              xmlns:triggers="clr-namespace:MVVM;assembly=MVVM"
+              xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions" 
+              DataContext="{Binding Source={StaticResource Locator}, Path=KimyasalBiyolojikTestSonucViewModel}"
+             PageHeight="29.7cm" PageWidth="21cm" ColumnWidth="21cm" >
+    <xrd:ReportProperties>
+        <xrd:ReportProperties.ReportName>OtoklavTestRaporu</xrd:ReportProperties.ReportName>
+        <xrd:ReportProperties.ReportTitle>OtoklavTestRaporu</xrd:ReportProperties.ReportTitle>
+    </xrd:ReportProperties>
+    <Section Padding="40,40,40,20" FontSize="12">
+        <Table  CellSpacing="5" Margin="10,10,10,10" BorderBrush="Black" BorderThickness="0.02cm">
+            <Table.Resources>
+                <!-- Style for header/footer rows. -->
+                <Style x:Key="headerFooterRowStyle" TargetType="{x:Type TableRowGroup}">
+                    <Setter Property="FontWeight" Value="DemiBold"/>
+                    <Setter Property="FontSize" Value="14"/>
+                    <Setter Property="Background" Value="LightGray"/>
+                </Style>
+
+                <!-- Style for data rows. -->
+                <Style x:Key="dataRowStyle" TargetType="{x:Type TableRowGroup}">
+                    <Setter Property="FontSize" Value="12"/>
+                </Style>
+
+                <!-- Style for data cells. -->
+                <Style TargetType="{x:Type TableCell}">
+                    <Setter Property="Padding" Value="0.1cm"/>
+                    <Setter Property="BorderBrush" Value="Gray"/>
+                    <Setter Property="BorderThickness" Value="0.01cm"/>
+                </Style>
+            </Table.Resources>
+            <Table.Columns>
+                <TableColumn Width="*" />
+            </Table.Columns>
+            <TableRowGroup>
+                <TableRow>
+                    <TableCell>
+
+                        <Paragraph    FontSize="16" TextAlignment="Center">
+                            <Bold >
+                                <Run Text="ONDOKUZ MAYIS ÜNİVERSİTESİ"></Run>
+                            </Bold>
+                        </Paragraph>
+                    </TableCell>
+
+                </TableRow>
+            </TableRowGroup>
+        </Table>
+        <Table CellSpacing="5" Margin="0,0,0,0" BorderBrush="Black" BorderThickness="0.02cm">
+            <Table.Resources>
+                <!-- Style for header/footer rows. -->
+                <Style x:Key="headerFooterRowStyle" TargetType="{x:Type TableRowGroup}">
+                    <Setter Property="FontWeight" Value="DemiBold"/>
+                    <Setter Property="FontSize" Value="14"/>
+                    <Setter Property="Background" Value="LightGray"/>
+                </Style>
+
+                <!-- Style for data rows. -->
+                <Style x:Key="dataRowStyle" TargetType="{x:Type TableRowGroup}">
+                    <Setter Property="FontSize" Value="12"/>
+                </Style>
+
+                <!-- Style for data cells. -->
+                <Style TargetType="{x:Type TableCell}">
+                    <Setter Property="Padding" Value="0.1cm"/>
+                    <Setter Property="BorderBrush" Value="Gray"/>
+                    <Setter Property="BorderThickness" Value="0.01cm"/>
+                </Style>
+            </Table.Resources>
+            <Table.Columns>
+                <TableColumn Width="*" />
+            </Table.Columns>
+            <TableRowGroup>
+                <TableRow>
+                    <TableCell>
+                        <Paragraph    FontSize="16" TextAlignment="Center">
+                            <Bold >
+                                <Run Text="OTOKLAV TEST RAPORU"></Run>
+                            </Bold>
+                        </Paragraph>
+                    </TableCell>
+
+                </TableRow>
+            </TableRowGroup>
+        </Table>
+        <Table CellSpacing="5" Margin="0,0,0,0" BorderBrush="Black">
+            <Table.Resources>
+                <!-- Style for header/footer rows. -->
+                <Style x:Key="headerFooterRowStyle" TargetType="{x:Type TableRowGroup}">
+                    <Setter Property="FontWeight" Value="DemiBold"/>
+                    <Setter Property="FontSize" Value="16"/>
+                    <Setter Property="Background" Value="LightGray"/>
+                </Style>
+
+                <!-- Style for data rows. -->
+                <Style x:Key="dataRowStyle" TargetType="{x:Type TableRowGroup}">
+                    <Setter Property="FontSize" Value="12"/>
+                </Style>
+
+                <!-- Style for data cells. -->
+                <Style TargetType="{x:Type TableCell}">
+                    <Setter Property="Padding" Value="0.1cm"/>
+                    <Setter Property="BorderBrush" Value="Gray"/>
+                    <Setter Property="BorderThickness" Value="0.02cm"/>
+                </Style>
+            </Table.Resources>
+            <Table.Columns>
+                <TableColumn Width="*" />
+                <TableColumn Width="*" />
+            </Table.Columns>
+            <TableRowGroup Style="{StaticResource dataRowStyle}">
+                <TableRow>
+                    <TableCell>
+                        <Paragraph TextAlignment="Left">
+                            <Bold>RAPOR TARİHİ</Bold>
+                        </Paragraph>
+                    </TableCell>
+                    <TableCell>
+                        <Paragraph TextAlignment="Left">
+                            <xrd:InlineDocumentValue PropertyName="KontrolTarih" />
+                        </Paragraph>
+                    </TableCell>
+                </TableRow>
+            </TableRowGroup>
+
+        </Table>
+    </Section>
+    <Section Padding="40,5,40,20" >
+        <Table  CellSpacing="0" Margin="0,0,0,0" BorderBrush="Black" BorderThickness="0.02cm">
+            <Table.Resources>
+                <!-- Style for header/footer rows. -->
+                <Style x:Key="headerFooterRowStyle" TargetType="{x:Type TableRowGroup}">
+                    <Setter Property="FontWeight" Value="DemiBold"/>
+                    <Setter Property="FontSize" Value="12"/>
+                    <Setter Property="Background" Value="LightGray"/>
+                </Style>
+
+                <!-- Style for data rows. -->
+                <Style x:Key="dataRowStyle" TargetType="{x:Type TableRowGroup}">
+                    <Setter Property="FontSize" Value="12"/>
+                </Style>
+
+                <!-- Style for data cells. -->
+                <Style TargetType="{x:Type TableCell}">
+                    <Setter Property="Padding" Value="0.1cm"/>
+                    <Setter Property="BorderBrush" Value="Gray"/>
+                    <Setter Property="BorderThickness" Value="0.02cm"/>
+                </Style>
+            </Table.Resources>
+            <Table.Columns>
+                <TableColumn Width="*" />
+            </Table.Columns>
+            <TableRowGroup Style="{StaticResource headerFooterRowStyle}">
+                <TableRow>
+                    <TableCell>
+                        <Paragraph TextAlignment="Center">
+                            <Bold>
+                                <Run Text="OTOKLAV1 TEST BİLGİLERİ"></Run>
+                            </Bold>
+                        </Paragraph>
+                    </TableCell>
+                </TableRow>
+            </TableRowGroup>
+        </Table>
+        <Table CellSpacing="0" Margin="0,0,0,0" BorderBrush="Black">
+            <Table.Resources>
+                <!-- Style for header/footer rows. -->
+                <Style x:Key="headerFooterRowStyle" TargetType="{x:Type TableRowGroup}">
+                    <Setter Property="FontWeight" Value="DemiBold"/>
+                    <Setter Property="FontSize" Value="16"/>
+                    <Setter Property="Background" Value="LightGray"/>
+                </Style>
+
+                <!-- Style for data rows. -->
+                <Style x:Key="dataRowStyle" TargetType="{x:Type TableRowGroup}">
+                    <Setter Property="FontSize" Value="12"/>
+                </Style>
+
+                <!-- Style for data cells. -->
+                <Style TargetType="{x:Type TableCell}">
+                    <Setter Property="Padding" Value="0.1cm"/>
+                    <Setter Property="BorderBrush" Value="Gray"/>
+                    <Setter Property="BorderThickness" Value="0.02cm"/>
+                </Style>
+            </Table.Resources>
+            <Table.Columns>
+                <TableColumn Width="*" />
+                <TableColumn Width="*" />
+            </Table.Columns>
+            <TableRowGroup Style="{StaticResource dataRowStyle}">
+                <TableRow>
+                    <TableCell>
+                        <Paragraph TextAlignment="Left">
+                            <Bold>KONTROL EDEN</Bold>
+                        </Paragraph>
+                    </TableCell>
+                    <TableCell>
+                        <Paragraph TextAlignment="Left">
+                            <xrd:InlineDocumentValue PropertyName="KontrolEden1" />
+                        </Paragraph>
+                    </TableCell>
+                </TableRow>
+            </TableRowGroup>
+            <TableRowGroup Style="{StaticResource dataRowStyle}">
+                <TableRow>
+                    <TableCell>
+                        <Paragraph TextAlignment="Left">
+                            <Bold>TEST SONUCU</Bold>
+                        </Paragraph>
+                    </TableCell>
+                    <TableCell>
+                        <Paragraph TextAlignment="Left">
+                            <xrd:InlineDocumentValue PropertyName="KontrolDrm1" />
+                        </Paragraph>
+                    </TableCell>
+                </TableRow>
+            </TableRowGroup>
+                   
+        </Table>
+    </Section>
+    <Section Padding="40,5,40,20" >
+        <Table  CellSpacing="0" Margin="0,0,0,0" BorderBrush="Black" BorderThickness="0.02cm">
+            <Table.Resources>
+                <!-- Style for header/footer rows. -->
+                <Style x:Key="headerFooterRowStyle" TargetType="{x:Type TableRowGroup}">
+                    <Setter Property="FontWeight" Value="DemiBold"/>
+                    <Setter Property="FontSize" Value="12"/>
+                    <Setter Property="Background" Value="LightGray"/>
+                </Style>
+
+                <!-- Style for data rows. -->
+                <Style x:Key="dataRowStyle" TargetType="{x:Type TableRowGroup}">
+                    <Setter Property="FontSize" Value="12"/>
+                </Style>
+
+                <!-- Style for data cells. -->
+                <Style TargetType="{x:Type TableCell}">
+                    <Setter Property="Padding" Value="0.1cm"/>
+                    <Setter Property="BorderBrush" Value="Gray"/>
+                    <Setter Property="BorderThickness" Value="0.02cm"/>
+                </Style>
+            </Table.Resources>
+            <Table.Columns>
+                <TableColumn Width="*" />
+            </Table.Columns>
+            <TableRowGroup Style="{StaticResource headerFooterRowStyle}">
+                <TableRow>
+                    <TableCell>
+                        <Paragraph TextAlignment="Center">
+                            <Bold>
+                                <Run Text="OTOKLAV2 TEST BİLGİLERİ"></Run>
+                            </Bold>
+                        </Paragraph>
+                    </TableCell>
+                </TableRow>
+            </TableRowGroup>
+        </Table>
+        <Table CellSpacing="0" Margin="0,0,0,0" BorderBrush="Black">
+            <Table.Resources>
+                <!-- Style for header/footer rows. -->
+                <Style x:Key="headerFooterRowStyle" TargetType="{x:Type TableRowGroup}">
+                    <Setter Property="FontWeight" Value="DemiBold"/>
+                    <Setter Property="FontSize" Value="16"/>
+                    <Setter Property="Background" Value="LightGray"/>
+                </Style>
+
+                <!-- Style for data rows. -->
+                <Style x:Key="dataRowStyle" TargetType="{x:Type TableRowGroup}">
+                    <Setter Property="FontSize" Value="12"/>
+                </Style>
+
+                <!-- Style for data cells. -->
+                <Style TargetType="{x:Type TableCell}">
+                    <Setter Property="Padding" Value="0.1cm"/>
+                    <Setter Property="BorderBrush" Value="Gray"/>
+                    <Setter Property="BorderThickness" Value="0.02cm"/>
+                </Style>
+            </Table.Resources>
+            <Table.Columns>
+                <TableColumn Width="*" />
+                <TableColumn Width="*" />
+            </Table.Columns>
+            <TableRowGroup Style="{StaticResource dataRowStyle}">
+                <TableRow>
+                    <TableCell>
+                        <Paragraph TextAlignment="Left">
+                            <Bold>KONTROL EDEN</Bold>
+                        </Paragraph>
+                    </TableCell>
+                    <TableCell>
+                        <Paragraph TextAlignment="Left">
+                            <xrd:InlineDocumentValue PropertyName="KontrolEden2" />
+                        </Paragraph>
+                    </TableCell>
+                </TableRow>
+            </TableRowGroup>
+            <TableRowGroup Style="{StaticResource dataRowStyle}">
+                <TableRow>
+                    <TableCell>
+                        <Paragraph TextAlignment="Left">
+                            <Bold>TEST SONUCU</Bold>
+                        </Paragraph>
+                    </TableCell>
+                    <TableCell>
+                        <Paragraph TextAlignment="Left">
+                            <xrd:InlineDocumentValue PropertyName="KontrolDrm2" />
+                        </Paragraph>
+                    </TableCell>
+                </TableRow>
+            </TableRowGroup>
+
+        </Table>
+    </Section>
+    <Section Padding="40,5,40,20" >
+        <Table  CellSpacing="0" Margin="0,0,0,0" BorderBrush="Black" BorderThickness="0.02cm">
+            <Table.Resources>
+                <!-- Style for header/footer rows. -->
+                <Style x:Key="headerFooterRowStyle" TargetType="{x:Type TableRowGroup}">
+                    <Setter Property="FontWeight" Value="DemiBold"/>
+                    <Setter Property="FontSize" Value="12"/>
+                    <Setter Property="Background" Value="LightGray"/>
+                </Style>
+
+                <!-- Style for data rows. -->
+                <Style x:Key="dataRowStyle" TargetType="{x:Type TableRowGroup}">
+                    <Setter Property="FontSize" Value="12"/>
+                </Style>
+
+                <!-- Style for data cells. -->
+                <Style TargetType="{x:Type TableCell}">
+                    <Setter Property="Padding" Value="0.1cm"/>
+                    <Setter Property="BorderBrush" Value="Gray"/>
+                    <Setter Property="BorderThickness" Value="0.02cm"/>
+                </Style>
+            </Table.Resources>
+            <Table.Columns>
+                <TableColumn Width="*" />
+            </Table.Columns>
+            <TableRowGroup Style="{StaticResource headerFooterRowStyle}">
+                <TableRow>
+                    <TableCell>
+                        <Paragraph TextAlignment="Center">
+                            <Bold>
+                                <Run Text="OTOKLAV3 TEST BİLGİLERİ"></Run>
+                            </Bold>
+                        </Paragraph>
+                    </TableCell>
+                </TableRow>
+            </TableRowGroup>
+        </Table>
+        <Table CellSpacing="0" Margin="0,0,0,0" BorderBrush="Black">
+            <Table.Resources>
+                <!-- Style for header/footer rows. -->
+                <Style x:Key="headerFooterRowStyle" TargetType="{x:Type TableRowGroup}">
+                    <Setter Property="FontWeight" Value="DemiBold"/>
+                    <Setter Property="FontSize" Value="12"/>
+                    <Setter Property="Background" Value="LightGray"/>
+                </Style>
+
+                <!-- Style for data rows. -->
+                <Style x:Key="dataRowStyle" TargetType="{x:Type TableRowGroup}">
+                    <Setter Property="FontSize" Value="12"/>
+                </Style>
+
+                <!-- Style for data cells. -->
+                <Style TargetType="{x:Type TableCell}">
+                    <Setter Property="Padding" Value="0.1cm"/>
+                    <Setter Property="BorderBrush" Value="Gray"/>
+                    <Setter Property="BorderThickness" Value="0.02cm"/>
+                </Style>
+            </Table.Resources>
+            <Table.Columns>
+                <TableColumn Width="*" />
+                <TableColumn Width="*" />
+            </Table.Columns>
+            <TableRowGroup Style="{StaticResource dataRowStyle}">
+                <TableRow>
+                    <TableCell>
+                        <Paragraph TextAlignment="Left">
+                            <Bold>KONTROL EDEN</Bold>
+                        </Paragraph>
+                    </TableCell>
+                    <TableCell>
+                        <Paragraph TextAlignment="Left">
+                            <xrd:InlineDocumentValue PropertyName="KontrolEden3" />
+                        </Paragraph>
+                    </TableCell>
+                </TableRow>
+            </TableRowGroup>
+            <TableRowGroup Style="{StaticResource dataRowStyle}">
+                <TableRow>
+                    <TableCell>
+                        <Paragraph TextAlignment="Left">
+                            <Bold>TEST SONUCU</Bold>
+                        </Paragraph>
+                    </TableCell>
+                    <TableCell>
+                        <Paragraph TextAlignment="Left">
+                            <xrd:InlineDocumentValue PropertyName="KontrolDrm3" />
+                        </Paragraph>
+                    </TableCell>
+                </TableRow>
+            </TableRowGroup>
+
+        </Table>
+    </Section>
+    <Section Padding="40,5,40,20" >
+        <Table  CellSpacing="0" Margin="0,0,0,0" BorderBrush="Black" BorderThickness="0.02cm">
+            <Table.Resources>
+                <!-- Style for header/footer rows. -->
+                <Style x:Key="headerFooterRowStyle" TargetType="{x:Type TableRowGroup}">
+                    <Setter Property="FontWeight" Value="DemiBold"/>
+                    <Setter Property="FontSize" Value="12"/>
+                    <Setter Property="Background" Value="LightGray"/>
+                </Style>
+
+                <!-- Style for data rows. -->
+                <Style x:Key="dataRowStyle" TargetType="{x:Type TableRowGroup}">
+                    <Setter Property="FontSize" Value="12"/>
+                </Style>
+
+                <!-- Style for data cells. -->
+                <Style TargetType="{x:Type TableCell}">
+                    <Setter Property="Padding" Value="0.1cm"/>
+                    <Setter Property="BorderBrush" Value="Gray"/>
+                    <Setter Property="BorderThickness" Value="0.02cm"/>
+                </Style>
+            </Table.Resources>
+            <Table.Columns>
+                <TableColumn Width="*" />
+            </Table.Columns>
+            <TableRowGroup Style="{StaticResource headerFooterRowStyle}">
+                <TableRow>
+                    <TableCell>
+                        <Paragraph TextAlignment="Center">
+                            <Bold>
+                                <Run Text="OTOKLAV4 TEST BİLGİLERİ"></Run>
+                            </Bold>
+                        </Paragraph>
+                    </TableCell>
+                </TableRow>
+            </TableRowGroup>
+        </Table>
+        <Table CellSpacing="0" Margin="0,0,0,0" BorderBrush="Black">
+            <Table.Resources>
+                <!-- Style for header/footer rows. -->
+                <Style x:Key="headerFooterRowStyle" TargetType="{x:Type TableRowGroup}">
+                    <Setter Property="FontWeight" Value="DemiBold"/>
+                    <Setter Property="FontSize" Value="12"/>
+                    <Setter Property="Background" Value="LightGray"/>
+                </Style>
+
+                <!-- Style for data rows. -->
+                <Style x:Key="dataRowStyle" TargetType="{x:Type TableRowGroup}">
+                    <Setter Property="FontSize" Value="12"/>
+                </Style>
+
+                <!-- Style for data cells. -->
+                <Style TargetType="{x:Type TableCell}">
+                    <Setter Property="Padding" Value="0.1cm"/>
+                    <Setter Property="BorderBrush" Value="Gray"/>
+                    <Setter Property="BorderThickness" Value="0.02cm"/>
+                </Style>
+            </Table.Resources>
+            <Table.Columns>
+                <TableColumn Width="*" />
+                <TableColumn Width="*" />
+            </Table.Columns>
+            <TableRowGroup Style="{StaticResource dataRowStyle}">
+                <TableRow>
+                    <TableCell>
+                        <Paragraph TextAlignment="Left">
+                            <Bold>KONTROL EDEN</Bold>
+                        </Paragraph>
+                    </TableCell>
+                    <TableCell>
+                        <Paragraph TextAlignment="Left">
+                            <xrd:InlineDocumentValue PropertyName="KontrolEden4" />
+                        </Paragraph>
+                    </TableCell>
+                </TableRow>
+            </TableRowGroup>
+            <TableRowGroup Style="{StaticResource dataRowStyle}">
+                <TableRow>
+                    <TableCell>
+                        <Paragraph TextAlignment="Left">
+                            <Bold>TEST SONUCU</Bold>
+                        </Paragraph>
+                    </TableCell>
+                    <TableCell>
+                        <Paragraph TextAlignment="Left">
+                            <xrd:InlineDocumentValue PropertyName="KontrolDrm4" />
+                        </Paragraph>
+                    </TableCell>
+                </TableRow>
+            </TableRowGroup>
+
+        </Table>
+    </Section>
+    <Section Padding="40,5,40,20" >
+        <Table  CellSpacing="0" Margin="0,0,0,0" BorderBrush="Black" BorderThickness="0.02cm">
+            <Table.Resources>
+                <!-- Style for header/footer rows. -->
+                <Style x:Key="headerFooterRowStyle" TargetType="{x:Type TableRowGroup}">
+                    <Setter Property="FontWeight" Value="DemiBold"/>
+                    <Setter Property="FontSize" Value="12"/>
+                    <Setter Property="Background" Value="LightGray"/>
+                </Style>
+
+                <!-- Style for data rows. -->
+                <Style x:Key="dataRowStyle" TargetType="{x:Type TableRowGroup}">
+                    <Setter Property="FontSize" Value="12"/>
+                </Style>
+
+                <!-- Style for data cells. -->
+                <Style TargetType="{x:Type TableCell}">
+                    <Setter Property="Padding" Value="0.1cm"/>
+                    <Setter Property="BorderBrush" Value="Gray"/>
+                    <Setter Property="BorderThickness" Value="0.02cm"/>
+                </Style>
+            </Table.Resources>
+            <Table.Columns>
+                <TableColumn Width="*" />
+            </Table.Columns>
+            <TableRowGroup Style="{StaticResource headerFooterRowStyle}">
+                <TableRow>
+                    <TableCell>
+                        <Paragraph TextAlignment="Center">
+                            <Bold>
+                                <Run Text="OTOKLAV5 TEST BİLGİLERİ"></Run>
+                            </Bold>
+                        </Paragraph>
+                    </TableCell>
+                </TableRow>
+            </TableRowGroup>
+        </Table>
+        <Table CellSpacing="0" Margin="0,0,0,0" BorderBrush="Black">
+            <Table.Resources>
+                <!-- Style for header/footer rows. -->
+                <Style x:Key="headerFooterRowStyle" TargetType="{x:Type TableRowGroup}">
+                    <Setter Property="FontWeight" Value="DemiBold"/>
+                    <Setter Property="FontSize" Value="12"/>
+                    <Setter Property="Background" Value="LightGray"/>
+                </Style>
+
+                <!-- Style for data rows. -->
+                <Style x:Key="dataRowStyle" TargetType="{x:Type TableRowGroup}">
+                    <Setter Property="FontSize" Value="12"/>
+                </Style>
+
+                <!-- Style for data cells. -->
+                <Style TargetType="{x:Type TableCell}">
+                    <Setter Property="Padding" Value="0.1cm"/>
+                    <Setter Property="BorderBrush" Value="Gray"/>
+                    <Setter Property="BorderThickness" Value="0.02cm"/>
+                </Style>
+            </Table.Resources>
+            <Table.Columns>
+                <TableColumn Width="*" />
+                <TableColumn Width="*" />
+            </Table.Columns>
+            <TableRowGroup Style="{StaticResource dataRowStyle}">
+                <TableRow>
+                    <TableCell>
+                        <Paragraph TextAlignment="Left">
+                            <Bold>KONTROL EDEN</Bold>
+                        </Paragraph>
+                    </TableCell>
+                    <TableCell>
+                        <Paragraph TextAlignment="Left">
+                            <xrd:InlineDocumentValue PropertyName="KontrolEden5" />
+                        </Paragraph>
+                    </TableCell>
+                </TableRow>
+            </TableRowGroup>
+            <TableRowGroup Style="{StaticResource dataRowStyle}">
+                <TableRow>
+                    <TableCell>
+                        <Paragraph TextAlignment="Left">
+                            <Bold>TEST SONUCU</Bold>
+                        </Paragraph>
+                    </TableCell>
+                    <TableCell>
+                        <Paragraph TextAlignment="Left">
+                            <xrd:InlineDocumentValue PropertyName="KontrolDrm5" />
+                        </Paragraph>
+                    </TableCell>
+                </TableRow>
+            </TableRowGroup>
+
+        </Table>
+    </Section>
+
+</FlowDocument>

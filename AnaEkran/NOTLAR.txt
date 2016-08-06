@@ -1,0 +1,10 @@
+﻿TBL_SPARIS_TURU_ID=1 "ALIŞ SİPARİŞİ"
+TBL_SPARIS_TURU_ID=2 "SATIŞ SİPARİŞİ"
+
+
+ODEME TURU
+ALINAN ÖDEME
+VERİLEN ODEME
+
+
+//siparişle alınan ürünün eklemesi yapmadım ürün geldiğinde depodan giriş olsun

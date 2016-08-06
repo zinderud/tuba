@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.WebAnalytics.Design.Editors</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.WebAnalytics.Design.Editors.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WebAnalytics.Design.Editors.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WebAnalytics.Design.Editors.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WebAnalytics.Design.Editors.Properties.Resources.Analytics">
+            <summary>
+              Looks up a localized string similar to Analytics.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WebAnalytics.Design.Editors.Properties.Resources.HelpFileDoesNotExist">
+            <summary>
+              Looks up a localized string similar to Help File does not exist at {0}..
+            </summary>
+        </member>
+        <member name="P:Microsoft.WebAnalytics.Design.Editors.Properties.Resources.InstallationError">
+            <summary>
+              Looks up a localized string similar to There is a problem with the installation for the Microsoft Silverlight Analytics Framework and the help file cannot be found.  Try reinstalling the Silverlight Analytics Framework or opening the help file from the Start Menu..
+            </summary>
+        </member>
+        <member name="P:Microsoft.WebAnalytics.Design.Editors.Properties.Resources.SilverlightAnalyticsFramework">
+            <summary>
+              Looks up a localized string similar to Microsoft Silverlight Analytics Framework.
+            </summary>
+        </member>
+        <member name="T:Microsoft.WebAnalytics.Design.Editors.AnalyticsCategoryLayout">
+            <summary>
+            Interaction logic for AnalyticsCategoryLayout.xaml
+            </summary>
+            <summary>
+            AnalyticsCategoryLayout
+            </summary>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Design.Editors.AnalyticsCategoryLayout.#ctor">
+            <summary>
+            Initializes a new instance of the AnalyticsCategoryLayout class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Design.Editors.AnalyticsCategoryLayout.OpenHelp(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Opens the Silverlight Analytics Framework.chm help file
+            </summary>
+            <param name="sender">the button</param>
+            <param name="e">the routed event arguments</param>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Design.Editors.AnalyticsCategoryLayout.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Microsoft.WebAnalytics.Design.Editors.AnalyticsCategoryEditor">
+            <summary>
+            Analytics category editor adds an "Analytics Help" button to the bottom of the "Analytics" property category
+            </summary>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Design.Editors.AnalyticsCategoryEditor.ConsumesProperty(Microsoft.Windows.Design.PropertyEditing.PropertyEntry)">
+            <summary>
+            This consumes all "Analytics" properties
+            </summary>
+            <param name="propertyEntry">the property entry</param>
+            <returns>always true</returns>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Design.Editors.AnalyticsCategoryEditor.GetImage(System.Windows.Size)">
+            <summary>
+            Gets an image
+            </summary>
+            <param name="desiredSize">desired size</param>
+            <returns>always returns null</returns>
+        </member>
+        <member name="P:Microsoft.WebAnalytics.Design.Editors.AnalyticsCategoryEditor.EditorTemplate">
+            <summary>
+            Gets a data template using the <see cref="T:Microsoft.WebAnalytics.Design.Editors.AnalyticsCategoryLayout"/> class
+            </summary>
+        </member>
+        <member name="P:Microsoft.WebAnalytics.Design.Editors.AnalyticsCategoryEditor.TargetCategory">
+            <summary>
+            Gets the target category for "Analytics"
+            </summary>
+        </member>
+        <member name="T:XamlGeneratedNamespace.GeneratedInternalTypeHelper">
+            <summary>
+            GeneratedInternalTypeHelper
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateInstance(System.Type,System.Globalization.CultureInfo)">
+            <summary>
+            CreateInstance
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.GetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            GetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.SetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            SetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateDelegate(System.Type,System.Object,System.String)">
+            <summary>
+            CreateDelegate
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.AddEventHandler(System.Reflection.EventInfo,System.Object,System.Delegate)">
+            <summary>
+            AddEventHandler
+            </summary>
+        </member>
+    </members>
+</doc>

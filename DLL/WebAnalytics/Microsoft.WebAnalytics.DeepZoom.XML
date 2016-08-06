@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.WebAnalytics.DeepZoom</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.WebAnalytics.Media.HandleMultiScaleImage">
+            <summary>
+            Track deep zoom events
+            </summary>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Media.HandleMultiScaleImage.Track(System.Windows.FrameworkElement,Microsoft.WebAnalytics.AnalyticsEvent,System.EventArgs)">
+            <summary>
+            Track deep zoom events
+            </summary>
+            <param name="associatedObject">the MultiScaleImage</param>
+            <param name="analyticsEvent">the analytics event</param>
+            <param name="eventArgs">the event arguments</param>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Media.HandleMultiScaleImage.AddExceptionMessage(Microsoft.WebAnalytics.AnalyticsEvent,System.EventArgs)">
+            <summary>
+            Add an exception message to the <codeEntityReference>P:Microsoft.WebAnalytics.AnalyticsEvent.ActionValue</codeEntityReference>
+            </summary>
+            <param name="analyticsEvent">the analytics event</param>
+            <param name="eventArgs">the event arguments</param>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Media.HandleMultiScaleImage.AddViewportArgs(Microsoft.WebAnalytics.AnalyticsEvent,System.Windows.Controls.MultiScaleImage)">
+            <summary>
+            Add Viewport arguments to the <codeEntityReference>P:Microsoft.WebAnalytics.AnalyticsEvent.EventArgs</codeEntityReference>
+            </summary>
+            <param name="analyticsEvent">the analytics event</param>
+            <param name="image">the multiscale image</param>
+        </member>
+        <member name="P:Microsoft.WebAnalytics.Media.HandleMultiScaleImage.Log">
+            <summary>
+            Gets or sets the event Logging method
+            </summary>
+        </member>
+        <member name="T:Microsoft.WebAnalytics.Media.TrackMultiScaleImage">
+            <summary>
+            <img src="../media/Microsoft.WebAnalytics.Media.TrackMultiScaleImage.24x24.png"/> 
+            Track Deep Zoom Events 
+            </summary>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Media.TrackMultiScaleImage.#ctor">
+            <summary>
+            Initializes a new instance of the TrackMultiScaleImage class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Media.TrackMultiScaleImage.OnAttached">
+            <summary>
+            Attach events and initialize parts
+            </summary>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Media.TrackMultiScaleImage.OnDetaching">
+            <summary>
+            Detach events
+            </summary>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Media.TrackMultiScaleImage.Distance(System.Windows.Point,System.Windows.Point)">
+            <summary>
+            Use the Pythagorean Theorum to get the distance between two points
+            </summary>
+            <param name="p1">the first point</param>
+            <param name="p2">the second point</param>
+            <returns>the distance between the two points</returns>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Media.TrackMultiScaleImage.OnViewportChanged(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Viewport changed event handler
+            </summary>
+            <param name="sender">the multiscale image</param>
+            <param name="e">the routed event argument</param>
+        </member>
+        <member name="P:Microsoft.WebAnalytics.Media.TrackMultiScaleImage.Locations">
+            <summary>
+            Gets or sets the locations to track
+            </summary>
+        </member>
+        <member name="P:Microsoft.WebAnalytics.Media.TrackMultiScaleImage.Log">
+            <summary>
+            Gets or sets the event Logging method
+            </summary>
+        </member>
+        <member name="T:Microsoft.WebAnalytics.Media.MultiScaleImageLocation">
+            <summary>
+            A Deep Zoom location to track with the Silverlight Analytics Framework
+            </summary>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Media.MultiScaleImageLocation.#ctor">
+            <summary>
+            Initializes a new instance of the MultiScaleImageLocation class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WebAnalytics.Media.MultiScaleImageLocation.Name">
+            <summary>
+            Gets or sets the name to track in the AnalyticsEvent.ActionValue
+            </summary>
+        </member>
+        <member name="P:Microsoft.WebAnalytics.Media.MultiScaleImageLocation.ViewportWidth">
+            <summary>
+            Gets or sets the viewport width to compare against
+            </summary>
+        </member>
+        <member name="P:Microsoft.WebAnalytics.Media.MultiScaleImageLocation.ViewportOrigin">
+            <summary>
+            Gets or sets the Viewport origin to compare against
+            </summary>
+        </member>
+        <member name="P:Microsoft.WebAnalytics.Media.MultiScaleImageLocation.OriginTolerance">
+            <summary>
+            Gets or sets the tolerance in to compare the ViewportOrigin to the MultiScaleImage.ViewportOrigin
+            </summary>
+        </member>
+        <member name="P:Microsoft.WebAnalytics.Media.MultiScaleImageLocation.WidthTolerance">
+            <summary>
+            Gets or sets the tolerance in to compare the ViewportWidth to the MultiScaleImage.ViewportWidth
+            </summary>
+        </member>
+        <member name="P:Microsoft.WebAnalytics.Media.MultiScaleImageLocation.CustomProperties">
+            <summary>
+            Gets the custom properties
+            </summary>
+        </member>
+    </members>
+</doc>

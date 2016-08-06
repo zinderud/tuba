@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A800186F-95FC-410D-8837-20AD6FF03CFF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DataObjects</RootNamespace>
+    <AssemblyName>DataObjects</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Son\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.0.2\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.0.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServerCompact">
+      <HintPath>..\packages\EntityFramework.SqlServerCompact.6.0.2\lib\net45\EntityFramework.SqlServerCompact.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\DLL\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.Services" />
+    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.SqlServer.Compact.4.0.8876.1\lib\net40\System.Data.SqlServerCe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DaoFactories.cs" />
+    <Compile Include="DataAccessAuto.cs" />
+    <Compile Include="EntityDaoFactoryAuto.cs" />
+    <Compile Include="EntityFramework\Action.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Action.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\DataObjectFactory.cs" />
+    <Compile Include="EntityTabloAuto.cs" />
+    <Compile Include="EntityTBL_BANKAAuto.cs" />
+    <Compile Include="EntityTBL_BANKA_BAKIYEAuto.cs" />
+    <Compile Include="EntityTBL_DEPOAuto.cs" />
+    <Compile Include="EntityTBL_DEPO_ISLEMAuto.cs" />
+    <Compile Include="EntityTBL_DEPO_TRANSFERAuto.cs" />
+    <Compile Include="EntityTBL_FATURAAuto.cs" />
+    <Compile Include="EntityTBL_FATURA_TURUAuto.cs" />
+    <Compile Include="EntityTBL_FISAuto.cs" />
+    <Compile Include="EntityTBL_GIDERAuto.cs" />
+    <Compile Include="EntityTBL_GIDER_BAKIYEAuto.cs" />
+    <Compile Include="EntityTBL_KASAAuto.cs" />
+    <Compile Include="EntityTBL_KASA_BAKIYEAuto.cs" />
+    <Compile Include="EntityTBL_KDVAuto.cs" />
+    <Compile Include="EntityTBL_ODEMEAuto.cs" />
+    <Compile Include="EntityTBL_ODEME_TIPIAuto.cs" />
+    <Compile Include="EntityTBL_ODEME_TURUAuto.cs" />
+    <Compile Include="EntityTBL_PARA_TIPIAuto.cs" />
+    <Compile Include="EntityTBL_PERSONELAuto.cs" />
+    <Compile Include="EntityTBL_SIRKETAuto.cs" />
+    <Compile Include="EntityTBL_SIRKET_BAKIYEAuto.cs" />
+    <Compile Include="EntityTBL_SIRKET_GRUBAuto.cs" />
+    <Compile Include="EntityTBL_SIRKET_SINIFAuto.cs" />
+    <Compile Include="EntityTBL_SIRKET_TIPIAuto.cs" />
+    <Compile Include="EntityTBL_SPARISAuto.cs" />
+    <Compile Include="EntityTBL_SPARIS_TURUAuto.cs" />
+    <Compile Include="EntityTBL_URUNAuto.cs" />
+    <Compile Include="EntityTBL_URUN_BIRIMAuto.cs" />
+    <Compile Include="EntityTBL_URUN_CINSIAuto.cs" />
+    <Compile Include="EntityTBL_URUN_FATURAAuto.cs" />
+    <Compile Include="EntityTBL_URUN_MARKAAuto.cs" />
+    <Compile Include="EntityTBL_URUN_SPARISAuto.cs" />
+    <Compile Include="EntityTBL_URUN_STOKAuto.cs" />
+    <Compile Include="EntityTBL_URUN_TIPIAuto.cs" />
+    <Compile Include="IDaoFactoryAuto.cs" />
+    <Compile Include="ITabloAuto.cs" />
+    <Compile Include="ITBL_BANKAAuto.cs" />
+    <Compile Include="ITBL_BANKA_BAKIYEAuto.cs" />
+    <Compile Include="ITBL_DEPOAuto.cs" />
+    <Compile Include="ITBL_DEPO_ISLEMAuto.cs" />
+    <Compile Include="ITBL_DEPO_TRANSFERAuto.cs" />
+    <Compile Include="ITBL_FATURAAuto.cs" />
+    <Compile Include="ITBL_FATURA_TURUAuto.cs" />
+    <Compile Include="ITBL_FISAuto.cs" />
+    <Compile Include="ITBL_GIDERAuto.cs" />
+    <Compile Include="ITBL_GIDER_BAKIYEAuto.cs" />
+    <Compile Include="ITBL_KASAAuto.cs" />
+    <Compile Include="ITBL_KASA_BAKIYEAuto.cs" />
+    <Compile Include="ITBL_KDVAuto.cs" />
+    <Compile Include="ITBL_ODEMEAuto.cs" />
+    <Compile Include="ITBL_ODEME_TIPIAuto.cs" />
+    <Compile Include="ITBL_ODEME_TURUAuto.cs" />
+    <Compile Include="ITBL_PARA_TIPIAuto.cs" />
+    <Compile Include="ITBL_PERSONELAuto.cs" />
+    <Compile Include="ITBL_SIRKETAuto.cs" />
+    <Compile Include="ITBL_SIRKET_BAKIYEAuto.cs" />
+    <Compile Include="ITBL_SIRKET_GRUBAuto.cs" />
+    <Compile Include="ITBL_SIRKET_SINIFAuto.cs" />
+    <Compile Include="ITBL_SIRKET_TIPIAuto.cs" />
+    <Compile Include="ITBL_SPARISAuto.cs" />
+    <Compile Include="ITBL_SPARIS_TURUAuto.cs" />
+    <Compile Include="ITBL_URUNAuto.cs" />
+    <Compile Include="ITBL_URUN_BIRIMAuto.cs" />
+    <Compile Include="ITBL_URUN_CINSIAuto.cs" />
+    <Compile Include="ITBL_URUN_FATURAAuto.cs" />
+    <Compile Include="ITBL_URUN_MARKAAuto.cs" />
+    <Compile Include="ITBL_URUN_SPARISAuto.cs" />
+    <Compile Include="ITBL_URUN_STOKAuto.cs" />
+    <Compile Include="ITBL_URUN_TIPIAuto.cs" />
+    <Compile Include="ModelMapper\Maping.cs" />
+    <Compile Include="ModelMapper\MapperAuto.cs" />
+    <Compile Include="ModelMapper\TBL_BANKAMapperAuto.cs" />
+    <Compile Include="ModelMapper\TBL_BANKA_BAKIYEMapperAuto.cs" />
+    <Compile Include="ModelMapper\TBL_DEPOMapperAuto.cs" />
+    <Compile Include="ModelMapper\TBL_DEPO_ISLEMMapperAuto.cs" />
+    <Compile Include="ModelMapper\TBL_DEPO_TRANSFERMapperAuto.cs" />
+    <Compile Include="ModelMapper\TBL_FATURAMapperAuto.cs" />
+    <Compile Include="ModelMapper\TBL_FATURA_TURUMapperAuto.cs" />
+    <Compile Include="ModelMapper\TBL_FISMapperAuto.cs" />
+    <Compile Include="ModelMapper\TBL_GIDERMapperAuto.cs" />
+    <Compile Include="ModelMapper\TBL_GIDER_BAKIYEMapperAuto.cs" />
+    <Compile Include="ModelMapper\TBL_KASAMapperAuto.cs" />
+    <Compile Include="ModelMapper\TBL_KASA_BAKIYEMapperAuto.cs" />
+    <Compile Include="ModelMapper\TBL_KDVMapperAuto.cs" />
+    <Compile Include="ModelMapper\TBL_ODEMEMapperAuto.cs" />
+    <Compile Include="ModelMapper\TBL_ODEME_TIPIMapperAuto.cs" />
+    <Compile Include="ModelMapper\TBL_ODEME_TURUMapperAuto.cs" />
+    <Compile Include="ModelMapper\TBL_PARA_TIPIMapperAuto.cs" />
+    <Compile Include="ModelMapper\TBL_PERSONELMapperAuto.cs" />
+    <Compile Include="ModelMapper\TBL_SIRKETMapperAuto.cs" />
+    <Compile Include="ModelMapper\TBL_SIRKET_BAKIYEMapperAuto.cs" />
+    <Compile Include="ModelMapper\TBL_SIRKET_GRUBMapperAuto.cs" />
+    <Compile Include="ModelMapper\TBL_SIRKET_SINIFMapperAuto.cs" />
+    <Compile Include="ModelMapper\TBL_SIRKET_TIPIMapperAuto.cs" />
+    <Compile Include="ModelMapper\TBL_SPARISMapperAuto.cs" />
+    <Compile Include="ModelMapper\TBL_SPARIS_TURUMapperAuto.cs" />
+    <Compile Include="ModelMapper\TBL_URUNMapperAuto.cs" />
+    <Compile Include="ModelMapper\TBL_URUN_BIRIMMapperAuto.cs" />
+    <Compile Include="ModelMapper\TBL_URUN_CINSIMapperAuto.cs" />
+    <Compile Include="ModelMapper\TBL_URUN_FATURAMapperAuto.cs" />
+    <Compile Include="ModelMapper\TBL_URUN_MARKAMapperAuto.cs" />
+    <Compile Include="ModelMapper\TBL_URUN_SPARISMapperAuto.cs" />
+    <Compile Include="ModelMapper\TBL_URUN_STOKMapperAuto.cs" />
+    <Compile Include="ModelMapper\TBL_URUN_TIPIMapperAuto.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="EntityFramework\Implementation\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="EntityFramework\Action.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Action.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EntityFramework\Action.edmx.diagram">
+      <DependentUpon>Action.edmx</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SQL.Server.Compact.4.0">
+      <Visible>False</Visible>
+      <ProductName>SQL Server Compact 4.0 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AutoBusinessObjects\AutoBusinessObjects.csproj">
+      <Project>{d40ebac3-9459-447a-b3ba-e7491a83534d}</Project>
+      <Name>AutoBusinessObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Zinderud\Zinderud.csproj">
+      <Project>{0f60e337-bb58-4def-8c59-10f3c22be9d9}</Project>
+      <Name>Zinderud</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    if not exist "$(TargetDir)x86" md "$(TargetDir)x86"
+    xcopy /s /y "$(SolutionDir)packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\x86\*.*" "$(TargetDir)x86"
+    if not exist "$(TargetDir)amd64" md "$(TargetDir)amd64"
+    xcopy /s /y "$(SolutionDir)packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\amd64\*.*" "$(TargetDir)amd64"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

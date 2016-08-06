@@ -1,0 +1,3380 @@
+﻿<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+<!-- EF Runtime content -->
+<edmx:Runtime>
+<!-- SSDL content -->
+<edmx:StorageModels>
+<Schema Namespace="ActionModel.Store" Alias="Self" Provider="System.Data.SqlServerCe.4.0" ProviderManifestToken="4.0" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="ActionModelStoreContainer">
+    <EntitySet Name="TBL_BANKA" EntityType="ActionModel.Store.TBL_BANKA" store:Type="Tables" />
+    <EntitySet Name="TBL_BANKA_BAKIYE" EntityType="ActionModel.Store.TBL_BANKA_BAKIYE" store:Type="Tables" />
+    <EntitySet Name="TBL_DEPO" EntityType="ActionModel.Store.TBL_DEPO" store:Type="Tables" />
+    <EntitySet Name="TBL_DEPO_ISLEM" EntityType="ActionModel.Store.TBL_DEPO_ISLEM" store:Type="Tables" />
+    <EntitySet Name="TBL_DEPO_TRANSFER" EntityType="ActionModel.Store.TBL_DEPO_TRANSFER" store:Type="Tables" />
+    <EntitySet Name="TBL_FATURA" EntityType="ActionModel.Store.TBL_FATURA" store:Type="Tables" />
+    <EntitySet Name="TBL_FATURA_TURU" EntityType="ActionModel.Store.TBL_FATURA_TURU" store:Type="Tables" />
+    <EntitySet Name="TBL_FIS" EntityType="ActionModel.Store.TBL_FIS" store:Type="Tables" />
+    <EntitySet Name="TBL_GIDER" EntityType="ActionModel.Store.TBL_GIDER" store:Type="Tables" />
+    <EntitySet Name="TBL_GIDER_BAKIYE" EntityType="ActionModel.Store.TBL_GIDER_BAKIYE" store:Type="Tables" />
+    <EntitySet Name="TBL_KASA" EntityType="ActionModel.Store.TBL_KASA" store:Type="Tables" />
+    <EntitySet Name="TBL_KASA_BAKIYE" EntityType="ActionModel.Store.TBL_KASA_BAKIYE" store:Type="Tables" />
+    <EntitySet Name="TBL_KDV" EntityType="ActionModel.Store.TBL_KDV" store:Type="Tables" />
+    <EntitySet Name="TBL_ODEME" EntityType="ActionModel.Store.TBL_ODEME" store:Type="Tables" />
+    <EntitySet Name="TBL_ODEME_TIPI" EntityType="ActionModel.Store.TBL_ODEME_TIPI" store:Type="Tables" />
+    <EntitySet Name="TBL_ODEME_TURU" EntityType="ActionModel.Store.TBL_ODEME_TURU" store:Type="Tables" />
+    <EntitySet Name="TBL_PARA_TIPI" EntityType="ActionModel.Store.TBL_PARA_TIPI" store:Type="Tables" />
+    <EntitySet Name="TBL_PERSONEL" EntityType="ActionModel.Store.TBL_PERSONEL" store:Type="Tables" />
+    <EntitySet Name="TBL_SIRKET" EntityType="ActionModel.Store.TBL_SIRKET" store:Type="Tables" />
+    <EntitySet Name="TBL_SIRKET_BAKIYE" EntityType="ActionModel.Store.TBL_SIRKET_BAKIYE" store:Type="Tables" />
+    <EntitySet Name="TBL_SIRKET_GRUB" EntityType="ActionModel.Store.TBL_SIRKET_GRUB" store:Type="Tables" />
+    <EntitySet Name="TBL_SIRKET_SINIF" EntityType="ActionModel.Store.TBL_SIRKET_SINIF" store:Type="Tables" />
+    <EntitySet Name="TBL_SIRKET_TIPI" EntityType="ActionModel.Store.TBL_SIRKET_TIPI" store:Type="Tables" />
+    <EntitySet Name="TBL_SPARIS" EntityType="ActionModel.Store.TBL_SPARIS" store:Type="Tables" />
+    <EntitySet Name="TBL_SPARIS_TURU" EntityType="ActionModel.Store.TBL_SPARIS_TURU" store:Type="Tables" />
+    <EntitySet Name="TBL_URUN" EntityType="ActionModel.Store.TBL_URUN" store:Type="Tables" />
+    <EntitySet Name="TBL_URUN_BIRIM" EntityType="ActionModel.Store.TBL_URUN_BIRIM" store:Type="Tables" />
+    <EntitySet Name="TBL_URUN_CINSI" EntityType="ActionModel.Store.TBL_URUN_CINSI" store:Type="Tables" />
+    <EntitySet Name="TBL_URUN_FATURA" EntityType="ActionModel.Store.TBL_URUN_FATURA" store:Type="Tables" />
+    <EntitySet Name="TBL_URUN_MARKA" EntityType="ActionModel.Store.TBL_URUN_MARKA" store:Type="Tables" />
+    <EntitySet Name="TBL_URUN_SPARIS" EntityType="ActionModel.Store.TBL_URUN_SPARIS" store:Type="Tables" />
+    <EntitySet Name="TBL_URUN_STOK" EntityType="ActionModel.Store.TBL_URUN_STOK" store:Type="Tables" />
+    <EntitySet Name="TBL_URUN_TIPI" EntityType="ActionModel.Store.TBL_URUN_TIPI" store:Type="Tables" />
+    <AssociationSet Name="FK_TBL_BANKA_BAKIYE_TBL_BANKA" Association="ActionModel.Store.FK_TBL_BANKA_BAKIYE_TBL_BANKA">
+      <End Role="TBL_BANKA" EntitySet="TBL_BANKA" />
+      <End Role="TBL_BANKA_BAKIYE" EntitySet="TBL_BANKA_BAKIYE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_BANKA_BAKIYE_TBL_FIS" Association="ActionModel.Store.FK_TBL_BANKA_BAKIYE_TBL_FIS">
+      <End Role="TBL_FIS" EntitySet="TBL_FIS" />
+      <End Role="TBL_BANKA_BAKIYE" EntitySet="TBL_BANKA_BAKIYE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_BANKA_BAKIYE_TBL_PARA_TIPI" Association="ActionModel.Store.FK_TBL_BANKA_BAKIYE_TBL_PARA_TIPI">
+      <End Role="TBL_PARA_TIPI" EntitySet="TBL_PARA_TIPI" />
+      <End Role="TBL_BANKA_BAKIYE" EntitySet="TBL_BANKA_BAKIYE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_BANKA_TBL_PARA_TIPI" Association="ActionModel.Store.FK_TBL_BANKA_TBL_PARA_TIPI">
+      <End Role="TBL_PARA_TIPI" EntitySet="TBL_PARA_TIPI" />
+      <End Role="TBL_BANKA" EntitySet="TBL_BANKA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_DEPO_ISLEM_TBL_DEPO" Association="ActionModel.Store.FK_TBL_DEPO_ISLEM_TBL_DEPO">
+      <End Role="TBL_DEPO" EntitySet="TBL_DEPO" />
+      <End Role="TBL_DEPO_ISLEM" EntitySet="TBL_DEPO_ISLEM" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_DEPO_ISLEM_TBL_URUN" Association="ActionModel.Store.FK_TBL_DEPO_ISLEM_TBL_URUN">
+      <End Role="TBL_URUN" EntitySet="TBL_URUN" />
+      <End Role="TBL_DEPO_ISLEM" EntitySet="TBL_DEPO_ISLEM" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_DEPO_TRANSFER_TBL_URUN" Association="ActionModel.Store.FK_TBL_DEPO_TRANSFER_TBL_URUN">
+      <End Role="TBL_URUN" EntitySet="TBL_URUN" />
+      <End Role="TBL_DEPO_TRANSFER" EntitySet="TBL_DEPO_TRANSFER" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_FATURA_TBL_DEPO" Association="ActionModel.Store.FK_TBL_FATURA_TBL_DEPO">
+      <End Role="TBL_DEPO" EntitySet="TBL_DEPO" />
+      <End Role="TBL_FATURA" EntitySet="TBL_FATURA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_FATURA_TBL_FATURA_TURU" Association="ActionModel.Store.FK_TBL_FATURA_TBL_FATURA_TURU">
+      <End Role="TBL_FATURA_TURU" EntitySet="TBL_FATURA_TURU" />
+      <End Role="TBL_FATURA" EntitySet="TBL_FATURA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_FATURA_TBL_KASA" Association="ActionModel.Store.FK_TBL_FATURA_TBL_KASA">
+      <End Role="TBL_KASA" EntitySet="TBL_KASA" />
+      <End Role="TBL_FATURA" EntitySet="TBL_FATURA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_FATURA_TBL_ODEME_TIPI" Association="ActionModel.Store.FK_TBL_FATURA_TBL_ODEME_TIPI">
+      <End Role="TBL_ODEME_TIPI" EntitySet="TBL_ODEME_TIPI" />
+      <End Role="TBL_FATURA" EntitySet="TBL_FATURA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_FATURA_TBL_PARA_TIPI" Association="ActionModel.Store.FK_TBL_FATURA_TBL_PARA_TIPI">
+      <End Role="TBL_PARA_TIPI" EntitySet="TBL_PARA_TIPI" />
+      <End Role="TBL_FATURA" EntitySet="TBL_FATURA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_FATURA_TBL_PERSONEL" Association="ActionModel.Store.FK_TBL_FATURA_TBL_PERSONEL">
+      <End Role="TBL_PERSONEL" EntitySet="TBL_PERSONEL" />
+      <End Role="TBL_FATURA" EntitySet="TBL_FATURA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_FATURA_TBL_SIRKET" Association="ActionModel.Store.FK_TBL_FATURA_TBL_SIRKET">
+      <End Role="TBL_SIRKET" EntitySet="TBL_SIRKET" />
+      <End Role="TBL_FATURA" EntitySet="TBL_FATURA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_FATURA_TBL_SPARIS" Association="ActionModel.Store.FK_TBL_FATURA_TBL_SPARIS">
+      <End Role="TBL_SPARIS" EntitySet="TBL_SPARIS" />
+      <End Role="TBL_FATURA" EntitySet="TBL_FATURA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_GIDER_BAKIYE_TBL_FIS" Association="ActionModel.Store.FK_TBL_GIDER_BAKIYE_TBL_FIS">
+      <End Role="TBL_FIS" EntitySet="TBL_FIS" />
+      <End Role="TBL_GIDER_BAKIYE" EntitySet="TBL_GIDER_BAKIYE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_GIDER_BAKIYE_TBL_GIDER" Association="ActionModel.Store.FK_TBL_GIDER_BAKIYE_TBL_GIDER">
+      <End Role="TBL_GIDER" EntitySet="TBL_GIDER" />
+      <End Role="TBL_GIDER_BAKIYE" EntitySet="TBL_GIDER_BAKIYE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_GIDER_BAKIYE_TBL_PARA_TIPI" Association="ActionModel.Store.FK_TBL_GIDER_BAKIYE_TBL_PARA_TIPI">
+      <End Role="TBL_PARA_TIPI" EntitySet="TBL_PARA_TIPI" />
+      <End Role="TBL_GIDER_BAKIYE" EntitySet="TBL_GIDER_BAKIYE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_GIDER_TBL_PARA_TIPI" Association="ActionModel.Store.FK_TBL_GIDER_TBL_PARA_TIPI">
+      <End Role="TBL_PARA_TIPI" EntitySet="TBL_PARA_TIPI" />
+      <End Role="TBL_GIDER" EntitySet="TBL_GIDER" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_KASA_BAKIYE_TBL_FIS" Association="ActionModel.Store.FK_TBL_KASA_BAKIYE_TBL_FIS">
+      <End Role="TBL_FIS" EntitySet="TBL_FIS" />
+      <End Role="TBL_KASA_BAKIYE" EntitySet="TBL_KASA_BAKIYE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_KASA_BAKIYE_TBL_KASA" Association="ActionModel.Store.FK_TBL_KASA_BAKIYE_TBL_KASA">
+      <End Role="TBL_KASA" EntitySet="TBL_KASA" />
+      <End Role="TBL_KASA_BAKIYE" EntitySet="TBL_KASA_BAKIYE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_KASA_BAKIYE_TBL_PARA_TIPI" Association="ActionModel.Store.FK_TBL_KASA_BAKIYE_TBL_PARA_TIPI">
+      <End Role="TBL_PARA_TIPI" EntitySet="TBL_PARA_TIPI" />
+      <End Role="TBL_KASA_BAKIYE" EntitySet="TBL_KASA_BAKIYE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_KASA_TBL_PARA_TIPI" Association="ActionModel.Store.FK_TBL_KASA_TBL_PARA_TIPI">
+      <End Role="TBL_PARA_TIPI" EntitySet="TBL_PARA_TIPI" />
+      <End Role="TBL_KASA" EntitySet="TBL_KASA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_ODEME_TBL_KASA" Association="ActionModel.Store.FK_TBL_ODEME_TBL_KASA">
+      <End Role="TBL_KASA" EntitySet="TBL_KASA" />
+      <End Role="TBL_ODEME" EntitySet="TBL_ODEME" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_ODEME_TBL_ODEME_TIPI" Association="ActionModel.Store.FK_TBL_ODEME_TBL_ODEME_TIPI">
+      <End Role="TBL_ODEME_TIPI" EntitySet="TBL_ODEME_TIPI" />
+      <End Role="TBL_ODEME" EntitySet="TBL_ODEME" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_ODEME_TBL_ODEME_TURU" Association="ActionModel.Store.FK_TBL_ODEME_TBL_ODEME_TURU">
+      <End Role="TBL_ODEME_TURU" EntitySet="TBL_ODEME_TURU" />
+      <End Role="TBL_ODEME" EntitySet="TBL_ODEME" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_ODEME_TBL_PARA_TIPI" Association="ActionModel.Store.FK_TBL_ODEME_TBL_PARA_TIPI">
+      <End Role="TBL_PARA_TIPI" EntitySet="TBL_PARA_TIPI" />
+      <End Role="TBL_ODEME" EntitySet="TBL_ODEME" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_ODEME_TBL_SIRKET" Association="ActionModel.Store.FK_TBL_ODEME_TBL_SIRKET">
+      <End Role="TBL_SIRKET" EntitySet="TBL_SIRKET" />
+      <End Role="TBL_ODEME" EntitySet="TBL_ODEME" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_SIRKET_BAKIYE_TBL_FIS" Association="ActionModel.Store.FK_TBL_SIRKET_BAKIYE_TBL_FIS">
+      <End Role="TBL_FIS" EntitySet="TBL_FIS" />
+      <End Role="TBL_SIRKET_BAKIYE" EntitySet="TBL_SIRKET_BAKIYE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_SIRKET_BAKIYE_TBL_PARA_TIPI" Association="ActionModel.Store.FK_TBL_SIRKET_BAKIYE_TBL_PARA_TIPI">
+      <End Role="TBL_PARA_TIPI" EntitySet="TBL_PARA_TIPI" />
+      <End Role="TBL_SIRKET_BAKIYE" EntitySet="TBL_SIRKET_BAKIYE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_SIRKET_BAKIYE_TBL_SIRKET" Association="ActionModel.Store.FK_TBL_SIRKET_BAKIYE_TBL_SIRKET">
+      <End Role="TBL_SIRKET" EntitySet="TBL_SIRKET" />
+      <End Role="TBL_SIRKET_BAKIYE" EntitySet="TBL_SIRKET_BAKIYE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_SIRKET_TBL_SIRKET_GRUB" Association="ActionModel.Store.FK_TBL_SIRKET_TBL_SIRKET_GRUB">
+      <End Role="TBL_SIRKET_GRUB" EntitySet="TBL_SIRKET_GRUB" />
+      <End Role="TBL_SIRKET" EntitySet="TBL_SIRKET" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_SIRKET_TBL_SIRKET_SINIF" Association="ActionModel.Store.FK_TBL_SIRKET_TBL_SIRKET_SINIF">
+      <End Role="TBL_SIRKET_SINIF" EntitySet="TBL_SIRKET_SINIF" />
+      <End Role="TBL_SIRKET" EntitySet="TBL_SIRKET" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_SIRKET_TBL_SIRKET_TIPI" Association="ActionModel.Store.FK_TBL_SIRKET_TBL_SIRKET_TIPI">
+      <End Role="TBL_SIRKET_TIPI" EntitySet="TBL_SIRKET_TIPI" />
+      <End Role="TBL_SIRKET" EntitySet="TBL_SIRKET" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_SPARIS_TBL_DEPO" Association="ActionModel.Store.FK_TBL_SPARIS_TBL_DEPO">
+      <End Role="TBL_DEPO" EntitySet="TBL_DEPO" />
+      <End Role="TBL_SPARIS" EntitySet="TBL_SPARIS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_SPARIS_TBL_KASA" Association="ActionModel.Store.FK_TBL_SPARIS_TBL_KASA">
+      <End Role="TBL_KASA" EntitySet="TBL_KASA" />
+      <End Role="TBL_SPARIS" EntitySet="TBL_SPARIS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_SPARIS_TBL_ODEME_TIPI" Association="ActionModel.Store.FK_TBL_SPARIS_TBL_ODEME_TIPI">
+      <End Role="TBL_ODEME_TIPI" EntitySet="TBL_ODEME_TIPI" />
+      <End Role="TBL_SPARIS" EntitySet="TBL_SPARIS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_SPARIS_TBL_PARA_TIPI" Association="ActionModel.Store.FK_TBL_SPARIS_TBL_PARA_TIPI">
+      <End Role="TBL_PARA_TIPI" EntitySet="TBL_PARA_TIPI" />
+      <End Role="TBL_SPARIS" EntitySet="TBL_SPARIS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_SPARIS_TBL_PERSONEL" Association="ActionModel.Store.FK_TBL_SPARIS_TBL_PERSONEL">
+      <End Role="TBL_PERSONEL" EntitySet="TBL_PERSONEL" />
+      <End Role="TBL_SPARIS" EntitySet="TBL_SPARIS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_SPARIS_TBL_SIRKET" Association="ActionModel.Store.FK_TBL_SPARIS_TBL_SIRKET">
+      <End Role="TBL_SIRKET" EntitySet="TBL_SIRKET" />
+      <End Role="TBL_SPARIS" EntitySet="TBL_SPARIS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_SPARIS_TBL_SPARIS_TURU" Association="ActionModel.Store.FK_TBL_SPARIS_TBL_SPARIS_TURU">
+      <End Role="TBL_SPARIS_TURU" EntitySet="TBL_SPARIS_TURU" />
+      <End Role="TBL_SPARIS" EntitySet="TBL_SPARIS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_URUN_CINSI_TBL_URUN_TIPI" Association="ActionModel.Store.FK_TBL_URUN_CINSI_TBL_URUN_TIPI">
+      <End Role="TBL_URUN_TIPI" EntitySet="TBL_URUN_TIPI" />
+      <End Role="TBL_URUN_CINSI" EntitySet="TBL_URUN_CINSI" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_URUN_FATURA_TBL_FATURA" Association="ActionModel.Store.FK_TBL_URUN_FATURA_TBL_FATURA">
+      <End Role="TBL_FATURA" EntitySet="TBL_FATURA" />
+      <End Role="TBL_URUN_FATURA" EntitySet="TBL_URUN_FATURA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_URUN_FATURA_TBL_URUN1" Association="ActionModel.Store.FK_TBL_URUN_FATURA_TBL_URUN1">
+      <End Role="TBL_URUN" EntitySet="TBL_URUN" />
+      <End Role="TBL_URUN_FATURA" EntitySet="TBL_URUN_FATURA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_URUN_MARKA_TBL_URUN_CINSI" Association="ActionModel.Store.FK_TBL_URUN_MARKA_TBL_URUN_CINSI">
+      <End Role="TBL_URUN_CINSI" EntitySet="TBL_URUN_CINSI" />
+      <End Role="TBL_URUN_MARKA" EntitySet="TBL_URUN_MARKA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_URUN_MARKA_TBL_URUN_TIPI" Association="ActionModel.Store.FK_TBL_URUN_MARKA_TBL_URUN_TIPI">
+      <End Role="TBL_URUN_TIPI" EntitySet="TBL_URUN_TIPI" />
+      <End Role="TBL_URUN_MARKA" EntitySet="TBL_URUN_MARKA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_URUN_SPARIS_TBL_SPARIS" Association="ActionModel.Store.FK_TBL_URUN_SPARIS_TBL_SPARIS">
+      <End Role="TBL_SPARIS" EntitySet="TBL_SPARIS" />
+      <End Role="TBL_URUN_SPARIS" EntitySet="TBL_URUN_SPARIS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_URUN_SPARIS_TBL_URUN1" Association="ActionModel.Store.FK_TBL_URUN_SPARIS_TBL_URUN1">
+      <End Role="TBL_URUN" EntitySet="TBL_URUN" />
+      <End Role="TBL_URUN_SPARIS" EntitySet="TBL_URUN_SPARIS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_URUN_STOK_TBL_DEPO" Association="ActionModel.Store.FK_TBL_URUN_STOK_TBL_DEPO">
+      <End Role="TBL_DEPO" EntitySet="TBL_DEPO" />
+      <End Role="TBL_URUN_STOK" EntitySet="TBL_URUN_STOK" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_URUN_STOK_TBL_URUN" Association="ActionModel.Store.FK_TBL_URUN_STOK_TBL_URUN">
+      <End Role="TBL_URUN" EntitySet="TBL_URUN" />
+      <End Role="TBL_URUN_STOK" EntitySet="TBL_URUN_STOK" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_URUN_TBL_KDV" Association="ActionModel.Store.FK_TBL_URUN_TBL_KDV">
+      <End Role="TBL_KDV" EntitySet="TBL_KDV" />
+      <End Role="TBL_URUN" EntitySet="TBL_URUN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_URUN_TBL_PARA_TIPI" Association="ActionModel.Store.FK_TBL_URUN_TBL_PARA_TIPI">
+      <End Role="TBL_PARA_TIPI" EntitySet="TBL_PARA_TIPI" />
+      <End Role="TBL_URUN" EntitySet="TBL_URUN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_URUN_TBL_URUN_BIRIM" Association="ActionModel.Store.FK_TBL_URUN_TBL_URUN_BIRIM">
+      <End Role="TBL_URUN_BIRIM" EntitySet="TBL_URUN_BIRIM" />
+      <End Role="TBL_URUN" EntitySet="TBL_URUN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_URUN_TBL_URUN_CINSI" Association="ActionModel.Store.FK_TBL_URUN_TBL_URUN_CINSI">
+      <End Role="TBL_URUN_CINSI" EntitySet="TBL_URUN_CINSI" />
+      <End Role="TBL_URUN" EntitySet="TBL_URUN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_URUN_TBL_URUN_MARKA" Association="ActionModel.Store.FK_TBL_URUN_TBL_URUN_MARKA">
+      <End Role="TBL_URUN_MARKA" EntitySet="TBL_URUN_MARKA" />
+      <End Role="TBL_URUN" EntitySet="TBL_URUN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_URUN_TBL_URUN_TIPI" Association="ActionModel.Store.FK_TBL_URUN_TBL_URUN_TIPI">
+      <End Role="TBL_URUN_TIPI" EntitySet="TBL_URUN_TIPI" />
+      <End Role="TBL_URUN" EntitySet="TBL_URUN" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="TBL_BANKA">
+    <Key>
+      <PropertyRef Name="TBL_BANKA_ID" />
+    </Key>
+    <Property Name="TBL_BANKA_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="BANKA_ADI" Type="nvarchar" MaxLength="50" />
+    <Property Name="BANKA_SUBE_ADI" Type="nvarchar" MaxLength="50" />
+    <Property Name="BANKA_IBAN_NO" Type="nvarchar" MaxLength="50" />
+    <Property Name="TBL_PARA_TIPI_ID" Type="int" />
+    <Property Name="BANKA_TELEFON_1" Type="nvarchar" MaxLength="50" />
+    <Property Name="BANKA_TELEFON_2" Type="nvarchar" MaxLength="50" />
+    <Property Name="BANKA_ADRES" Type="ntext" />
+    <Property Name="BANKA_IL" Type="nvarchar" MaxLength="50" />
+    <Property Name="BANKA_ILCE" Type="nvarchar" MaxLength="50" />
+    <Property Name="BANKA_MAIL" Type="nvarchar" MaxLength="50" />
+    <Property Name="BANKA_ACIKLAMA" Type="ntext" />
+    <Property Name="YEDEK" Type="ntext" />
+  </EntityType>
+  <EntityType Name="TBL_BANKA_BAKIYE">
+    <Key>
+      <PropertyRef Name="TBL_BANKA_BAKIYE_ID" />
+    </Key>
+    <Property Name="TBL_BANKA_BAKIYE_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TBL_BANKA_ID" Type="int" />
+    <Property Name="TBL_PARA_TIPI_ID" Type="int" />
+    <Property Name="TBL_FIS_ID" Type="int" />
+    <Property Name="KUR" Type="nvarchar" MaxLength="50" />
+    <Property Name="TARIH" Type="nvarchar" MaxLength="50" />
+    <Property Name="TUTAR" Type="nvarchar" MaxLength="50" />
+    <Property Name="ACIKLAMA" Type="ntext" />
+    <Property Name="YEDEK" Type="ntext" />
+  </EntityType>
+  <EntityType Name="TBL_DEPO">
+    <Key>
+      <PropertyRef Name="TBL_DEPO_ID" />
+    </Key>
+    <Property Name="TBL_DEPO_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DEPO_ADI" Type="nvarchar" MaxLength="50" />
+    <Property Name="DEPO_ACIKLAMA" Type="ntext" />
+    <Property Name="YEDEK" Type="ntext" />
+  </EntityType>
+  <EntityType Name="TBL_DEPO_ISLEM">
+    <Key>
+      <PropertyRef Name="TBL_DEPO_ISLEM_ID" />
+    </Key>
+    <Property Name="TBL_DEPO_ISLEM_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TBL_DEPO_ID" Type="int" />
+    <Property Name="TBL_URUN_ID" Type="int" />
+    <Property Name="DEPO_ISLEM_ADI" Type="nvarchar" MaxLength="50" />
+    <Property Name="URUN_MIKTAR" Type="nvarchar" MaxLength="50" />
+    <Property Name="DEPO_ONAY" Type="nvarchar" MaxLength="50" />
+    <Property Name="ACIKLAMA" Type="ntext" />
+    <Property Name="YEDEK" Type="ntext" />
+  </EntityType>
+  <EntityType Name="TBL_DEPO_TRANSFER">
+    <Key>
+      <PropertyRef Name="TBL_DEPO_TRANSFER_ID" />
+    </Key>
+    <Property Name="TBL_DEPO_TRANSFER_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DEPO_TRANSFER_ADI" Type="nvarchar" MaxLength="50" />
+    <Property Name="DEPO_TRANSFER_TARIHI" Type="nvarchar" MaxLength="50" />
+    <Property Name="DEPO_TRANSFER_NEREDEN" Type="nvarchar" MaxLength="50" />
+    <Property Name="DEPO_TRANSFER_NEREYE" Type="nvarchar" MaxLength="50" />
+    <Property Name="TBL_URUN_ID" Type="int" />
+    <Property Name="DEPO_TRANSFER_ACIKLAMA" Type="ntext" />
+    <Property Name="YEDEK" Type="ntext" />
+  </EntityType>
+  <EntityType Name="TBL_FATURA">
+    <Key>
+      <PropertyRef Name="TBL_FATURA_ID" />
+    </Key>
+    <Property Name="TBL_FATURA_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TBL_SIRKET_ID" Type="int" />
+    <Property Name="TBL_FATURA_TURU_ID" Type="int" />
+    <Property Name="FATURA_TARIH" Type="nvarchar" MaxLength="50" />
+    <Property Name="FATURA_VADE_TARIH" Type="nvarchar" MaxLength="50" />
+    <Property Name="FATURA_FATURA_SERI_NO" Type="nvarchar" MaxLength="50" />
+    <Property Name="TBL_PARA_TIPI_ID" Type="int" />
+    <Property Name="TBL_ODEME_TIPI_ID" Type="int" />
+    <Property Name="TBL_KASA_ID" Type="int" />
+    <Property Name="TBL_DEPO_ID" Type="int" />
+    <Property Name="TBL_PERSONEL_ID" Type="int" />
+    <Property Name="ACIKLAMA" Type="ntext" />
+    <Property Name="YEDEK" Type="ntext" />
+    <Property Name="TBL_SPARIS_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="TBL_FATURA_TURU">
+    <Key>
+      <PropertyRef Name="TBL_FATURA_TURU_ID" />
+    </Key>
+    <Property Name="TBL_FATURA_TURU_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FATURA_TURU_ADI" Type="nvarchar" MaxLength="50" />
+    <Property Name="FATURA_TURU_ACIKLAMA" Type="ntext" />
+    <Property Name="YEDEK" Type="ntext" />
+  </EntityType>
+  <EntityType Name="TBL_FIS">
+    <Key>
+      <PropertyRef Name="TBL_FIS_ID" />
+    </Key>
+    <Property Name="TBL_FIS_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ACIKLAMA" Type="ntext" />
+    <Property Name="YEDEK" Type="ntext" />
+  </EntityType>
+  <EntityType Name="TBL_GIDER">
+    <Key>
+      <PropertyRef Name="TBL_GIDER_ID" />
+    </Key>
+    <Property Name="TBL_GIDER_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TBL_PARA_TIPI_ID" Type="int" />
+    <Property Name="GİDER_ADI" Type="nvarchar" MaxLength="50" />
+    <Property Name="GİDER_ACIKLAMA" Type="ntext" />
+    <Property Name="YEDEK" Type="ntext" />
+  </EntityType>
+  <EntityType Name="TBL_GIDER_BAKIYE">
+    <Key>
+      <PropertyRef Name="TBL_GIDER_BAKIYE_ID" />
+    </Key>
+    <Property Name="TBL_GIDER_BAKIYE_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TBL_GIDER_ID" Type="int" />
+    <Property Name="TBL_PARA_TIPI_ID" Type="int" />
+    <Property Name="TBL_FIS_ID" Type="int" />
+    <Property Name="KUR" Type="nvarchar" MaxLength="50" />
+    <Property Name="TARIH" Type="nvarchar" MaxLength="50" />
+    <Property Name="TUTAR" Type="nvarchar" MaxLength="50" />
+    <Property Name="ACIKLAMA" Type="ntext" />
+    <Property Name="YEDEK" Type="ntext" />
+  </EntityType>
+  <EntityType Name="TBL_KASA">
+    <Key>
+      <PropertyRef Name="TBL_KASA_ID" />
+    </Key>
+    <Property Name="TBL_KASA_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TBL_PARA_TIPI_ID" Type="int" />
+    <Property Name="KASA_ADI" Type="nvarchar" MaxLength="50" />
+    <Property Name="KASA_ACIKLAMA" Type="ntext" />
+    <Property Name="YEDEK" Type="ntext" />
+  </EntityType>
+  <EntityType Name="TBL_KASA_BAKIYE">
+    <Key>
+      <PropertyRef Name="TBL_KASA_BAKIYE_ID" />
+    </Key>
+    <Property Name="TBL_KASA_BAKIYE_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TBL_KASA_ID" Type="int" />
+    <Property Name="TBL_PARA_TIPI_ID" Type="int" />
+    <Property Name="TBL_FIS_ID" Type="int" />
+    <Property Name="KUR" Type="nvarchar" MaxLength="50" />
+    <Property Name="TARIH" Type="nvarchar" MaxLength="50" />
+    <Property Name="TUTAR" Type="nvarchar" MaxLength="50" />
+    <Property Name="ACIKLAMA" Type="ntext" />
+    <Property Name="YEDEK" Type="ntext" />
+  </EntityType>
+  <EntityType Name="TBL_KDV">
+    <Key>
+      <PropertyRef Name="TBL_KDV_ID" />
+    </Key>
+    <Property Name="TBL_KDV_ID" Type="int" Nullable="false" />
+    <Property Name="KDV_YUZDESI" Type="int" />
+    <Property Name="KDV_ACIKLAMA" Type="ntext" />
+    <Property Name="YEDEK" Type="ntext" />
+  </EntityType>
+  <EntityType Name="TBL_ODEME">
+    <Key>
+      <PropertyRef Name="TBL_ODEME_ID" />
+    </Key>
+    <Property Name="TBL_ODEME_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ODEME_KAYIT_TARIHI" Type="nvarchar" MaxLength="50" />
+    <Property Name="ODEME_VADE_TARIHI" Type="nvarchar" MaxLength="50" />
+    <Property Name="TBL_ODEME_TURU_ID" Type="int" />
+    <Property Name="TBL_ODEME_TIPI_ID" Type="int" />
+    <Property Name="BELGE_NO" Type="nvarchar" MaxLength="50" />
+    <Property Name="TBL_SIRKET_ID" Type="int" />
+    <Property Name="TUTAR" Type="nvarchar" MaxLength="50" />
+    <Property Name="TBL_PARA_TIPI_ID" Type="int" />
+    <Property Name="TBL_KASA_ID" Type="int" />
+    <Property Name="YEDEK" Type="ntext" />
+  </EntityType>
+  <EntityType Name="TBL_ODEME_TIPI">
+    <Key>
+      <PropertyRef Name="TBL_ODEME_TIPI_ID" />
+    </Key>
+    <Property Name="TBL_ODEME_TIPI_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ODEME_TIPI_ADI" Type="nvarchar" MaxLength="50" />
+    <Property Name="ODEME_TIPI_ACIKLAMA" Type="ntext" />
+    <Property Name="YEDEK" Type="ntext" />
+  </EntityType>
+  <EntityType Name="TBL_ODEME_TURU">
+    <Key>
+      <PropertyRef Name="TBL_ODEME_TURU_ID" />
+    </Key>
+    <Property Name="TBL_ODEME_TURU_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ODEME_TURU_ADI" Type="nvarchar" MaxLength="50" />
+    <Property Name="ODEME_TURU_ACIKLAMA" Type="ntext" />
+    <Property Name="YEDEK" Type="ntext" />
+  </EntityType>
+  <EntityType Name="TBL_PARA_TIPI">
+    <Key>
+      <PropertyRef Name="TBL_PARA_TIPI_ID" />
+    </Key>
+    <Property Name="TBL_PARA_TIPI_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PARA_TIPI_ADI" Type="nvarchar" MaxLength="50" />
+    <Property Name="YEDEK" Type="ntext" />
+  </EntityType>
+  <EntityType Name="TBL_PERSONEL">
+    <Key>
+      <PropertyRef Name="TBL_PERSONEL_ID" />
+    </Key>
+    <Property Name="TBL_PERSONEL_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PERSONEL_AD_SOYAD" Type="nvarchar" MaxLength="50" />
+    <Property Name="YETKI_SEVIYESI" Type="ntext" />
+    <Property Name="SIFRE" Type="ntext" />
+    <Property Name="BARKOD_ID" Type="ntext" />
+    <Property Name="PERSONEL_GOREVI" Type="nvarchar" MaxLength="50" />
+    <Property Name="PERSONEL_TELEFON1" Type="nvarchar" MaxLength="50" />
+    <Property Name="PERSONEL_TELEFON2" Type="nvarchar" MaxLength="50" />
+    <Property Name="PERSONEL_MAIL" Type="nvarchar" MaxLength="50" />
+    <Property Name="PERSONEL_CALISMA_DURUMU" Type="nvarchar" MaxLength="50" />
+    <Property Name="PERSONEL_ISE_BASLAMA_TARIHI" Type="nvarchar" MaxLength="50" />
+    <Property Name="PERSONEL_ISTEN_AYRILMA_TARIHI" Type="nvarchar" MaxLength="50" />
+    <Property Name="PERSONEL_ISE_GELIS_SAATI" Type="nvarchar" MaxLength="50" />
+    <Property Name="PERSONEL_ISTEN_CIKIS_SAATI" Type="nvarchar" MaxLength="50" />
+    <Property Name="PERSONEL_SSK_NO" Type="nvarchar" MaxLength="50" />
+    <Property Name="PERSONEL_CINSIYET" Type="nvarchar" MaxLength="50" />
+    <Property Name="PERSONEL_KIMLIK_NO" Type="nvarchar" MaxLength="50" />
+    <Property Name="PERSONEL_DOGUM_TARIHI" Type="nvarchar" MaxLength="50" />
+    <Property Name="PERSONEL_DOGUM_YERI" Type="nvarchar" MaxLength="50" />
+    <Property Name="PERSONEL_EGITIM_DURUMU" Type="nvarchar" MaxLength="50" />
+    <Property Name="PERSONEL_ACIKLAMA" Type="nvarchar" MaxLength="50" />
+    <Property Name="PERSONEL_AYAKKABI_NO" Type="nvarchar" MaxLength="50" />
+    <Property Name="PERSONEL_GOMLEK_NO" Type="nvarchar" MaxLength="50" />
+    <Property Name="PERSONEL_MONT_NO" Type="nvarchar" MaxLength="50" />
+    <Property Name="PERSONEL_PANTOLON_NO" Type="nvarchar" MaxLength="50" />
+    <Property Name="YEDEK" Type="ntext" />
+  </EntityType>
+  <EntityType Name="TBL_SIRKET">
+    <Key>
+      <PropertyRef Name="TBL_SIRKET_ID" />
+    </Key>
+    <Property Name="TBL_SIRKET_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TBL_SIRKET_GRUB_ID" Type="int" />
+    <Property Name="TBL_SIRKET_SINIF_ID" Type="int" />
+    <Property Name="TBL_SIRKET_TIPI_ID" Type="int" />
+    <Property Name="SIRKET_ADI" Type="nvarchar" MaxLength="50" />
+    <Property Name="SIRKET_TELEFON_1" Type="nvarchar" MaxLength="50" />
+    <Property Name="SIRKET_TELEFON_2" Type="nvarchar" MaxLength="50" />
+    <Property Name="SIRKET_FAX_1" Type="nvarchar" MaxLength="50" />
+    <Property Name="SIRKET_FAX_2" Type="nvarchar" MaxLength="50" />
+    <Property Name="SIRKET_MAIL_1" Type="nvarchar" MaxLength="50" />
+    <Property Name="SIRKET_MAIL_2" Type="nvarchar" MaxLength="50" />
+    <Property Name="SIRKET_WEB_ADRES" Type="nvarchar" MaxLength="50" />
+    <Property Name="SIRKET_VERGI_DAIRESI" Type="nvarchar" MaxLength="50" />
+    <Property Name="SIRKET_VERGI_NO" Type="nvarchar" MaxLength="50" />
+    <Property Name="SIRKET_ADRES" Type="ntext" />
+    <Property Name="SIRKET_IL" Type="nvarchar" MaxLength="50" />
+    <Property Name="SIRKET_ILCE" Type="nvarchar" MaxLength="50" />
+    <Property Name="SIRKET_POSTA_KODU" Type="nvarchar" MaxLength="50" />
+    <Property Name="SIRKET_BANKA_ADI" Type="nvarchar" MaxLength="50" />
+    <Property Name="SIRKET_BANKA_SUBE_ADI" Type="nvarchar" MaxLength="50" />
+    <Property Name="SIRKET_HESAP_NO" Type="nvarchar" MaxLength="50" />
+    <Property Name="SIRKET_IBAN" Type="nvarchar" MaxLength="50" />
+    <Property Name="SIRKET_ACIKLAMA" Type="ntext" />
+    <Property Name="YEDEK" Type="ntext" />
+  </EntityType>
+  <EntityType Name="TBL_SIRKET_BAKIYE">
+    <Key>
+      <PropertyRef Name="TBL_SIRKET_BAKIYE_ID" />
+    </Key>
+    <Property Name="TBL_SIRKET_BAKIYE_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TBL_SIRKET_ID" Type="int" />
+    <Property Name="TBL_PARA_TIPI_ID" Type="int" />
+    <Property Name="TBL_FIS_ID" Type="int" />
+    <Property Name="KUR" Type="nvarchar" MaxLength="50" />
+    <Property Name="TARIH" Type="nvarchar" MaxLength="50" />
+    <Property Name="TUTAR" Type="nvarchar" MaxLength="50" />
+    <Property Name="ACIKLAMA" Type="ntext" />
+    <Property Name="YEDEK" Type="ntext" />
+  </EntityType>
+  <EntityType Name="TBL_SIRKET_GRUB">
+    <Key>
+      <PropertyRef Name="TBL_SIRKET_GRUB_ID" />
+    </Key>
+    <Property Name="TBL_SIRKET_GRUB_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SIRKET_GRUP_ADI" Type="nvarchar" MaxLength="50" />
+    <Property Name="ACIKLAMA" Type="ntext" />
+    <Property Name="YEDEK" Type="ntext" />
+  </EntityType>
+  <EntityType Name="TBL_SIRKET_SINIF">
+    <Key>
+      <PropertyRef Name="TBL_SIRKET_SINIF_ID" />
+    </Key>
+    <Property Name="TBL_SIRKET_SINIF_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SIRKET_SINIF_ADI" Type="ntext" />
+    <Property Name="YEDEK" Type="ntext" />
+  </EntityType>
+  <EntityType Name="TBL_SIRKET_TIPI">
+    <Key>
+      <PropertyRef Name="TBL_SIRKET_TIPI_ID" />
+    </Key>
+    <Property Name="TBL_SIRKET_TIPI_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SIRKET_TIPI_ADI" Type="nvarchar" MaxLength="50" />
+    <Property Name="YEDEK" Type="ntext" />
+  </EntityType>
+  <EntityType Name="TBL_SPARIS">
+    <Key>
+      <PropertyRef Name="TBL_SPARIS_ID" />
+    </Key>
+    <Property Name="TBL_SPARIS_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TBL_SIRKET_ID" Type="int" />
+    <Property Name="TBL_SPARIS_TURU_ID" Type="int" />
+    <Property Name="SPARIS_TARIH" Type="nvarchar" MaxLength="50" />
+    <Property Name="SPARIS_VADE_TARIH" Type="nvarchar" MaxLength="50" />
+    <Property Name="SPARIS_FATURA_SERI_NO" Type="nvarchar" MaxLength="50" />
+    <Property Name="TBL_PARA_TIPI_ID" Type="int" />
+    <Property Name="TBL_ODEME_TIPI_ID" Type="int" />
+    <Property Name="TBL_KASA_ID" Type="int" />
+    <Property Name="TBL_DEPO_ID" Type="int" />
+    <Property Name="TBL_PERSONEL_ID" Type="int" />
+    <Property Name="YEDEK" Type="ntext" />
+  </EntityType>
+  <EntityType Name="TBL_SPARIS_TURU">
+    <Key>
+      <PropertyRef Name="TBL_SPARIS_TURU_ID" />
+    </Key>
+    <Property Name="TBL_SPARIS_TURU_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SPARIS_TURU_ADI" Type="nvarchar" MaxLength="50" />
+    <Property Name="SPARIS_TURU_ACIKLAMA" Type="ntext" />
+    <Property Name="YEDEK" Type="ntext" />
+  </EntityType>
+  <EntityType Name="TBL_URUN">
+    <Key>
+      <PropertyRef Name="TBL_URUN_ID" />
+    </Key>
+    <Property Name="TBL_URUN_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="URUN_ADI" Type="nvarchar" MaxLength="50" />
+    <Property Name="URUN_KODU" Type="ntext" />
+    <Property Name="TBL_URUN_TIPI_ID" Type="int" />
+    <Property Name="TBL_URUN_CINSI_ID" Type="int" />
+    <Property Name="TBL_URUN_MARKA_ID" Type="int" />
+    <Property Name="TBL_URUN_BIRIM_ID" Type="int" />
+    <Property Name="TBL_KDV_ID" Type="int" />
+    <Property Name="URUN_DURUM" Type="nvarchar" MaxLength="50" />
+    <Property Name="URUN_ALIS_FIYATI" Type="nvarchar" MaxLength="50" />
+    <Property Name="URUN_SATIS_FIYATI" Type="nvarchar" MaxLength="50" />
+    <Property Name="TBL_PARA_TIPI_ID" Type="int" />
+    <Property Name="YEDEK" Type="ntext" />
+  </EntityType>
+  <EntityType Name="TBL_URUN_BIRIM">
+    <Key>
+      <PropertyRef Name="TBL_URUN_BIRIM_ID" />
+    </Key>
+    <Property Name="TBL_URUN_BIRIM_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="URUN_BIRIM_ADI" Type="nvarchar" MaxLength="50" />
+    <Property Name="URUN_BIRIM_ACIKLAMA" Type="ntext" />
+    <Property Name="YEDEK" Type="ntext" />
+  </EntityType>
+  <EntityType Name="TBL_URUN_CINSI">
+    <Key>
+      <PropertyRef Name="TBL_URUN_CINSI_ID" />
+    </Key>
+    <Property Name="TBL_URUN_CINSI_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TBL_URUN_TIPI_ID" Type="int" />
+    <Property Name="URUN_CINSI_ADI" Type="nvarchar" MaxLength="50" />
+    <Property Name="URUN_CINSI_ACIKLAMA" Type="ntext" />
+    <Property Name="YEDEK" Type="ntext" />
+  </EntityType>
+  <EntityType Name="TBL_URUN_FATURA">
+    <Key>
+      <PropertyRef Name="TBL_URUN_FATURA_ID" />
+    </Key>
+    <Property Name="TBL_URUN_FATURA_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TBL_URUN_ID" Type="int" />
+    <Property Name="TBL_FATURA_ID" Type="int" />
+    <Property Name="URUN_FATURA_MIKTAR" Type="nvarchar" MaxLength="50" />
+    <Property Name="ACIKLAMA" Type="ntext" />
+    <Property Name="YEDEK" Type="ntext" />
+  </EntityType>
+  <EntityType Name="TBL_URUN_MARKA">
+    <Key>
+      <PropertyRef Name="TBL_URUN_MARKA_ID" />
+    </Key>
+    <Property Name="TBL_URUN_MARKA_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TBL_URUN_TIPI_ID" Type="int" />
+    <Property Name="TBL_URUN_CINSI_ID" Type="int" Nullable="false" />
+    <Property Name="URUN_MARKA_ADI" Type="nvarchar" MaxLength="50" />
+    <Property Name="URUN_MARKA_ACIKLAMA" Type="ntext" />
+    <Property Name="YEDEK" Type="ntext" />
+  </EntityType>
+  <EntityType Name="TBL_URUN_SPARIS">
+    <Key>
+      <PropertyRef Name="TBL_URUN_SPARIS_ID" />
+    </Key>
+    <Property Name="TBL_URUN_SPARIS_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TBL_URUN_ID" Type="int" />
+    <Property Name="TBL_SIPARIS_ID" Type="int" />
+    <Property Name="URUN_SIPARIS_MIKTAR" Type="nvarchar" MaxLength="50" />
+    <Property Name="ACIKLAMA" Type="ntext" />
+    <Property Name="YEDEK" Type="ntext" />
+  </EntityType>
+  <EntityType Name="TBL_URUN_STOK">
+    <Key>
+      <PropertyRef Name="TBL_URUN_STOK_ID" />
+    </Key>
+    <Property Name="TBL_URUN_STOK_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TBL_URUN_ID" Type="int" />
+    <Property Name="TBL_DEPO_ID" Type="int" />
+    <Property Name="URUN_BIRIM_MIKTARI" Type="int" />
+    <Property Name="STOK_DURUM" Type="nvarchar" MaxLength="50" />
+    <Property Name="ACIKLAMA" Type="ntext" />
+    <Property Name="YEDEK" Type="ntext" />
+  </EntityType>
+  <EntityType Name="TBL_URUN_TIPI">
+    <Key>
+      <PropertyRef Name="TBL_URUN_TIPI_ID" />
+    </Key>
+    <Property Name="TBL_URUN_TIPI_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="URUN_TIPI_ADI" Type="nvarchar" MaxLength="50" />
+    <Property Name="URUN_TIPI_ACIKLAMA" Type="nvarchar" MaxLength="50" />
+    <Property Name="YEDEK" Type="ntext" />
+  </EntityType>
+  <Association Name="FK_TBL_BANKA_BAKIYE_TBL_BANKA">
+    <End Role="TBL_BANKA" Type="ActionModel.Store.TBL_BANKA" Multiplicity="0..1" />
+    <End Role="TBL_BANKA_BAKIYE" Type="ActionModel.Store.TBL_BANKA_BAKIYE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_BANKA">
+        <PropertyRef Name="TBL_BANKA_ID" />
+      </Principal>
+      <Dependent Role="TBL_BANKA_BAKIYE">
+        <PropertyRef Name="TBL_BANKA_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_BANKA_BAKIYE_TBL_FIS">
+    <End Role="TBL_FIS" Type="ActionModel.Store.TBL_FIS" Multiplicity="0..1" />
+    <End Role="TBL_BANKA_BAKIYE" Type="ActionModel.Store.TBL_BANKA_BAKIYE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_FIS">
+        <PropertyRef Name="TBL_FIS_ID" />
+      </Principal>
+      <Dependent Role="TBL_BANKA_BAKIYE">
+        <PropertyRef Name="TBL_FIS_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_BANKA_BAKIYE_TBL_PARA_TIPI">
+    <End Role="TBL_PARA_TIPI" Type="ActionModel.Store.TBL_PARA_TIPI" Multiplicity="0..1" />
+    <End Role="TBL_BANKA_BAKIYE" Type="ActionModel.Store.TBL_BANKA_BAKIYE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_PARA_TIPI">
+        <PropertyRef Name="TBL_PARA_TIPI_ID" />
+      </Principal>
+      <Dependent Role="TBL_BANKA_BAKIYE">
+        <PropertyRef Name="TBL_PARA_TIPI_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_BANKA_TBL_PARA_TIPI">
+    <End Role="TBL_PARA_TIPI" Type="ActionModel.Store.TBL_PARA_TIPI" Multiplicity="0..1" />
+    <End Role="TBL_BANKA" Type="ActionModel.Store.TBL_BANKA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_PARA_TIPI">
+        <PropertyRef Name="TBL_PARA_TIPI_ID" />
+      </Principal>
+      <Dependent Role="TBL_BANKA">
+        <PropertyRef Name="TBL_PARA_TIPI_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_DEPO_ISLEM_TBL_DEPO">
+    <End Role="TBL_DEPO" Type="ActionModel.Store.TBL_DEPO" Multiplicity="0..1" />
+    <End Role="TBL_DEPO_ISLEM" Type="ActionModel.Store.TBL_DEPO_ISLEM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_DEPO">
+        <PropertyRef Name="TBL_DEPO_ID" />
+      </Principal>
+      <Dependent Role="TBL_DEPO_ISLEM">
+        <PropertyRef Name="TBL_DEPO_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_DEPO_ISLEM_TBL_URUN">
+    <End Role="TBL_URUN" Type="ActionModel.Store.TBL_URUN" Multiplicity="0..1" />
+    <End Role="TBL_DEPO_ISLEM" Type="ActionModel.Store.TBL_DEPO_ISLEM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_URUN">
+        <PropertyRef Name="TBL_URUN_ID" />
+      </Principal>
+      <Dependent Role="TBL_DEPO_ISLEM">
+        <PropertyRef Name="TBL_URUN_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_DEPO_TRANSFER_TBL_URUN">
+    <End Role="TBL_URUN" Type="ActionModel.Store.TBL_URUN" Multiplicity="0..1" />
+    <End Role="TBL_DEPO_TRANSFER" Type="ActionModel.Store.TBL_DEPO_TRANSFER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_URUN">
+        <PropertyRef Name="TBL_URUN_ID" />
+      </Principal>
+      <Dependent Role="TBL_DEPO_TRANSFER">
+        <PropertyRef Name="TBL_URUN_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_FATURA_TBL_DEPO">
+    <End Role="TBL_DEPO" Type="ActionModel.Store.TBL_DEPO" Multiplicity="0..1" />
+    <End Role="TBL_FATURA" Type="ActionModel.Store.TBL_FATURA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_DEPO">
+        <PropertyRef Name="TBL_DEPO_ID" />
+      </Principal>
+      <Dependent Role="TBL_FATURA">
+        <PropertyRef Name="TBL_DEPO_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_FATURA_TBL_FATURA_TURU">
+    <End Role="TBL_FATURA_TURU" Type="ActionModel.Store.TBL_FATURA_TURU" Multiplicity="0..1" />
+    <End Role="TBL_FATURA" Type="ActionModel.Store.TBL_FATURA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_FATURA_TURU">
+        <PropertyRef Name="TBL_FATURA_TURU_ID" />
+      </Principal>
+      <Dependent Role="TBL_FATURA">
+        <PropertyRef Name="TBL_FATURA_TURU_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_FATURA_TBL_KASA">
+    <End Role="TBL_KASA" Type="ActionModel.Store.TBL_KASA" Multiplicity="0..1" />
+    <End Role="TBL_FATURA" Type="ActionModel.Store.TBL_FATURA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_KASA">
+        <PropertyRef Name="TBL_KASA_ID" />
+      </Principal>
+      <Dependent Role="TBL_FATURA">
+        <PropertyRef Name="TBL_KASA_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_FATURA_TBL_ODEME_TIPI">
+    <End Role="TBL_ODEME_TIPI" Type="ActionModel.Store.TBL_ODEME_TIPI" Multiplicity="0..1" />
+    <End Role="TBL_FATURA" Type="ActionModel.Store.TBL_FATURA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_ODEME_TIPI">
+        <PropertyRef Name="TBL_ODEME_TIPI_ID" />
+      </Principal>
+      <Dependent Role="TBL_FATURA">
+        <PropertyRef Name="TBL_ODEME_TIPI_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_FATURA_TBL_PARA_TIPI">
+    <End Role="TBL_PARA_TIPI" Type="ActionModel.Store.TBL_PARA_TIPI" Multiplicity="0..1" />
+    <End Role="TBL_FATURA" Type="ActionModel.Store.TBL_FATURA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_PARA_TIPI">
+        <PropertyRef Name="TBL_PARA_TIPI_ID" />
+      </Principal>
+      <Dependent Role="TBL_FATURA">
+        <PropertyRef Name="TBL_PARA_TIPI_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_FATURA_TBL_PERSONEL">
+    <End Role="TBL_PERSONEL" Type="ActionModel.Store.TBL_PERSONEL" Multiplicity="0..1" />
+    <End Role="TBL_FATURA" Type="ActionModel.Store.TBL_FATURA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_PERSONEL">
+        <PropertyRef Name="TBL_PERSONEL_ID" />
+      </Principal>
+      <Dependent Role="TBL_FATURA">
+        <PropertyRef Name="TBL_PERSONEL_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_FATURA_TBL_SIRKET">
+    <End Role="TBL_SIRKET" Type="ActionModel.Store.TBL_SIRKET" Multiplicity="0..1" />
+    <End Role="TBL_FATURA" Type="ActionModel.Store.TBL_FATURA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_SIRKET">
+        <PropertyRef Name="TBL_SIRKET_ID" />
+      </Principal>
+      <Dependent Role="TBL_FATURA">
+        <PropertyRef Name="TBL_SIRKET_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_FATURA_TBL_SPARIS">
+    <End Role="TBL_SPARIS" Type="ActionModel.Store.TBL_SPARIS" Multiplicity="0..1" />
+    <End Role="TBL_FATURA" Type="ActionModel.Store.TBL_FATURA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_SPARIS">
+        <PropertyRef Name="TBL_SPARIS_ID" />
+      </Principal>
+      <Dependent Role="TBL_FATURA">
+        <PropertyRef Name="TBL_SPARIS_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_GIDER_BAKIYE_TBL_FIS">
+    <End Role="TBL_FIS" Type="ActionModel.Store.TBL_FIS" Multiplicity="0..1" />
+    <End Role="TBL_GIDER_BAKIYE" Type="ActionModel.Store.TBL_GIDER_BAKIYE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_FIS">
+        <PropertyRef Name="TBL_FIS_ID" />
+      </Principal>
+      <Dependent Role="TBL_GIDER_BAKIYE">
+        <PropertyRef Name="TBL_FIS_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_GIDER_BAKIYE_TBL_GIDER">
+    <End Role="TBL_GIDER" Type="ActionModel.Store.TBL_GIDER" Multiplicity="0..1" />
+    <End Role="TBL_GIDER_BAKIYE" Type="ActionModel.Store.TBL_GIDER_BAKIYE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_GIDER">
+        <PropertyRef Name="TBL_GIDER_ID" />
+      </Principal>
+      <Dependent Role="TBL_GIDER_BAKIYE">
+        <PropertyRef Name="TBL_GIDER_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_GIDER_BAKIYE_TBL_PARA_TIPI">
+    <End Role="TBL_PARA_TIPI" Type="ActionModel.Store.TBL_PARA_TIPI" Multiplicity="0..1" />
+    <End Role="TBL_GIDER_BAKIYE" Type="ActionModel.Store.TBL_GIDER_BAKIYE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_PARA_TIPI">
+        <PropertyRef Name="TBL_PARA_TIPI_ID" />
+      </Principal>
+      <Dependent Role="TBL_GIDER_BAKIYE">
+        <PropertyRef Name="TBL_PARA_TIPI_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_GIDER_TBL_PARA_TIPI">
+    <End Role="TBL_PARA_TIPI" Type="ActionModel.Store.TBL_PARA_TIPI" Multiplicity="0..1" />
+    <End Role="TBL_GIDER" Type="ActionModel.Store.TBL_GIDER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_PARA_TIPI">
+        <PropertyRef Name="TBL_PARA_TIPI_ID" />
+      </Principal>
+      <Dependent Role="TBL_GIDER">
+        <PropertyRef Name="TBL_PARA_TIPI_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_KASA_BAKIYE_TBL_FIS">
+    <End Role="TBL_FIS" Type="ActionModel.Store.TBL_FIS" Multiplicity="0..1" />
+    <End Role="TBL_KASA_BAKIYE" Type="ActionModel.Store.TBL_KASA_BAKIYE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_FIS">
+        <PropertyRef Name="TBL_FIS_ID" />
+      </Principal>
+      <Dependent Role="TBL_KASA_BAKIYE">
+        <PropertyRef Name="TBL_FIS_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_KASA_BAKIYE_TBL_KASA">
+    <End Role="TBL_KASA" Type="ActionModel.Store.TBL_KASA" Multiplicity="0..1" />
+    <End Role="TBL_KASA_BAKIYE" Type="ActionModel.Store.TBL_KASA_BAKIYE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_KASA">
+        <PropertyRef Name="TBL_KASA_ID" />
+      </Principal>
+      <Dependent Role="TBL_KASA_BAKIYE">
+        <PropertyRef Name="TBL_KASA_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_KASA_BAKIYE_TBL_PARA_TIPI">
+    <End Role="TBL_PARA_TIPI" Type="ActionModel.Store.TBL_PARA_TIPI" Multiplicity="0..1" />
+    <End Role="TBL_KASA_BAKIYE" Type="ActionModel.Store.TBL_KASA_BAKIYE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_PARA_TIPI">
+        <PropertyRef Name="TBL_PARA_TIPI_ID" />
+      </Principal>
+      <Dependent Role="TBL_KASA_BAKIYE">
+        <PropertyRef Name="TBL_PARA_TIPI_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_KASA_TBL_PARA_TIPI">
+    <End Role="TBL_PARA_TIPI" Type="ActionModel.Store.TBL_PARA_TIPI" Multiplicity="0..1" />
+    <End Role="TBL_KASA" Type="ActionModel.Store.TBL_KASA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_PARA_TIPI">
+        <PropertyRef Name="TBL_PARA_TIPI_ID" />
+      </Principal>
+      <Dependent Role="TBL_KASA">
+        <PropertyRef Name="TBL_PARA_TIPI_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_ODEME_TBL_KASA">
+    <End Role="TBL_KASA" Type="ActionModel.Store.TBL_KASA" Multiplicity="0..1" />
+    <End Role="TBL_ODEME" Type="ActionModel.Store.TBL_ODEME" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_KASA">
+        <PropertyRef Name="TBL_KASA_ID" />
+      </Principal>
+      <Dependent Role="TBL_ODEME">
+        <PropertyRef Name="TBL_KASA_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_ODEME_TBL_ODEME_TIPI">
+    <End Role="TBL_ODEME_TIPI" Type="ActionModel.Store.TBL_ODEME_TIPI" Multiplicity="0..1" />
+    <End Role="TBL_ODEME" Type="ActionModel.Store.TBL_ODEME" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_ODEME_TIPI">
+        <PropertyRef Name="TBL_ODEME_TIPI_ID" />
+      </Principal>
+      <Dependent Role="TBL_ODEME">
+        <PropertyRef Name="TBL_ODEME_TIPI_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_ODEME_TBL_ODEME_TURU">
+    <End Role="TBL_ODEME_TURU" Type="ActionModel.Store.TBL_ODEME_TURU" Multiplicity="0..1" />
+    <End Role="TBL_ODEME" Type="ActionModel.Store.TBL_ODEME" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_ODEME_TURU">
+        <PropertyRef Name="TBL_ODEME_TURU_ID" />
+      </Principal>
+      <Dependent Role="TBL_ODEME">
+        <PropertyRef Name="TBL_ODEME_TURU_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_ODEME_TBL_PARA_TIPI">
+    <End Role="TBL_PARA_TIPI" Type="ActionModel.Store.TBL_PARA_TIPI" Multiplicity="0..1" />
+    <End Role="TBL_ODEME" Type="ActionModel.Store.TBL_ODEME" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_PARA_TIPI">
+        <PropertyRef Name="TBL_PARA_TIPI_ID" />
+      </Principal>
+      <Dependent Role="TBL_ODEME">
+        <PropertyRef Name="TBL_PARA_TIPI_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_ODEME_TBL_SIRKET">
+    <End Role="TBL_SIRKET" Type="ActionModel.Store.TBL_SIRKET" Multiplicity="0..1" />
+    <End Role="TBL_ODEME" Type="ActionModel.Store.TBL_ODEME" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_SIRKET">
+        <PropertyRef Name="TBL_SIRKET_ID" />
+      </Principal>
+      <Dependent Role="TBL_ODEME">
+        <PropertyRef Name="TBL_SIRKET_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_SIRKET_BAKIYE_TBL_FIS">
+    <End Role="TBL_FIS" Type="ActionModel.Store.TBL_FIS" Multiplicity="0..1" />
+    <End Role="TBL_SIRKET_BAKIYE" Type="ActionModel.Store.TBL_SIRKET_BAKIYE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_FIS">
+        <PropertyRef Name="TBL_FIS_ID" />
+      </Principal>
+      <Dependent Role="TBL_SIRKET_BAKIYE">
+        <PropertyRef Name="TBL_FIS_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_SIRKET_BAKIYE_TBL_PARA_TIPI">
+    <End Role="TBL_PARA_TIPI" Type="ActionModel.Store.TBL_PARA_TIPI" Multiplicity="0..1" />
+    <End Role="TBL_SIRKET_BAKIYE" Type="ActionModel.Store.TBL_SIRKET_BAKIYE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_PARA_TIPI">
+        <PropertyRef Name="TBL_PARA_TIPI_ID" />
+      </Principal>
+      <Dependent Role="TBL_SIRKET_BAKIYE">
+        <PropertyRef Name="TBL_PARA_TIPI_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_SIRKET_BAKIYE_TBL_SIRKET">
+    <End Role="TBL_SIRKET" Type="ActionModel.Store.TBL_SIRKET" Multiplicity="0..1" />
+    <End Role="TBL_SIRKET_BAKIYE" Type="ActionModel.Store.TBL_SIRKET_BAKIYE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_SIRKET">
+        <PropertyRef Name="TBL_SIRKET_ID" />
+      </Principal>
+      <Dependent Role="TBL_SIRKET_BAKIYE">
+        <PropertyRef Name="TBL_SIRKET_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_SIRKET_TBL_SIRKET_GRUB">
+    <End Role="TBL_SIRKET_GRUB" Type="ActionModel.Store.TBL_SIRKET_GRUB" Multiplicity="0..1" />
+    <End Role="TBL_SIRKET" Type="ActionModel.Store.TBL_SIRKET" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_SIRKET_GRUB">
+        <PropertyRef Name="TBL_SIRKET_GRUB_ID" />
+      </Principal>
+      <Dependent Role="TBL_SIRKET">
+        <PropertyRef Name="TBL_SIRKET_GRUB_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_SIRKET_TBL_SIRKET_SINIF">
+    <End Role="TBL_SIRKET_SINIF" Type="ActionModel.Store.TBL_SIRKET_SINIF" Multiplicity="0..1" />
+    <End Role="TBL_SIRKET" Type="ActionModel.Store.TBL_SIRKET" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_SIRKET_SINIF">
+        <PropertyRef Name="TBL_SIRKET_SINIF_ID" />
+      </Principal>
+      <Dependent Role="TBL_SIRKET">
+        <PropertyRef Name="TBL_SIRKET_SINIF_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_SIRKET_TBL_SIRKET_TIPI">
+    <End Role="TBL_SIRKET_TIPI" Type="ActionModel.Store.TBL_SIRKET_TIPI" Multiplicity="0..1" />
+    <End Role="TBL_SIRKET" Type="ActionModel.Store.TBL_SIRKET" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_SIRKET_TIPI">
+        <PropertyRef Name="TBL_SIRKET_TIPI_ID" />
+      </Principal>
+      <Dependent Role="TBL_SIRKET">
+        <PropertyRef Name="TBL_SIRKET_TIPI_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_SPARIS_TBL_DEPO">
+    <End Role="TBL_DEPO" Type="ActionModel.Store.TBL_DEPO" Multiplicity="0..1" />
+    <End Role="TBL_SPARIS" Type="ActionModel.Store.TBL_SPARIS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_DEPO">
+        <PropertyRef Name="TBL_DEPO_ID" />
+      </Principal>
+      <Dependent Role="TBL_SPARIS">
+        <PropertyRef Name="TBL_DEPO_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_SPARIS_TBL_KASA">
+    <End Role="TBL_KASA" Type="ActionModel.Store.TBL_KASA" Multiplicity="0..1" />
+    <End Role="TBL_SPARIS" Type="ActionModel.Store.TBL_SPARIS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_KASA">
+        <PropertyRef Name="TBL_KASA_ID" />
+      </Principal>
+      <Dependent Role="TBL_SPARIS">
+        <PropertyRef Name="TBL_KASA_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_SPARIS_TBL_ODEME_TIPI">
+    <End Role="TBL_ODEME_TIPI" Type="ActionModel.Store.TBL_ODEME_TIPI" Multiplicity="0..1" />
+    <End Role="TBL_SPARIS" Type="ActionModel.Store.TBL_SPARIS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_ODEME_TIPI">
+        <PropertyRef Name="TBL_ODEME_TIPI_ID" />
+      </Principal>
+      <Dependent Role="TBL_SPARIS">
+        <PropertyRef Name="TBL_ODEME_TIPI_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_SPARIS_TBL_PARA_TIPI">
+    <End Role="TBL_PARA_TIPI" Type="ActionModel.Store.TBL_PARA_TIPI" Multiplicity="0..1" />
+    <End Role="TBL_SPARIS" Type="ActionModel.Store.TBL_SPARIS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_PARA_TIPI">
+        <PropertyRef Name="TBL_PARA_TIPI_ID" />
+      </Principal>
+      <Dependent Role="TBL_SPARIS">
+        <PropertyRef Name="TBL_PARA_TIPI_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_SPARIS_TBL_PERSONEL">
+    <End Role="TBL_PERSONEL" Type="ActionModel.Store.TBL_PERSONEL" Multiplicity="0..1" />
+    <End Role="TBL_SPARIS" Type="ActionModel.Store.TBL_SPARIS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_PERSONEL">
+        <PropertyRef Name="TBL_PERSONEL_ID" />
+      </Principal>
+      <Dependent Role="TBL_SPARIS">
+        <PropertyRef Name="TBL_PERSONEL_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_SPARIS_TBL_SIRKET">
+    <End Role="TBL_SIRKET" Type="ActionModel.Store.TBL_SIRKET" Multiplicity="0..1" />
+    <End Role="TBL_SPARIS" Type="ActionModel.Store.TBL_SPARIS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_SIRKET">
+        <PropertyRef Name="TBL_SIRKET_ID" />
+      </Principal>
+      <Dependent Role="TBL_SPARIS">
+        <PropertyRef Name="TBL_SIRKET_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_SPARIS_TBL_SPARIS_TURU">
+    <End Role="TBL_SPARIS_TURU" Type="ActionModel.Store.TBL_SPARIS_TURU" Multiplicity="0..1" />
+    <End Role="TBL_SPARIS" Type="ActionModel.Store.TBL_SPARIS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_SPARIS_TURU">
+        <PropertyRef Name="TBL_SPARIS_TURU_ID" />
+      </Principal>
+      <Dependent Role="TBL_SPARIS">
+        <PropertyRef Name="TBL_SPARIS_TURU_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_URUN_CINSI_TBL_URUN_TIPI">
+    <End Role="TBL_URUN_TIPI" Type="ActionModel.Store.TBL_URUN_TIPI" Multiplicity="0..1" />
+    <End Role="TBL_URUN_CINSI" Type="ActionModel.Store.TBL_URUN_CINSI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_URUN_TIPI">
+        <PropertyRef Name="TBL_URUN_TIPI_ID" />
+      </Principal>
+      <Dependent Role="TBL_URUN_CINSI">
+        <PropertyRef Name="TBL_URUN_TIPI_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_URUN_FATURA_TBL_FATURA">
+    <End Role="TBL_FATURA" Type="ActionModel.Store.TBL_FATURA" Multiplicity="0..1" />
+    <End Role="TBL_URUN_FATURA" Type="ActionModel.Store.TBL_URUN_FATURA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_FATURA">
+        <PropertyRef Name="TBL_FATURA_ID" />
+      </Principal>
+      <Dependent Role="TBL_URUN_FATURA">
+        <PropertyRef Name="TBL_FATURA_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_URUN_FATURA_TBL_URUN1">
+    <End Role="TBL_URUN" Type="ActionModel.Store.TBL_URUN" Multiplicity="0..1" />
+    <End Role="TBL_URUN_FATURA" Type="ActionModel.Store.TBL_URUN_FATURA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_URUN">
+        <PropertyRef Name="TBL_URUN_ID" />
+      </Principal>
+      <Dependent Role="TBL_URUN_FATURA">
+        <PropertyRef Name="TBL_URUN_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_URUN_MARKA_TBL_URUN_CINSI">
+    <End Role="TBL_URUN_CINSI" Type="ActionModel.Store.TBL_URUN_CINSI" Multiplicity="1" />
+    <End Role="TBL_URUN_MARKA" Type="ActionModel.Store.TBL_URUN_MARKA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_URUN_CINSI">
+        <PropertyRef Name="TBL_URUN_CINSI_ID" />
+      </Principal>
+      <Dependent Role="TBL_URUN_MARKA">
+        <PropertyRef Name="TBL_URUN_CINSI_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_URUN_MARKA_TBL_URUN_TIPI">
+    <End Role="TBL_URUN_TIPI" Type="ActionModel.Store.TBL_URUN_TIPI" Multiplicity="0..1" />
+    <End Role="TBL_URUN_MARKA" Type="ActionModel.Store.TBL_URUN_MARKA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_URUN_TIPI">
+        <PropertyRef Name="TBL_URUN_TIPI_ID" />
+      </Principal>
+      <Dependent Role="TBL_URUN_MARKA">
+        <PropertyRef Name="TBL_URUN_TIPI_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_URUN_SPARIS_TBL_SPARIS">
+    <End Role="TBL_SPARIS" Type="ActionModel.Store.TBL_SPARIS" Multiplicity="0..1" />
+    <End Role="TBL_URUN_SPARIS" Type="ActionModel.Store.TBL_URUN_SPARIS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_SPARIS">
+        <PropertyRef Name="TBL_SPARIS_ID" />
+      </Principal>
+      <Dependent Role="TBL_URUN_SPARIS">
+        <PropertyRef Name="TBL_SIPARIS_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_URUN_SPARIS_TBL_URUN1">
+    <End Role="TBL_URUN" Type="ActionModel.Store.TBL_URUN" Multiplicity="0..1" />
+    <End Role="TBL_URUN_SPARIS" Type="ActionModel.Store.TBL_URUN_SPARIS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_URUN">
+        <PropertyRef Name="TBL_URUN_ID" />
+      </Principal>
+      <Dependent Role="TBL_URUN_SPARIS">
+        <PropertyRef Name="TBL_URUN_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_URUN_STOK_TBL_DEPO">
+    <End Role="TBL_DEPO" Type="ActionModel.Store.TBL_DEPO" Multiplicity="0..1" />
+    <End Role="TBL_URUN_STOK" Type="ActionModel.Store.TBL_URUN_STOK" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_DEPO">
+        <PropertyRef Name="TBL_DEPO_ID" />
+      </Principal>
+      <Dependent Role="TBL_URUN_STOK">
+        <PropertyRef Name="TBL_DEPO_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_URUN_STOK_TBL_URUN">
+    <End Role="TBL_URUN" Type="ActionModel.Store.TBL_URUN" Multiplicity="0..1" />
+    <End Role="TBL_URUN_STOK" Type="ActionModel.Store.TBL_URUN_STOK" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_URUN">
+        <PropertyRef Name="TBL_URUN_ID" />
+      </Principal>
+      <Dependent Role="TBL_URUN_STOK">
+        <PropertyRef Name="TBL_URUN_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_URUN_TBL_KDV">
+    <End Role="TBL_KDV" Type="ActionModel.Store.TBL_KDV" Multiplicity="0..1" />
+    <End Role="TBL_URUN" Type="ActionModel.Store.TBL_URUN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_KDV">
+        <PropertyRef Name="TBL_KDV_ID" />
+      </Principal>
+      <Dependent Role="TBL_URUN">
+        <PropertyRef Name="TBL_KDV_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_URUN_TBL_PARA_TIPI">
+    <End Role="TBL_PARA_TIPI" Type="ActionModel.Store.TBL_PARA_TIPI" Multiplicity="0..1" />
+    <End Role="TBL_URUN" Type="ActionModel.Store.TBL_URUN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_PARA_TIPI">
+        <PropertyRef Name="TBL_PARA_TIPI_ID" />
+      </Principal>
+      <Dependent Role="TBL_URUN">
+        <PropertyRef Name="TBL_PARA_TIPI_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_URUN_TBL_URUN_BIRIM">
+    <End Role="TBL_URUN_BIRIM" Type="ActionModel.Store.TBL_URUN_BIRIM" Multiplicity="0..1" />
+    <End Role="TBL_URUN" Type="ActionModel.Store.TBL_URUN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_URUN_BIRIM">
+        <PropertyRef Name="TBL_URUN_BIRIM_ID" />
+      </Principal>
+      <Dependent Role="TBL_URUN">
+        <PropertyRef Name="TBL_URUN_BIRIM_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_URUN_TBL_URUN_CINSI">
+    <End Role="TBL_URUN_CINSI" Type="ActionModel.Store.TBL_URUN_CINSI" Multiplicity="0..1" />
+    <End Role="TBL_URUN" Type="ActionModel.Store.TBL_URUN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_URUN_CINSI">
+        <PropertyRef Name="TBL_URUN_CINSI_ID" />
+      </Principal>
+      <Dependent Role="TBL_URUN">
+        <PropertyRef Name="TBL_URUN_CINSI_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_URUN_TBL_URUN_MARKA">
+    <End Role="TBL_URUN_MARKA" Type="ActionModel.Store.TBL_URUN_MARKA" Multiplicity="0..1" />
+    <End Role="TBL_URUN" Type="ActionModel.Store.TBL_URUN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_URUN_MARKA">
+        <PropertyRef Name="TBL_URUN_MARKA_ID" />
+      </Principal>
+      <Dependent Role="TBL_URUN">
+        <PropertyRef Name="TBL_URUN_MARKA_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_URUN_TBL_URUN_TIPI">
+    <End Role="TBL_URUN_TIPI" Type="ActionModel.Store.TBL_URUN_TIPI" Multiplicity="0..1" />
+    <End Role="TBL_URUN" Type="ActionModel.Store.TBL_URUN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_URUN_TIPI">
+        <PropertyRef Name="TBL_URUN_TIPI_ID" />
+      </Principal>
+      <Dependent Role="TBL_URUN">
+        <PropertyRef Name="TBL_URUN_TIPI_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
+</edmx:StorageModels>
+<!-- CSDL content -->
+<edmx:ConceptualModels>
+<Schema Namespace="ActionModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="ActionEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="TBL_BANKA" EntityType="ActionModel.TBL_BANKA" />
+    <EntitySet Name="TBL_BANKA_BAKIYE" EntityType="ActionModel.TBL_BANKA_BAKIYE" />
+    <EntitySet Name="TBL_DEPO" EntityType="ActionModel.TBL_DEPO" />
+    <EntitySet Name="TBL_DEPO_ISLEM" EntityType="ActionModel.TBL_DEPO_ISLEM" />
+    <EntitySet Name="TBL_DEPO_TRANSFER" EntityType="ActionModel.TBL_DEPO_TRANSFER" />
+    <EntitySet Name="TBL_FATURA" EntityType="ActionModel.TBL_FATURA" />
+    <EntitySet Name="TBL_FATURA_TURU" EntityType="ActionModel.TBL_FATURA_TURU" />
+    <EntitySet Name="TBL_FIS" EntityType="ActionModel.TBL_FIS" />
+    <EntitySet Name="TBL_GIDER" EntityType="ActionModel.TBL_GIDER" />
+    <EntitySet Name="TBL_GIDER_BAKIYE" EntityType="ActionModel.TBL_GIDER_BAKIYE" />
+    <EntitySet Name="TBL_KASA" EntityType="ActionModel.TBL_KASA" />
+    <EntitySet Name="TBL_KASA_BAKIYE" EntityType="ActionModel.TBL_KASA_BAKIYE" />
+    <EntitySet Name="TBL_KDV" EntityType="ActionModel.TBL_KDV" />
+    <EntitySet Name="TBL_ODEME" EntityType="ActionModel.TBL_ODEME" />
+    <EntitySet Name="TBL_ODEME_TIPI" EntityType="ActionModel.TBL_ODEME_TIPI" />
+    <EntitySet Name="TBL_ODEME_TURU" EntityType="ActionModel.TBL_ODEME_TURU" />
+    <EntitySet Name="TBL_PARA_TIPI" EntityType="ActionModel.TBL_PARA_TIPI" />
+    <EntitySet Name="TBL_PERSONEL" EntityType="ActionModel.TBL_PERSONEL" />
+    <EntitySet Name="TBL_SIRKET" EntityType="ActionModel.TBL_SIRKET" />
+    <EntitySet Name="TBL_SIRKET_BAKIYE" EntityType="ActionModel.TBL_SIRKET_BAKIYE" />
+    <EntitySet Name="TBL_SIRKET_GRUB" EntityType="ActionModel.TBL_SIRKET_GRUB" />
+    <EntitySet Name="TBL_SIRKET_SINIF" EntityType="ActionModel.TBL_SIRKET_SINIF" />
+    <EntitySet Name="TBL_SIRKET_TIPI" EntityType="ActionModel.TBL_SIRKET_TIPI" />
+    <EntitySet Name="TBL_SPARIS" EntityType="ActionModel.TBL_SPARIS" />
+    <EntitySet Name="TBL_SPARIS_TURU" EntityType="ActionModel.TBL_SPARIS_TURU" />
+    <EntitySet Name="TBL_URUN" EntityType="ActionModel.TBL_URUN" />
+    <EntitySet Name="TBL_URUN_BIRIM" EntityType="ActionModel.TBL_URUN_BIRIM" />
+    <EntitySet Name="TBL_URUN_CINSI" EntityType="ActionModel.TBL_URUN_CINSI" />
+    <EntitySet Name="TBL_URUN_FATURA" EntityType="ActionModel.TBL_URUN_FATURA" />
+    <EntitySet Name="TBL_URUN_MARKA" EntityType="ActionModel.TBL_URUN_MARKA" />
+    <EntitySet Name="TBL_URUN_SPARIS" EntityType="ActionModel.TBL_URUN_SPARIS" />
+    <EntitySet Name="TBL_URUN_STOK" EntityType="ActionModel.TBL_URUN_STOK" />
+    <EntitySet Name="TBL_URUN_TIPI" EntityType="ActionModel.TBL_URUN_TIPI" />
+    <AssociationSet Name="FK_TBL_BANKA_BAKIYE_TBL_BANKA" Association="ActionModel.FK_TBL_BANKA_BAKIYE_TBL_BANKA">
+      <End Role="TBL_BANKA" EntitySet="TBL_BANKA" />
+      <End Role="TBL_BANKA_BAKIYE" EntitySet="TBL_BANKA_BAKIYE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_BANKA_TBL_PARA_TIPI" Association="ActionModel.FK_TBL_BANKA_TBL_PARA_TIPI">
+      <End Role="TBL_PARA_TIPI" EntitySet="TBL_PARA_TIPI" />
+      <End Role="TBL_BANKA" EntitySet="TBL_BANKA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_BANKA_BAKIYE_TBL_FIS" Association="ActionModel.FK_TBL_BANKA_BAKIYE_TBL_FIS">
+      <End Role="TBL_FIS" EntitySet="TBL_FIS" />
+      <End Role="TBL_BANKA_BAKIYE" EntitySet="TBL_BANKA_BAKIYE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_BANKA_BAKIYE_TBL_PARA_TIPI" Association="ActionModel.FK_TBL_BANKA_BAKIYE_TBL_PARA_TIPI">
+      <End Role="TBL_PARA_TIPI" EntitySet="TBL_PARA_TIPI" />
+      <End Role="TBL_BANKA_BAKIYE" EntitySet="TBL_BANKA_BAKIYE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_DEPO_ISLEM_TBL_DEPO" Association="ActionModel.FK_TBL_DEPO_ISLEM_TBL_DEPO">
+      <End Role="TBL_DEPO" EntitySet="TBL_DEPO" />
+      <End Role="TBL_DEPO_ISLEM" EntitySet="TBL_DEPO_ISLEM" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_FATURA_TBL_DEPO" Association="ActionModel.FK_TBL_FATURA_TBL_DEPO">
+      <End Role="TBL_DEPO" EntitySet="TBL_DEPO" />
+      <End Role="TBL_FATURA" EntitySet="TBL_FATURA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_SPARIS_TBL_DEPO" Association="ActionModel.FK_TBL_SPARIS_TBL_DEPO">
+      <End Role="TBL_DEPO" EntitySet="TBL_DEPO" />
+      <End Role="TBL_SPARIS" EntitySet="TBL_SPARIS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_URUN_STOK_TBL_DEPO" Association="ActionModel.FK_TBL_URUN_STOK_TBL_DEPO">
+      <End Role="TBL_DEPO" EntitySet="TBL_DEPO" />
+      <End Role="TBL_URUN_STOK" EntitySet="TBL_URUN_STOK" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_DEPO_ISLEM_TBL_URUN" Association="ActionModel.FK_TBL_DEPO_ISLEM_TBL_URUN">
+      <End Role="TBL_URUN" EntitySet="TBL_URUN" />
+      <End Role="TBL_DEPO_ISLEM" EntitySet="TBL_DEPO_ISLEM" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_DEPO_TRANSFER_TBL_URUN" Association="ActionModel.FK_TBL_DEPO_TRANSFER_TBL_URUN">
+      <End Role="TBL_URUN" EntitySet="TBL_URUN" />
+      <End Role="TBL_DEPO_TRANSFER" EntitySet="TBL_DEPO_TRANSFER" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_FATURA_TBL_FATURA_TURU" Association="ActionModel.FK_TBL_FATURA_TBL_FATURA_TURU">
+      <End Role="TBL_FATURA_TURU" EntitySet="TBL_FATURA_TURU" />
+      <End Role="TBL_FATURA" EntitySet="TBL_FATURA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_FATURA_TBL_KASA" Association="ActionModel.FK_TBL_FATURA_TBL_KASA">
+      <End Role="TBL_KASA" EntitySet="TBL_KASA" />
+      <End Role="TBL_FATURA" EntitySet="TBL_FATURA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_FATURA_TBL_ODEME_TIPI" Association="ActionModel.FK_TBL_FATURA_TBL_ODEME_TIPI">
+      <End Role="TBL_ODEME_TIPI" EntitySet="TBL_ODEME_TIPI" />
+      <End Role="TBL_FATURA" EntitySet="TBL_FATURA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_FATURA_TBL_PARA_TIPI" Association="ActionModel.FK_TBL_FATURA_TBL_PARA_TIPI">
+      <End Role="TBL_PARA_TIPI" EntitySet="TBL_PARA_TIPI" />
+      <End Role="TBL_FATURA" EntitySet="TBL_FATURA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_FATURA_TBL_PERSONEL" Association="ActionModel.FK_TBL_FATURA_TBL_PERSONEL">
+      <End Role="TBL_PERSONEL" EntitySet="TBL_PERSONEL" />
+      <End Role="TBL_FATURA" EntitySet="TBL_FATURA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_FATURA_TBL_SIRKET" Association="ActionModel.FK_TBL_FATURA_TBL_SIRKET">
+      <End Role="TBL_SIRKET" EntitySet="TBL_SIRKET" />
+      <End Role="TBL_FATURA" EntitySet="TBL_FATURA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_FATURA_TBL_SPARIS" Association="ActionModel.FK_TBL_FATURA_TBL_SPARIS">
+      <End Role="TBL_SPARIS" EntitySet="TBL_SPARIS" />
+      <End Role="TBL_FATURA" EntitySet="TBL_FATURA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_URUN_FATURA_TBL_FATURA" Association="ActionModel.FK_TBL_URUN_FATURA_TBL_FATURA">
+      <End Role="TBL_FATURA" EntitySet="TBL_FATURA" />
+      <End Role="TBL_URUN_FATURA" EntitySet="TBL_URUN_FATURA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_GIDER_BAKIYE_TBL_FIS" Association="ActionModel.FK_TBL_GIDER_BAKIYE_TBL_FIS">
+      <End Role="TBL_FIS" EntitySet="TBL_FIS" />
+      <End Role="TBL_GIDER_BAKIYE" EntitySet="TBL_GIDER_BAKIYE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_KASA_BAKIYE_TBL_FIS" Association="ActionModel.FK_TBL_KASA_BAKIYE_TBL_FIS">
+      <End Role="TBL_FIS" EntitySet="TBL_FIS" />
+      <End Role="TBL_KASA_BAKIYE" EntitySet="TBL_KASA_BAKIYE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_SIRKET_BAKIYE_TBL_FIS" Association="ActionModel.FK_TBL_SIRKET_BAKIYE_TBL_FIS">
+      <End Role="TBL_FIS" EntitySet="TBL_FIS" />
+      <End Role="TBL_SIRKET_BAKIYE" EntitySet="TBL_SIRKET_BAKIYE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_GIDER_BAKIYE_TBL_GIDER" Association="ActionModel.FK_TBL_GIDER_BAKIYE_TBL_GIDER">
+      <End Role="TBL_GIDER" EntitySet="TBL_GIDER" />
+      <End Role="TBL_GIDER_BAKIYE" EntitySet="TBL_GIDER_BAKIYE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_GIDER_TBL_PARA_TIPI" Association="ActionModel.FK_TBL_GIDER_TBL_PARA_TIPI">
+      <End Role="TBL_PARA_TIPI" EntitySet="TBL_PARA_TIPI" />
+      <End Role="TBL_GIDER" EntitySet="TBL_GIDER" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_GIDER_BAKIYE_TBL_PARA_TIPI" Association="ActionModel.FK_TBL_GIDER_BAKIYE_TBL_PARA_TIPI">
+      <End Role="TBL_PARA_TIPI" EntitySet="TBL_PARA_TIPI" />
+      <End Role="TBL_GIDER_BAKIYE" EntitySet="TBL_GIDER_BAKIYE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_KASA_BAKIYE_TBL_KASA" Association="ActionModel.FK_TBL_KASA_BAKIYE_TBL_KASA">
+      <End Role="TBL_KASA" EntitySet="TBL_KASA" />
+      <End Role="TBL_KASA_BAKIYE" EntitySet="TBL_KASA_BAKIYE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_KASA_TBL_PARA_TIPI" Association="ActionModel.FK_TBL_KASA_TBL_PARA_TIPI">
+      <End Role="TBL_PARA_TIPI" EntitySet="TBL_PARA_TIPI" />
+      <End Role="TBL_KASA" EntitySet="TBL_KASA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_ODEME_TBL_KASA" Association="ActionModel.FK_TBL_ODEME_TBL_KASA">
+      <End Role="TBL_KASA" EntitySet="TBL_KASA" />
+      <End Role="TBL_ODEME" EntitySet="TBL_ODEME" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_SPARIS_TBL_KASA" Association="ActionModel.FK_TBL_SPARIS_TBL_KASA">
+      <End Role="TBL_KASA" EntitySet="TBL_KASA" />
+      <End Role="TBL_SPARIS" EntitySet="TBL_SPARIS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_KASA_BAKIYE_TBL_PARA_TIPI" Association="ActionModel.FK_TBL_KASA_BAKIYE_TBL_PARA_TIPI">
+      <End Role="TBL_PARA_TIPI" EntitySet="TBL_PARA_TIPI" />
+      <End Role="TBL_KASA_BAKIYE" EntitySet="TBL_KASA_BAKIYE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_URUN_TBL_KDV" Association="ActionModel.FK_TBL_URUN_TBL_KDV">
+      <End Role="TBL_KDV" EntitySet="TBL_KDV" />
+      <End Role="TBL_URUN" EntitySet="TBL_URUN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_ODEME_TBL_ODEME_TIPI" Association="ActionModel.FK_TBL_ODEME_TBL_ODEME_TIPI">
+      <End Role="TBL_ODEME_TIPI" EntitySet="TBL_ODEME_TIPI" />
+      <End Role="TBL_ODEME" EntitySet="TBL_ODEME" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_ODEME_TBL_ODEME_TURU" Association="ActionModel.FK_TBL_ODEME_TBL_ODEME_TURU">
+      <End Role="TBL_ODEME_TURU" EntitySet="TBL_ODEME_TURU" />
+      <End Role="TBL_ODEME" EntitySet="TBL_ODEME" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_ODEME_TBL_PARA_TIPI" Association="ActionModel.FK_TBL_ODEME_TBL_PARA_TIPI">
+      <End Role="TBL_PARA_TIPI" EntitySet="TBL_PARA_TIPI" />
+      <End Role="TBL_ODEME" EntitySet="TBL_ODEME" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_ODEME_TBL_SIRKET" Association="ActionModel.FK_TBL_ODEME_TBL_SIRKET">
+      <End Role="TBL_SIRKET" EntitySet="TBL_SIRKET" />
+      <End Role="TBL_ODEME" EntitySet="TBL_ODEME" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_SPARIS_TBL_ODEME_TIPI" Association="ActionModel.FK_TBL_SPARIS_TBL_ODEME_TIPI">
+      <End Role="TBL_ODEME_TIPI" EntitySet="TBL_ODEME_TIPI" />
+      <End Role="TBL_SPARIS" EntitySet="TBL_SPARIS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_SIRKET_BAKIYE_TBL_PARA_TIPI" Association="ActionModel.FK_TBL_SIRKET_BAKIYE_TBL_PARA_TIPI">
+      <End Role="TBL_PARA_TIPI" EntitySet="TBL_PARA_TIPI" />
+      <End Role="TBL_SIRKET_BAKIYE" EntitySet="TBL_SIRKET_BAKIYE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_SPARIS_TBL_PARA_TIPI" Association="ActionModel.FK_TBL_SPARIS_TBL_PARA_TIPI">
+      <End Role="TBL_PARA_TIPI" EntitySet="TBL_PARA_TIPI" />
+      <End Role="TBL_SPARIS" EntitySet="TBL_SPARIS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_URUN_TBL_PARA_TIPI" Association="ActionModel.FK_TBL_URUN_TBL_PARA_TIPI">
+      <End Role="TBL_PARA_TIPI" EntitySet="TBL_PARA_TIPI" />
+      <End Role="TBL_URUN" EntitySet="TBL_URUN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_SPARIS_TBL_PERSONEL" Association="ActionModel.FK_TBL_SPARIS_TBL_PERSONEL">
+      <End Role="TBL_PERSONEL" EntitySet="TBL_PERSONEL" />
+      <End Role="TBL_SPARIS" EntitySet="TBL_SPARIS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_SIRKET_BAKIYE_TBL_SIRKET" Association="ActionModel.FK_TBL_SIRKET_BAKIYE_TBL_SIRKET">
+      <End Role="TBL_SIRKET" EntitySet="TBL_SIRKET" />
+      <End Role="TBL_SIRKET_BAKIYE" EntitySet="TBL_SIRKET_BAKIYE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_SIRKET_TBL_SIRKET_GRUB" Association="ActionModel.FK_TBL_SIRKET_TBL_SIRKET_GRUB">
+      <End Role="TBL_SIRKET_GRUB" EntitySet="TBL_SIRKET_GRUB" />
+      <End Role="TBL_SIRKET" EntitySet="TBL_SIRKET" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_SIRKET_TBL_SIRKET_SINIF" Association="ActionModel.FK_TBL_SIRKET_TBL_SIRKET_SINIF">
+      <End Role="TBL_SIRKET_SINIF" EntitySet="TBL_SIRKET_SINIF" />
+      <End Role="TBL_SIRKET" EntitySet="TBL_SIRKET" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_SIRKET_TBL_SIRKET_TIPI" Association="ActionModel.FK_TBL_SIRKET_TBL_SIRKET_TIPI">
+      <End Role="TBL_SIRKET_TIPI" EntitySet="TBL_SIRKET_TIPI" />
+      <End Role="TBL_SIRKET" EntitySet="TBL_SIRKET" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_SPARIS_TBL_SIRKET" Association="ActionModel.FK_TBL_SPARIS_TBL_SIRKET">
+      <End Role="TBL_SIRKET" EntitySet="TBL_SIRKET" />
+      <End Role="TBL_SPARIS" EntitySet="TBL_SPARIS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_SPARIS_TBL_SPARIS_TURU" Association="ActionModel.FK_TBL_SPARIS_TBL_SPARIS_TURU">
+      <End Role="TBL_SPARIS_TURU" EntitySet="TBL_SPARIS_TURU" />
+      <End Role="TBL_SPARIS" EntitySet="TBL_SPARIS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_URUN_SPARIS_TBL_SPARIS" Association="ActionModel.FK_TBL_URUN_SPARIS_TBL_SPARIS">
+      <End Role="TBL_SPARIS" EntitySet="TBL_SPARIS" />
+      <End Role="TBL_URUN_SPARIS" EntitySet="TBL_URUN_SPARIS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_URUN_FATURA_TBL_URUN1" Association="ActionModel.FK_TBL_URUN_FATURA_TBL_URUN1">
+      <End Role="TBL_URUN" EntitySet="TBL_URUN" />
+      <End Role="TBL_URUN_FATURA" EntitySet="TBL_URUN_FATURA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_URUN_SPARIS_TBL_URUN1" Association="ActionModel.FK_TBL_URUN_SPARIS_TBL_URUN1">
+      <End Role="TBL_URUN" EntitySet="TBL_URUN" />
+      <End Role="TBL_URUN_SPARIS" EntitySet="TBL_URUN_SPARIS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_URUN_STOK_TBL_URUN" Association="ActionModel.FK_TBL_URUN_STOK_TBL_URUN">
+      <End Role="TBL_URUN" EntitySet="TBL_URUN" />
+      <End Role="TBL_URUN_STOK" EntitySet="TBL_URUN_STOK" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_URUN_TBL_URUN_BIRIM" Association="ActionModel.FK_TBL_URUN_TBL_URUN_BIRIM">
+      <End Role="TBL_URUN_BIRIM" EntitySet="TBL_URUN_BIRIM" />
+      <End Role="TBL_URUN" EntitySet="TBL_URUN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_URUN_TBL_URUN_CINSI" Association="ActionModel.FK_TBL_URUN_TBL_URUN_CINSI">
+      <End Role="TBL_URUN_CINSI" EntitySet="TBL_URUN_CINSI" />
+      <End Role="TBL_URUN" EntitySet="TBL_URUN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_URUN_TBL_URUN_MARKA" Association="ActionModel.FK_TBL_URUN_TBL_URUN_MARKA">
+      <End Role="TBL_URUN_MARKA" EntitySet="TBL_URUN_MARKA" />
+      <End Role="TBL_URUN" EntitySet="TBL_URUN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_URUN_TBL_URUN_TIPI" Association="ActionModel.FK_TBL_URUN_TBL_URUN_TIPI">
+      <End Role="TBL_URUN_TIPI" EntitySet="TBL_URUN_TIPI" />
+      <End Role="TBL_URUN" EntitySet="TBL_URUN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_URUN_CINSI_TBL_URUN_TIPI" Association="ActionModel.FK_TBL_URUN_CINSI_TBL_URUN_TIPI">
+      <End Role="TBL_URUN_TIPI" EntitySet="TBL_URUN_TIPI" />
+      <End Role="TBL_URUN_CINSI" EntitySet="TBL_URUN_CINSI" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_URUN_MARKA_TBL_URUN_CINSI" Association="ActionModel.FK_TBL_URUN_MARKA_TBL_URUN_CINSI">
+      <End Role="TBL_URUN_CINSI" EntitySet="TBL_URUN_CINSI" />
+      <End Role="TBL_URUN_MARKA" EntitySet="TBL_URUN_MARKA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_URUN_MARKA_TBL_URUN_TIPI" Association="ActionModel.FK_TBL_URUN_MARKA_TBL_URUN_TIPI">
+      <End Role="TBL_URUN_TIPI" EntitySet="TBL_URUN_TIPI" />
+      <End Role="TBL_URUN_MARKA" EntitySet="TBL_URUN_MARKA" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="TBL_BANKA">
+    <Key>
+      <PropertyRef Name="TBL_BANKA_ID" />
+    </Key>
+    <Property Name="TBL_BANKA_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="BANKA_ADI" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="BANKA_SUBE_ADI" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="BANKA_IBAN_NO" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="TBL_PARA_TIPI_ID" Type="Int32" />
+    <Property Name="BANKA_TELEFON_1" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="BANKA_TELEFON_2" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="BANKA_ADRES" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="BANKA_IL" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="BANKA_ILCE" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="BANKA_MAIL" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="BANKA_ACIKLAMA" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="YEDEK" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="TBL_BANKA_BAKIYE" Relationship="ActionModel.FK_TBL_BANKA_BAKIYE_TBL_BANKA" FromRole="TBL_BANKA" ToRole="TBL_BANKA_BAKIYE" />
+    <NavigationProperty Name="TBL_PARA_TIPI" Relationship="ActionModel.FK_TBL_BANKA_TBL_PARA_TIPI" FromRole="TBL_BANKA" ToRole="TBL_PARA_TIPI" />
+  </EntityType>
+  <EntityType Name="TBL_BANKA_BAKIYE">
+    <Key>
+      <PropertyRef Name="TBL_BANKA_BAKIYE_ID" />
+    </Key>
+    <Property Name="TBL_BANKA_BAKIYE_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="TBL_BANKA_ID" Type="Int32" />
+    <Property Name="TBL_PARA_TIPI_ID" Type="Int32" />
+    <Property Name="TBL_FIS_ID" Type="Int32" />
+    <Property Name="KUR" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="TARIH" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="TUTAR" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ACIKLAMA" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="YEDEK" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="TBL_BANKA" Relationship="ActionModel.FK_TBL_BANKA_BAKIYE_TBL_BANKA" FromRole="TBL_BANKA_BAKIYE" ToRole="TBL_BANKA" />
+    <NavigationProperty Name="TBL_FIS" Relationship="ActionModel.FK_TBL_BANKA_BAKIYE_TBL_FIS" FromRole="TBL_BANKA_BAKIYE" ToRole="TBL_FIS" />
+    <NavigationProperty Name="TBL_PARA_TIPI" Relationship="ActionModel.FK_TBL_BANKA_BAKIYE_TBL_PARA_TIPI" FromRole="TBL_BANKA_BAKIYE" ToRole="TBL_PARA_TIPI" />
+  </EntityType>
+  <EntityType Name="TBL_DEPO">
+    <Key>
+      <PropertyRef Name="TBL_DEPO_ID" />
+    </Key>
+    <Property Name="TBL_DEPO_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="DEPO_ADI" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="DEPO_ACIKLAMA" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="YEDEK" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="TBL_DEPO_ISLEM" Relationship="ActionModel.FK_TBL_DEPO_ISLEM_TBL_DEPO" FromRole="TBL_DEPO" ToRole="TBL_DEPO_ISLEM" />
+    <NavigationProperty Name="TBL_FATURA" Relationship="ActionModel.FK_TBL_FATURA_TBL_DEPO" FromRole="TBL_DEPO" ToRole="TBL_FATURA" />
+    <NavigationProperty Name="TBL_SPARIS" Relationship="ActionModel.FK_TBL_SPARIS_TBL_DEPO" FromRole="TBL_DEPO" ToRole="TBL_SPARIS" />
+    <NavigationProperty Name="TBL_URUN_STOK" Relationship="ActionModel.FK_TBL_URUN_STOK_TBL_DEPO" FromRole="TBL_DEPO" ToRole="TBL_URUN_STOK" />
+  </EntityType>
+  <EntityType Name="TBL_DEPO_ISLEM">
+    <Key>
+      <PropertyRef Name="TBL_DEPO_ISLEM_ID" />
+    </Key>
+    <Property Name="TBL_DEPO_ISLEM_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="TBL_DEPO_ID" Type="Int32" />
+    <Property Name="TBL_URUN_ID" Type="Int32" />
+    <Property Name="DEPO_ISLEM_ADI" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="URUN_MIKTAR" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="DEPO_ONAY" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ACIKLAMA" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="YEDEK" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="TBL_DEPO" Relationship="ActionModel.FK_TBL_DEPO_ISLEM_TBL_DEPO" FromRole="TBL_DEPO_ISLEM" ToRole="TBL_DEPO" />
+    <NavigationProperty Name="TBL_URUN" Relationship="ActionModel.FK_TBL_DEPO_ISLEM_TBL_URUN" FromRole="TBL_DEPO_ISLEM" ToRole="TBL_URUN" />
+  </EntityType>
+  <EntityType Name="TBL_DEPO_TRANSFER">
+    <Key>
+      <PropertyRef Name="TBL_DEPO_TRANSFER_ID" />
+    </Key>
+    <Property Name="TBL_DEPO_TRANSFER_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="DEPO_TRANSFER_ADI" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="DEPO_TRANSFER_TARIHI" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="DEPO_TRANSFER_NEREDEN" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="DEPO_TRANSFER_NEREYE" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="TBL_URUN_ID" Type="Int32" />
+    <Property Name="DEPO_TRANSFER_ACIKLAMA" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="YEDEK" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="TBL_URUN" Relationship="ActionModel.FK_TBL_DEPO_TRANSFER_TBL_URUN" FromRole="TBL_DEPO_TRANSFER" ToRole="TBL_URUN" />
+  </EntityType>
+  <EntityType Name="TBL_FATURA">
+    <Key>
+      <PropertyRef Name="TBL_FATURA_ID" />
+    </Key>
+    <Property Name="TBL_FATURA_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="TBL_SIRKET_ID" Type="Int32" />
+    <Property Name="TBL_FATURA_TURU_ID" Type="Int32" />
+    <Property Name="FATURA_TARIH" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="FATURA_VADE_TARIH" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="FATURA_FATURA_SERI_NO" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="TBL_PARA_TIPI_ID" Type="Int32" />
+    <Property Name="TBL_ODEME_TIPI_ID" Type="Int32" />
+    <Property Name="TBL_KASA_ID" Type="Int32" />
+    <Property Name="TBL_DEPO_ID" Type="Int32" />
+    <Property Name="TBL_PERSONEL_ID" Type="Int32" />
+    <Property Name="ACIKLAMA" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="YEDEK" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="TBL_SPARIS_ID" Type="Int32" />
+    <NavigationProperty Name="TBL_DEPO" Relationship="ActionModel.FK_TBL_FATURA_TBL_DEPO" FromRole="TBL_FATURA" ToRole="TBL_DEPO" />
+    <NavigationProperty Name="TBL_FATURA_TURU" Relationship="ActionModel.FK_TBL_FATURA_TBL_FATURA_TURU" FromRole="TBL_FATURA" ToRole="TBL_FATURA_TURU" />
+    <NavigationProperty Name="TBL_KASA" Relationship="ActionModel.FK_TBL_FATURA_TBL_KASA" FromRole="TBL_FATURA" ToRole="TBL_KASA" />
+    <NavigationProperty Name="TBL_ODEME_TIPI" Relationship="ActionModel.FK_TBL_FATURA_TBL_ODEME_TIPI" FromRole="TBL_FATURA" ToRole="TBL_ODEME_TIPI" />
+    <NavigationProperty Name="TBL_PARA_TIPI" Relationship="ActionModel.FK_TBL_FATURA_TBL_PARA_TIPI" FromRole="TBL_FATURA" ToRole="TBL_PARA_TIPI" />
+    <NavigationProperty Name="TBL_PERSONEL" Relationship="ActionModel.FK_TBL_FATURA_TBL_PERSONEL" FromRole="TBL_FATURA" ToRole="TBL_PERSONEL" />
+    <NavigationProperty Name="TBL_SIRKET" Relationship="ActionModel.FK_TBL_FATURA_TBL_SIRKET" FromRole="TBL_FATURA" ToRole="TBL_SIRKET" />
+    <NavigationProperty Name="TBL_SPARIS" Relationship="ActionModel.FK_TBL_FATURA_TBL_SPARIS" FromRole="TBL_FATURA" ToRole="TBL_SPARIS" />
+    <NavigationProperty Name="TBL_URUN_FATURA" Relationship="ActionModel.FK_TBL_URUN_FATURA_TBL_FATURA" FromRole="TBL_FATURA" ToRole="TBL_URUN_FATURA" />
+  </EntityType>
+  <EntityType Name="TBL_FATURA_TURU">
+    <Key>
+      <PropertyRef Name="TBL_FATURA_TURU_ID" />
+    </Key>
+    <Property Name="TBL_FATURA_TURU_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="FATURA_TURU_ADI" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="FATURA_TURU_ACIKLAMA" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="YEDEK" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="TBL_FATURA" Relationship="ActionModel.FK_TBL_FATURA_TBL_FATURA_TURU" FromRole="TBL_FATURA_TURU" ToRole="TBL_FATURA" />
+  </EntityType>
+  <EntityType Name="TBL_FIS">
+    <Key>
+      <PropertyRef Name="TBL_FIS_ID" />
+    </Key>
+    <Property Name="TBL_FIS_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="ACIKLAMA" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="YEDEK" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="TBL_BANKA_BAKIYE" Relationship="ActionModel.FK_TBL_BANKA_BAKIYE_TBL_FIS" FromRole="TBL_FIS" ToRole="TBL_BANKA_BAKIYE" />
+    <NavigationProperty Name="TBL_GIDER_BAKIYE" Relationship="ActionModel.FK_TBL_GIDER_BAKIYE_TBL_FIS" FromRole="TBL_FIS" ToRole="TBL_GIDER_BAKIYE" />
+    <NavigationProperty Name="TBL_KASA_BAKIYE" Relationship="ActionModel.FK_TBL_KASA_BAKIYE_TBL_FIS" FromRole="TBL_FIS" ToRole="TBL_KASA_BAKIYE" />
+    <NavigationProperty Name="TBL_SIRKET_BAKIYE" Relationship="ActionModel.FK_TBL_SIRKET_BAKIYE_TBL_FIS" FromRole="TBL_FIS" ToRole="TBL_SIRKET_BAKIYE" />
+  </EntityType>
+  <EntityType Name="TBL_GIDER">
+    <Key>
+      <PropertyRef Name="TBL_GIDER_ID" />
+    </Key>
+    <Property Name="TBL_GIDER_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="TBL_PARA_TIPI_ID" Type="Int32" />
+    <Property Name="GİDER_ADI" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="GİDER_ACIKLAMA" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="YEDEK" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="TBL_GIDER_BAKIYE" Relationship="ActionModel.FK_TBL_GIDER_BAKIYE_TBL_GIDER" FromRole="TBL_GIDER" ToRole="TBL_GIDER_BAKIYE" />
+    <NavigationProperty Name="TBL_PARA_TIPI" Relationship="ActionModel.FK_TBL_GIDER_TBL_PARA_TIPI" FromRole="TBL_GIDER" ToRole="TBL_PARA_TIPI" />
+  </EntityType>
+  <EntityType Name="TBL_GIDER_BAKIYE">
+    <Key>
+      <PropertyRef Name="TBL_GIDER_BAKIYE_ID" />
+    </Key>
+    <Property Name="TBL_GIDER_BAKIYE_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="TBL_GIDER_ID" Type="Int32" />
+    <Property Name="TBL_PARA_TIPI_ID" Type="Int32" />
+    <Property Name="TBL_FIS_ID" Type="Int32" />
+    <Property Name="KUR" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="TARIH" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="TUTAR" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ACIKLAMA" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="YEDEK" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="TBL_FIS" Relationship="ActionModel.FK_TBL_GIDER_BAKIYE_TBL_FIS" FromRole="TBL_GIDER_BAKIYE" ToRole="TBL_FIS" />
+    <NavigationProperty Name="TBL_GIDER" Relationship="ActionModel.FK_TBL_GIDER_BAKIYE_TBL_GIDER" FromRole="TBL_GIDER_BAKIYE" ToRole="TBL_GIDER" />
+    <NavigationProperty Name="TBL_PARA_TIPI" Relationship="ActionModel.FK_TBL_GIDER_BAKIYE_TBL_PARA_TIPI" FromRole="TBL_GIDER_BAKIYE" ToRole="TBL_PARA_TIPI" />
+  </EntityType>
+  <EntityType Name="TBL_KASA">
+    <Key>
+      <PropertyRef Name="TBL_KASA_ID" />
+    </Key>
+    <Property Name="TBL_KASA_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="TBL_PARA_TIPI_ID" Type="Int32" />
+    <Property Name="KASA_ADI" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="KASA_ACIKLAMA" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="YEDEK" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="TBL_FATURA" Relationship="ActionModel.FK_TBL_FATURA_TBL_KASA" FromRole="TBL_KASA" ToRole="TBL_FATURA" />
+    <NavigationProperty Name="TBL_KASA_BAKIYE" Relationship="ActionModel.FK_TBL_KASA_BAKIYE_TBL_KASA" FromRole="TBL_KASA" ToRole="TBL_KASA_BAKIYE" />
+    <NavigationProperty Name="TBL_PARA_TIPI" Relationship="ActionModel.FK_TBL_KASA_TBL_PARA_TIPI" FromRole="TBL_KASA" ToRole="TBL_PARA_TIPI" />
+    <NavigationProperty Name="TBL_ODEME" Relationship="ActionModel.FK_TBL_ODEME_TBL_KASA" FromRole="TBL_KASA" ToRole="TBL_ODEME" />
+    <NavigationProperty Name="TBL_SPARIS" Relationship="ActionModel.FK_TBL_SPARIS_TBL_KASA" FromRole="TBL_KASA" ToRole="TBL_SPARIS" />
+  </EntityType>
+  <EntityType Name="TBL_KASA_BAKIYE">
+    <Key>
+      <PropertyRef Name="TBL_KASA_BAKIYE_ID" />
+    </Key>
+    <Property Name="TBL_KASA_BAKIYE_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="TBL_KASA_ID" Type="Int32" />
+    <Property Name="TBL_PARA_TIPI_ID" Type="Int32" />
+    <Property Name="TBL_FIS_ID" Type="Int32" />
+    <Property Name="KUR" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="TARIH" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="TUTAR" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ACIKLAMA" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="YEDEK" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="TBL_FIS" Relationship="ActionModel.FK_TBL_KASA_BAKIYE_TBL_FIS" FromRole="TBL_KASA_BAKIYE" ToRole="TBL_FIS" />
+    <NavigationProperty Name="TBL_KASA" Relationship="ActionModel.FK_TBL_KASA_BAKIYE_TBL_KASA" FromRole="TBL_KASA_BAKIYE" ToRole="TBL_KASA" />
+    <NavigationProperty Name="TBL_PARA_TIPI" Relationship="ActionModel.FK_TBL_KASA_BAKIYE_TBL_PARA_TIPI" FromRole="TBL_KASA_BAKIYE" ToRole="TBL_PARA_TIPI" />
+  </EntityType>
+  <EntityType Name="TBL_KDV">
+    <Key>
+      <PropertyRef Name="TBL_KDV_ID" />
+    </Key>
+    <Property Name="TBL_KDV_ID" Type="Int32" Nullable="false" />
+    <Property Name="KDV_YUZDESI" Type="Int32" />
+    <Property Name="KDV_ACIKLAMA" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="YEDEK" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="TBL_URUN" Relationship="ActionModel.FK_TBL_URUN_TBL_KDV" FromRole="TBL_KDV" ToRole="TBL_URUN" />
+  </EntityType>
+  <EntityType Name="TBL_ODEME">
+    <Key>
+      <PropertyRef Name="TBL_ODEME_ID" />
+    </Key>
+    <Property Name="TBL_ODEME_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="ODEME_KAYIT_TARIHI" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ODEME_VADE_TARIHI" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="TBL_ODEME_TURU_ID" Type="Int32" />
+    <Property Name="TBL_ODEME_TIPI_ID" Type="Int32" />
+    <Property Name="BELGE_NO" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="TBL_SIRKET_ID" Type="Int32" />
+    <Property Name="TUTAR" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="TBL_PARA_TIPI_ID" Type="Int32" />
+    <Property Name="TBL_KASA_ID" Type="Int32" />
+    <Property Name="YEDEK" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="TBL_KASA" Relationship="ActionModel.FK_TBL_ODEME_TBL_KASA" FromRole="TBL_ODEME" ToRole="TBL_KASA" />
+    <NavigationProperty Name="TBL_ODEME_TIPI" Relationship="ActionModel.FK_TBL_ODEME_TBL_ODEME_TIPI" FromRole="TBL_ODEME" ToRole="TBL_ODEME_TIPI" />
+    <NavigationProperty Name="TBL_ODEME_TURU" Relationship="ActionModel.FK_TBL_ODEME_TBL_ODEME_TURU" FromRole="TBL_ODEME" ToRole="TBL_ODEME_TURU" />
+    <NavigationProperty Name="TBL_PARA_TIPI" Relationship="ActionModel.FK_TBL_ODEME_TBL_PARA_TIPI" FromRole="TBL_ODEME" ToRole="TBL_PARA_TIPI" />
+    <NavigationProperty Name="TBL_SIRKET" Relationship="ActionModel.FK_TBL_ODEME_TBL_SIRKET" FromRole="TBL_ODEME" ToRole="TBL_SIRKET" />
+  </EntityType>
+  <EntityType Name="TBL_ODEME_TIPI">
+    <Key>
+      <PropertyRef Name="TBL_ODEME_TIPI_ID" />
+    </Key>
+    <Property Name="TBL_ODEME_TIPI_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="ODEME_TIPI_ADI" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ODEME_TIPI_ACIKLAMA" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="YEDEK" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="TBL_FATURA" Relationship="ActionModel.FK_TBL_FATURA_TBL_ODEME_TIPI" FromRole="TBL_ODEME_TIPI" ToRole="TBL_FATURA" />
+    <NavigationProperty Name="TBL_ODEME" Relationship="ActionModel.FK_TBL_ODEME_TBL_ODEME_TIPI" FromRole="TBL_ODEME_TIPI" ToRole="TBL_ODEME" />
+    <NavigationProperty Name="TBL_SPARIS" Relationship="ActionModel.FK_TBL_SPARIS_TBL_ODEME_TIPI" FromRole="TBL_ODEME_TIPI" ToRole="TBL_SPARIS" />
+  </EntityType>
+  <EntityType Name="TBL_ODEME_TURU">
+    <Key>
+      <PropertyRef Name="TBL_ODEME_TURU_ID" />
+    </Key>
+    <Property Name="TBL_ODEME_TURU_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="ODEME_TURU_ADI" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ODEME_TURU_ACIKLAMA" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="YEDEK" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="TBL_ODEME" Relationship="ActionModel.FK_TBL_ODEME_TBL_ODEME_TURU" FromRole="TBL_ODEME_TURU" ToRole="TBL_ODEME" />
+  </EntityType>
+  <EntityType Name="TBL_PARA_TIPI">
+    <Key>
+      <PropertyRef Name="TBL_PARA_TIPI_ID" />
+    </Key>
+    <Property Name="TBL_PARA_TIPI_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="PARA_TIPI_ADI" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="YEDEK" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="TBL_BANKA" Relationship="ActionModel.FK_TBL_BANKA_TBL_PARA_TIPI" FromRole="TBL_PARA_TIPI" ToRole="TBL_BANKA" />
+    <NavigationProperty Name="TBL_BANKA_BAKIYE" Relationship="ActionModel.FK_TBL_BANKA_BAKIYE_TBL_PARA_TIPI" FromRole="TBL_PARA_TIPI" ToRole="TBL_BANKA_BAKIYE" />
+    <NavigationProperty Name="TBL_FATURA" Relationship="ActionModel.FK_TBL_FATURA_TBL_PARA_TIPI" FromRole="TBL_PARA_TIPI" ToRole="TBL_FATURA" />
+    <NavigationProperty Name="TBL_GIDER" Relationship="ActionModel.FK_TBL_GIDER_TBL_PARA_TIPI" FromRole="TBL_PARA_TIPI" ToRole="TBL_GIDER" />
+    <NavigationProperty Name="TBL_GIDER_BAKIYE" Relationship="ActionModel.FK_TBL_GIDER_BAKIYE_TBL_PARA_TIPI" FromRole="TBL_PARA_TIPI" ToRole="TBL_GIDER_BAKIYE" />
+    <NavigationProperty Name="TBL_KASA" Relationship="ActionModel.FK_TBL_KASA_TBL_PARA_TIPI" FromRole="TBL_PARA_TIPI" ToRole="TBL_KASA" />
+    <NavigationProperty Name="TBL_KASA_BAKIYE" Relationship="ActionModel.FK_TBL_KASA_BAKIYE_TBL_PARA_TIPI" FromRole="TBL_PARA_TIPI" ToRole="TBL_KASA_BAKIYE" />
+    <NavigationProperty Name="TBL_ODEME" Relationship="ActionModel.FK_TBL_ODEME_TBL_PARA_TIPI" FromRole="TBL_PARA_TIPI" ToRole="TBL_ODEME" />
+    <NavigationProperty Name="TBL_SIRKET_BAKIYE" Relationship="ActionModel.FK_TBL_SIRKET_BAKIYE_TBL_PARA_TIPI" FromRole="TBL_PARA_TIPI" ToRole="TBL_SIRKET_BAKIYE" />
+    <NavigationProperty Name="TBL_SPARIS" Relationship="ActionModel.FK_TBL_SPARIS_TBL_PARA_TIPI" FromRole="TBL_PARA_TIPI" ToRole="TBL_SPARIS" />
+    <NavigationProperty Name="TBL_URUN" Relationship="ActionModel.FK_TBL_URUN_TBL_PARA_TIPI" FromRole="TBL_PARA_TIPI" ToRole="TBL_URUN" />
+  </EntityType>
+  <EntityType Name="TBL_PERSONEL">
+    <Key>
+      <PropertyRef Name="TBL_PERSONEL_ID" />
+    </Key>
+    <Property Name="TBL_PERSONEL_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="PERSONEL_AD_SOYAD" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="YETKI_SEVIYESI" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="SIFRE" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="BARKOD_ID" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="PERSONEL_GOREVI" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PERSONEL_TELEFON1" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PERSONEL_TELEFON2" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PERSONEL_MAIL" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PERSONEL_CALISMA_DURUMU" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PERSONEL_ISE_BASLAMA_TARIHI" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PERSONEL_ISTEN_AYRILMA_TARIHI" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PERSONEL_ISE_GELIS_SAATI" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PERSONEL_ISTEN_CIKIS_SAATI" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PERSONEL_SSK_NO" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PERSONEL_CINSIYET" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PERSONEL_KIMLIK_NO" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PERSONEL_DOGUM_TARIHI" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PERSONEL_DOGUM_YERI" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PERSONEL_EGITIM_DURUMU" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PERSONEL_ACIKLAMA" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PERSONEL_AYAKKABI_NO" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PERSONEL_GOMLEK_NO" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PERSONEL_MONT_NO" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PERSONEL_PANTOLON_NO" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="YEDEK" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="TBL_FATURA" Relationship="ActionModel.FK_TBL_FATURA_TBL_PERSONEL" FromRole="TBL_PERSONEL" ToRole="TBL_FATURA" />
+    <NavigationProperty Name="TBL_SPARIS" Relationship="ActionModel.FK_TBL_SPARIS_TBL_PERSONEL" FromRole="TBL_PERSONEL" ToRole="TBL_SPARIS" />
+  </EntityType>
+  <EntityType Name="TBL_SIRKET">
+    <Key>
+      <PropertyRef Name="TBL_SIRKET_ID" />
+    </Key>
+    <Property Name="TBL_SIRKET_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="TBL_SIRKET_GRUB_ID" Type="Int32" />
+    <Property Name="TBL_SIRKET_SINIF_ID" Type="Int32" />
+    <Property Name="TBL_SIRKET_TIPI_ID" Type="Int32" />
+    <Property Name="SIRKET_ADI" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SIRKET_TELEFON_1" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SIRKET_TELEFON_2" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SIRKET_FAX_1" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SIRKET_FAX_2" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SIRKET_MAIL_1" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SIRKET_MAIL_2" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SIRKET_WEB_ADRES" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SIRKET_VERGI_DAIRESI" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SIRKET_VERGI_NO" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SIRKET_ADRES" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="SIRKET_IL" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SIRKET_ILCE" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SIRKET_POSTA_KODU" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SIRKET_BANKA_ADI" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SIRKET_BANKA_SUBE_ADI" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SIRKET_HESAP_NO" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SIRKET_IBAN" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SIRKET_ACIKLAMA" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="YEDEK" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="TBL_FATURA" Relationship="ActionModel.FK_TBL_FATURA_TBL_SIRKET" FromRole="TBL_SIRKET" ToRole="TBL_FATURA" />
+    <NavigationProperty Name="TBL_ODEME" Relationship="ActionModel.FK_TBL_ODEME_TBL_SIRKET" FromRole="TBL_SIRKET" ToRole="TBL_ODEME" />
+    <NavigationProperty Name="TBL_SIRKET_BAKIYE" Relationship="ActionModel.FK_TBL_SIRKET_BAKIYE_TBL_SIRKET" FromRole="TBL_SIRKET" ToRole="TBL_SIRKET_BAKIYE" />
+    <NavigationProperty Name="TBL_SIRKET_GRUB" Relationship="ActionModel.FK_TBL_SIRKET_TBL_SIRKET_GRUB" FromRole="TBL_SIRKET" ToRole="TBL_SIRKET_GRUB" />
+    <NavigationProperty Name="TBL_SIRKET_SINIF" Relationship="ActionModel.FK_TBL_SIRKET_TBL_SIRKET_SINIF" FromRole="TBL_SIRKET" ToRole="TBL_SIRKET_SINIF" />
+    <NavigationProperty Name="TBL_SIRKET_TIPI" Relationship="ActionModel.FK_TBL_SIRKET_TBL_SIRKET_TIPI" FromRole="TBL_SIRKET" ToRole="TBL_SIRKET_TIPI" />
+    <NavigationProperty Name="TBL_SPARIS" Relationship="ActionModel.FK_TBL_SPARIS_TBL_SIRKET" FromRole="TBL_SIRKET" ToRole="TBL_SPARIS" />
+  </EntityType>
+  <EntityType Name="TBL_SIRKET_BAKIYE">
+    <Key>
+      <PropertyRef Name="TBL_SIRKET_BAKIYE_ID" />
+    </Key>
+    <Property Name="TBL_SIRKET_BAKIYE_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="TBL_SIRKET_ID" Type="Int32" />
+    <Property Name="TBL_PARA_TIPI_ID" Type="Int32" />
+    <Property Name="TBL_FIS_ID" Type="Int32" />
+    <Property Name="KUR" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="TARIH" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="TUTAR" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ACIKLAMA" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="YEDEK" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="TBL_FIS" Relationship="ActionModel.FK_TBL_SIRKET_BAKIYE_TBL_FIS" FromRole="TBL_SIRKET_BAKIYE" ToRole="TBL_FIS" />
+    <NavigationProperty Name="TBL_PARA_TIPI" Relationship="ActionModel.FK_TBL_SIRKET_BAKIYE_TBL_PARA_TIPI" FromRole="TBL_SIRKET_BAKIYE" ToRole="TBL_PARA_TIPI" />
+    <NavigationProperty Name="TBL_SIRKET" Relationship="ActionModel.FK_TBL_SIRKET_BAKIYE_TBL_SIRKET" FromRole="TBL_SIRKET_BAKIYE" ToRole="TBL_SIRKET" />
+  </EntityType>
+  <EntityType Name="TBL_SIRKET_GRUB">
+    <Key>
+      <PropertyRef Name="TBL_SIRKET_GRUB_ID" />
+    </Key>
+    <Property Name="TBL_SIRKET_GRUB_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="SIRKET_GRUP_ADI" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ACIKLAMA" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="YEDEK" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="TBL_SIRKET" Relationship="ActionModel.FK_TBL_SIRKET_TBL_SIRKET_GRUB" FromRole="TBL_SIRKET_GRUB" ToRole="TBL_SIRKET" />
+  </EntityType>
+  <EntityType Name="TBL_SIRKET_SINIF">
+    <Key>
+      <PropertyRef Name="TBL_SIRKET_SINIF_ID" />
+    </Key>
+    <Property Name="TBL_SIRKET_SINIF_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="SIRKET_SINIF_ADI" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="YEDEK" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="TBL_SIRKET" Relationship="ActionModel.FK_TBL_SIRKET_TBL_SIRKET_SINIF" FromRole="TBL_SIRKET_SINIF" ToRole="TBL_SIRKET" />
+  </EntityType>
+  <EntityType Name="TBL_SIRKET_TIPI">
+    <Key>
+      <PropertyRef Name="TBL_SIRKET_TIPI_ID" />
+    </Key>
+    <Property Name="TBL_SIRKET_TIPI_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="SIRKET_TIPI_ADI" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="YEDEK" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="TBL_SIRKET" Relationship="ActionModel.FK_TBL_SIRKET_TBL_SIRKET_TIPI" FromRole="TBL_SIRKET_TIPI" ToRole="TBL_SIRKET" />
+  </EntityType>
+  <EntityType Name="TBL_SPARIS">
+    <Key>
+      <PropertyRef Name="TBL_SPARIS_ID" />
+    </Key>
+    <Property Name="TBL_SPARIS_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="TBL_SIRKET_ID" Type="Int32" />
+    <Property Name="TBL_SPARIS_TURU_ID" Type="Int32" />
+    <Property Name="SPARIS_TARIH" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SPARIS_VADE_TARIH" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SPARIS_FATURA_SERI_NO" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="TBL_PARA_TIPI_ID" Type="Int32" />
+    <Property Name="TBL_ODEME_TIPI_ID" Type="Int32" />
+    <Property Name="TBL_KASA_ID" Type="Int32" />
+    <Property Name="TBL_DEPO_ID" Type="Int32" />
+    <Property Name="TBL_PERSONEL_ID" Type="Int32" />
+    <Property Name="YEDEK" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="TBL_DEPO" Relationship="ActionModel.FK_TBL_SPARIS_TBL_DEPO" FromRole="TBL_SPARIS" ToRole="TBL_DEPO" />
+    <NavigationProperty Name="TBL_FATURA" Relationship="ActionModel.FK_TBL_FATURA_TBL_SPARIS" FromRole="TBL_SPARIS" ToRole="TBL_FATURA" />
+    <NavigationProperty Name="TBL_KASA" Relationship="ActionModel.FK_TBL_SPARIS_TBL_KASA" FromRole="TBL_SPARIS" ToRole="TBL_KASA" />
+    <NavigationProperty Name="TBL_ODEME_TIPI" Relationship="ActionModel.FK_TBL_SPARIS_TBL_ODEME_TIPI" FromRole="TBL_SPARIS" ToRole="TBL_ODEME_TIPI" />
+    <NavigationProperty Name="TBL_PARA_TIPI" Relationship="ActionModel.FK_TBL_SPARIS_TBL_PARA_TIPI" FromRole="TBL_SPARIS" ToRole="TBL_PARA_TIPI" />
+    <NavigationProperty Name="TBL_PERSONEL" Relationship="ActionModel.FK_TBL_SPARIS_TBL_PERSONEL" FromRole="TBL_SPARIS" ToRole="TBL_PERSONEL" />
+    <NavigationProperty Name="TBL_SIRKET" Relationship="ActionModel.FK_TBL_SPARIS_TBL_SIRKET" FromRole="TBL_SPARIS" ToRole="TBL_SIRKET" />
+    <NavigationProperty Name="TBL_SPARIS_TURU" Relationship="ActionModel.FK_TBL_SPARIS_TBL_SPARIS_TURU" FromRole="TBL_SPARIS" ToRole="TBL_SPARIS_TURU" />
+    <NavigationProperty Name="TBL_URUN_SPARIS" Relationship="ActionModel.FK_TBL_URUN_SPARIS_TBL_SPARIS" FromRole="TBL_SPARIS" ToRole="TBL_URUN_SPARIS" />
+  </EntityType>
+  <EntityType Name="TBL_SPARIS_TURU">
+    <Key>
+      <PropertyRef Name="TBL_SPARIS_TURU_ID" />
+    </Key>
+    <Property Name="TBL_SPARIS_TURU_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="SPARIS_TURU_ADI" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SPARIS_TURU_ACIKLAMA" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="YEDEK" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="TBL_SPARIS" Relationship="ActionModel.FK_TBL_SPARIS_TBL_SPARIS_TURU" FromRole="TBL_SPARIS_TURU" ToRole="TBL_SPARIS" />
+  </EntityType>
+  <EntityType Name="TBL_URUN">
+    <Key>
+      <PropertyRef Name="TBL_URUN_ID" />
+    </Key>
+    <Property Name="TBL_URUN_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="URUN_ADI" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="URUN_KODU" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="TBL_URUN_TIPI_ID" Type="Int32" />
+    <Property Name="TBL_URUN_CINSI_ID" Type="Int32" />
+    <Property Name="TBL_URUN_MARKA_ID" Type="Int32" />
+    <Property Name="TBL_URUN_BIRIM_ID" Type="Int32" />
+    <Property Name="TBL_KDV_ID" Type="Int32" />
+    <Property Name="URUN_DURUM" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="URUN_ALIS_FIYATI" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="URUN_SATIS_FIYATI" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="TBL_PARA_TIPI_ID" Type="Int32" />
+    <Property Name="YEDEK" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="TBL_DEPO_ISLEM" Relationship="ActionModel.FK_TBL_DEPO_ISLEM_TBL_URUN" FromRole="TBL_URUN" ToRole="TBL_DEPO_ISLEM" />
+    <NavigationProperty Name="TBL_DEPO_TRANSFER" Relationship="ActionModel.FK_TBL_DEPO_TRANSFER_TBL_URUN" FromRole="TBL_URUN" ToRole="TBL_DEPO_TRANSFER" />
+    <NavigationProperty Name="TBL_KDV" Relationship="ActionModel.FK_TBL_URUN_TBL_KDV" FromRole="TBL_URUN" ToRole="TBL_KDV" />
+    <NavigationProperty Name="TBL_PARA_TIPI" Relationship="ActionModel.FK_TBL_URUN_TBL_PARA_TIPI" FromRole="TBL_URUN" ToRole="TBL_PARA_TIPI" />
+    <NavigationProperty Name="TBL_URUN_FATURA" Relationship="ActionModel.FK_TBL_URUN_FATURA_TBL_URUN1" FromRole="TBL_URUN" ToRole="TBL_URUN_FATURA" />
+    <NavigationProperty Name="TBL_URUN_SPARIS" Relationship="ActionModel.FK_TBL_URUN_SPARIS_TBL_URUN1" FromRole="TBL_URUN" ToRole="TBL_URUN_SPARIS" />
+    <NavigationProperty Name="TBL_URUN_STOK" Relationship="ActionModel.FK_TBL_URUN_STOK_TBL_URUN" FromRole="TBL_URUN" ToRole="TBL_URUN_STOK" />
+    <NavigationProperty Name="TBL_URUN_BIRIM" Relationship="ActionModel.FK_TBL_URUN_TBL_URUN_BIRIM" FromRole="TBL_URUN" ToRole="TBL_URUN_BIRIM" />
+    <NavigationProperty Name="TBL_URUN_CINSI" Relationship="ActionModel.FK_TBL_URUN_TBL_URUN_CINSI" FromRole="TBL_URUN" ToRole="TBL_URUN_CINSI" />
+    <NavigationProperty Name="TBL_URUN_MARKA" Relationship="ActionModel.FK_TBL_URUN_TBL_URUN_MARKA" FromRole="TBL_URUN" ToRole="TBL_URUN_MARKA" />
+    <NavigationProperty Name="TBL_URUN_TIPI" Relationship="ActionModel.FK_TBL_URUN_TBL_URUN_TIPI" FromRole="TBL_URUN" ToRole="TBL_URUN_TIPI" />
+  </EntityType>
+  <EntityType Name="TBL_URUN_BIRIM">
+    <Key>
+      <PropertyRef Name="TBL_URUN_BIRIM_ID" />
+    </Key>
+    <Property Name="TBL_URUN_BIRIM_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="URUN_BIRIM_ADI" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="URUN_BIRIM_ACIKLAMA" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="YEDEK" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="TBL_URUN" Relationship="ActionModel.FK_TBL_URUN_TBL_URUN_BIRIM" FromRole="TBL_URUN_BIRIM" ToRole="TBL_URUN" />
+  </EntityType>
+  <EntityType Name="TBL_URUN_CINSI">
+    <Key>
+      <PropertyRef Name="TBL_URUN_CINSI_ID" />
+    </Key>
+    <Property Name="TBL_URUN_CINSI_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="TBL_URUN_TIPI_ID" Type="Int32" />
+    <Property Name="URUN_CINSI_ADI" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="URUN_CINSI_ACIKLAMA" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="YEDEK" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="TBL_URUN" Relationship="ActionModel.FK_TBL_URUN_TBL_URUN_CINSI" FromRole="TBL_URUN_CINSI" ToRole="TBL_URUN" />
+    <NavigationProperty Name="TBL_URUN_TIPI" Relationship="ActionModel.FK_TBL_URUN_CINSI_TBL_URUN_TIPI" FromRole="TBL_URUN_CINSI" ToRole="TBL_URUN_TIPI" />
+    <NavigationProperty Name="TBL_URUN_MARKA" Relationship="ActionModel.FK_TBL_URUN_MARKA_TBL_URUN_CINSI" FromRole="TBL_URUN_CINSI" ToRole="TBL_URUN_MARKA" />
+  </EntityType>
+  <EntityType Name="TBL_URUN_FATURA">
+    <Key>
+      <PropertyRef Name="TBL_URUN_FATURA_ID" />
+    </Key>
+    <Property Name="TBL_URUN_FATURA_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="TBL_URUN_ID" Type="Int32" />
+    <Property Name="TBL_FATURA_ID" Type="Int32" />
+    <Property Name="URUN_FATURA_MIKTAR" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ACIKLAMA" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="YEDEK" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="TBL_FATURA" Relationship="ActionModel.FK_TBL_URUN_FATURA_TBL_FATURA" FromRole="TBL_URUN_FATURA" ToRole="TBL_FATURA" />
+    <NavigationProperty Name="TBL_URUN" Relationship="ActionModel.FK_TBL_URUN_FATURA_TBL_URUN1" FromRole="TBL_URUN_FATURA" ToRole="TBL_URUN" />
+  </EntityType>
+  <EntityType Name="TBL_URUN_MARKA">
+    <Key>
+      <PropertyRef Name="TBL_URUN_MARKA_ID" />
+    </Key>
+    <Property Name="TBL_URUN_MARKA_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="TBL_URUN_TIPI_ID" Type="Int32" />
+    <Property Name="TBL_URUN_CINSI_ID" Type="Int32" Nullable="false" />
+    <Property Name="URUN_MARKA_ADI" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="URUN_MARKA_ACIKLAMA" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="YEDEK" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="TBL_URUN" Relationship="ActionModel.FK_TBL_URUN_TBL_URUN_MARKA" FromRole="TBL_URUN_MARKA" ToRole="TBL_URUN" />
+    <NavigationProperty Name="TBL_URUN_CINSI" Relationship="ActionModel.FK_TBL_URUN_MARKA_TBL_URUN_CINSI" FromRole="TBL_URUN_MARKA" ToRole="TBL_URUN_CINSI" />
+    <NavigationProperty Name="TBL_URUN_TIPI" Relationship="ActionModel.FK_TBL_URUN_MARKA_TBL_URUN_TIPI" FromRole="TBL_URUN_MARKA" ToRole="TBL_URUN_TIPI" />
+  </EntityType>
+  <EntityType Name="TBL_URUN_SPARIS">
+    <Key>
+      <PropertyRef Name="TBL_URUN_SPARIS_ID" />
+    </Key>
+    <Property Name="TBL_URUN_SPARIS_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="TBL_URUN_ID" Type="Int32" />
+    <Property Name="TBL_SIPARIS_ID" Type="Int32" />
+    <Property Name="URUN_SIPARIS_MIKTAR" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ACIKLAMA" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="YEDEK" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="TBL_SPARIS" Relationship="ActionModel.FK_TBL_URUN_SPARIS_TBL_SPARIS" FromRole="TBL_URUN_SPARIS" ToRole="TBL_SPARIS" />
+    <NavigationProperty Name="TBL_URUN" Relationship="ActionModel.FK_TBL_URUN_SPARIS_TBL_URUN1" FromRole="TBL_URUN_SPARIS" ToRole="TBL_URUN" />
+  </EntityType>
+  <EntityType Name="TBL_URUN_STOK">
+    <Key>
+      <PropertyRef Name="TBL_URUN_STOK_ID" />
+    </Key>
+    <Property Name="TBL_URUN_STOK_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="TBL_URUN_ID" Type="Int32" />
+    <Property Name="TBL_DEPO_ID" Type="Int32" />
+    <Property Name="URUN_BIRIM_MIKTARI" Type="Int32" />
+    <Property Name="STOK_DURUM" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ACIKLAMA" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="YEDEK" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="TBL_DEPO" Relationship="ActionModel.FK_TBL_URUN_STOK_TBL_DEPO" FromRole="TBL_URUN_STOK" ToRole="TBL_DEPO" />
+    <NavigationProperty Name="TBL_URUN" Relationship="ActionModel.FK_TBL_URUN_STOK_TBL_URUN" FromRole="TBL_URUN_STOK" ToRole="TBL_URUN" />
+  </EntityType>
+  <EntityType Name="TBL_URUN_TIPI">
+    <Key>
+      <PropertyRef Name="TBL_URUN_TIPI_ID" />
+    </Key>
+    <Property Name="TBL_URUN_TIPI_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="URUN_TIPI_ADI" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="URUN_TIPI_ACIKLAMA" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="YEDEK" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="TBL_URUN" Relationship="ActionModel.FK_TBL_URUN_TBL_URUN_TIPI" FromRole="TBL_URUN_TIPI" ToRole="TBL_URUN" />
+    <NavigationProperty Name="TBL_URUN_CINSI" Relationship="ActionModel.FK_TBL_URUN_CINSI_TBL_URUN_TIPI" FromRole="TBL_URUN_TIPI" ToRole="TBL_URUN_CINSI" />
+    <NavigationProperty Name="TBL_URUN_MARKA" Relationship="ActionModel.FK_TBL_URUN_MARKA_TBL_URUN_TIPI" FromRole="TBL_URUN_TIPI" ToRole="TBL_URUN_MARKA" />
+  </EntityType>
+  <Association Name="FK_TBL_BANKA_BAKIYE_TBL_BANKA">
+    <End Role="TBL_BANKA" Type="ActionModel.TBL_BANKA" Multiplicity="0..1" />
+    <End Role="TBL_BANKA_BAKIYE" Type="ActionModel.TBL_BANKA_BAKIYE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_BANKA">
+        <PropertyRef Name="TBL_BANKA_ID" />
+      </Principal>
+      <Dependent Role="TBL_BANKA_BAKIYE">
+        <PropertyRef Name="TBL_BANKA_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_BANKA_TBL_PARA_TIPI">
+    <End Role="TBL_PARA_TIPI" Type="ActionModel.TBL_PARA_TIPI" Multiplicity="0..1" />
+    <End Role="TBL_BANKA" Type="ActionModel.TBL_BANKA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_PARA_TIPI">
+        <PropertyRef Name="TBL_PARA_TIPI_ID" />
+      </Principal>
+      <Dependent Role="TBL_BANKA">
+        <PropertyRef Name="TBL_PARA_TIPI_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_BANKA_BAKIYE_TBL_FIS">
+    <End Role="TBL_FIS" Type="ActionModel.TBL_FIS" Multiplicity="0..1" />
+    <End Role="TBL_BANKA_BAKIYE" Type="ActionModel.TBL_BANKA_BAKIYE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_FIS">
+        <PropertyRef Name="TBL_FIS_ID" />
+      </Principal>
+      <Dependent Role="TBL_BANKA_BAKIYE">
+        <PropertyRef Name="TBL_FIS_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_BANKA_BAKIYE_TBL_PARA_TIPI">
+    <End Role="TBL_PARA_TIPI" Type="ActionModel.TBL_PARA_TIPI" Multiplicity="0..1" />
+    <End Role="TBL_BANKA_BAKIYE" Type="ActionModel.TBL_BANKA_BAKIYE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_PARA_TIPI">
+        <PropertyRef Name="TBL_PARA_TIPI_ID" />
+      </Principal>
+      <Dependent Role="TBL_BANKA_BAKIYE">
+        <PropertyRef Name="TBL_PARA_TIPI_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_DEPO_ISLEM_TBL_DEPO">
+    <End Role="TBL_DEPO" Type="ActionModel.TBL_DEPO" Multiplicity="0..1" />
+    <End Role="TBL_DEPO_ISLEM" Type="ActionModel.TBL_DEPO_ISLEM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_DEPO">
+        <PropertyRef Name="TBL_DEPO_ID" />
+      </Principal>
+      <Dependent Role="TBL_DEPO_ISLEM">
+        <PropertyRef Name="TBL_DEPO_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_FATURA_TBL_DEPO">
+    <End Role="TBL_DEPO" Type="ActionModel.TBL_DEPO" Multiplicity="0..1" />
+    <End Role="TBL_FATURA" Type="ActionModel.TBL_FATURA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_DEPO">
+        <PropertyRef Name="TBL_DEPO_ID" />
+      </Principal>
+      <Dependent Role="TBL_FATURA">
+        <PropertyRef Name="TBL_DEPO_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_SPARIS_TBL_DEPO">
+    <End Role="TBL_DEPO" Type="ActionModel.TBL_DEPO" Multiplicity="0..1" />
+    <End Role="TBL_SPARIS" Type="ActionModel.TBL_SPARIS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_DEPO">
+        <PropertyRef Name="TBL_DEPO_ID" />
+      </Principal>
+      <Dependent Role="TBL_SPARIS">
+        <PropertyRef Name="TBL_DEPO_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_URUN_STOK_TBL_DEPO">
+    <End Role="TBL_DEPO" Type="ActionModel.TBL_DEPO" Multiplicity="0..1" />
+    <End Role="TBL_URUN_STOK" Type="ActionModel.TBL_URUN_STOK" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_DEPO">
+        <PropertyRef Name="TBL_DEPO_ID" />
+      </Principal>
+      <Dependent Role="TBL_URUN_STOK">
+        <PropertyRef Name="TBL_DEPO_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_DEPO_ISLEM_TBL_URUN">
+    <End Role="TBL_URUN" Type="ActionModel.TBL_URUN" Multiplicity="0..1" />
+    <End Role="TBL_DEPO_ISLEM" Type="ActionModel.TBL_DEPO_ISLEM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_URUN">
+        <PropertyRef Name="TBL_URUN_ID" />
+      </Principal>
+      <Dependent Role="TBL_DEPO_ISLEM">
+        <PropertyRef Name="TBL_URUN_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_DEPO_TRANSFER_TBL_URUN">
+    <End Role="TBL_URUN" Type="ActionModel.TBL_URUN" Multiplicity="0..1" />
+    <End Role="TBL_DEPO_TRANSFER" Type="ActionModel.TBL_DEPO_TRANSFER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_URUN">
+        <PropertyRef Name="TBL_URUN_ID" />
+      </Principal>
+      <Dependent Role="TBL_DEPO_TRANSFER">
+        <PropertyRef Name="TBL_URUN_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_FATURA_TBL_FATURA_TURU">
+    <End Role="TBL_FATURA_TURU" Type="ActionModel.TBL_FATURA_TURU" Multiplicity="0..1" />
+    <End Role="TBL_FATURA" Type="ActionModel.TBL_FATURA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_FATURA_TURU">
+        <PropertyRef Name="TBL_FATURA_TURU_ID" />
+      </Principal>
+      <Dependent Role="TBL_FATURA">
+        <PropertyRef Name="TBL_FATURA_TURU_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_FATURA_TBL_KASA">
+    <End Role="TBL_KASA" Type="ActionModel.TBL_KASA" Multiplicity="0..1" />
+    <End Role="TBL_FATURA" Type="ActionModel.TBL_FATURA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_KASA">
+        <PropertyRef Name="TBL_KASA_ID" />
+      </Principal>
+      <Dependent Role="TBL_FATURA">
+        <PropertyRef Name="TBL_KASA_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_FATURA_TBL_ODEME_TIPI">
+    <End Role="TBL_ODEME_TIPI" Type="ActionModel.TBL_ODEME_TIPI" Multiplicity="0..1" />
+    <End Role="TBL_FATURA" Type="ActionModel.TBL_FATURA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_ODEME_TIPI">
+        <PropertyRef Name="TBL_ODEME_TIPI_ID" />
+      </Principal>
+      <Dependent Role="TBL_FATURA">
+        <PropertyRef Name="TBL_ODEME_TIPI_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_FATURA_TBL_PARA_TIPI">
+    <End Role="TBL_PARA_TIPI" Type="ActionModel.TBL_PARA_TIPI" Multiplicity="0..1" />
+    <End Role="TBL_FATURA" Type="ActionModel.TBL_FATURA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_PARA_TIPI">
+        <PropertyRef Name="TBL_PARA_TIPI_ID" />
+      </Principal>
+      <Dependent Role="TBL_FATURA">
+        <PropertyRef Name="TBL_PARA_TIPI_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_FATURA_TBL_PERSONEL">
+    <End Role="TBL_PERSONEL" Type="ActionModel.TBL_PERSONEL" Multiplicity="0..1" />
+    <End Role="TBL_FATURA" Type="ActionModel.TBL_FATURA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_PERSONEL">
+        <PropertyRef Name="TBL_PERSONEL_ID" />
+      </Principal>
+      <Dependent Role="TBL_FATURA">
+        <PropertyRef Name="TBL_PERSONEL_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_FATURA_TBL_SIRKET">
+    <End Role="TBL_SIRKET" Type="ActionModel.TBL_SIRKET" Multiplicity="0..1" />
+    <End Role="TBL_FATURA" Type="ActionModel.TBL_FATURA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_SIRKET">
+        <PropertyRef Name="TBL_SIRKET_ID" />
+      </Principal>
+      <Dependent Role="TBL_FATURA">
+        <PropertyRef Name="TBL_SIRKET_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_FATURA_TBL_SPARIS">
+    <End Role="TBL_SPARIS" Type="ActionModel.TBL_SPARIS" Multiplicity="0..1" />
+    <End Role="TBL_FATURA" Type="ActionModel.TBL_FATURA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_SPARIS">
+        <PropertyRef Name="TBL_SPARIS_ID" />
+      </Principal>
+      <Dependent Role="TBL_FATURA">
+        <PropertyRef Name="TBL_SPARIS_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_URUN_FATURA_TBL_FATURA">
+    <End Role="TBL_FATURA" Type="ActionModel.TBL_FATURA" Multiplicity="0..1" />
+    <End Role="TBL_URUN_FATURA" Type="ActionModel.TBL_URUN_FATURA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_FATURA">
+        <PropertyRef Name="TBL_FATURA_ID" />
+      </Principal>
+      <Dependent Role="TBL_URUN_FATURA">
+        <PropertyRef Name="TBL_FATURA_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_GIDER_BAKIYE_TBL_FIS">
+    <End Role="TBL_FIS" Type="ActionModel.TBL_FIS" Multiplicity="0..1" />
+    <End Role="TBL_GIDER_BAKIYE" Type="ActionModel.TBL_GIDER_BAKIYE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_FIS">
+        <PropertyRef Name="TBL_FIS_ID" />
+      </Principal>
+      <Dependent Role="TBL_GIDER_BAKIYE">
+        <PropertyRef Name="TBL_FIS_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_KASA_BAKIYE_TBL_FIS">
+    <End Role="TBL_FIS" Type="ActionModel.TBL_FIS" Multiplicity="0..1" />
+    <End Role="TBL_KASA_BAKIYE" Type="ActionModel.TBL_KASA_BAKIYE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_FIS">
+        <PropertyRef Name="TBL_FIS_ID" />
+      </Principal>
+      <Dependent Role="TBL_KASA_BAKIYE">
+        <PropertyRef Name="TBL_FIS_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_SIRKET_BAKIYE_TBL_FIS">
+    <End Role="TBL_FIS" Type="ActionModel.TBL_FIS" Multiplicity="0..1" />
+    <End Role="TBL_SIRKET_BAKIYE" Type="ActionModel.TBL_SIRKET_BAKIYE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_FIS">
+        <PropertyRef Name="TBL_FIS_ID" />
+      </Principal>
+      <Dependent Role="TBL_SIRKET_BAKIYE">
+        <PropertyRef Name="TBL_FIS_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_GIDER_BAKIYE_TBL_GIDER">
+    <End Role="TBL_GIDER" Type="ActionModel.TBL_GIDER" Multiplicity="0..1" />
+    <End Role="TBL_GIDER_BAKIYE" Type="ActionModel.TBL_GIDER_BAKIYE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_GIDER">
+        <PropertyRef Name="TBL_GIDER_ID" />
+      </Principal>
+      <Dependent Role="TBL_GIDER_BAKIYE">
+        <PropertyRef Name="TBL_GIDER_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_GIDER_TBL_PARA_TIPI">
+    <End Role="TBL_PARA_TIPI" Type="ActionModel.TBL_PARA_TIPI" Multiplicity="0..1" />
+    <End Role="TBL_GIDER" Type="ActionModel.TBL_GIDER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_PARA_TIPI">
+        <PropertyRef Name="TBL_PARA_TIPI_ID" />
+      </Principal>
+      <Dependent Role="TBL_GIDER">
+        <PropertyRef Name="TBL_PARA_TIPI_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_GIDER_BAKIYE_TBL_PARA_TIPI">
+    <End Role="TBL_PARA_TIPI" Type="ActionModel.TBL_PARA_TIPI" Multiplicity="0..1" />
+    <End Role="TBL_GIDER_BAKIYE" Type="ActionModel.TBL_GIDER_BAKIYE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_PARA_TIPI">
+        <PropertyRef Name="TBL_PARA_TIPI_ID" />
+      </Principal>
+      <Dependent Role="TBL_GIDER_BAKIYE">
+        <PropertyRef Name="TBL_PARA_TIPI_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_KASA_BAKIYE_TBL_KASA">
+    <End Role="TBL_KASA" Type="ActionModel.TBL_KASA" Multiplicity="0..1" />
+    <End Role="TBL_KASA_BAKIYE" Type="ActionModel.TBL_KASA_BAKIYE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_KASA">
+        <PropertyRef Name="TBL_KASA_ID" />
+      </Principal>
+      <Dependent Role="TBL_KASA_BAKIYE">
+        <PropertyRef Name="TBL_KASA_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_KASA_TBL_PARA_TIPI">
+    <End Role="TBL_PARA_TIPI" Type="ActionModel.TBL_PARA_TIPI" Multiplicity="0..1" />
+    <End Role="TBL_KASA" Type="ActionModel.TBL_KASA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_PARA_TIPI">
+        <PropertyRef Name="TBL_PARA_TIPI_ID" />
+      </Principal>
+      <Dependent Role="TBL_KASA">
+        <PropertyRef Name="TBL_PARA_TIPI_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_ODEME_TBL_KASA">
+    <End Role="TBL_KASA" Type="ActionModel.TBL_KASA" Multiplicity="0..1" />
+    <End Role="TBL_ODEME" Type="ActionModel.TBL_ODEME" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_KASA">
+        <PropertyRef Name="TBL_KASA_ID" />
+      </Principal>
+      <Dependent Role="TBL_ODEME">
+        <PropertyRef Name="TBL_KASA_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_SPARIS_TBL_KASA">
+    <End Role="TBL_KASA" Type="ActionModel.TBL_KASA" Multiplicity="0..1" />
+    <End Role="TBL_SPARIS" Type="ActionModel.TBL_SPARIS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_KASA">
+        <PropertyRef Name="TBL_KASA_ID" />
+      </Principal>
+      <Dependent Role="TBL_SPARIS">
+        <PropertyRef Name="TBL_KASA_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_KASA_BAKIYE_TBL_PARA_TIPI">
+    <End Role="TBL_PARA_TIPI" Type="ActionModel.TBL_PARA_TIPI" Multiplicity="0..1" />
+    <End Role="TBL_KASA_BAKIYE" Type="ActionModel.TBL_KASA_BAKIYE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_PARA_TIPI">
+        <PropertyRef Name="TBL_PARA_TIPI_ID" />
+      </Principal>
+      <Dependent Role="TBL_KASA_BAKIYE">
+        <PropertyRef Name="TBL_PARA_TIPI_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_URUN_TBL_KDV">
+    <End Role="TBL_KDV" Type="ActionModel.TBL_KDV" Multiplicity="0..1" />
+    <End Role="TBL_URUN" Type="ActionModel.TBL_URUN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_KDV">
+        <PropertyRef Name="TBL_KDV_ID" />
+      </Principal>
+      <Dependent Role="TBL_URUN">
+        <PropertyRef Name="TBL_KDV_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_ODEME_TBL_ODEME_TIPI">
+    <End Role="TBL_ODEME_TIPI" Type="ActionModel.TBL_ODEME_TIPI" Multiplicity="0..1" />
+    <End Role="TBL_ODEME" Type="ActionModel.TBL_ODEME" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_ODEME_TIPI">
+        <PropertyRef Name="TBL_ODEME_TIPI_ID" />
+      </Principal>
+      <Dependent Role="TBL_ODEME">
+        <PropertyRef Name="TBL_ODEME_TIPI_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_ODEME_TBL_ODEME_TURU">
+    <End Role="TBL_ODEME_TURU" Type="ActionModel.TBL_ODEME_TURU" Multiplicity="0..1" />
+    <End Role="TBL_ODEME" Type="ActionModel.TBL_ODEME" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_ODEME_TURU">
+        <PropertyRef Name="TBL_ODEME_TURU_ID" />
+      </Principal>
+      <Dependent Role="TBL_ODEME">
+        <PropertyRef Name="TBL_ODEME_TURU_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_ODEME_TBL_PARA_TIPI">
+    <End Role="TBL_PARA_TIPI" Type="ActionModel.TBL_PARA_TIPI" Multiplicity="0..1" />
+    <End Role="TBL_ODEME" Type="ActionModel.TBL_ODEME" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_PARA_TIPI">
+        <PropertyRef Name="TBL_PARA_TIPI_ID" />
+      </Principal>
+      <Dependent Role="TBL_ODEME">
+        <PropertyRef Name="TBL_PARA_TIPI_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_ODEME_TBL_SIRKET">
+    <End Role="TBL_SIRKET" Type="ActionModel.TBL_SIRKET" Multiplicity="0..1" />
+    <End Role="TBL_ODEME" Type="ActionModel.TBL_ODEME" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_SIRKET">
+        <PropertyRef Name="TBL_SIRKET_ID" />
+      </Principal>
+      <Dependent Role="TBL_ODEME">
+        <PropertyRef Name="TBL_SIRKET_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_SPARIS_TBL_ODEME_TIPI">
+    <End Role="TBL_ODEME_TIPI" Type="ActionModel.TBL_ODEME_TIPI" Multiplicity="0..1" />
+    <End Role="TBL_SPARIS" Type="ActionModel.TBL_SPARIS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_ODEME_TIPI">
+        <PropertyRef Name="TBL_ODEME_TIPI_ID" />
+      </Principal>
+      <Dependent Role="TBL_SPARIS">
+        <PropertyRef Name="TBL_ODEME_TIPI_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_SIRKET_BAKIYE_TBL_PARA_TIPI">
+    <End Role="TBL_PARA_TIPI" Type="ActionModel.TBL_PARA_TIPI" Multiplicity="0..1" />
+    <End Role="TBL_SIRKET_BAKIYE" Type="ActionModel.TBL_SIRKET_BAKIYE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_PARA_TIPI">
+        <PropertyRef Name="TBL_PARA_TIPI_ID" />
+      </Principal>
+      <Dependent Role="TBL_SIRKET_BAKIYE">
+        <PropertyRef Name="TBL_PARA_TIPI_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_SPARIS_TBL_PARA_TIPI">
+    <End Role="TBL_PARA_TIPI" Type="ActionModel.TBL_PARA_TIPI" Multiplicity="0..1" />
+    <End Role="TBL_SPARIS" Type="ActionModel.TBL_SPARIS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_PARA_TIPI">
+        <PropertyRef Name="TBL_PARA_TIPI_ID" />
+      </Principal>
+      <Dependent Role="TBL_SPARIS">
+        <PropertyRef Name="TBL_PARA_TIPI_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_URUN_TBL_PARA_TIPI">
+    <End Role="TBL_PARA_TIPI" Type="ActionModel.TBL_PARA_TIPI" Multiplicity="0..1" />
+    <End Role="TBL_URUN" Type="ActionModel.TBL_URUN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_PARA_TIPI">
+        <PropertyRef Name="TBL_PARA_TIPI_ID" />
+      </Principal>
+      <Dependent Role="TBL_URUN">
+        <PropertyRef Name="TBL_PARA_TIPI_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_SPARIS_TBL_PERSONEL">
+    <End Role="TBL_PERSONEL" Type="ActionModel.TBL_PERSONEL" Multiplicity="0..1" />
+    <End Role="TBL_SPARIS" Type="ActionModel.TBL_SPARIS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_PERSONEL">
+        <PropertyRef Name="TBL_PERSONEL_ID" />
+      </Principal>
+      <Dependent Role="TBL_SPARIS">
+        <PropertyRef Name="TBL_PERSONEL_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_SIRKET_BAKIYE_TBL_SIRKET">
+    <End Role="TBL_SIRKET" Type="ActionModel.TBL_SIRKET" Multiplicity="0..1" />
+    <End Role="TBL_SIRKET_BAKIYE" Type="ActionModel.TBL_SIRKET_BAKIYE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_SIRKET">
+        <PropertyRef Name="TBL_SIRKET_ID" />
+      </Principal>
+      <Dependent Role="TBL_SIRKET_BAKIYE">
+        <PropertyRef Name="TBL_SIRKET_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_SIRKET_TBL_SIRKET_GRUB">
+    <End Role="TBL_SIRKET_GRUB" Type="ActionModel.TBL_SIRKET_GRUB" Multiplicity="0..1" />
+    <End Role="TBL_SIRKET" Type="ActionModel.TBL_SIRKET" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_SIRKET_GRUB">
+        <PropertyRef Name="TBL_SIRKET_GRUB_ID" />
+      </Principal>
+      <Dependent Role="TBL_SIRKET">
+        <PropertyRef Name="TBL_SIRKET_GRUB_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_SIRKET_TBL_SIRKET_SINIF">
+    <End Role="TBL_SIRKET_SINIF" Type="ActionModel.TBL_SIRKET_SINIF" Multiplicity="0..1" />
+    <End Role="TBL_SIRKET" Type="ActionModel.TBL_SIRKET" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_SIRKET_SINIF">
+        <PropertyRef Name="TBL_SIRKET_SINIF_ID" />
+      </Principal>
+      <Dependent Role="TBL_SIRKET">
+        <PropertyRef Name="TBL_SIRKET_SINIF_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_SIRKET_TBL_SIRKET_TIPI">
+    <End Role="TBL_SIRKET_TIPI" Type="ActionModel.TBL_SIRKET_TIPI" Multiplicity="0..1" />
+    <End Role="TBL_SIRKET" Type="ActionModel.TBL_SIRKET" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_SIRKET_TIPI">
+        <PropertyRef Name="TBL_SIRKET_TIPI_ID" />
+      </Principal>
+      <Dependent Role="TBL_SIRKET">
+        <PropertyRef Name="TBL_SIRKET_TIPI_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_SPARIS_TBL_SIRKET">
+    <End Role="TBL_SIRKET" Type="ActionModel.TBL_SIRKET" Multiplicity="0..1" />
+    <End Role="TBL_SPARIS" Type="ActionModel.TBL_SPARIS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_SIRKET">
+        <PropertyRef Name="TBL_SIRKET_ID" />
+      </Principal>
+      <Dependent Role="TBL_SPARIS">
+        <PropertyRef Name="TBL_SIRKET_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_SPARIS_TBL_SPARIS_TURU">
+    <End Role="TBL_SPARIS_TURU" Type="ActionModel.TBL_SPARIS_TURU" Multiplicity="0..1" />
+    <End Role="TBL_SPARIS" Type="ActionModel.TBL_SPARIS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_SPARIS_TURU">
+        <PropertyRef Name="TBL_SPARIS_TURU_ID" />
+      </Principal>
+      <Dependent Role="TBL_SPARIS">
+        <PropertyRef Name="TBL_SPARIS_TURU_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_URUN_SPARIS_TBL_SPARIS">
+    <End Role="TBL_SPARIS" Type="ActionModel.TBL_SPARIS" Multiplicity="0..1" />
+    <End Role="TBL_URUN_SPARIS" Type="ActionModel.TBL_URUN_SPARIS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_SPARIS">
+        <PropertyRef Name="TBL_SPARIS_ID" />
+      </Principal>
+      <Dependent Role="TBL_URUN_SPARIS">
+        <PropertyRef Name="TBL_SIPARIS_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_URUN_FATURA_TBL_URUN1">
+    <End Role="TBL_URUN" Type="ActionModel.TBL_URUN" Multiplicity="0..1" />
+    <End Role="TBL_URUN_FATURA" Type="ActionModel.TBL_URUN_FATURA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_URUN">
+        <PropertyRef Name="TBL_URUN_ID" />
+      </Principal>
+      <Dependent Role="TBL_URUN_FATURA">
+        <PropertyRef Name="TBL_URUN_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_URUN_SPARIS_TBL_URUN1">
+    <End Role="TBL_URUN" Type="ActionModel.TBL_URUN" Multiplicity="0..1" />
+    <End Role="TBL_URUN_SPARIS" Type="ActionModel.TBL_URUN_SPARIS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_URUN">
+        <PropertyRef Name="TBL_URUN_ID" />
+      </Principal>
+      <Dependent Role="TBL_URUN_SPARIS">
+        <PropertyRef Name="TBL_URUN_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_URUN_STOK_TBL_URUN">
+    <End Role="TBL_URUN" Type="ActionModel.TBL_URUN" Multiplicity="0..1" />
+    <End Role="TBL_URUN_STOK" Type="ActionModel.TBL_URUN_STOK" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_URUN">
+        <PropertyRef Name="TBL_URUN_ID" />
+      </Principal>
+      <Dependent Role="TBL_URUN_STOK">
+        <PropertyRef Name="TBL_URUN_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_URUN_TBL_URUN_BIRIM">
+    <End Role="TBL_URUN_BIRIM" Type="ActionModel.TBL_URUN_BIRIM" Multiplicity="0..1" />
+    <End Role="TBL_URUN" Type="ActionModel.TBL_URUN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_URUN_BIRIM">
+        <PropertyRef Name="TBL_URUN_BIRIM_ID" />
+      </Principal>
+      <Dependent Role="TBL_URUN">
+        <PropertyRef Name="TBL_URUN_BIRIM_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_URUN_TBL_URUN_CINSI">
+    <End Role="TBL_URUN_CINSI" Type="ActionModel.TBL_URUN_CINSI" Multiplicity="0..1" />
+    <End Role="TBL_URUN" Type="ActionModel.TBL_URUN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_URUN_CINSI">
+        <PropertyRef Name="TBL_URUN_CINSI_ID" />
+      </Principal>
+      <Dependent Role="TBL_URUN">
+        <PropertyRef Name="TBL_URUN_CINSI_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_URUN_TBL_URUN_MARKA">
+    <End Role="TBL_URUN_MARKA" Type="ActionModel.TBL_URUN_MARKA" Multiplicity="0..1" />
+    <End Role="TBL_URUN" Type="ActionModel.TBL_URUN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_URUN_MARKA">
+        <PropertyRef Name="TBL_URUN_MARKA_ID" />
+      </Principal>
+      <Dependent Role="TBL_URUN">
+        <PropertyRef Name="TBL_URUN_MARKA_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_URUN_TBL_URUN_TIPI">
+    <End Role="TBL_URUN_TIPI" Type="ActionModel.TBL_URUN_TIPI" Multiplicity="0..1" />
+    <End Role="TBL_URUN" Type="ActionModel.TBL_URUN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_URUN_TIPI">
+        <PropertyRef Name="TBL_URUN_TIPI_ID" />
+      </Principal>
+      <Dependent Role="TBL_URUN">
+        <PropertyRef Name="TBL_URUN_TIPI_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_URUN_CINSI_TBL_URUN_TIPI">
+    <End Role="TBL_URUN_TIPI" Type="ActionModel.TBL_URUN_TIPI" Multiplicity="0..1" />
+    <End Role="TBL_URUN_CINSI" Type="ActionModel.TBL_URUN_CINSI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_URUN_TIPI">
+        <PropertyRef Name="TBL_URUN_TIPI_ID" />
+      </Principal>
+      <Dependent Role="TBL_URUN_CINSI">
+        <PropertyRef Name="TBL_URUN_TIPI_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_URUN_MARKA_TBL_URUN_CINSI">
+    <End Role="TBL_URUN_CINSI" Type="ActionModel.TBL_URUN_CINSI" Multiplicity="1" />
+    <End Role="TBL_URUN_MARKA" Type="ActionModel.TBL_URUN_MARKA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_URUN_CINSI">
+        <PropertyRef Name="TBL_URUN_CINSI_ID" />
+      </Principal>
+      <Dependent Role="TBL_URUN_MARKA">
+        <PropertyRef Name="TBL_URUN_CINSI_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_URUN_MARKA_TBL_URUN_TIPI">
+    <End Role="TBL_URUN_TIPI" Type="ActionModel.TBL_URUN_TIPI" Multiplicity="0..1" />
+    <End Role="TBL_URUN_MARKA" Type="ActionModel.TBL_URUN_MARKA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_URUN_TIPI">
+        <PropertyRef Name="TBL_URUN_TIPI_ID" />
+      </Principal>
+      <Dependent Role="TBL_URUN_MARKA">
+        <PropertyRef Name="TBL_URUN_TIPI_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
+</edmx:ConceptualModels>
+<!-- C-S mapping content -->
+<edmx:Mappings>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ActionModelStoreContainer" CdmEntityContainer="ActionEntities">
+    <EntitySetMapping Name="TBL_BANKA">
+      <EntityTypeMapping TypeName="ActionModel.TBL_BANKA">
+        <MappingFragment StoreEntitySet="TBL_BANKA">
+          <ScalarProperty Name="TBL_BANKA_ID" ColumnName="TBL_BANKA_ID" />
+          <ScalarProperty Name="BANKA_ADI" ColumnName="BANKA_ADI" />
+          <ScalarProperty Name="BANKA_SUBE_ADI" ColumnName="BANKA_SUBE_ADI" />
+          <ScalarProperty Name="BANKA_IBAN_NO" ColumnName="BANKA_IBAN_NO" />
+          <ScalarProperty Name="TBL_PARA_TIPI_ID" ColumnName="TBL_PARA_TIPI_ID" />
+          <ScalarProperty Name="BANKA_TELEFON_1" ColumnName="BANKA_TELEFON_1" />
+          <ScalarProperty Name="BANKA_TELEFON_2" ColumnName="BANKA_TELEFON_2" />
+          <ScalarProperty Name="BANKA_ADRES" ColumnName="BANKA_ADRES" />
+          <ScalarProperty Name="BANKA_IL" ColumnName="BANKA_IL" />
+          <ScalarProperty Name="BANKA_ILCE" ColumnName="BANKA_ILCE" />
+          <ScalarProperty Name="BANKA_MAIL" ColumnName="BANKA_MAIL" />
+          <ScalarProperty Name="BANKA_ACIKLAMA" ColumnName="BANKA_ACIKLAMA" />
+          <ScalarProperty Name="YEDEK" ColumnName="YEDEK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_BANKA_BAKIYE">
+      <EntityTypeMapping TypeName="ActionModel.TBL_BANKA_BAKIYE">
+        <MappingFragment StoreEntitySet="TBL_BANKA_BAKIYE">
+          <ScalarProperty Name="TBL_BANKA_BAKIYE_ID" ColumnName="TBL_BANKA_BAKIYE_ID" />
+          <ScalarProperty Name="TBL_BANKA_ID" ColumnName="TBL_BANKA_ID" />
+          <ScalarProperty Name="TBL_PARA_TIPI_ID" ColumnName="TBL_PARA_TIPI_ID" />
+          <ScalarProperty Name="TBL_FIS_ID" ColumnName="TBL_FIS_ID" />
+          <ScalarProperty Name="KUR" ColumnName="KUR" />
+          <ScalarProperty Name="TARIH" ColumnName="TARIH" />
+          <ScalarProperty Name="TUTAR" ColumnName="TUTAR" />
+          <ScalarProperty Name="ACIKLAMA" ColumnName="ACIKLAMA" />
+          <ScalarProperty Name="YEDEK" ColumnName="YEDEK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_DEPO">
+      <EntityTypeMapping TypeName="ActionModel.TBL_DEPO">
+        <MappingFragment StoreEntitySet="TBL_DEPO">
+          <ScalarProperty Name="TBL_DEPO_ID" ColumnName="TBL_DEPO_ID" />
+          <ScalarProperty Name="DEPO_ADI" ColumnName="DEPO_ADI" />
+          <ScalarProperty Name="DEPO_ACIKLAMA" ColumnName="DEPO_ACIKLAMA" />
+          <ScalarProperty Name="YEDEK" ColumnName="YEDEK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_DEPO_ISLEM">
+      <EntityTypeMapping TypeName="ActionModel.TBL_DEPO_ISLEM">
+        <MappingFragment StoreEntitySet="TBL_DEPO_ISLEM">
+          <ScalarProperty Name="TBL_DEPO_ISLEM_ID" ColumnName="TBL_DEPO_ISLEM_ID" />
+          <ScalarProperty Name="TBL_DEPO_ID" ColumnName="TBL_DEPO_ID" />
+          <ScalarProperty Name="TBL_URUN_ID" ColumnName="TBL_URUN_ID" />
+          <ScalarProperty Name="DEPO_ISLEM_ADI" ColumnName="DEPO_ISLEM_ADI" />
+          <ScalarProperty Name="URUN_MIKTAR" ColumnName="URUN_MIKTAR" />
+          <ScalarProperty Name="DEPO_ONAY" ColumnName="DEPO_ONAY" />
+          <ScalarProperty Name="ACIKLAMA" ColumnName="ACIKLAMA" />
+          <ScalarProperty Name="YEDEK" ColumnName="YEDEK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_DEPO_TRANSFER">
+      <EntityTypeMapping TypeName="ActionModel.TBL_DEPO_TRANSFER">
+        <MappingFragment StoreEntitySet="TBL_DEPO_TRANSFER">
+          <ScalarProperty Name="TBL_DEPO_TRANSFER_ID" ColumnName="TBL_DEPO_TRANSFER_ID" />
+          <ScalarProperty Name="DEPO_TRANSFER_ADI" ColumnName="DEPO_TRANSFER_ADI" />
+          <ScalarProperty Name="DEPO_TRANSFER_TARIHI" ColumnName="DEPO_TRANSFER_TARIHI" />
+          <ScalarProperty Name="DEPO_TRANSFER_NEREDEN" ColumnName="DEPO_TRANSFER_NEREDEN" />
+          <ScalarProperty Name="DEPO_TRANSFER_NEREYE" ColumnName="DEPO_TRANSFER_NEREYE" />
+          <ScalarProperty Name="TBL_URUN_ID" ColumnName="TBL_URUN_ID" />
+          <ScalarProperty Name="DEPO_TRANSFER_ACIKLAMA" ColumnName="DEPO_TRANSFER_ACIKLAMA" />
+          <ScalarProperty Name="YEDEK" ColumnName="YEDEK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_FATURA">
+      <EntityTypeMapping TypeName="ActionModel.TBL_FATURA">
+        <MappingFragment StoreEntitySet="TBL_FATURA">
+          <ScalarProperty Name="TBL_FATURA_ID" ColumnName="TBL_FATURA_ID" />
+          <ScalarProperty Name="TBL_SIRKET_ID" ColumnName="TBL_SIRKET_ID" />
+          <ScalarProperty Name="TBL_FATURA_TURU_ID" ColumnName="TBL_FATURA_TURU_ID" />
+          <ScalarProperty Name="FATURA_TARIH" ColumnName="FATURA_TARIH" />
+          <ScalarProperty Name="FATURA_VADE_TARIH" ColumnName="FATURA_VADE_TARIH" />
+          <ScalarProperty Name="FATURA_FATURA_SERI_NO" ColumnName="FATURA_FATURA_SERI_NO" />
+          <ScalarProperty Name="TBL_PARA_TIPI_ID" ColumnName="TBL_PARA_TIPI_ID" />
+          <ScalarProperty Name="TBL_ODEME_TIPI_ID" ColumnName="TBL_ODEME_TIPI_ID" />
+          <ScalarProperty Name="TBL_KASA_ID" ColumnName="TBL_KASA_ID" />
+          <ScalarProperty Name="TBL_DEPO_ID" ColumnName="TBL_DEPO_ID" />
+          <ScalarProperty Name="TBL_PERSONEL_ID" ColumnName="TBL_PERSONEL_ID" />
+          <ScalarProperty Name="ACIKLAMA" ColumnName="ACIKLAMA" />
+          <ScalarProperty Name="YEDEK" ColumnName="YEDEK" />
+          <ScalarProperty Name="TBL_SPARIS_ID" ColumnName="TBL_SPARIS_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_FATURA_TURU">
+      <EntityTypeMapping TypeName="ActionModel.TBL_FATURA_TURU">
+        <MappingFragment StoreEntitySet="TBL_FATURA_TURU">
+          <ScalarProperty Name="TBL_FATURA_TURU_ID" ColumnName="TBL_FATURA_TURU_ID" />
+          <ScalarProperty Name="FATURA_TURU_ADI" ColumnName="FATURA_TURU_ADI" />
+          <ScalarProperty Name="FATURA_TURU_ACIKLAMA" ColumnName="FATURA_TURU_ACIKLAMA" />
+          <ScalarProperty Name="YEDEK" ColumnName="YEDEK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_FIS">
+      <EntityTypeMapping TypeName="ActionModel.TBL_FIS">
+        <MappingFragment StoreEntitySet="TBL_FIS">
+          <ScalarProperty Name="TBL_FIS_ID" ColumnName="TBL_FIS_ID" />
+          <ScalarProperty Name="ACIKLAMA" ColumnName="ACIKLAMA" />
+          <ScalarProperty Name="YEDEK" ColumnName="YEDEK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_GIDER">
+      <EntityTypeMapping TypeName="ActionModel.TBL_GIDER">
+        <MappingFragment StoreEntitySet="TBL_GIDER">
+          <ScalarProperty Name="TBL_GIDER_ID" ColumnName="TBL_GIDER_ID" />
+          <ScalarProperty Name="TBL_PARA_TIPI_ID" ColumnName="TBL_PARA_TIPI_ID" />
+          <ScalarProperty Name="GİDER_ADI" ColumnName="GİDER_ADI" />
+          <ScalarProperty Name="GİDER_ACIKLAMA" ColumnName="GİDER_ACIKLAMA" />
+          <ScalarProperty Name="YEDEK" ColumnName="YEDEK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_GIDER_BAKIYE">
+      <EntityTypeMapping TypeName="ActionModel.TBL_GIDER_BAKIYE">
+        <MappingFragment StoreEntitySet="TBL_GIDER_BAKIYE">
+          <ScalarProperty Name="TBL_GIDER_BAKIYE_ID" ColumnName="TBL_GIDER_BAKIYE_ID" />
+          <ScalarProperty Name="TBL_GIDER_ID" ColumnName="TBL_GIDER_ID" />
+          <ScalarProperty Name="TBL_PARA_TIPI_ID" ColumnName="TBL_PARA_TIPI_ID" />
+          <ScalarProperty Name="TBL_FIS_ID" ColumnName="TBL_FIS_ID" />
+          <ScalarProperty Name="KUR" ColumnName="KUR" />
+          <ScalarProperty Name="TARIH" ColumnName="TARIH" />
+          <ScalarProperty Name="TUTAR" ColumnName="TUTAR" />
+          <ScalarProperty Name="ACIKLAMA" ColumnName="ACIKLAMA" />
+          <ScalarProperty Name="YEDEK" ColumnName="YEDEK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_KASA">
+      <EntityTypeMapping TypeName="ActionModel.TBL_KASA">
+        <MappingFragment StoreEntitySet="TBL_KASA">
+          <ScalarProperty Name="TBL_KASA_ID" ColumnName="TBL_KASA_ID" />
+          <ScalarProperty Name="TBL_PARA_TIPI_ID" ColumnName="TBL_PARA_TIPI_ID" />
+          <ScalarProperty Name="KASA_ADI" ColumnName="KASA_ADI" />
+          <ScalarProperty Name="KASA_ACIKLAMA" ColumnName="KASA_ACIKLAMA" />
+          <ScalarProperty Name="YEDEK" ColumnName="YEDEK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_KASA_BAKIYE">
+      <EntityTypeMapping TypeName="ActionModel.TBL_KASA_BAKIYE">
+        <MappingFragment StoreEntitySet="TBL_KASA_BAKIYE">
+          <ScalarProperty Name="TBL_KASA_BAKIYE_ID" ColumnName="TBL_KASA_BAKIYE_ID" />
+          <ScalarProperty Name="TBL_KASA_ID" ColumnName="TBL_KASA_ID" />
+          <ScalarProperty Name="TBL_PARA_TIPI_ID" ColumnName="TBL_PARA_TIPI_ID" />
+          <ScalarProperty Name="TBL_FIS_ID" ColumnName="TBL_FIS_ID" />
+          <ScalarProperty Name="KUR" ColumnName="KUR" />
+          <ScalarProperty Name="TARIH" ColumnName="TARIH" />
+          <ScalarProperty Name="TUTAR" ColumnName="TUTAR" />
+          <ScalarProperty Name="ACIKLAMA" ColumnName="ACIKLAMA" />
+          <ScalarProperty Name="YEDEK" ColumnName="YEDEK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_KDV">
+      <EntityTypeMapping TypeName="ActionModel.TBL_KDV">
+        <MappingFragment StoreEntitySet="TBL_KDV">
+          <ScalarProperty Name="TBL_KDV_ID" ColumnName="TBL_KDV_ID" />
+          <ScalarProperty Name="KDV_YUZDESI" ColumnName="KDV_YUZDESI" />
+          <ScalarProperty Name="KDV_ACIKLAMA" ColumnName="KDV_ACIKLAMA" />
+          <ScalarProperty Name="YEDEK" ColumnName="YEDEK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_ODEME">
+      <EntityTypeMapping TypeName="ActionModel.TBL_ODEME">
+        <MappingFragment StoreEntitySet="TBL_ODEME">
+          <ScalarProperty Name="TBL_ODEME_ID" ColumnName="TBL_ODEME_ID" />
+          <ScalarProperty Name="ODEME_KAYIT_TARIHI" ColumnName="ODEME_KAYIT_TARIHI" />
+          <ScalarProperty Name="ODEME_VADE_TARIHI" ColumnName="ODEME_VADE_TARIHI" />
+          <ScalarProperty Name="TBL_ODEME_TURU_ID" ColumnName="TBL_ODEME_TURU_ID" />
+          <ScalarProperty Name="TBL_ODEME_TIPI_ID" ColumnName="TBL_ODEME_TIPI_ID" />
+          <ScalarProperty Name="BELGE_NO" ColumnName="BELGE_NO" />
+          <ScalarProperty Name="TBL_SIRKET_ID" ColumnName="TBL_SIRKET_ID" />
+          <ScalarProperty Name="TUTAR" ColumnName="TUTAR" />
+          <ScalarProperty Name="TBL_PARA_TIPI_ID" ColumnName="TBL_PARA_TIPI_ID" />
+          <ScalarProperty Name="TBL_KASA_ID" ColumnName="TBL_KASA_ID" />
+          <ScalarProperty Name="YEDEK" ColumnName="YEDEK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_ODEME_TIPI">
+      <EntityTypeMapping TypeName="ActionModel.TBL_ODEME_TIPI">
+        <MappingFragment StoreEntitySet="TBL_ODEME_TIPI">
+          <ScalarProperty Name="TBL_ODEME_TIPI_ID" ColumnName="TBL_ODEME_TIPI_ID" />
+          <ScalarProperty Name="ODEME_TIPI_ADI" ColumnName="ODEME_TIPI_ADI" />
+          <ScalarProperty Name="ODEME_TIPI_ACIKLAMA" ColumnName="ODEME_TIPI_ACIKLAMA" />
+          <ScalarProperty Name="YEDEK" ColumnName="YEDEK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_ODEME_TURU">
+      <EntityTypeMapping TypeName="ActionModel.TBL_ODEME_TURU">
+        <MappingFragment StoreEntitySet="TBL_ODEME_TURU">
+          <ScalarProperty Name="TBL_ODEME_TURU_ID" ColumnName="TBL_ODEME_TURU_ID" />
+          <ScalarProperty Name="ODEME_TURU_ADI" ColumnName="ODEME_TURU_ADI" />
+          <ScalarProperty Name="ODEME_TURU_ACIKLAMA" ColumnName="ODEME_TURU_ACIKLAMA" />
+          <ScalarProperty Name="YEDEK" ColumnName="YEDEK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_PARA_TIPI">
+      <EntityTypeMapping TypeName="ActionModel.TBL_PARA_TIPI">
+        <MappingFragment StoreEntitySet="TBL_PARA_TIPI">
+          <ScalarProperty Name="TBL_PARA_TIPI_ID" ColumnName="TBL_PARA_TIPI_ID" />
+          <ScalarProperty Name="PARA_TIPI_ADI" ColumnName="PARA_TIPI_ADI" />
+          <ScalarProperty Name="YEDEK" ColumnName="YEDEK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_PERSONEL">
+      <EntityTypeMapping TypeName="ActionModel.TBL_PERSONEL">
+        <MappingFragment StoreEntitySet="TBL_PERSONEL">
+          <ScalarProperty Name="TBL_PERSONEL_ID" ColumnName="TBL_PERSONEL_ID" />
+          <ScalarProperty Name="PERSONEL_AD_SOYAD" ColumnName="PERSONEL_AD_SOYAD" />
+          <ScalarProperty Name="YETKI_SEVIYESI" ColumnName="YETKI_SEVIYESI" />
+          <ScalarProperty Name="SIFRE" ColumnName="SIFRE" />
+          <ScalarProperty Name="BARKOD_ID" ColumnName="BARKOD_ID" />
+          <ScalarProperty Name="PERSONEL_GOREVI" ColumnName="PERSONEL_GOREVI" />
+          <ScalarProperty Name="PERSONEL_TELEFON1" ColumnName="PERSONEL_TELEFON1" />
+          <ScalarProperty Name="PERSONEL_TELEFON2" ColumnName="PERSONEL_TELEFON2" />
+          <ScalarProperty Name="PERSONEL_MAIL" ColumnName="PERSONEL_MAIL" />
+          <ScalarProperty Name="PERSONEL_CALISMA_DURUMU" ColumnName="PERSONEL_CALISMA_DURUMU" />
+          <ScalarProperty Name="PERSONEL_ISE_BASLAMA_TARIHI" ColumnName="PERSONEL_ISE_BASLAMA_TARIHI" />
+          <ScalarProperty Name="PERSONEL_ISTEN_AYRILMA_TARIHI" ColumnName="PERSONEL_ISTEN_AYRILMA_TARIHI" />
+          <ScalarProperty Name="PERSONEL_ISE_GELIS_SAATI" ColumnName="PERSONEL_ISE_GELIS_SAATI" />
+          <ScalarProperty Name="PERSONEL_ISTEN_CIKIS_SAATI" ColumnName="PERSONEL_ISTEN_CIKIS_SAATI" />
+          <ScalarProperty Name="PERSONEL_SSK_NO" ColumnName="PERSONEL_SSK_NO" />
+          <ScalarProperty Name="PERSONEL_CINSIYET" ColumnName="PERSONEL_CINSIYET" />
+          <ScalarProperty Name="PERSONEL_KIMLIK_NO" ColumnName="PERSONEL_KIMLIK_NO" />
+          <ScalarProperty Name="PERSONEL_DOGUM_TARIHI" ColumnName="PERSONEL_DOGUM_TARIHI" />
+          <ScalarProperty Name="PERSONEL_DOGUM_YERI" ColumnName="PERSONEL_DOGUM_YERI" />
+          <ScalarProperty Name="PERSONEL_EGITIM_DURUMU" ColumnName="PERSONEL_EGITIM_DURUMU" />
+          <ScalarProperty Name="PERSONEL_ACIKLAMA" ColumnName="PERSONEL_ACIKLAMA" />
+          <ScalarProperty Name="PERSONEL_AYAKKABI_NO" ColumnName="PERSONEL_AYAKKABI_NO" />
+          <ScalarProperty Name="PERSONEL_GOMLEK_NO" ColumnName="PERSONEL_GOMLEK_NO" />
+          <ScalarProperty Name="PERSONEL_MONT_NO" ColumnName="PERSONEL_MONT_NO" />
+          <ScalarProperty Name="PERSONEL_PANTOLON_NO" ColumnName="PERSONEL_PANTOLON_NO" />
+          <ScalarProperty Name="YEDEK" ColumnName="YEDEK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_SIRKET">
+      <EntityTypeMapping TypeName="ActionModel.TBL_SIRKET">
+        <MappingFragment StoreEntitySet="TBL_SIRKET">
+          <ScalarProperty Name="TBL_SIRKET_ID" ColumnName="TBL_SIRKET_ID" />
+          <ScalarProperty Name="TBL_SIRKET_GRUB_ID" ColumnName="TBL_SIRKET_GRUB_ID" />
+          <ScalarProperty Name="TBL_SIRKET_SINIF_ID" ColumnName="TBL_SIRKET_SINIF_ID" />
+          <ScalarProperty Name="TBL_SIRKET_TIPI_ID" ColumnName="TBL_SIRKET_TIPI_ID" />
+          <ScalarProperty Name="SIRKET_ADI" ColumnName="SIRKET_ADI" />
+          <ScalarProperty Name="SIRKET_TELEFON_1" ColumnName="SIRKET_TELEFON_1" />
+          <ScalarProperty Name="SIRKET_TELEFON_2" ColumnName="SIRKET_TELEFON_2" />
+          <ScalarProperty Name="SIRKET_FAX_1" ColumnName="SIRKET_FAX_1" />
+          <ScalarProperty Name="SIRKET_FAX_2" ColumnName="SIRKET_FAX_2" />
+          <ScalarProperty Name="SIRKET_MAIL_1" ColumnName="SIRKET_MAIL_1" />
+          <ScalarProperty Name="SIRKET_MAIL_2" ColumnName="SIRKET_MAIL_2" />
+          <ScalarProperty Name="SIRKET_WEB_ADRES" ColumnName="SIRKET_WEB_ADRES" />
+          <ScalarProperty Name="SIRKET_VERGI_DAIRESI" ColumnName="SIRKET_VERGI_DAIRESI" />
+          <ScalarProperty Name="SIRKET_VERGI_NO" ColumnName="SIRKET_VERGI_NO" />
+          <ScalarProperty Name="SIRKET_ADRES" ColumnName="SIRKET_ADRES" />
+          <ScalarProperty Name="SIRKET_IL" ColumnName="SIRKET_IL" />
+          <ScalarProperty Name="SIRKET_ILCE" ColumnName="SIRKET_ILCE" />
+          <ScalarProperty Name="SIRKET_POSTA_KODU" ColumnName="SIRKET_POSTA_KODU" />
+          <ScalarProperty Name="SIRKET_BANKA_ADI" ColumnName="SIRKET_BANKA_ADI" />
+          <ScalarProperty Name="SIRKET_BANKA_SUBE_ADI" ColumnName="SIRKET_BANKA_SUBE_ADI" />
+          <ScalarProperty Name="SIRKET_HESAP_NO" ColumnName="SIRKET_HESAP_NO" />
+          <ScalarProperty Name="SIRKET_IBAN" ColumnName="SIRKET_IBAN" />
+          <ScalarProperty Name="SIRKET_ACIKLAMA" ColumnName="SIRKET_ACIKLAMA" />
+          <ScalarProperty Name="YEDEK" ColumnName="YEDEK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_SIRKET_BAKIYE">
+      <EntityTypeMapping TypeName="ActionModel.TBL_SIRKET_BAKIYE">
+        <MappingFragment StoreEntitySet="TBL_SIRKET_BAKIYE">
+          <ScalarProperty Name="TBL_SIRKET_BAKIYE_ID" ColumnName="TBL_SIRKET_BAKIYE_ID" />
+          <ScalarProperty Name="TBL_SIRKET_ID" ColumnName="TBL_SIRKET_ID" />
+          <ScalarProperty Name="TBL_PARA_TIPI_ID" ColumnName="TBL_PARA_TIPI_ID" />
+          <ScalarProperty Name="TBL_FIS_ID" ColumnName="TBL_FIS_ID" />
+          <ScalarProperty Name="KUR" ColumnName="KUR" />
+          <ScalarProperty Name="TARIH" ColumnName="TARIH" />
+          <ScalarProperty Name="TUTAR" ColumnName="TUTAR" />
+          <ScalarProperty Name="ACIKLAMA" ColumnName="ACIKLAMA" />
+          <ScalarProperty Name="YEDEK" ColumnName="YEDEK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_SIRKET_GRUB">
+      <EntityTypeMapping TypeName="ActionModel.TBL_SIRKET_GRUB">
+        <MappingFragment StoreEntitySet="TBL_SIRKET_GRUB">
+          <ScalarProperty Name="TBL_SIRKET_GRUB_ID" ColumnName="TBL_SIRKET_GRUB_ID" />
+          <ScalarProperty Name="SIRKET_GRUP_ADI" ColumnName="SIRKET_GRUP_ADI" />
+          <ScalarProperty Name="ACIKLAMA" ColumnName="ACIKLAMA" />
+          <ScalarProperty Name="YEDEK" ColumnName="YEDEK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_SIRKET_SINIF">
+      <EntityTypeMapping TypeName="ActionModel.TBL_SIRKET_SINIF">
+        <MappingFragment StoreEntitySet="TBL_SIRKET_SINIF">
+          <ScalarProperty Name="TBL_SIRKET_SINIF_ID" ColumnName="TBL_SIRKET_SINIF_ID" />
+          <ScalarProperty Name="SIRKET_SINIF_ADI" ColumnName="SIRKET_SINIF_ADI" />
+          <ScalarProperty Name="YEDEK" ColumnName="YEDEK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_SIRKET_TIPI">
+      <EntityTypeMapping TypeName="ActionModel.TBL_SIRKET_TIPI">
+        <MappingFragment StoreEntitySet="TBL_SIRKET_TIPI">
+          <ScalarProperty Name="TBL_SIRKET_TIPI_ID" ColumnName="TBL_SIRKET_TIPI_ID" />
+          <ScalarProperty Name="SIRKET_TIPI_ADI" ColumnName="SIRKET_TIPI_ADI" />
+          <ScalarProperty Name="YEDEK" ColumnName="YEDEK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_SPARIS">
+      <EntityTypeMapping TypeName="ActionModel.TBL_SPARIS">
+        <MappingFragment StoreEntitySet="TBL_SPARIS">
+          <ScalarProperty Name="TBL_SPARIS_ID" ColumnName="TBL_SPARIS_ID" />
+          <ScalarProperty Name="TBL_SIRKET_ID" ColumnName="TBL_SIRKET_ID" />
+          <ScalarProperty Name="TBL_SPARIS_TURU_ID" ColumnName="TBL_SPARIS_TURU_ID" />
+          <ScalarProperty Name="SPARIS_TARIH" ColumnName="SPARIS_TARIH" />
+          <ScalarProperty Name="SPARIS_VADE_TARIH" ColumnName="SPARIS_VADE_TARIH" />
+          <ScalarProperty Name="SPARIS_FATURA_SERI_NO" ColumnName="SPARIS_FATURA_SERI_NO" />
+          <ScalarProperty Name="TBL_PARA_TIPI_ID" ColumnName="TBL_PARA_TIPI_ID" />
+          <ScalarProperty Name="TBL_ODEME_TIPI_ID" ColumnName="TBL_ODEME_TIPI_ID" />
+          <ScalarProperty Name="TBL_KASA_ID" ColumnName="TBL_KASA_ID" />
+          <ScalarProperty Name="TBL_DEPO_ID" ColumnName="TBL_DEPO_ID" />
+          <ScalarProperty Name="TBL_PERSONEL_ID" ColumnName="TBL_PERSONEL_ID" />
+          <ScalarProperty Name="YEDEK" ColumnName="YEDEK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_SPARIS_TURU">
+      <EntityTypeMapping TypeName="ActionModel.TBL_SPARIS_TURU">
+        <MappingFragment StoreEntitySet="TBL_SPARIS_TURU">
+          <ScalarProperty Name="TBL_SPARIS_TURU_ID" ColumnName="TBL_SPARIS_TURU_ID" />
+          <ScalarProperty Name="SPARIS_TURU_ADI" ColumnName="SPARIS_TURU_ADI" />
+          <ScalarProperty Name="SPARIS_TURU_ACIKLAMA" ColumnName="SPARIS_TURU_ACIKLAMA" />
+          <ScalarProperty Name="YEDEK" ColumnName="YEDEK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_URUN">
+      <EntityTypeMapping TypeName="ActionModel.TBL_URUN">
+        <MappingFragment StoreEntitySet="TBL_URUN">
+          <ScalarProperty Name="TBL_URUN_ID" ColumnName="TBL_URUN_ID" />
+          <ScalarProperty Name="URUN_ADI" ColumnName="URUN_ADI" />
+          <ScalarProperty Name="URUN_KODU" ColumnName="URUN_KODU" />
+          <ScalarProperty Name="TBL_URUN_TIPI_ID" ColumnName="TBL_URUN_TIPI_ID" />
+          <ScalarProperty Name="TBL_URUN_CINSI_ID" ColumnName="TBL_URUN_CINSI_ID" />
+          <ScalarProperty Name="TBL_URUN_MARKA_ID" ColumnName="TBL_URUN_MARKA_ID" />
+          <ScalarProperty Name="TBL_URUN_BIRIM_ID" ColumnName="TBL_URUN_BIRIM_ID" />
+          <ScalarProperty Name="TBL_KDV_ID" ColumnName="TBL_KDV_ID" />
+          <ScalarProperty Name="URUN_DURUM" ColumnName="URUN_DURUM" />
+          <ScalarProperty Name="URUN_ALIS_FIYATI" ColumnName="URUN_ALIS_FIYATI" />
+          <ScalarProperty Name="URUN_SATIS_FIYATI" ColumnName="URUN_SATIS_FIYATI" />
+          <ScalarProperty Name="TBL_PARA_TIPI_ID" ColumnName="TBL_PARA_TIPI_ID" />
+          <ScalarProperty Name="YEDEK" ColumnName="YEDEK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_URUN_BIRIM">
+      <EntityTypeMapping TypeName="ActionModel.TBL_URUN_BIRIM">
+        <MappingFragment StoreEntitySet="TBL_URUN_BIRIM">
+          <ScalarProperty Name="TBL_URUN_BIRIM_ID" ColumnName="TBL_URUN_BIRIM_ID" />
+          <ScalarProperty Name="URUN_BIRIM_ADI" ColumnName="URUN_BIRIM_ADI" />
+          <ScalarProperty Name="URUN_BIRIM_ACIKLAMA" ColumnName="URUN_BIRIM_ACIKLAMA" />
+          <ScalarProperty Name="YEDEK" ColumnName="YEDEK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_URUN_CINSI">
+      <EntityTypeMapping TypeName="ActionModel.TBL_URUN_CINSI">
+        <MappingFragment StoreEntitySet="TBL_URUN_CINSI">
+          <ScalarProperty Name="TBL_URUN_CINSI_ID" ColumnName="TBL_URUN_CINSI_ID" />
+          <ScalarProperty Name="TBL_URUN_TIPI_ID" ColumnName="TBL_URUN_TIPI_ID" />
+          <ScalarProperty Name="URUN_CINSI_ADI" ColumnName="URUN_CINSI_ADI" />
+          <ScalarProperty Name="URUN_CINSI_ACIKLAMA" ColumnName="URUN_CINSI_ACIKLAMA" />
+          <ScalarProperty Name="YEDEK" ColumnName="YEDEK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_URUN_FATURA">
+      <EntityTypeMapping TypeName="ActionModel.TBL_URUN_FATURA">
+        <MappingFragment StoreEntitySet="TBL_URUN_FATURA">
+          <ScalarProperty Name="TBL_URUN_FATURA_ID" ColumnName="TBL_URUN_FATURA_ID" />
+          <ScalarProperty Name="TBL_URUN_ID" ColumnName="TBL_URUN_ID" />
+          <ScalarProperty Name="TBL_FATURA_ID" ColumnName="TBL_FATURA_ID" />
+          <ScalarProperty Name="URUN_FATURA_MIKTAR" ColumnName="URUN_FATURA_MIKTAR" />
+          <ScalarProperty Name="ACIKLAMA" ColumnName="ACIKLAMA" />
+          <ScalarProperty Name="YEDEK" ColumnName="YEDEK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_URUN_MARKA">
+      <EntityTypeMapping TypeName="ActionModel.TBL_URUN_MARKA">
+        <MappingFragment StoreEntitySet="TBL_URUN_MARKA">
+          <ScalarProperty Name="TBL_URUN_MARKA_ID" ColumnName="TBL_URUN_MARKA_ID" />
+          <ScalarProperty Name="TBL_URUN_TIPI_ID" ColumnName="TBL_URUN_TIPI_ID" />
+          <ScalarProperty Name="TBL_URUN_CINSI_ID" ColumnName="TBL_URUN_CINSI_ID" />
+          <ScalarProperty Name="URUN_MARKA_ADI" ColumnName="URUN_MARKA_ADI" />
+          <ScalarProperty Name="URUN_MARKA_ACIKLAMA" ColumnName="URUN_MARKA_ACIKLAMA" />
+          <ScalarProperty Name="YEDEK" ColumnName="YEDEK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_URUN_SPARIS">
+      <EntityTypeMapping TypeName="ActionModel.TBL_URUN_SPARIS">
+        <MappingFragment StoreEntitySet="TBL_URUN_SPARIS">
+          <ScalarProperty Name="TBL_URUN_SPARIS_ID" ColumnName="TBL_URUN_SPARIS_ID" />
+          <ScalarProperty Name="TBL_URUN_ID" ColumnName="TBL_URUN_ID" />
+          <ScalarProperty Name="TBL_SIPARIS_ID" ColumnName="TBL_SIPARIS_ID" />
+          <ScalarProperty Name="URUN_SIPARIS_MIKTAR" ColumnName="URUN_SIPARIS_MIKTAR" />
+          <ScalarProperty Name="ACIKLAMA" ColumnName="ACIKLAMA" />
+          <ScalarProperty Name="YEDEK" ColumnName="YEDEK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_URUN_STOK">
+      <EntityTypeMapping TypeName="ActionModel.TBL_URUN_STOK">
+        <MappingFragment StoreEntitySet="TBL_URUN_STOK">
+          <ScalarProperty Name="TBL_URUN_STOK_ID" ColumnName="TBL_URUN_STOK_ID" />
+          <ScalarProperty Name="TBL_URUN_ID" ColumnName="TBL_URUN_ID" />
+          <ScalarProperty Name="TBL_DEPO_ID" ColumnName="TBL_DEPO_ID" />
+          <ScalarProperty Name="URUN_BIRIM_MIKTARI" ColumnName="URUN_BIRIM_MIKTARI" />
+          <ScalarProperty Name="STOK_DURUM" ColumnName="STOK_DURUM" />
+          <ScalarProperty Name="ACIKLAMA" ColumnName="ACIKLAMA" />
+          <ScalarProperty Name="YEDEK" ColumnName="YEDEK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_URUN_TIPI">
+      <EntityTypeMapping TypeName="ActionModel.TBL_URUN_TIPI">
+        <MappingFragment StoreEntitySet="TBL_URUN_TIPI">
+          <ScalarProperty Name="TBL_URUN_TIPI_ID" ColumnName="TBL_URUN_TIPI_ID" />
+          <ScalarProperty Name="URUN_TIPI_ADI" ColumnName="URUN_TIPI_ADI" />
+          <ScalarProperty Name="URUN_TIPI_ACIKLAMA" ColumnName="URUN_TIPI_ACIKLAMA" />
+          <ScalarProperty Name="YEDEK" ColumnName="YEDEK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
+</edmx:Mappings>
+</edmx:Runtime>
+<!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+<edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+<Connection><DesignerInfoPropertySet><DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" /></DesignerInfoPropertySet></Connection>
+<edmx:Options><DesignerInfoPropertySet><DesignerProperty Name="ValidateOnBuild" Value="True" /><DesignerProperty Name="EnablePluralization" Value="True" /><DesignerProperty Name="IncludeForeignKeysInModel" Value="True" /><DesignerProperty Name="UseLegacyProvider" Value="False" /><DesignerProperty Name="CodeGenerationStrategy" Value="None" /></DesignerInfoPropertySet></edmx:Options>
+<edmx:Diagrams >
+      <Diagram DiagramId="8e8bda14c331425b99071f7fe1d8ff5d" Name="Diagram1">
+        <EntityTypeShape EntityType="ActionModel.TBL_BANKA" Width="1.5" PointX="3" PointY="19.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActionModel.TBL_BANKA_BAKIYE" Width="1.5" PointX="5.25" PointY="21.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActionModel.TBL_DEPO" Width="1.5" PointX="8" PointY="15.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActionModel.TBL_DEPO_ISLEM" Width="1.5" PointX="10.25" PointY="18.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActionModel.TBL_DEPO_TRANSFER" Width="1.5" PointX="10.25" PointY="22.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActionModel.TBL_FATURA" Width="1.5" PointX="5.25" PointY="27" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActionModel.TBL_FATURA_TURU" Width="1.5" PointX="3" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActionModel.TBL_FIS" Width="1.5" PointX="3" PointY="15.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActionModel.TBL_GIDER" Width="1.5" PointX="3" PointY="30.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActionModel.TBL_GIDER_BAKIYE" Width="1.5" PointX="8.25" PointY="26.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActionModel.TBL_KASA" Width="1.5" PointX="3" PointY="33.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActionModel.TBL_KASA_BAKIYE" Width="1.5" PointX="8.25" PointY="31" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActionModel.TBL_KDV" Width="1.5" PointX="5.75" PointY="16.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActionModel.TBL_ODEME" Width="1.5" PointX="5.25" PointY="33.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActionModel.TBL_ODEME_TIPI" Width="1.5" PointX="3" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActionModel.TBL_ODEME_TURU" Width="1.5" PointX="3" PointY="53.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActionModel.TBL_PARA_TIPI" Width="1.5" PointX="0.75" PointY="23" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActionModel.TBL_PERSONEL" Width="1.5" PointX="3" PointY="46" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActionModel.TBL_SIRKET" Width="1.5" PointX="0.75" PointY="28.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActionModel.TBL_SIRKET_BAKIYE" Width="1.5" PointX="3" PointY="24.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActionModel.TBL_SIRKET_GRUB" Width="1.5" PointX="1.5" PointY="37.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActionModel.TBL_SIRKET_SINIF" Width="1.5" PointX="1.5" PointY="40" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActionModel.TBL_SIRKET_TIPI" Width="1.5" PointX="1.5" PointY="42.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActionModel.TBL_SPARIS" Width="1.5" PointX="11.25" PointY="27.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActionModel.TBL_SPARIS_TURU" Width="1.5" PointX="9" PointY="35.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActionModel.TBL_URUN" Width="1.5" PointX="8" PointY="19" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActionModel.TBL_URUN_BIRIM" Width="1.5" PointX="5.75" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActionModel.TBL_URUN_CINSI" Width="1.5" PointX="5.75" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActionModel.TBL_URUN_FATURA" Width="1.5" PointX="14.25" PointY="24.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActionModel.TBL_URUN_MARKA" Width="1.5" PointX="5.75" PointY="38.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActionModel.TBL_URUN_SPARIS" Width="1.5" PointX="16.5" PointY="24.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActionModel.TBL_URUN_STOK" Width="1.5" PointX="13.25" PointY="20.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActionModel.TBL_URUN_TIPI" Width="1.5" PointX="3.5" PointY="8.625" IsExpanded="true" />
+        <AssociationConnector Association="ActionModel.FK_TBL_BANKA_BAKIYE_TBL_BANKA" ManuallyRouted="false" />
+        <AssociationConnector Association="ActionModel.FK_TBL_BANKA_TBL_PARA_TIPI" ManuallyRouted="false" />
+        <AssociationConnector Association="ActionModel.FK_TBL_BANKA_BAKIYE_TBL_FIS" ManuallyRouted="false" />
+        <AssociationConnector Association="ActionModel.FK_TBL_BANKA_BAKIYE_TBL_PARA_TIPI" ManuallyRouted="false" />
+        <AssociationConnector Association="ActionModel.FK_TBL_DEPO_ISLEM_TBL_DEPO" ManuallyRouted="false" />
+        <AssociationConnector Association="ActionModel.FK_TBL_FATURA_TBL_DEPO" ManuallyRouted="false" />
+        <AssociationConnector Association="ActionModel.FK_TBL_SPARIS_TBL_DEPO" ManuallyRouted="false" />
+        <AssociationConnector Association="ActionModel.FK_TBL_URUN_STOK_TBL_DEPO" ManuallyRouted="false" />
+        <AssociationConnector Association="ActionModel.FK_TBL_DEPO_ISLEM_TBL_URUN" ManuallyRouted="false" />
+        <AssociationConnector Association="ActionModel.FK_TBL_DEPO_TRANSFER_TBL_URUN" ManuallyRouted="false" />
+        <AssociationConnector Association="ActionModel.FK_TBL_FATURA_TBL_FATURA_TURU" ManuallyRouted="false" />
+        <AssociationConnector Association="ActionModel.FK_TBL_FATURA_TBL_KASA" ManuallyRouted="false" />
+        <AssociationConnector Association="ActionModel.FK_TBL_FATURA_TBL_ODEME_TIPI" ManuallyRouted="false" />
+        <AssociationConnector Association="ActionModel.FK_TBL_FATURA_TBL_PARA_TIPI" ManuallyRouted="false" />
+        <AssociationConnector Association="ActionModel.FK_TBL_FATURA_TBL_PERSONEL" ManuallyRouted="false" />
+        <AssociationConnector Association="ActionModel.FK_TBL_FATURA_TBL_SIRKET" ManuallyRouted="false" />
+        <AssociationConnector Association="ActionModel.FK_TBL_FATURA_TBL_SPARIS" ManuallyRouted="false" />
+        <AssociationConnector Association="ActionModel.FK_TBL_URUN_FATURA_TBL_FATURA" ManuallyRouted="false" />
+        <AssociationConnector Association="ActionModel.FK_TBL_GIDER_BAKIYE_TBL_FIS" ManuallyRouted="false" />
+        <AssociationConnector Association="ActionModel.FK_TBL_KASA_BAKIYE_TBL_FIS" ManuallyRouted="false" />
+        <AssociationConnector Association="ActionModel.FK_TBL_SIRKET_BAKIYE_TBL_FIS" ManuallyRouted="false" />
+        <AssociationConnector Association="ActionModel.FK_TBL_GIDER_BAKIYE_TBL_GIDER" ManuallyRouted="false" />
+        <AssociationConnector Association="ActionModel.FK_TBL_GIDER_TBL_PARA_TIPI" ManuallyRouted="false" />
+        <AssociationConnector Association="ActionModel.FK_TBL_GIDER_BAKIYE_TBL_PARA_TIPI" ManuallyRouted="false" />
+        <AssociationConnector Association="ActionModel.FK_TBL_KASA_BAKIYE_TBL_KASA" ManuallyRouted="false" />
+        <AssociationConnector Association="ActionModel.FK_TBL_KASA_TBL_PARA_TIPI" ManuallyRouted="false" />
+        <AssociationConnector Association="ActionModel.FK_TBL_ODEME_TBL_KASA" ManuallyRouted="false" />
+        <AssociationConnector Association="ActionModel.FK_TBL_SPARIS_TBL_KASA" ManuallyRouted="false" />
+        <AssociationConnector Association="ActionModel.FK_TBL_KASA_BAKIYE_TBL_PARA_TIPI" ManuallyRouted="false" />
+        <AssociationConnector Association="ActionModel.FK_TBL_URUN_TBL_KDV" ManuallyRouted="false" />
+        <AssociationConnector Association="ActionModel.FK_TBL_ODEME_TBL_ODEME_TIPI" ManuallyRouted="false" />
+        <AssociationConnector Association="ActionModel.FK_TBL_ODEME_TBL_ODEME_TURU" ManuallyRouted="false" />
+        <AssociationConnector Association="ActionModel.FK_TBL_ODEME_TBL_PARA_TIPI" ManuallyRouted="false" />
+        <AssociationConnector Association="ActionModel.FK_TBL_ODEME_TBL_SIRKET" ManuallyRouted="false" />
+        <AssociationConnector Association="ActionModel.FK_TBL_SPARIS_TBL_ODEME_TIPI" ManuallyRouted="false" />
+        <AssociationConnector Association="ActionModel.FK_TBL_SIRKET_BAKIYE_TBL_PARA_TIPI" ManuallyRouted="false" />
+        <AssociationConnector Association="ActionModel.FK_TBL_SPARIS_TBL_PARA_TIPI" ManuallyRouted="false" />
+        <AssociationConnector Association="ActionModel.FK_TBL_URUN_TBL_PARA_TIPI" ManuallyRouted="false" />
+        <AssociationConnector Association="ActionModel.FK_TBL_SPARIS_TBL_PERSONEL" ManuallyRouted="false" />
+        <AssociationConnector Association="ActionModel.FK_TBL_SIRKET_BAKIYE_TBL_SIRKET" ManuallyRouted="false" />
+        <AssociationConnector Association="ActionModel.FK_TBL_SIRKET_TBL_SIRKET_GRUB" ManuallyRouted="false" />
+        <AssociationConnector Association="ActionModel.FK_TBL_SIRKET_TBL_SIRKET_SINIF" ManuallyRouted="false" />
+        <AssociationConnector Association="ActionModel.FK_TBL_SIRKET_TBL_SIRKET_TIPI" ManuallyRouted="false" />
+        <AssociationConnector Association="ActionModel.FK_TBL_SPARIS_TBL_SIRKET" ManuallyRouted="false" />
+        <AssociationConnector Association="ActionModel.FK_TBL_SPARIS_TBL_SPARIS_TURU" ManuallyRouted="false" />
+        <AssociationConnector Association="ActionModel.FK_TBL_URUN_SPARIS_TBL_SPARIS" ManuallyRouted="false" />
+        <AssociationConnector Association="ActionModel.FK_TBL_URUN_FATURA_TBL_URUN1" ManuallyRouted="false" />
+        <AssociationConnector Association="ActionModel.FK_TBL_URUN_SPARIS_TBL_URUN1" ManuallyRouted="false" />
+        <AssociationConnector Association="ActionModel.FK_TBL_URUN_STOK_TBL_URUN" ManuallyRouted="false" />
+        <AssociationConnector Association="ActionModel.FK_TBL_URUN_TBL_URUN_BIRIM" ManuallyRouted="false" />
+        <AssociationConnector Association="ActionModel.FK_TBL_URUN_TBL_URUN_CINSI" ManuallyRouted="false" />
+        <AssociationConnector Association="ActionModel.FK_TBL_URUN_TBL_URUN_MARKA" ManuallyRouted="false" />
+        <AssociationConnector Association="ActionModel.FK_TBL_URUN_TBL_URUN_TIPI" ManuallyRouted="false" />
+        <AssociationConnector Association="ActionModel.FK_TBL_URUN_CINSI_TBL_URUN_TIPI" ManuallyRouted="false" />
+        <AssociationConnector Association="ActionModel.FK_TBL_URUN_MARKA_TBL_URUN_CINSI" ManuallyRouted="false" />
+        <AssociationConnector Association="ActionModel.FK_TBL_URUN_MARKA_TBL_URUN_TIPI" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+</edmx:Designer></edmx:Edmx>

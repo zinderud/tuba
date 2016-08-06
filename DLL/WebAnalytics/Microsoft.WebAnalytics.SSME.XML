@@ -1,0 +1,171 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.WebAnalytics.SSME</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.WebAnalytics.Media.TrackSmoothStreamingMediaElement">
+            <summary>
+            <img src="../media/Microsoft.WebAnalytics.Media.TrackSmoothStreamingMediaElement.24x24.png"/> 
+            Smooth Streaming Media Element event tracking
+            </summary>
+            <example>
+            Adding this behavior via code:
+            <code>
+            var ssme = new SmoothStreamingMediaElement();
+            var behaviors = System.Windows.Interactivity.Interaction.GetBehaviors(ssme);
+            behaviors.Add(new TrackSmoothStreamingMediaElement());
+            </code>
+            </example>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Media.TrackSmoothStreamingMediaElement.#ctor">
+            <summary>
+            Initializes a new instance of the TrackSmoothStreamingMediaElement class
+            </summary>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Media.TrackSmoothStreamingMediaElement.OnAttached">
+            <summary>
+            Initialize the imports and attach the event handlers
+            </summary>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Media.TrackSmoothStreamingMediaElement.OnDetaching">
+            <summary>
+            Detach the event handlers
+            </summary>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Media.TrackSmoothStreamingMediaElement.TimelineEventReached(System.Object,Microsoft.Web.Media.SmoothStreaming.TimelineEventArgs)">
+            <summary>
+            Log a TimelineEventReached event
+            </summary>
+            <param name="sender">the SSME object</param>
+            <param name="e">the timeline event arguments</param>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Media.TrackSmoothStreamingMediaElement.SmoothStreamingErrorOccurred(System.Object,Microsoft.Web.Media.SmoothStreaming.SmoothStreamingErrorEventArgs)">
+            <summary>
+            Log a SmoothStreamingErrorOccurred event
+            </summary>
+            <param name="sender">the SmoothStreamingMediaElement</param>
+            <param name="e">the smooth streaming error event argumetns</param>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Media.TrackSmoothStreamingMediaElement.SeekCompleted(System.Object,Microsoft.Web.Media.SmoothStreaming.SeekCompletedEventArgs)">
+            <summary>
+            Log the SeekCompleted event
+            </summary>
+            <param name="sender">the SmoothStreamingMediaElement</param>
+            <param name="e">the seek completed event arguments</param>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Media.TrackSmoothStreamingMediaElement.PlaybackTrackChanged(System.Object,Microsoft.Web.Media.SmoothStreaming.TrackChangedEventArgs)">
+            <summary>
+            Log the PlaybackTrackChanged event
+            </summary>
+            <param name="sender">the SmoothStreamingMediaElement</param>
+            <param name="e">the track changed event arguments</param>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Media.TrackSmoothStreamingMediaElement.MediaOpened(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Log the MediaOpened Event
+            </summary>
+            <param name="sender">the SmoothStreamingMediaElement</param>
+            <param name="e">the routed event arguments</param>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Media.TrackSmoothStreamingMediaElement.MediaFailed(System.Object,System.Windows.ExceptionRoutedEventArgs)">
+            <summary>
+            Log the MediaFailed event
+            </summary>
+            <param name="sender">the SmoothStreamingMediaElement</param>
+            <param name="e">the exception routed event arguments</param>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Media.TrackSmoothStreamingMediaElement.MediaEnded(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Log the MediaEnded event
+            </summary>
+            <param name="sender">the SmoothStreamingMediaElement</param>
+            <param name="e">the routed event arguments</param>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Media.TrackSmoothStreamingMediaElement.MarkerReached(System.Object,System.Windows.Media.TimelineMarkerRoutedEventArgs)">
+            <summary>
+            Log the MarkerReached event
+            </summary>
+            <param name="sender">the SmoothStreamingMediaElement</param>
+            <param name="e">the timeline marker routed event arguments</param>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Media.TrackSmoothStreamingMediaElement.LogReady(System.Object,System.Windows.Media.LogReadyRoutedEventArgs)">
+            <summary>
+            Log the LogReady event
+            </summary>
+            <param name="sender">the SmoothStreamingMediaElement</param>
+            <param name="e">the log ready routed event arguments</param>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Media.TrackSmoothStreamingMediaElement.LiveEventCompleted(System.Object,System.EventArgs)">
+            <summary>
+            Log the LiveEventCompleted event
+            </summary>
+            <param name="sender">the SmoothStreamingMediaElement</param>
+            <param name="e">the event arguments</param>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Media.TrackSmoothStreamingMediaElement.DurationExtended(System.Object,Microsoft.Web.Media.SmoothStreaming.DurationExtendedEventArgs)">
+            <summary>
+            Log the DurationExtended event
+            </summary>
+            <param name="sender">the SmoothStreamingMediaElement</param>
+            <param name="e">the duration extended event arguments</param>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Media.TrackSmoothStreamingMediaElement.DownloadTrackChanged(System.Object,Microsoft.Web.Media.SmoothStreaming.TrackChangedEventArgs)">
+            <summary>
+            Log the DownloadTrackChanged event
+            </summary>
+            <param name="sender">the SmoothStreamingMediaElement</param>
+            <param name="e">the track changed event arguments</param>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Media.TrackSmoothStreamingMediaElement.CurrentStateChanged(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Log the CurrentStateChanged event
+            </summary>
+            <param name="sender">the SmoothStreamingMediaElement</param>
+            <param name="e">the routed event arguments</param>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Media.TrackSmoothStreamingMediaElement.ClipStateChanged(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Log the ClipStateChanged event
+            </summary>
+            <param name="sender">the SmoothStreamingMediaElement</param>
+            <param name="e">the routed event arguments</param>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Media.TrackSmoothStreamingMediaElement.ClipError(System.Object,Microsoft.Web.Media.SmoothStreaming.ClipEventArgs)">
+            <summary>
+            Log the ClipError event
+            </summary>
+            <param name="sender">the SmoothStreamingMediaElement</param>
+            <param name="e">the clip event arguments</param>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Media.TrackSmoothStreamingMediaElement.ClipClickThrough(System.Object,Microsoft.Web.Media.SmoothStreaming.ClipEventArgs)">
+            <summary>
+            Log the ClipClickThrough event
+            </summary>
+            <param name="sender">the SmoothStreamingMediaElement</param>
+            <param name="e">the clip event arguments</param>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Media.TrackSmoothStreamingMediaElement.BufferingProgressChanged(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Log the BufferingProgressChanged event
+            </summary>
+            <param name="sender">the SmoothStreamingMediaElement</param>
+            <param name="e">the routed event arguments</param>
+        </member>
+        <member name="P:Microsoft.WebAnalytics.Media.TrackSmoothStreamingMediaElement.CustomProperties">
+            <summary>
+            Gets custom properties (name/value pairs) for the action
+            </summary>
+        </member>
+        <member name="P:Microsoft.WebAnalytics.Media.TrackSmoothStreamingMediaElement.Log">
+            <summary>
+            Gets or sets the event Logging method
+            </summary>
+        </member>
+        <member name="P:Microsoft.WebAnalytics.Media.TrackSmoothStreamingMediaElement.Source">
+            <summary>
+            Gets the Media Source or Smooth Streaming Source
+            </summary>
+        </member>
+    </members>
+</doc>

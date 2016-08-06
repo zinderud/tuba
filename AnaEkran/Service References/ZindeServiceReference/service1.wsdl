@@ -1,0 +1,3196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ZindeService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="ZindeService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1">
+        </msb:BinaryEncoding>
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <msf:WindowsTransportSecurity xmlns:msf="http://schemas.microsoft.com/ws/2006/05/framing/policy">
+                  <msf:ProtectionLevel>EncryptAndSign</msf:ProtectionLevel>
+                </msf:WindowsTransportSecurity>
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256>
+                </sp:Basic256>
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict>
+                </sp:Strict>
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <wsaw:UsingAddressing>
+        </wsaw:UsingAddressing>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/AutoBusinessObjects" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IZindeService_Ekle__TBL_PERSONEL_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ekle__TBL_PERSONEL" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Ekle__TBL_PERSONEL_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Ekle__TBL_PERSONELResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Sil__TBL_PERSONEL_InputMessage">
+    <wsdl:part name="parameters" element="tns:Sil__TBL_PERSONEL" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Sil__TBL_PERSONEL_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Sil__TBL_PERSONELResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Degistir__TBL_PERSONEL_InputMessage">
+    <wsdl:part name="parameters" element="tns:Degistir__TBL_PERSONEL" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Degistir__TBL_PERSONEL_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Degistir__TBL_PERSONELResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Listele__TBL_PERSONEL_InputMessage">
+    <wsdl:part name="parameters" element="tns:Listele__TBL_PERSONEL" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Listele__TBL_PERSONEL_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Listele__TBL_PERSONELResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Bul_TBL_PERSONEL_InputMessage">
+    <wsdl:part name="parameters" element="tns:Bul_TBL_PERSONEL" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Bul_TBL_PERSONEL_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Bul_TBL_PERSONELResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Ekle__TBL_SIRKET_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ekle__TBL_SIRKET" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Ekle__TBL_SIRKET_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Ekle__TBL_SIRKETResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Sil__TBL_SIRKET_InputMessage">
+    <wsdl:part name="parameters" element="tns:Sil__TBL_SIRKET" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Sil__TBL_SIRKET_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Sil__TBL_SIRKETResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Degistir__TBL_SIRKET_InputMessage">
+    <wsdl:part name="parameters" element="tns:Degistir__TBL_SIRKET" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Degistir__TBL_SIRKET_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Degistir__TBL_SIRKETResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Listele__TBL_SIRKET_InputMessage">
+    <wsdl:part name="parameters" element="tns:Listele__TBL_SIRKET" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Listele__TBL_SIRKET_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Listele__TBL_SIRKETResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Bul_TBL_SIRKET_InputMessage">
+    <wsdl:part name="parameters" element="tns:Bul_TBL_SIRKET" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Bul_TBL_SIRKET_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Bul_TBL_SIRKETResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Ekle__TBL_SIRKET_BAKIYE_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ekle__TBL_SIRKET_BAKIYE" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Ekle__TBL_SIRKET_BAKIYE_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Ekle__TBL_SIRKET_BAKIYEResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Sil__TBL_SIRKET_BAKIYE_InputMessage">
+    <wsdl:part name="parameters" element="tns:Sil__TBL_SIRKET_BAKIYE" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Sil__TBL_SIRKET_BAKIYE_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Sil__TBL_SIRKET_BAKIYEResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Degistir__TBL_SIRKET_BAKIYE_InputMessage">
+    <wsdl:part name="parameters" element="tns:Degistir__TBL_SIRKET_BAKIYE" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Degistir__TBL_SIRKET_BAKIYE_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Degistir__TBL_SIRKET_BAKIYEResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Listele__TBL_SIRKET_BAKIYE_InputMessage">
+    <wsdl:part name="parameters" element="tns:Listele__TBL_SIRKET_BAKIYE" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Listele__TBL_SIRKET_BAKIYE_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Listele__TBL_SIRKET_BAKIYEResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Bul_TBL_SIRKET_BAKIYE_InputMessage">
+    <wsdl:part name="parameters" element="tns:Bul_TBL_SIRKET_BAKIYE" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Bul_TBL_SIRKET_BAKIYE_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Bul_TBL_SIRKET_BAKIYEResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Ekle__TBL_SIRKET_GRUB_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ekle__TBL_SIRKET_GRUB" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Ekle__TBL_SIRKET_GRUB_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Ekle__TBL_SIRKET_GRUBResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Sil__TBL_SIRKET_GRUB_InputMessage">
+    <wsdl:part name="parameters" element="tns:Sil__TBL_SIRKET_GRUB" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Sil__TBL_SIRKET_GRUB_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Sil__TBL_SIRKET_GRUBResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Degistir__TBL_SIRKET_GRUB_InputMessage">
+    <wsdl:part name="parameters" element="tns:Degistir__TBL_SIRKET_GRUB" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Degistir__TBL_SIRKET_GRUB_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Degistir__TBL_SIRKET_GRUBResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Listele__TBL_SIRKET_GRUB_InputMessage">
+    <wsdl:part name="parameters" element="tns:Listele__TBL_SIRKET_GRUB" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Listele__TBL_SIRKET_GRUB_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Listele__TBL_SIRKET_GRUBResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Bul_TBL_SIRKET_GRUB_InputMessage">
+    <wsdl:part name="parameters" element="tns:Bul_TBL_SIRKET_GRUB" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Bul_TBL_SIRKET_GRUB_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Bul_TBL_SIRKET_GRUBResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Ekle__TBL_SIRKET_SINIF_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ekle__TBL_SIRKET_SINIF" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Ekle__TBL_SIRKET_SINIF_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Ekle__TBL_SIRKET_SINIFResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Sil__TBL_SIRKET_SINIF_InputMessage">
+    <wsdl:part name="parameters" element="tns:Sil__TBL_SIRKET_SINIF" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Sil__TBL_SIRKET_SINIF_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Sil__TBL_SIRKET_SINIFResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Degistir__TBL_SIRKET_SINIF_InputMessage">
+    <wsdl:part name="parameters" element="tns:Degistir__TBL_SIRKET_SINIF" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Degistir__TBL_SIRKET_SINIF_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Degistir__TBL_SIRKET_SINIFResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Listele__TBL_SIRKET_SINIF_InputMessage">
+    <wsdl:part name="parameters" element="tns:Listele__TBL_SIRKET_SINIF" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Listele__TBL_SIRKET_SINIF_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Listele__TBL_SIRKET_SINIFResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Bul_TBL_SIRKET_SINIF_InputMessage">
+    <wsdl:part name="parameters" element="tns:Bul_TBL_SIRKET_SINIF" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Bul_TBL_SIRKET_SINIF_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Bul_TBL_SIRKET_SINIFResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Ekle__TBL_SIRKET_TIPI_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ekle__TBL_SIRKET_TIPI" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Ekle__TBL_SIRKET_TIPI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Ekle__TBL_SIRKET_TIPIResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Sil__TBL_SIRKET_TIPI_InputMessage">
+    <wsdl:part name="parameters" element="tns:Sil__TBL_SIRKET_TIPI" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Sil__TBL_SIRKET_TIPI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Sil__TBL_SIRKET_TIPIResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Degistir__TBL_SIRKET_TIPI_InputMessage">
+    <wsdl:part name="parameters" element="tns:Degistir__TBL_SIRKET_TIPI" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Degistir__TBL_SIRKET_TIPI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Degistir__TBL_SIRKET_TIPIResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Listele__TBL_SIRKET_TIPI_InputMessage">
+    <wsdl:part name="parameters" element="tns:Listele__TBL_SIRKET_TIPI" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Listele__TBL_SIRKET_TIPI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Listele__TBL_SIRKET_TIPIResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Bul_TBL_SIRKET_TIPI_InputMessage">
+    <wsdl:part name="parameters" element="tns:Bul_TBL_SIRKET_TIPI" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Bul_TBL_SIRKET_TIPI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Bul_TBL_SIRKET_TIPIResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Ekle__TBL_SPARIS_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ekle__TBL_SPARIS" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Ekle__TBL_SPARIS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Ekle__TBL_SPARISResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Sil__TBL_SPARIS_InputMessage">
+    <wsdl:part name="parameters" element="tns:Sil__TBL_SPARIS" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Sil__TBL_SPARIS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Sil__TBL_SPARISResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Degistir__TBL_SPARIS_InputMessage">
+    <wsdl:part name="parameters" element="tns:Degistir__TBL_SPARIS" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Degistir__TBL_SPARIS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Degistir__TBL_SPARISResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Listele__TBL_SPARIS_InputMessage">
+    <wsdl:part name="parameters" element="tns:Listele__TBL_SPARIS" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Listele__TBL_SPARIS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Listele__TBL_SPARISResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Bul_TBL_SPARIS_InputMessage">
+    <wsdl:part name="parameters" element="tns:Bul_TBL_SPARIS" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Bul_TBL_SPARIS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Bul_TBL_SPARISResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Ekle__TBL_SPARIS_TURU_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ekle__TBL_SPARIS_TURU" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Ekle__TBL_SPARIS_TURU_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Ekle__TBL_SPARIS_TURUResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Sil__TBL_SPARIS_TURU_InputMessage">
+    <wsdl:part name="parameters" element="tns:Sil__TBL_SPARIS_TURU" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Sil__TBL_SPARIS_TURU_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Sil__TBL_SPARIS_TURUResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Degistir__TBL_SPARIS_TURU_InputMessage">
+    <wsdl:part name="parameters" element="tns:Degistir__TBL_SPARIS_TURU" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Degistir__TBL_SPARIS_TURU_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Degistir__TBL_SPARIS_TURUResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Listele__TBL_SPARIS_TURU_InputMessage">
+    <wsdl:part name="parameters" element="tns:Listele__TBL_SPARIS_TURU" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Listele__TBL_SPARIS_TURU_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Listele__TBL_SPARIS_TURUResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Bul_TBL_SPARIS_TURU_InputMessage">
+    <wsdl:part name="parameters" element="tns:Bul_TBL_SPARIS_TURU" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Bul_TBL_SPARIS_TURU_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Bul_TBL_SPARIS_TURUResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Ekle__TBL_URUN_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ekle__TBL_URUN" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Ekle__TBL_URUN_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Ekle__TBL_URUNResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Sil__TBL_URUN_InputMessage">
+    <wsdl:part name="parameters" element="tns:Sil__TBL_URUN" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Sil__TBL_URUN_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Sil__TBL_URUNResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Degistir__TBL_URUN_InputMessage">
+    <wsdl:part name="parameters" element="tns:Degistir__TBL_URUN" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Degistir__TBL_URUN_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Degistir__TBL_URUNResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Listele__TBL_URUN_InputMessage">
+    <wsdl:part name="parameters" element="tns:Listele__TBL_URUN" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Listele__TBL_URUN_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Listele__TBL_URUNResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Bul_TBL_URUN_InputMessage">
+    <wsdl:part name="parameters" element="tns:Bul_TBL_URUN" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Bul_TBL_URUN_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Bul_TBL_URUNResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Ekle__TBL_URUN_BIRIM_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ekle__TBL_URUN_BIRIM" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Ekle__TBL_URUN_BIRIM_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Ekle__TBL_URUN_BIRIMResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Sil__TBL_URUN_BIRIM_InputMessage">
+    <wsdl:part name="parameters" element="tns:Sil__TBL_URUN_BIRIM" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Sil__TBL_URUN_BIRIM_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Sil__TBL_URUN_BIRIMResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Degistir__TBL_URUN_BIRIM_InputMessage">
+    <wsdl:part name="parameters" element="tns:Degistir__TBL_URUN_BIRIM" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Degistir__TBL_URUN_BIRIM_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Degistir__TBL_URUN_BIRIMResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Listele__TBL_URUN_BIRIM_InputMessage">
+    <wsdl:part name="parameters" element="tns:Listele__TBL_URUN_BIRIM" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Listele__TBL_URUN_BIRIM_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Listele__TBL_URUN_BIRIMResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Bul_TBL_URUN_BIRIM_InputMessage">
+    <wsdl:part name="parameters" element="tns:Bul_TBL_URUN_BIRIM" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Bul_TBL_URUN_BIRIM_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Bul_TBL_URUN_BIRIMResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Ekle__TBL_URUN_CINSI_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ekle__TBL_URUN_CINSI" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Ekle__TBL_URUN_CINSI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Ekle__TBL_URUN_CINSIResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Sil__TBL_URUN_CINSI_InputMessage">
+    <wsdl:part name="parameters" element="tns:Sil__TBL_URUN_CINSI" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Sil__TBL_URUN_CINSI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Sil__TBL_URUN_CINSIResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Degistir__TBL_URUN_CINSI_InputMessage">
+    <wsdl:part name="parameters" element="tns:Degistir__TBL_URUN_CINSI" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Degistir__TBL_URUN_CINSI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Degistir__TBL_URUN_CINSIResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Listele__TBL_URUN_CINSI_InputMessage">
+    <wsdl:part name="parameters" element="tns:Listele__TBL_URUN_CINSI" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Listele__TBL_URUN_CINSI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Listele__TBL_URUN_CINSIResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Bul_TBL_URUN_CINSI_InputMessage">
+    <wsdl:part name="parameters" element="tns:Bul_TBL_URUN_CINSI" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Bul_TBL_URUN_CINSI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Bul_TBL_URUN_CINSIResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Ekle__TBL_URUN_FATURA_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ekle__TBL_URUN_FATURA" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Ekle__TBL_URUN_FATURA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Ekle__TBL_URUN_FATURAResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Sil__TBL_URUN_FATURA_InputMessage">
+    <wsdl:part name="parameters" element="tns:Sil__TBL_URUN_FATURA" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Sil__TBL_URUN_FATURA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Sil__TBL_URUN_FATURAResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Degistir__TBL_URUN_FATURA_InputMessage">
+    <wsdl:part name="parameters" element="tns:Degistir__TBL_URUN_FATURA" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Degistir__TBL_URUN_FATURA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Degistir__TBL_URUN_FATURAResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Listele__TBL_URUN_FATURA_InputMessage">
+    <wsdl:part name="parameters" element="tns:Listele__TBL_URUN_FATURA" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Listele__TBL_URUN_FATURA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Listele__TBL_URUN_FATURAResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Bul_TBL_URUN_FATURA_InputMessage">
+    <wsdl:part name="parameters" element="tns:Bul_TBL_URUN_FATURA" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Bul_TBL_URUN_FATURA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Bul_TBL_URUN_FATURAResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Ekle__TBL_URUN_MARKA_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ekle__TBL_URUN_MARKA" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Ekle__TBL_URUN_MARKA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Ekle__TBL_URUN_MARKAResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Sil__TBL_URUN_MARKA_InputMessage">
+    <wsdl:part name="parameters" element="tns:Sil__TBL_URUN_MARKA" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Sil__TBL_URUN_MARKA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Sil__TBL_URUN_MARKAResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Degistir__TBL_URUN_MARKA_InputMessage">
+    <wsdl:part name="parameters" element="tns:Degistir__TBL_URUN_MARKA" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Degistir__TBL_URUN_MARKA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Degistir__TBL_URUN_MARKAResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Listele__TBL_URUN_MARKA_InputMessage">
+    <wsdl:part name="parameters" element="tns:Listele__TBL_URUN_MARKA" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Listele__TBL_URUN_MARKA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Listele__TBL_URUN_MARKAResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Bul_TBL_URUN_MARKA_InputMessage">
+    <wsdl:part name="parameters" element="tns:Bul_TBL_URUN_MARKA" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Bul_TBL_URUN_MARKA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Bul_TBL_URUN_MARKAResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Ekle__TBL_URUN_SPARIS_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ekle__TBL_URUN_SPARIS" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Ekle__TBL_URUN_SPARIS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Ekle__TBL_URUN_SPARISResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Sil__TBL_URUN_SPARIS_InputMessage">
+    <wsdl:part name="parameters" element="tns:Sil__TBL_URUN_SPARIS" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Sil__TBL_URUN_SPARIS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Sil__TBL_URUN_SPARISResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Degistir__TBL_URUN_SPARIS_InputMessage">
+    <wsdl:part name="parameters" element="tns:Degistir__TBL_URUN_SPARIS" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Degistir__TBL_URUN_SPARIS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Degistir__TBL_URUN_SPARISResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Listele__TBL_URUN_SPARIS_InputMessage">
+    <wsdl:part name="parameters" element="tns:Listele__TBL_URUN_SPARIS" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Listele__TBL_URUN_SPARIS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Listele__TBL_URUN_SPARISResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Bul_TBL_URUN_SPARIS_InputMessage">
+    <wsdl:part name="parameters" element="tns:Bul_TBL_URUN_SPARIS" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Bul_TBL_URUN_SPARIS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Bul_TBL_URUN_SPARISResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Ekle__TBL_URUN_STOK_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ekle__TBL_URUN_STOK" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Ekle__TBL_URUN_STOK_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Ekle__TBL_URUN_STOKResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Sil__TBL_URUN_STOK_InputMessage">
+    <wsdl:part name="parameters" element="tns:Sil__TBL_URUN_STOK" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Sil__TBL_URUN_STOK_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Sil__TBL_URUN_STOKResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Degistir__TBL_URUN_STOK_InputMessage">
+    <wsdl:part name="parameters" element="tns:Degistir__TBL_URUN_STOK" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Degistir__TBL_URUN_STOK_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Degistir__TBL_URUN_STOKResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Listele__TBL_URUN_STOK_InputMessage">
+    <wsdl:part name="parameters" element="tns:Listele__TBL_URUN_STOK" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Listele__TBL_URUN_STOK_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Listele__TBL_URUN_STOKResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Bul_TBL_URUN_STOK_InputMessage">
+    <wsdl:part name="parameters" element="tns:Bul_TBL_URUN_STOK" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Bul_TBL_URUN_STOK_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Bul_TBL_URUN_STOKResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Ekle__TBL_URUN_TIPI_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ekle__TBL_URUN_TIPI" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Ekle__TBL_URUN_TIPI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Ekle__TBL_URUN_TIPIResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Sil__TBL_URUN_TIPI_InputMessage">
+    <wsdl:part name="parameters" element="tns:Sil__TBL_URUN_TIPI" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Sil__TBL_URUN_TIPI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Sil__TBL_URUN_TIPIResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Degistir__TBL_URUN_TIPI_InputMessage">
+    <wsdl:part name="parameters" element="tns:Degistir__TBL_URUN_TIPI" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Degistir__TBL_URUN_TIPI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Degistir__TBL_URUN_TIPIResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Listele__TBL_URUN_TIPI_InputMessage">
+    <wsdl:part name="parameters" element="tns:Listele__TBL_URUN_TIPI" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Listele__TBL_URUN_TIPI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Listele__TBL_URUN_TIPIResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Bul_TBL_URUN_TIPI_InputMessage">
+    <wsdl:part name="parameters" element="tns:Bul_TBL_URUN_TIPI" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Bul_TBL_URUN_TIPI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Bul_TBL_URUN_TIPIResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Ekle__TBL_BANKA_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ekle__TBL_BANKA" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Ekle__TBL_BANKA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Ekle__TBL_BANKAResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Sil__TBL_BANKA_InputMessage">
+    <wsdl:part name="parameters" element="tns:Sil__TBL_BANKA" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Sil__TBL_BANKA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Sil__TBL_BANKAResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Degistir__TBL_BANKA_InputMessage">
+    <wsdl:part name="parameters" element="tns:Degistir__TBL_BANKA" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Degistir__TBL_BANKA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Degistir__TBL_BANKAResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Listele__TBL_BANKA_InputMessage">
+    <wsdl:part name="parameters" element="tns:Listele__TBL_BANKA" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Listele__TBL_BANKA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Listele__TBL_BANKAResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Bul_TBL_BANKA_InputMessage">
+    <wsdl:part name="parameters" element="tns:Bul_TBL_BANKA" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Bul_TBL_BANKA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Bul_TBL_BANKAResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Ekle__TBL_BANKA_BAKIYE_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ekle__TBL_BANKA_BAKIYE" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Ekle__TBL_BANKA_BAKIYE_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Ekle__TBL_BANKA_BAKIYEResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Sil__TBL_BANKA_BAKIYE_InputMessage">
+    <wsdl:part name="parameters" element="tns:Sil__TBL_BANKA_BAKIYE" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Sil__TBL_BANKA_BAKIYE_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Sil__TBL_BANKA_BAKIYEResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Degistir__TBL_BANKA_BAKIYE_InputMessage">
+    <wsdl:part name="parameters" element="tns:Degistir__TBL_BANKA_BAKIYE" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Degistir__TBL_BANKA_BAKIYE_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Degistir__TBL_BANKA_BAKIYEResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Listele__TBL_BANKA_BAKIYE_InputMessage">
+    <wsdl:part name="parameters" element="tns:Listele__TBL_BANKA_BAKIYE" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Listele__TBL_BANKA_BAKIYE_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Listele__TBL_BANKA_BAKIYEResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Bul_TBL_BANKA_BAKIYE_InputMessage">
+    <wsdl:part name="parameters" element="tns:Bul_TBL_BANKA_BAKIYE" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Bul_TBL_BANKA_BAKIYE_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Bul_TBL_BANKA_BAKIYEResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Ekle__TBL_DEPO_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ekle__TBL_DEPO" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Ekle__TBL_DEPO_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Ekle__TBL_DEPOResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Sil__TBL_DEPO_InputMessage">
+    <wsdl:part name="parameters" element="tns:Sil__TBL_DEPO" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Sil__TBL_DEPO_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Sil__TBL_DEPOResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Degistir__TBL_DEPO_InputMessage">
+    <wsdl:part name="parameters" element="tns:Degistir__TBL_DEPO" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Degistir__TBL_DEPO_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Degistir__TBL_DEPOResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Listele__TBL_DEPO_InputMessage">
+    <wsdl:part name="parameters" element="tns:Listele__TBL_DEPO" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Listele__TBL_DEPO_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Listele__TBL_DEPOResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Bul_TBL_DEPO_InputMessage">
+    <wsdl:part name="parameters" element="tns:Bul_TBL_DEPO" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Bul_TBL_DEPO_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Bul_TBL_DEPOResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Ekle__TBL_DEPO_ISLEM_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ekle__TBL_DEPO_ISLEM" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Ekle__TBL_DEPO_ISLEM_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Ekle__TBL_DEPO_ISLEMResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Sil__TBL_DEPO_ISLEM_InputMessage">
+    <wsdl:part name="parameters" element="tns:Sil__TBL_DEPO_ISLEM" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Sil__TBL_DEPO_ISLEM_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Sil__TBL_DEPO_ISLEMResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Degistir__TBL_DEPO_ISLEM_InputMessage">
+    <wsdl:part name="parameters" element="tns:Degistir__TBL_DEPO_ISLEM" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Degistir__TBL_DEPO_ISLEM_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Degistir__TBL_DEPO_ISLEMResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Listele__TBL_DEPO_ISLEM_InputMessage">
+    <wsdl:part name="parameters" element="tns:Listele__TBL_DEPO_ISLEM" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Listele__TBL_DEPO_ISLEM_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Listele__TBL_DEPO_ISLEMResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Bul_TBL_DEPO_ISLEM_InputMessage">
+    <wsdl:part name="parameters" element="tns:Bul_TBL_DEPO_ISLEM" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Bul_TBL_DEPO_ISLEM_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Bul_TBL_DEPO_ISLEMResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Ekle__TBL_DEPO_TRANSFER_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ekle__TBL_DEPO_TRANSFER" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Ekle__TBL_DEPO_TRANSFER_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Ekle__TBL_DEPO_TRANSFERResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Sil__TBL_DEPO_TRANSFER_InputMessage">
+    <wsdl:part name="parameters" element="tns:Sil__TBL_DEPO_TRANSFER" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Sil__TBL_DEPO_TRANSFER_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Sil__TBL_DEPO_TRANSFERResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Degistir__TBL_DEPO_TRANSFER_InputMessage">
+    <wsdl:part name="parameters" element="tns:Degistir__TBL_DEPO_TRANSFER" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Degistir__TBL_DEPO_TRANSFER_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Degistir__TBL_DEPO_TRANSFERResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Listele__TBL_DEPO_TRANSFER_InputMessage">
+    <wsdl:part name="parameters" element="tns:Listele__TBL_DEPO_TRANSFER" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Listele__TBL_DEPO_TRANSFER_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Listele__TBL_DEPO_TRANSFERResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Bul_TBL_DEPO_TRANSFER_InputMessage">
+    <wsdl:part name="parameters" element="tns:Bul_TBL_DEPO_TRANSFER" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Bul_TBL_DEPO_TRANSFER_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Bul_TBL_DEPO_TRANSFERResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Ekle__TBL_FATURA_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ekle__TBL_FATURA" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Ekle__TBL_FATURA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Ekle__TBL_FATURAResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Sil__TBL_FATURA_InputMessage">
+    <wsdl:part name="parameters" element="tns:Sil__TBL_FATURA" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Sil__TBL_FATURA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Sil__TBL_FATURAResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Degistir__TBL_FATURA_InputMessage">
+    <wsdl:part name="parameters" element="tns:Degistir__TBL_FATURA" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Degistir__TBL_FATURA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Degistir__TBL_FATURAResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Listele__TBL_FATURA_InputMessage">
+    <wsdl:part name="parameters" element="tns:Listele__TBL_FATURA" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Listele__TBL_FATURA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Listele__TBL_FATURAResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Bul_TBL_FATURA_InputMessage">
+    <wsdl:part name="parameters" element="tns:Bul_TBL_FATURA" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Bul_TBL_FATURA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Bul_TBL_FATURAResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Ekle__TBL_FATURA_TURU_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ekle__TBL_FATURA_TURU" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Ekle__TBL_FATURA_TURU_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Ekle__TBL_FATURA_TURUResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Sil__TBL_FATURA_TURU_InputMessage">
+    <wsdl:part name="parameters" element="tns:Sil__TBL_FATURA_TURU" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Sil__TBL_FATURA_TURU_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Sil__TBL_FATURA_TURUResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Degistir__TBL_FATURA_TURU_InputMessage">
+    <wsdl:part name="parameters" element="tns:Degistir__TBL_FATURA_TURU" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Degistir__TBL_FATURA_TURU_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Degistir__TBL_FATURA_TURUResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Listele__TBL_FATURA_TURU_InputMessage">
+    <wsdl:part name="parameters" element="tns:Listele__TBL_FATURA_TURU" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Listele__TBL_FATURA_TURU_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Listele__TBL_FATURA_TURUResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Bul_TBL_FATURA_TURU_InputMessage">
+    <wsdl:part name="parameters" element="tns:Bul_TBL_FATURA_TURU" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Bul_TBL_FATURA_TURU_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Bul_TBL_FATURA_TURUResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Ekle__TBL_FIS_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ekle__TBL_FIS" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Ekle__TBL_FIS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Ekle__TBL_FISResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Sil__TBL_FIS_InputMessage">
+    <wsdl:part name="parameters" element="tns:Sil__TBL_FIS" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Sil__TBL_FIS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Sil__TBL_FISResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Degistir__TBL_FIS_InputMessage">
+    <wsdl:part name="parameters" element="tns:Degistir__TBL_FIS" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Degistir__TBL_FIS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Degistir__TBL_FISResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Listele__TBL_FIS_InputMessage">
+    <wsdl:part name="parameters" element="tns:Listele__TBL_FIS" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Listele__TBL_FIS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Listele__TBL_FISResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Bul_TBL_FIS_InputMessage">
+    <wsdl:part name="parameters" element="tns:Bul_TBL_FIS" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Bul_TBL_FIS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Bul_TBL_FISResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Ekle__TBL_GIDER_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ekle__TBL_GIDER" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Ekle__TBL_GIDER_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Ekle__TBL_GIDERResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Sil__TBL_GIDER_InputMessage">
+    <wsdl:part name="parameters" element="tns:Sil__TBL_GIDER" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Sil__TBL_GIDER_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Sil__TBL_GIDERResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Degistir__TBL_GIDER_InputMessage">
+    <wsdl:part name="parameters" element="tns:Degistir__TBL_GIDER" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Degistir__TBL_GIDER_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Degistir__TBL_GIDERResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Listele__TBL_GIDER_InputMessage">
+    <wsdl:part name="parameters" element="tns:Listele__TBL_GIDER" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Listele__TBL_GIDER_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Listele__TBL_GIDERResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Bul_TBL_GIDER_InputMessage">
+    <wsdl:part name="parameters" element="tns:Bul_TBL_GIDER" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Bul_TBL_GIDER_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Bul_TBL_GIDERResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Ekle__TBL_GIDER_BAKIYE_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ekle__TBL_GIDER_BAKIYE" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Ekle__TBL_GIDER_BAKIYE_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Ekle__TBL_GIDER_BAKIYEResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Sil__TBL_GIDER_BAKIYE_InputMessage">
+    <wsdl:part name="parameters" element="tns:Sil__TBL_GIDER_BAKIYE" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Sil__TBL_GIDER_BAKIYE_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Sil__TBL_GIDER_BAKIYEResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Degistir__TBL_GIDER_BAKIYE_InputMessage">
+    <wsdl:part name="parameters" element="tns:Degistir__TBL_GIDER_BAKIYE" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Degistir__TBL_GIDER_BAKIYE_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Degistir__TBL_GIDER_BAKIYEResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Listele__TBL_GIDER_BAKIYE_InputMessage">
+    <wsdl:part name="parameters" element="tns:Listele__TBL_GIDER_BAKIYE" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Listele__TBL_GIDER_BAKIYE_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Listele__TBL_GIDER_BAKIYEResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Bul_TBL_GIDER_BAKIYE_InputMessage">
+    <wsdl:part name="parameters" element="tns:Bul_TBL_GIDER_BAKIYE" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Bul_TBL_GIDER_BAKIYE_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Bul_TBL_GIDER_BAKIYEResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Ekle__TBL_KASA_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ekle__TBL_KASA" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Ekle__TBL_KASA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Ekle__TBL_KASAResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Sil__TBL_KASA_InputMessage">
+    <wsdl:part name="parameters" element="tns:Sil__TBL_KASA" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Sil__TBL_KASA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Sil__TBL_KASAResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Degistir__TBL_KASA_InputMessage">
+    <wsdl:part name="parameters" element="tns:Degistir__TBL_KASA" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Degistir__TBL_KASA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Degistir__TBL_KASAResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Listele__TBL_KASA_InputMessage">
+    <wsdl:part name="parameters" element="tns:Listele__TBL_KASA" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Listele__TBL_KASA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Listele__TBL_KASAResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Bul_TBL_KASA_InputMessage">
+    <wsdl:part name="parameters" element="tns:Bul_TBL_KASA" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Bul_TBL_KASA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Bul_TBL_KASAResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Ekle__TBL_KASA_BAKIYE_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ekle__TBL_KASA_BAKIYE" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Ekle__TBL_KASA_BAKIYE_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Ekle__TBL_KASA_BAKIYEResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Sil__TBL_KASA_BAKIYE_InputMessage">
+    <wsdl:part name="parameters" element="tns:Sil__TBL_KASA_BAKIYE" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Sil__TBL_KASA_BAKIYE_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Sil__TBL_KASA_BAKIYEResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Degistir__TBL_KASA_BAKIYE_InputMessage">
+    <wsdl:part name="parameters" element="tns:Degistir__TBL_KASA_BAKIYE" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Degistir__TBL_KASA_BAKIYE_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Degistir__TBL_KASA_BAKIYEResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Listele__TBL_KASA_BAKIYE_InputMessage">
+    <wsdl:part name="parameters" element="tns:Listele__TBL_KASA_BAKIYE" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Listele__TBL_KASA_BAKIYE_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Listele__TBL_KASA_BAKIYEResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Bul_TBL_KASA_BAKIYE_InputMessage">
+    <wsdl:part name="parameters" element="tns:Bul_TBL_KASA_BAKIYE" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Bul_TBL_KASA_BAKIYE_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Bul_TBL_KASA_BAKIYEResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Ekle__TBL_KDV_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ekle__TBL_KDV" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Ekle__TBL_KDV_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Ekle__TBL_KDVResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Sil__TBL_KDV_InputMessage">
+    <wsdl:part name="parameters" element="tns:Sil__TBL_KDV" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Sil__TBL_KDV_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Sil__TBL_KDVResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Degistir__TBL_KDV_InputMessage">
+    <wsdl:part name="parameters" element="tns:Degistir__TBL_KDV" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Degistir__TBL_KDV_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Degistir__TBL_KDVResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Listele__TBL_KDV_InputMessage">
+    <wsdl:part name="parameters" element="tns:Listele__TBL_KDV" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Listele__TBL_KDV_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Listele__TBL_KDVResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Bul_TBL_KDV_InputMessage">
+    <wsdl:part name="parameters" element="tns:Bul_TBL_KDV" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Bul_TBL_KDV_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Bul_TBL_KDVResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Ekle__TBL_ODEME_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ekle__TBL_ODEME" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Ekle__TBL_ODEME_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Ekle__TBL_ODEMEResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Sil__TBL_ODEME_InputMessage">
+    <wsdl:part name="parameters" element="tns:Sil__TBL_ODEME" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Sil__TBL_ODEME_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Sil__TBL_ODEMEResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Degistir__TBL_ODEME_InputMessage">
+    <wsdl:part name="parameters" element="tns:Degistir__TBL_ODEME" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Degistir__TBL_ODEME_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Degistir__TBL_ODEMEResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Listele__TBL_ODEME_InputMessage">
+    <wsdl:part name="parameters" element="tns:Listele__TBL_ODEME" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Listele__TBL_ODEME_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Listele__TBL_ODEMEResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Bul_TBL_ODEME_InputMessage">
+    <wsdl:part name="parameters" element="tns:Bul_TBL_ODEME" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Bul_TBL_ODEME_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Bul_TBL_ODEMEResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Ekle__TBL_ODEME_TIPI_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ekle__TBL_ODEME_TIPI" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Ekle__TBL_ODEME_TIPI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Ekle__TBL_ODEME_TIPIResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Sil__TBL_ODEME_TIPI_InputMessage">
+    <wsdl:part name="parameters" element="tns:Sil__TBL_ODEME_TIPI" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Sil__TBL_ODEME_TIPI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Sil__TBL_ODEME_TIPIResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Degistir__TBL_ODEME_TIPI_InputMessage">
+    <wsdl:part name="parameters" element="tns:Degistir__TBL_ODEME_TIPI" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Degistir__TBL_ODEME_TIPI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Degistir__TBL_ODEME_TIPIResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Listele__TBL_ODEME_TIPI_InputMessage">
+    <wsdl:part name="parameters" element="tns:Listele__TBL_ODEME_TIPI" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Listele__TBL_ODEME_TIPI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Listele__TBL_ODEME_TIPIResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Bul_TBL_ODEME_TIPI_InputMessage">
+    <wsdl:part name="parameters" element="tns:Bul_TBL_ODEME_TIPI" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Bul_TBL_ODEME_TIPI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Bul_TBL_ODEME_TIPIResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Ekle__TBL_ODEME_TURU_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ekle__TBL_ODEME_TURU" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Ekle__TBL_ODEME_TURU_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Ekle__TBL_ODEME_TURUResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Sil__TBL_ODEME_TURU_InputMessage">
+    <wsdl:part name="parameters" element="tns:Sil__TBL_ODEME_TURU" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Sil__TBL_ODEME_TURU_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Sil__TBL_ODEME_TURUResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Degistir__TBL_ODEME_TURU_InputMessage">
+    <wsdl:part name="parameters" element="tns:Degistir__TBL_ODEME_TURU" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Degistir__TBL_ODEME_TURU_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Degistir__TBL_ODEME_TURUResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Listele__TBL_ODEME_TURU_InputMessage">
+    <wsdl:part name="parameters" element="tns:Listele__TBL_ODEME_TURU" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Listele__TBL_ODEME_TURU_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Listele__TBL_ODEME_TURUResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Bul_TBL_ODEME_TURU_InputMessage">
+    <wsdl:part name="parameters" element="tns:Bul_TBL_ODEME_TURU" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Bul_TBL_ODEME_TURU_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Bul_TBL_ODEME_TURUResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Ekle__TBL_PARA_TIPI_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ekle__TBL_PARA_TIPI" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Ekle__TBL_PARA_TIPI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Ekle__TBL_PARA_TIPIResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Sil__TBL_PARA_TIPI_InputMessage">
+    <wsdl:part name="parameters" element="tns:Sil__TBL_PARA_TIPI" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Sil__TBL_PARA_TIPI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Sil__TBL_PARA_TIPIResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Degistir__TBL_PARA_TIPI_InputMessage">
+    <wsdl:part name="parameters" element="tns:Degistir__TBL_PARA_TIPI" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Degistir__TBL_PARA_TIPI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Degistir__TBL_PARA_TIPIResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Listele__TBL_PARA_TIPI_InputMessage">
+    <wsdl:part name="parameters" element="tns:Listele__TBL_PARA_TIPI" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Listele__TBL_PARA_TIPI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Listele__TBL_PARA_TIPIResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Bul_TBL_PARA_TIPI_InputMessage">
+    <wsdl:part name="parameters" element="tns:Bul_TBL_PARA_TIPI" />
+  </wsdl:message>
+  <wsdl:message name="IZindeService_Bul_TBL_PARA_TIPI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Bul_TBL_PARA_TIPIResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IZindeService">
+    <wsdl:operation name="Ekle__TBL_PERSONEL">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Ekle__TBL_PERSONEL" message="tns:IZindeService_Ekle__TBL_PERSONEL_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Ekle__TBL_PERSONELResponse" message="tns:IZindeService_Ekle__TBL_PERSONEL_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Sil__TBL_PERSONEL">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Sil__TBL_PERSONEL" message="tns:IZindeService_Sil__TBL_PERSONEL_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Sil__TBL_PERSONELResponse" message="tns:IZindeService_Sil__TBL_PERSONEL_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Degistir__TBL_PERSONEL">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Degistir__TBL_PERSONEL" message="tns:IZindeService_Degistir__TBL_PERSONEL_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Degistir__TBL_PERSONELResponse" message="tns:IZindeService_Degistir__TBL_PERSONEL_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Listele__TBL_PERSONEL">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Listele__TBL_PERSONEL" message="tns:IZindeService_Listele__TBL_PERSONEL_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Listele__TBL_PERSONELResponse" message="tns:IZindeService_Listele__TBL_PERSONEL_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Bul_TBL_PERSONEL">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Bul_TBL_PERSONEL" message="tns:IZindeService_Bul_TBL_PERSONEL_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Bul_TBL_PERSONELResponse" message="tns:IZindeService_Bul_TBL_PERSONEL_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Ekle__TBL_SIRKET">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Ekle__TBL_SIRKET" message="tns:IZindeService_Ekle__TBL_SIRKET_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Ekle__TBL_SIRKETResponse" message="tns:IZindeService_Ekle__TBL_SIRKET_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Sil__TBL_SIRKET">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Sil__TBL_SIRKET" message="tns:IZindeService_Sil__TBL_SIRKET_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Sil__TBL_SIRKETResponse" message="tns:IZindeService_Sil__TBL_SIRKET_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Degistir__TBL_SIRKET">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Degistir__TBL_SIRKET" message="tns:IZindeService_Degistir__TBL_SIRKET_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Degistir__TBL_SIRKETResponse" message="tns:IZindeService_Degistir__TBL_SIRKET_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Listele__TBL_SIRKET">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Listele__TBL_SIRKET" message="tns:IZindeService_Listele__TBL_SIRKET_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Listele__TBL_SIRKETResponse" message="tns:IZindeService_Listele__TBL_SIRKET_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Bul_TBL_SIRKET">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Bul_TBL_SIRKET" message="tns:IZindeService_Bul_TBL_SIRKET_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Bul_TBL_SIRKETResponse" message="tns:IZindeService_Bul_TBL_SIRKET_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Ekle__TBL_SIRKET_BAKIYE">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Ekle__TBL_SIRKET_BAKIYE" message="tns:IZindeService_Ekle__TBL_SIRKET_BAKIYE_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Ekle__TBL_SIRKET_BAKIYEResponse" message="tns:IZindeService_Ekle__TBL_SIRKET_BAKIYE_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Sil__TBL_SIRKET_BAKIYE">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Sil__TBL_SIRKET_BAKIYE" message="tns:IZindeService_Sil__TBL_SIRKET_BAKIYE_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Sil__TBL_SIRKET_BAKIYEResponse" message="tns:IZindeService_Sil__TBL_SIRKET_BAKIYE_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Degistir__TBL_SIRKET_BAKIYE">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Degistir__TBL_SIRKET_BAKIYE" message="tns:IZindeService_Degistir__TBL_SIRKET_BAKIYE_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Degistir__TBL_SIRKET_BAKIYEResponse" message="tns:IZindeService_Degistir__TBL_SIRKET_BAKIYE_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Listele__TBL_SIRKET_BAKIYE">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Listele__TBL_SIRKET_BAKIYE" message="tns:IZindeService_Listele__TBL_SIRKET_BAKIYE_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Listele__TBL_SIRKET_BAKIYEResponse" message="tns:IZindeService_Listele__TBL_SIRKET_BAKIYE_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Bul_TBL_SIRKET_BAKIYE">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Bul_TBL_SIRKET_BAKIYE" message="tns:IZindeService_Bul_TBL_SIRKET_BAKIYE_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Bul_TBL_SIRKET_BAKIYEResponse" message="tns:IZindeService_Bul_TBL_SIRKET_BAKIYE_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Ekle__TBL_SIRKET_GRUB">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Ekle__TBL_SIRKET_GRUB" message="tns:IZindeService_Ekle__TBL_SIRKET_GRUB_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Ekle__TBL_SIRKET_GRUBResponse" message="tns:IZindeService_Ekle__TBL_SIRKET_GRUB_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Sil__TBL_SIRKET_GRUB">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Sil__TBL_SIRKET_GRUB" message="tns:IZindeService_Sil__TBL_SIRKET_GRUB_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Sil__TBL_SIRKET_GRUBResponse" message="tns:IZindeService_Sil__TBL_SIRKET_GRUB_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Degistir__TBL_SIRKET_GRUB">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Degistir__TBL_SIRKET_GRUB" message="tns:IZindeService_Degistir__TBL_SIRKET_GRUB_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Degistir__TBL_SIRKET_GRUBResponse" message="tns:IZindeService_Degistir__TBL_SIRKET_GRUB_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Listele__TBL_SIRKET_GRUB">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Listele__TBL_SIRKET_GRUB" message="tns:IZindeService_Listele__TBL_SIRKET_GRUB_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Listele__TBL_SIRKET_GRUBResponse" message="tns:IZindeService_Listele__TBL_SIRKET_GRUB_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Bul_TBL_SIRKET_GRUB">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Bul_TBL_SIRKET_GRUB" message="tns:IZindeService_Bul_TBL_SIRKET_GRUB_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Bul_TBL_SIRKET_GRUBResponse" message="tns:IZindeService_Bul_TBL_SIRKET_GRUB_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Ekle__TBL_SIRKET_SINIF">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Ekle__TBL_SIRKET_SINIF" message="tns:IZindeService_Ekle__TBL_SIRKET_SINIF_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Ekle__TBL_SIRKET_SINIFResponse" message="tns:IZindeService_Ekle__TBL_SIRKET_SINIF_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Sil__TBL_SIRKET_SINIF">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Sil__TBL_SIRKET_SINIF" message="tns:IZindeService_Sil__TBL_SIRKET_SINIF_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Sil__TBL_SIRKET_SINIFResponse" message="tns:IZindeService_Sil__TBL_SIRKET_SINIF_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Degistir__TBL_SIRKET_SINIF">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Degistir__TBL_SIRKET_SINIF" message="tns:IZindeService_Degistir__TBL_SIRKET_SINIF_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Degistir__TBL_SIRKET_SINIFResponse" message="tns:IZindeService_Degistir__TBL_SIRKET_SINIF_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Listele__TBL_SIRKET_SINIF">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Listele__TBL_SIRKET_SINIF" message="tns:IZindeService_Listele__TBL_SIRKET_SINIF_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Listele__TBL_SIRKET_SINIFResponse" message="tns:IZindeService_Listele__TBL_SIRKET_SINIF_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Bul_TBL_SIRKET_SINIF">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Bul_TBL_SIRKET_SINIF" message="tns:IZindeService_Bul_TBL_SIRKET_SINIF_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Bul_TBL_SIRKET_SINIFResponse" message="tns:IZindeService_Bul_TBL_SIRKET_SINIF_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Ekle__TBL_SIRKET_TIPI">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Ekle__TBL_SIRKET_TIPI" message="tns:IZindeService_Ekle__TBL_SIRKET_TIPI_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Ekle__TBL_SIRKET_TIPIResponse" message="tns:IZindeService_Ekle__TBL_SIRKET_TIPI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Sil__TBL_SIRKET_TIPI">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Sil__TBL_SIRKET_TIPI" message="tns:IZindeService_Sil__TBL_SIRKET_TIPI_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Sil__TBL_SIRKET_TIPIResponse" message="tns:IZindeService_Sil__TBL_SIRKET_TIPI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Degistir__TBL_SIRKET_TIPI">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Degistir__TBL_SIRKET_TIPI" message="tns:IZindeService_Degistir__TBL_SIRKET_TIPI_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Degistir__TBL_SIRKET_TIPIResponse" message="tns:IZindeService_Degistir__TBL_SIRKET_TIPI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Listele__TBL_SIRKET_TIPI">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Listele__TBL_SIRKET_TIPI" message="tns:IZindeService_Listele__TBL_SIRKET_TIPI_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Listele__TBL_SIRKET_TIPIResponse" message="tns:IZindeService_Listele__TBL_SIRKET_TIPI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Bul_TBL_SIRKET_TIPI">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Bul_TBL_SIRKET_TIPI" message="tns:IZindeService_Bul_TBL_SIRKET_TIPI_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Bul_TBL_SIRKET_TIPIResponse" message="tns:IZindeService_Bul_TBL_SIRKET_TIPI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Ekle__TBL_SPARIS">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Ekle__TBL_SPARIS" message="tns:IZindeService_Ekle__TBL_SPARIS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Ekle__TBL_SPARISResponse" message="tns:IZindeService_Ekle__TBL_SPARIS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Sil__TBL_SPARIS">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Sil__TBL_SPARIS" message="tns:IZindeService_Sil__TBL_SPARIS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Sil__TBL_SPARISResponse" message="tns:IZindeService_Sil__TBL_SPARIS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Degistir__TBL_SPARIS">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Degistir__TBL_SPARIS" message="tns:IZindeService_Degistir__TBL_SPARIS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Degistir__TBL_SPARISResponse" message="tns:IZindeService_Degistir__TBL_SPARIS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Listele__TBL_SPARIS">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Listele__TBL_SPARIS" message="tns:IZindeService_Listele__TBL_SPARIS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Listele__TBL_SPARISResponse" message="tns:IZindeService_Listele__TBL_SPARIS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Bul_TBL_SPARIS">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Bul_TBL_SPARIS" message="tns:IZindeService_Bul_TBL_SPARIS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Bul_TBL_SPARISResponse" message="tns:IZindeService_Bul_TBL_SPARIS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Ekle__TBL_SPARIS_TURU">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Ekle__TBL_SPARIS_TURU" message="tns:IZindeService_Ekle__TBL_SPARIS_TURU_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Ekle__TBL_SPARIS_TURUResponse" message="tns:IZindeService_Ekle__TBL_SPARIS_TURU_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Sil__TBL_SPARIS_TURU">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Sil__TBL_SPARIS_TURU" message="tns:IZindeService_Sil__TBL_SPARIS_TURU_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Sil__TBL_SPARIS_TURUResponse" message="tns:IZindeService_Sil__TBL_SPARIS_TURU_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Degistir__TBL_SPARIS_TURU">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Degistir__TBL_SPARIS_TURU" message="tns:IZindeService_Degistir__TBL_SPARIS_TURU_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Degistir__TBL_SPARIS_TURUResponse" message="tns:IZindeService_Degistir__TBL_SPARIS_TURU_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Listele__TBL_SPARIS_TURU">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Listele__TBL_SPARIS_TURU" message="tns:IZindeService_Listele__TBL_SPARIS_TURU_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Listele__TBL_SPARIS_TURUResponse" message="tns:IZindeService_Listele__TBL_SPARIS_TURU_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Bul_TBL_SPARIS_TURU">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Bul_TBL_SPARIS_TURU" message="tns:IZindeService_Bul_TBL_SPARIS_TURU_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Bul_TBL_SPARIS_TURUResponse" message="tns:IZindeService_Bul_TBL_SPARIS_TURU_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Ekle__TBL_URUN">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Ekle__TBL_URUN" message="tns:IZindeService_Ekle__TBL_URUN_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Ekle__TBL_URUNResponse" message="tns:IZindeService_Ekle__TBL_URUN_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Sil__TBL_URUN">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Sil__TBL_URUN" message="tns:IZindeService_Sil__TBL_URUN_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Sil__TBL_URUNResponse" message="tns:IZindeService_Sil__TBL_URUN_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Degistir__TBL_URUN">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Degistir__TBL_URUN" message="tns:IZindeService_Degistir__TBL_URUN_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Degistir__TBL_URUNResponse" message="tns:IZindeService_Degistir__TBL_URUN_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Listele__TBL_URUN">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Listele__TBL_URUN" message="tns:IZindeService_Listele__TBL_URUN_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Listele__TBL_URUNResponse" message="tns:IZindeService_Listele__TBL_URUN_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Bul_TBL_URUN">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Bul_TBL_URUN" message="tns:IZindeService_Bul_TBL_URUN_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Bul_TBL_URUNResponse" message="tns:IZindeService_Bul_TBL_URUN_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Ekle__TBL_URUN_BIRIM">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Ekle__TBL_URUN_BIRIM" message="tns:IZindeService_Ekle__TBL_URUN_BIRIM_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Ekle__TBL_URUN_BIRIMResponse" message="tns:IZindeService_Ekle__TBL_URUN_BIRIM_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Sil__TBL_URUN_BIRIM">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Sil__TBL_URUN_BIRIM" message="tns:IZindeService_Sil__TBL_URUN_BIRIM_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Sil__TBL_URUN_BIRIMResponse" message="tns:IZindeService_Sil__TBL_URUN_BIRIM_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Degistir__TBL_URUN_BIRIM">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Degistir__TBL_URUN_BIRIM" message="tns:IZindeService_Degistir__TBL_URUN_BIRIM_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Degistir__TBL_URUN_BIRIMResponse" message="tns:IZindeService_Degistir__TBL_URUN_BIRIM_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Listele__TBL_URUN_BIRIM">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Listele__TBL_URUN_BIRIM" message="tns:IZindeService_Listele__TBL_URUN_BIRIM_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Listele__TBL_URUN_BIRIMResponse" message="tns:IZindeService_Listele__TBL_URUN_BIRIM_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Bul_TBL_URUN_BIRIM">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Bul_TBL_URUN_BIRIM" message="tns:IZindeService_Bul_TBL_URUN_BIRIM_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Bul_TBL_URUN_BIRIMResponse" message="tns:IZindeService_Bul_TBL_URUN_BIRIM_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Ekle__TBL_URUN_CINSI">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Ekle__TBL_URUN_CINSI" message="tns:IZindeService_Ekle__TBL_URUN_CINSI_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Ekle__TBL_URUN_CINSIResponse" message="tns:IZindeService_Ekle__TBL_URUN_CINSI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Sil__TBL_URUN_CINSI">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Sil__TBL_URUN_CINSI" message="tns:IZindeService_Sil__TBL_URUN_CINSI_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Sil__TBL_URUN_CINSIResponse" message="tns:IZindeService_Sil__TBL_URUN_CINSI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Degistir__TBL_URUN_CINSI">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Degistir__TBL_URUN_CINSI" message="tns:IZindeService_Degistir__TBL_URUN_CINSI_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Degistir__TBL_URUN_CINSIResponse" message="tns:IZindeService_Degistir__TBL_URUN_CINSI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Listele__TBL_URUN_CINSI">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Listele__TBL_URUN_CINSI" message="tns:IZindeService_Listele__TBL_URUN_CINSI_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Listele__TBL_URUN_CINSIResponse" message="tns:IZindeService_Listele__TBL_URUN_CINSI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Bul_TBL_URUN_CINSI">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Bul_TBL_URUN_CINSI" message="tns:IZindeService_Bul_TBL_URUN_CINSI_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Bul_TBL_URUN_CINSIResponse" message="tns:IZindeService_Bul_TBL_URUN_CINSI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Ekle__TBL_URUN_FATURA">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Ekle__TBL_URUN_FATURA" message="tns:IZindeService_Ekle__TBL_URUN_FATURA_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Ekle__TBL_URUN_FATURAResponse" message="tns:IZindeService_Ekle__TBL_URUN_FATURA_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Sil__TBL_URUN_FATURA">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Sil__TBL_URUN_FATURA" message="tns:IZindeService_Sil__TBL_URUN_FATURA_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Sil__TBL_URUN_FATURAResponse" message="tns:IZindeService_Sil__TBL_URUN_FATURA_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Degistir__TBL_URUN_FATURA">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Degistir__TBL_URUN_FATURA" message="tns:IZindeService_Degistir__TBL_URUN_FATURA_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Degistir__TBL_URUN_FATURAResponse" message="tns:IZindeService_Degistir__TBL_URUN_FATURA_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Listele__TBL_URUN_FATURA">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Listele__TBL_URUN_FATURA" message="tns:IZindeService_Listele__TBL_URUN_FATURA_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Listele__TBL_URUN_FATURAResponse" message="tns:IZindeService_Listele__TBL_URUN_FATURA_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Bul_TBL_URUN_FATURA">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Bul_TBL_URUN_FATURA" message="tns:IZindeService_Bul_TBL_URUN_FATURA_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Bul_TBL_URUN_FATURAResponse" message="tns:IZindeService_Bul_TBL_URUN_FATURA_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Ekle__TBL_URUN_MARKA">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Ekle__TBL_URUN_MARKA" message="tns:IZindeService_Ekle__TBL_URUN_MARKA_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Ekle__TBL_URUN_MARKAResponse" message="tns:IZindeService_Ekle__TBL_URUN_MARKA_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Sil__TBL_URUN_MARKA">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Sil__TBL_URUN_MARKA" message="tns:IZindeService_Sil__TBL_URUN_MARKA_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Sil__TBL_URUN_MARKAResponse" message="tns:IZindeService_Sil__TBL_URUN_MARKA_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Degistir__TBL_URUN_MARKA">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Degistir__TBL_URUN_MARKA" message="tns:IZindeService_Degistir__TBL_URUN_MARKA_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Degistir__TBL_URUN_MARKAResponse" message="tns:IZindeService_Degistir__TBL_URUN_MARKA_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Listele__TBL_URUN_MARKA">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Listele__TBL_URUN_MARKA" message="tns:IZindeService_Listele__TBL_URUN_MARKA_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Listele__TBL_URUN_MARKAResponse" message="tns:IZindeService_Listele__TBL_URUN_MARKA_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Bul_TBL_URUN_MARKA">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Bul_TBL_URUN_MARKA" message="tns:IZindeService_Bul_TBL_URUN_MARKA_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Bul_TBL_URUN_MARKAResponse" message="tns:IZindeService_Bul_TBL_URUN_MARKA_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Ekle__TBL_URUN_SPARIS">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Ekle__TBL_URUN_SPARIS" message="tns:IZindeService_Ekle__TBL_URUN_SPARIS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Ekle__TBL_URUN_SPARISResponse" message="tns:IZindeService_Ekle__TBL_URUN_SPARIS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Sil__TBL_URUN_SPARIS">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Sil__TBL_URUN_SPARIS" message="tns:IZindeService_Sil__TBL_URUN_SPARIS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Sil__TBL_URUN_SPARISResponse" message="tns:IZindeService_Sil__TBL_URUN_SPARIS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Degistir__TBL_URUN_SPARIS">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Degistir__TBL_URUN_SPARIS" message="tns:IZindeService_Degistir__TBL_URUN_SPARIS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Degistir__TBL_URUN_SPARISResponse" message="tns:IZindeService_Degistir__TBL_URUN_SPARIS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Listele__TBL_URUN_SPARIS">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Listele__TBL_URUN_SPARIS" message="tns:IZindeService_Listele__TBL_URUN_SPARIS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Listele__TBL_URUN_SPARISResponse" message="tns:IZindeService_Listele__TBL_URUN_SPARIS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Bul_TBL_URUN_SPARIS">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Bul_TBL_URUN_SPARIS" message="tns:IZindeService_Bul_TBL_URUN_SPARIS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Bul_TBL_URUN_SPARISResponse" message="tns:IZindeService_Bul_TBL_URUN_SPARIS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Ekle__TBL_URUN_STOK">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Ekle__TBL_URUN_STOK" message="tns:IZindeService_Ekle__TBL_URUN_STOK_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Ekle__TBL_URUN_STOKResponse" message="tns:IZindeService_Ekle__TBL_URUN_STOK_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Sil__TBL_URUN_STOK">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Sil__TBL_URUN_STOK" message="tns:IZindeService_Sil__TBL_URUN_STOK_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Sil__TBL_URUN_STOKResponse" message="tns:IZindeService_Sil__TBL_URUN_STOK_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Degistir__TBL_URUN_STOK">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Degistir__TBL_URUN_STOK" message="tns:IZindeService_Degistir__TBL_URUN_STOK_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Degistir__TBL_URUN_STOKResponse" message="tns:IZindeService_Degistir__TBL_URUN_STOK_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Listele__TBL_URUN_STOK">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Listele__TBL_URUN_STOK" message="tns:IZindeService_Listele__TBL_URUN_STOK_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Listele__TBL_URUN_STOKResponse" message="tns:IZindeService_Listele__TBL_URUN_STOK_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Bul_TBL_URUN_STOK">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Bul_TBL_URUN_STOK" message="tns:IZindeService_Bul_TBL_URUN_STOK_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Bul_TBL_URUN_STOKResponse" message="tns:IZindeService_Bul_TBL_URUN_STOK_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Ekle__TBL_URUN_TIPI">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Ekle__TBL_URUN_TIPI" message="tns:IZindeService_Ekle__TBL_URUN_TIPI_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Ekle__TBL_URUN_TIPIResponse" message="tns:IZindeService_Ekle__TBL_URUN_TIPI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Sil__TBL_URUN_TIPI">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Sil__TBL_URUN_TIPI" message="tns:IZindeService_Sil__TBL_URUN_TIPI_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Sil__TBL_URUN_TIPIResponse" message="tns:IZindeService_Sil__TBL_URUN_TIPI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Degistir__TBL_URUN_TIPI">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Degistir__TBL_URUN_TIPI" message="tns:IZindeService_Degistir__TBL_URUN_TIPI_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Degistir__TBL_URUN_TIPIResponse" message="tns:IZindeService_Degistir__TBL_URUN_TIPI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Listele__TBL_URUN_TIPI">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Listele__TBL_URUN_TIPI" message="tns:IZindeService_Listele__TBL_URUN_TIPI_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Listele__TBL_URUN_TIPIResponse" message="tns:IZindeService_Listele__TBL_URUN_TIPI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Bul_TBL_URUN_TIPI">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Bul_TBL_URUN_TIPI" message="tns:IZindeService_Bul_TBL_URUN_TIPI_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Bul_TBL_URUN_TIPIResponse" message="tns:IZindeService_Bul_TBL_URUN_TIPI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Ekle__TBL_BANKA">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Ekle__TBL_BANKA" message="tns:IZindeService_Ekle__TBL_BANKA_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Ekle__TBL_BANKAResponse" message="tns:IZindeService_Ekle__TBL_BANKA_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Sil__TBL_BANKA">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Sil__TBL_BANKA" message="tns:IZindeService_Sil__TBL_BANKA_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Sil__TBL_BANKAResponse" message="tns:IZindeService_Sil__TBL_BANKA_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Degistir__TBL_BANKA">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Degistir__TBL_BANKA" message="tns:IZindeService_Degistir__TBL_BANKA_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Degistir__TBL_BANKAResponse" message="tns:IZindeService_Degistir__TBL_BANKA_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Listele__TBL_BANKA">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Listele__TBL_BANKA" message="tns:IZindeService_Listele__TBL_BANKA_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Listele__TBL_BANKAResponse" message="tns:IZindeService_Listele__TBL_BANKA_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Bul_TBL_BANKA">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Bul_TBL_BANKA" message="tns:IZindeService_Bul_TBL_BANKA_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Bul_TBL_BANKAResponse" message="tns:IZindeService_Bul_TBL_BANKA_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Ekle__TBL_BANKA_BAKIYE">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Ekle__TBL_BANKA_BAKIYE" message="tns:IZindeService_Ekle__TBL_BANKA_BAKIYE_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Ekle__TBL_BANKA_BAKIYEResponse" message="tns:IZindeService_Ekle__TBL_BANKA_BAKIYE_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Sil__TBL_BANKA_BAKIYE">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Sil__TBL_BANKA_BAKIYE" message="tns:IZindeService_Sil__TBL_BANKA_BAKIYE_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Sil__TBL_BANKA_BAKIYEResponse" message="tns:IZindeService_Sil__TBL_BANKA_BAKIYE_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Degistir__TBL_BANKA_BAKIYE">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Degistir__TBL_BANKA_BAKIYE" message="tns:IZindeService_Degistir__TBL_BANKA_BAKIYE_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Degistir__TBL_BANKA_BAKIYEResponse" message="tns:IZindeService_Degistir__TBL_BANKA_BAKIYE_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Listele__TBL_BANKA_BAKIYE">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Listele__TBL_BANKA_BAKIYE" message="tns:IZindeService_Listele__TBL_BANKA_BAKIYE_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Listele__TBL_BANKA_BAKIYEResponse" message="tns:IZindeService_Listele__TBL_BANKA_BAKIYE_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Bul_TBL_BANKA_BAKIYE">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Bul_TBL_BANKA_BAKIYE" message="tns:IZindeService_Bul_TBL_BANKA_BAKIYE_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Bul_TBL_BANKA_BAKIYEResponse" message="tns:IZindeService_Bul_TBL_BANKA_BAKIYE_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Ekle__TBL_DEPO">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Ekle__TBL_DEPO" message="tns:IZindeService_Ekle__TBL_DEPO_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Ekle__TBL_DEPOResponse" message="tns:IZindeService_Ekle__TBL_DEPO_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Sil__TBL_DEPO">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Sil__TBL_DEPO" message="tns:IZindeService_Sil__TBL_DEPO_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Sil__TBL_DEPOResponse" message="tns:IZindeService_Sil__TBL_DEPO_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Degistir__TBL_DEPO">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Degistir__TBL_DEPO" message="tns:IZindeService_Degistir__TBL_DEPO_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Degistir__TBL_DEPOResponse" message="tns:IZindeService_Degistir__TBL_DEPO_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Listele__TBL_DEPO">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Listele__TBL_DEPO" message="tns:IZindeService_Listele__TBL_DEPO_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Listele__TBL_DEPOResponse" message="tns:IZindeService_Listele__TBL_DEPO_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Bul_TBL_DEPO">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Bul_TBL_DEPO" message="tns:IZindeService_Bul_TBL_DEPO_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Bul_TBL_DEPOResponse" message="tns:IZindeService_Bul_TBL_DEPO_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Ekle__TBL_DEPO_ISLEM">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Ekle__TBL_DEPO_ISLEM" message="tns:IZindeService_Ekle__TBL_DEPO_ISLEM_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Ekle__TBL_DEPO_ISLEMResponse" message="tns:IZindeService_Ekle__TBL_DEPO_ISLEM_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Sil__TBL_DEPO_ISLEM">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Sil__TBL_DEPO_ISLEM" message="tns:IZindeService_Sil__TBL_DEPO_ISLEM_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Sil__TBL_DEPO_ISLEMResponse" message="tns:IZindeService_Sil__TBL_DEPO_ISLEM_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Degistir__TBL_DEPO_ISLEM">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Degistir__TBL_DEPO_ISLEM" message="tns:IZindeService_Degistir__TBL_DEPO_ISLEM_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Degistir__TBL_DEPO_ISLEMResponse" message="tns:IZindeService_Degistir__TBL_DEPO_ISLEM_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Listele__TBL_DEPO_ISLEM">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Listele__TBL_DEPO_ISLEM" message="tns:IZindeService_Listele__TBL_DEPO_ISLEM_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Listele__TBL_DEPO_ISLEMResponse" message="tns:IZindeService_Listele__TBL_DEPO_ISLEM_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Bul_TBL_DEPO_ISLEM">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Bul_TBL_DEPO_ISLEM" message="tns:IZindeService_Bul_TBL_DEPO_ISLEM_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Bul_TBL_DEPO_ISLEMResponse" message="tns:IZindeService_Bul_TBL_DEPO_ISLEM_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Ekle__TBL_DEPO_TRANSFER">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Ekle__TBL_DEPO_TRANSFER" message="tns:IZindeService_Ekle__TBL_DEPO_TRANSFER_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Ekle__TBL_DEPO_TRANSFERResponse" message="tns:IZindeService_Ekle__TBL_DEPO_TRANSFER_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Sil__TBL_DEPO_TRANSFER">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Sil__TBL_DEPO_TRANSFER" message="tns:IZindeService_Sil__TBL_DEPO_TRANSFER_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Sil__TBL_DEPO_TRANSFERResponse" message="tns:IZindeService_Sil__TBL_DEPO_TRANSFER_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Degistir__TBL_DEPO_TRANSFER">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Degistir__TBL_DEPO_TRANSFER" message="tns:IZindeService_Degistir__TBL_DEPO_TRANSFER_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Degistir__TBL_DEPO_TRANSFERResponse" message="tns:IZindeService_Degistir__TBL_DEPO_TRANSFER_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Listele__TBL_DEPO_TRANSFER">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Listele__TBL_DEPO_TRANSFER" message="tns:IZindeService_Listele__TBL_DEPO_TRANSFER_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Listele__TBL_DEPO_TRANSFERResponse" message="tns:IZindeService_Listele__TBL_DEPO_TRANSFER_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Bul_TBL_DEPO_TRANSFER">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Bul_TBL_DEPO_TRANSFER" message="tns:IZindeService_Bul_TBL_DEPO_TRANSFER_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Bul_TBL_DEPO_TRANSFERResponse" message="tns:IZindeService_Bul_TBL_DEPO_TRANSFER_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Ekle__TBL_FATURA">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Ekle__TBL_FATURA" message="tns:IZindeService_Ekle__TBL_FATURA_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Ekle__TBL_FATURAResponse" message="tns:IZindeService_Ekle__TBL_FATURA_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Sil__TBL_FATURA">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Sil__TBL_FATURA" message="tns:IZindeService_Sil__TBL_FATURA_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Sil__TBL_FATURAResponse" message="tns:IZindeService_Sil__TBL_FATURA_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Degistir__TBL_FATURA">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Degistir__TBL_FATURA" message="tns:IZindeService_Degistir__TBL_FATURA_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Degistir__TBL_FATURAResponse" message="tns:IZindeService_Degistir__TBL_FATURA_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Listele__TBL_FATURA">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Listele__TBL_FATURA" message="tns:IZindeService_Listele__TBL_FATURA_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Listele__TBL_FATURAResponse" message="tns:IZindeService_Listele__TBL_FATURA_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Bul_TBL_FATURA">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Bul_TBL_FATURA" message="tns:IZindeService_Bul_TBL_FATURA_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Bul_TBL_FATURAResponse" message="tns:IZindeService_Bul_TBL_FATURA_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Ekle__TBL_FATURA_TURU">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Ekle__TBL_FATURA_TURU" message="tns:IZindeService_Ekle__TBL_FATURA_TURU_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Ekle__TBL_FATURA_TURUResponse" message="tns:IZindeService_Ekle__TBL_FATURA_TURU_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Sil__TBL_FATURA_TURU">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Sil__TBL_FATURA_TURU" message="tns:IZindeService_Sil__TBL_FATURA_TURU_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Sil__TBL_FATURA_TURUResponse" message="tns:IZindeService_Sil__TBL_FATURA_TURU_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Degistir__TBL_FATURA_TURU">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Degistir__TBL_FATURA_TURU" message="tns:IZindeService_Degistir__TBL_FATURA_TURU_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Degistir__TBL_FATURA_TURUResponse" message="tns:IZindeService_Degistir__TBL_FATURA_TURU_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Listele__TBL_FATURA_TURU">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Listele__TBL_FATURA_TURU" message="tns:IZindeService_Listele__TBL_FATURA_TURU_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Listele__TBL_FATURA_TURUResponse" message="tns:IZindeService_Listele__TBL_FATURA_TURU_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Bul_TBL_FATURA_TURU">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Bul_TBL_FATURA_TURU" message="tns:IZindeService_Bul_TBL_FATURA_TURU_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Bul_TBL_FATURA_TURUResponse" message="tns:IZindeService_Bul_TBL_FATURA_TURU_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Ekle__TBL_FIS">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Ekle__TBL_FIS" message="tns:IZindeService_Ekle__TBL_FIS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Ekle__TBL_FISResponse" message="tns:IZindeService_Ekle__TBL_FIS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Sil__TBL_FIS">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Sil__TBL_FIS" message="tns:IZindeService_Sil__TBL_FIS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Sil__TBL_FISResponse" message="tns:IZindeService_Sil__TBL_FIS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Degistir__TBL_FIS">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Degistir__TBL_FIS" message="tns:IZindeService_Degistir__TBL_FIS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Degistir__TBL_FISResponse" message="tns:IZindeService_Degistir__TBL_FIS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Listele__TBL_FIS">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Listele__TBL_FIS" message="tns:IZindeService_Listele__TBL_FIS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Listele__TBL_FISResponse" message="tns:IZindeService_Listele__TBL_FIS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Bul_TBL_FIS">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Bul_TBL_FIS" message="tns:IZindeService_Bul_TBL_FIS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Bul_TBL_FISResponse" message="tns:IZindeService_Bul_TBL_FIS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Ekle__TBL_GIDER">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Ekle__TBL_GIDER" message="tns:IZindeService_Ekle__TBL_GIDER_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Ekle__TBL_GIDERResponse" message="tns:IZindeService_Ekle__TBL_GIDER_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Sil__TBL_GIDER">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Sil__TBL_GIDER" message="tns:IZindeService_Sil__TBL_GIDER_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Sil__TBL_GIDERResponse" message="tns:IZindeService_Sil__TBL_GIDER_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Degistir__TBL_GIDER">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Degistir__TBL_GIDER" message="tns:IZindeService_Degistir__TBL_GIDER_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Degistir__TBL_GIDERResponse" message="tns:IZindeService_Degistir__TBL_GIDER_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Listele__TBL_GIDER">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Listele__TBL_GIDER" message="tns:IZindeService_Listele__TBL_GIDER_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Listele__TBL_GIDERResponse" message="tns:IZindeService_Listele__TBL_GIDER_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Bul_TBL_GIDER">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Bul_TBL_GIDER" message="tns:IZindeService_Bul_TBL_GIDER_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Bul_TBL_GIDERResponse" message="tns:IZindeService_Bul_TBL_GIDER_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Ekle__TBL_GIDER_BAKIYE">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Ekle__TBL_GIDER_BAKIYE" message="tns:IZindeService_Ekle__TBL_GIDER_BAKIYE_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Ekle__TBL_GIDER_BAKIYEResponse" message="tns:IZindeService_Ekle__TBL_GIDER_BAKIYE_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Sil__TBL_GIDER_BAKIYE">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Sil__TBL_GIDER_BAKIYE" message="tns:IZindeService_Sil__TBL_GIDER_BAKIYE_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Sil__TBL_GIDER_BAKIYEResponse" message="tns:IZindeService_Sil__TBL_GIDER_BAKIYE_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Degistir__TBL_GIDER_BAKIYE">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Degistir__TBL_GIDER_BAKIYE" message="tns:IZindeService_Degistir__TBL_GIDER_BAKIYE_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Degistir__TBL_GIDER_BAKIYEResponse" message="tns:IZindeService_Degistir__TBL_GIDER_BAKIYE_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Listele__TBL_GIDER_BAKIYE">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Listele__TBL_GIDER_BAKIYE" message="tns:IZindeService_Listele__TBL_GIDER_BAKIYE_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Listele__TBL_GIDER_BAKIYEResponse" message="tns:IZindeService_Listele__TBL_GIDER_BAKIYE_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Bul_TBL_GIDER_BAKIYE">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Bul_TBL_GIDER_BAKIYE" message="tns:IZindeService_Bul_TBL_GIDER_BAKIYE_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Bul_TBL_GIDER_BAKIYEResponse" message="tns:IZindeService_Bul_TBL_GIDER_BAKIYE_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Ekle__TBL_KASA">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Ekle__TBL_KASA" message="tns:IZindeService_Ekle__TBL_KASA_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Ekle__TBL_KASAResponse" message="tns:IZindeService_Ekle__TBL_KASA_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Sil__TBL_KASA">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Sil__TBL_KASA" message="tns:IZindeService_Sil__TBL_KASA_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Sil__TBL_KASAResponse" message="tns:IZindeService_Sil__TBL_KASA_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Degistir__TBL_KASA">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Degistir__TBL_KASA" message="tns:IZindeService_Degistir__TBL_KASA_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Degistir__TBL_KASAResponse" message="tns:IZindeService_Degistir__TBL_KASA_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Listele__TBL_KASA">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Listele__TBL_KASA" message="tns:IZindeService_Listele__TBL_KASA_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Listele__TBL_KASAResponse" message="tns:IZindeService_Listele__TBL_KASA_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Bul_TBL_KASA">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Bul_TBL_KASA" message="tns:IZindeService_Bul_TBL_KASA_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Bul_TBL_KASAResponse" message="tns:IZindeService_Bul_TBL_KASA_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Ekle__TBL_KASA_BAKIYE">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Ekle__TBL_KASA_BAKIYE" message="tns:IZindeService_Ekle__TBL_KASA_BAKIYE_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Ekle__TBL_KASA_BAKIYEResponse" message="tns:IZindeService_Ekle__TBL_KASA_BAKIYE_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Sil__TBL_KASA_BAKIYE">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Sil__TBL_KASA_BAKIYE" message="tns:IZindeService_Sil__TBL_KASA_BAKIYE_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Sil__TBL_KASA_BAKIYEResponse" message="tns:IZindeService_Sil__TBL_KASA_BAKIYE_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Degistir__TBL_KASA_BAKIYE">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Degistir__TBL_KASA_BAKIYE" message="tns:IZindeService_Degistir__TBL_KASA_BAKIYE_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Degistir__TBL_KASA_BAKIYEResponse" message="tns:IZindeService_Degistir__TBL_KASA_BAKIYE_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Listele__TBL_KASA_BAKIYE">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Listele__TBL_KASA_BAKIYE" message="tns:IZindeService_Listele__TBL_KASA_BAKIYE_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Listele__TBL_KASA_BAKIYEResponse" message="tns:IZindeService_Listele__TBL_KASA_BAKIYE_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Bul_TBL_KASA_BAKIYE">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Bul_TBL_KASA_BAKIYE" message="tns:IZindeService_Bul_TBL_KASA_BAKIYE_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Bul_TBL_KASA_BAKIYEResponse" message="tns:IZindeService_Bul_TBL_KASA_BAKIYE_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Ekle__TBL_KDV">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Ekle__TBL_KDV" message="tns:IZindeService_Ekle__TBL_KDV_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Ekle__TBL_KDVResponse" message="tns:IZindeService_Ekle__TBL_KDV_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Sil__TBL_KDV">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Sil__TBL_KDV" message="tns:IZindeService_Sil__TBL_KDV_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Sil__TBL_KDVResponse" message="tns:IZindeService_Sil__TBL_KDV_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Degistir__TBL_KDV">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Degistir__TBL_KDV" message="tns:IZindeService_Degistir__TBL_KDV_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Degistir__TBL_KDVResponse" message="tns:IZindeService_Degistir__TBL_KDV_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Listele__TBL_KDV">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Listele__TBL_KDV" message="tns:IZindeService_Listele__TBL_KDV_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Listele__TBL_KDVResponse" message="tns:IZindeService_Listele__TBL_KDV_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Bul_TBL_KDV">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Bul_TBL_KDV" message="tns:IZindeService_Bul_TBL_KDV_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Bul_TBL_KDVResponse" message="tns:IZindeService_Bul_TBL_KDV_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Ekle__TBL_ODEME">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Ekle__TBL_ODEME" message="tns:IZindeService_Ekle__TBL_ODEME_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Ekle__TBL_ODEMEResponse" message="tns:IZindeService_Ekle__TBL_ODEME_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Sil__TBL_ODEME">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Sil__TBL_ODEME" message="tns:IZindeService_Sil__TBL_ODEME_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Sil__TBL_ODEMEResponse" message="tns:IZindeService_Sil__TBL_ODEME_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Degistir__TBL_ODEME">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Degistir__TBL_ODEME" message="tns:IZindeService_Degistir__TBL_ODEME_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Degistir__TBL_ODEMEResponse" message="tns:IZindeService_Degistir__TBL_ODEME_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Listele__TBL_ODEME">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Listele__TBL_ODEME" message="tns:IZindeService_Listele__TBL_ODEME_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Listele__TBL_ODEMEResponse" message="tns:IZindeService_Listele__TBL_ODEME_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Bul_TBL_ODEME">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Bul_TBL_ODEME" message="tns:IZindeService_Bul_TBL_ODEME_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Bul_TBL_ODEMEResponse" message="tns:IZindeService_Bul_TBL_ODEME_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Ekle__TBL_ODEME_TIPI">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Ekle__TBL_ODEME_TIPI" message="tns:IZindeService_Ekle__TBL_ODEME_TIPI_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Ekle__TBL_ODEME_TIPIResponse" message="tns:IZindeService_Ekle__TBL_ODEME_TIPI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Sil__TBL_ODEME_TIPI">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Sil__TBL_ODEME_TIPI" message="tns:IZindeService_Sil__TBL_ODEME_TIPI_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Sil__TBL_ODEME_TIPIResponse" message="tns:IZindeService_Sil__TBL_ODEME_TIPI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Degistir__TBL_ODEME_TIPI">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Degistir__TBL_ODEME_TIPI" message="tns:IZindeService_Degistir__TBL_ODEME_TIPI_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Degistir__TBL_ODEME_TIPIResponse" message="tns:IZindeService_Degistir__TBL_ODEME_TIPI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Listele__TBL_ODEME_TIPI">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Listele__TBL_ODEME_TIPI" message="tns:IZindeService_Listele__TBL_ODEME_TIPI_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Listele__TBL_ODEME_TIPIResponse" message="tns:IZindeService_Listele__TBL_ODEME_TIPI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Bul_TBL_ODEME_TIPI">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Bul_TBL_ODEME_TIPI" message="tns:IZindeService_Bul_TBL_ODEME_TIPI_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Bul_TBL_ODEME_TIPIResponse" message="tns:IZindeService_Bul_TBL_ODEME_TIPI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Ekle__TBL_ODEME_TURU">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Ekle__TBL_ODEME_TURU" message="tns:IZindeService_Ekle__TBL_ODEME_TURU_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Ekle__TBL_ODEME_TURUResponse" message="tns:IZindeService_Ekle__TBL_ODEME_TURU_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Sil__TBL_ODEME_TURU">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Sil__TBL_ODEME_TURU" message="tns:IZindeService_Sil__TBL_ODEME_TURU_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Sil__TBL_ODEME_TURUResponse" message="tns:IZindeService_Sil__TBL_ODEME_TURU_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Degistir__TBL_ODEME_TURU">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Degistir__TBL_ODEME_TURU" message="tns:IZindeService_Degistir__TBL_ODEME_TURU_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Degistir__TBL_ODEME_TURUResponse" message="tns:IZindeService_Degistir__TBL_ODEME_TURU_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Listele__TBL_ODEME_TURU">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Listele__TBL_ODEME_TURU" message="tns:IZindeService_Listele__TBL_ODEME_TURU_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Listele__TBL_ODEME_TURUResponse" message="tns:IZindeService_Listele__TBL_ODEME_TURU_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Bul_TBL_ODEME_TURU">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Bul_TBL_ODEME_TURU" message="tns:IZindeService_Bul_TBL_ODEME_TURU_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Bul_TBL_ODEME_TURUResponse" message="tns:IZindeService_Bul_TBL_ODEME_TURU_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Ekle__TBL_PARA_TIPI">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Ekle__TBL_PARA_TIPI" message="tns:IZindeService_Ekle__TBL_PARA_TIPI_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Ekle__TBL_PARA_TIPIResponse" message="tns:IZindeService_Ekle__TBL_PARA_TIPI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Sil__TBL_PARA_TIPI">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Sil__TBL_PARA_TIPI" message="tns:IZindeService_Sil__TBL_PARA_TIPI_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Sil__TBL_PARA_TIPIResponse" message="tns:IZindeService_Sil__TBL_PARA_TIPI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Degistir__TBL_PARA_TIPI">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Degistir__TBL_PARA_TIPI" message="tns:IZindeService_Degistir__TBL_PARA_TIPI_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Degistir__TBL_PARA_TIPIResponse" message="tns:IZindeService_Degistir__TBL_PARA_TIPI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Listele__TBL_PARA_TIPI">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Listele__TBL_PARA_TIPI" message="tns:IZindeService_Listele__TBL_PARA_TIPI_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Listele__TBL_PARA_TIPIResponse" message="tns:IZindeService_Listele__TBL_PARA_TIPI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Bul_TBL_PARA_TIPI">
+      <wsdl:input wsaw:Action="http://tempuri.org/IZindeService/Bul_TBL_PARA_TIPI" message="tns:IZindeService_Bul_TBL_PARA_TIPI_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IZindeService/Bul_TBL_PARA_TIPIResponse" message="tns:IZindeService_Bul_TBL_PARA_TIPI_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ZindeService" type="tns:IZindeService">
+    <wsp:PolicyReference URI="#ZindeService_policy">
+    </wsp:PolicyReference>
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="Ekle__TBL_PERSONEL">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Ekle__TBL_PERSONEL" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sil__TBL_PERSONEL">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Sil__TBL_PERSONEL" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Degistir__TBL_PERSONEL">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Degistir__TBL_PERSONEL" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Listele__TBL_PERSONEL">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Listele__TBL_PERSONEL" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Bul_TBL_PERSONEL">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Bul_TBL_PERSONEL" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ekle__TBL_SIRKET">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Ekle__TBL_SIRKET" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sil__TBL_SIRKET">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Sil__TBL_SIRKET" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Degistir__TBL_SIRKET">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Degistir__TBL_SIRKET" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Listele__TBL_SIRKET">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Listele__TBL_SIRKET" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Bul_TBL_SIRKET">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Bul_TBL_SIRKET" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ekle__TBL_SIRKET_BAKIYE">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Ekle__TBL_SIRKET_BAKIYE" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sil__TBL_SIRKET_BAKIYE">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Sil__TBL_SIRKET_BAKIYE" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Degistir__TBL_SIRKET_BAKIYE">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Degistir__TBL_SIRKET_BAKIYE" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Listele__TBL_SIRKET_BAKIYE">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Listele__TBL_SIRKET_BAKIYE" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Bul_TBL_SIRKET_BAKIYE">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Bul_TBL_SIRKET_BAKIYE" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ekle__TBL_SIRKET_GRUB">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Ekle__TBL_SIRKET_GRUB" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sil__TBL_SIRKET_GRUB">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Sil__TBL_SIRKET_GRUB" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Degistir__TBL_SIRKET_GRUB">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Degistir__TBL_SIRKET_GRUB" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Listele__TBL_SIRKET_GRUB">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Listele__TBL_SIRKET_GRUB" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Bul_TBL_SIRKET_GRUB">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Bul_TBL_SIRKET_GRUB" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ekle__TBL_SIRKET_SINIF">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Ekle__TBL_SIRKET_SINIF" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sil__TBL_SIRKET_SINIF">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Sil__TBL_SIRKET_SINIF" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Degistir__TBL_SIRKET_SINIF">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Degistir__TBL_SIRKET_SINIF" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Listele__TBL_SIRKET_SINIF">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Listele__TBL_SIRKET_SINIF" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Bul_TBL_SIRKET_SINIF">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Bul_TBL_SIRKET_SINIF" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ekle__TBL_SIRKET_TIPI">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Ekle__TBL_SIRKET_TIPI" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sil__TBL_SIRKET_TIPI">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Sil__TBL_SIRKET_TIPI" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Degistir__TBL_SIRKET_TIPI">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Degistir__TBL_SIRKET_TIPI" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Listele__TBL_SIRKET_TIPI">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Listele__TBL_SIRKET_TIPI" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Bul_TBL_SIRKET_TIPI">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Bul_TBL_SIRKET_TIPI" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ekle__TBL_SPARIS">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Ekle__TBL_SPARIS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sil__TBL_SPARIS">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Sil__TBL_SPARIS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Degistir__TBL_SPARIS">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Degistir__TBL_SPARIS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Listele__TBL_SPARIS">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Listele__TBL_SPARIS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Bul_TBL_SPARIS">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Bul_TBL_SPARIS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ekle__TBL_SPARIS_TURU">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Ekle__TBL_SPARIS_TURU" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sil__TBL_SPARIS_TURU">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Sil__TBL_SPARIS_TURU" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Degistir__TBL_SPARIS_TURU">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Degistir__TBL_SPARIS_TURU" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Listele__TBL_SPARIS_TURU">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Listele__TBL_SPARIS_TURU" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Bul_TBL_SPARIS_TURU">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Bul_TBL_SPARIS_TURU" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ekle__TBL_URUN">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Ekle__TBL_URUN" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sil__TBL_URUN">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Sil__TBL_URUN" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Degistir__TBL_URUN">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Degistir__TBL_URUN" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Listele__TBL_URUN">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Listele__TBL_URUN" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Bul_TBL_URUN">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Bul_TBL_URUN" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ekle__TBL_URUN_BIRIM">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Ekle__TBL_URUN_BIRIM" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sil__TBL_URUN_BIRIM">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Sil__TBL_URUN_BIRIM" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Degistir__TBL_URUN_BIRIM">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Degistir__TBL_URUN_BIRIM" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Listele__TBL_URUN_BIRIM">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Listele__TBL_URUN_BIRIM" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Bul_TBL_URUN_BIRIM">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Bul_TBL_URUN_BIRIM" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ekle__TBL_URUN_CINSI">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Ekle__TBL_URUN_CINSI" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sil__TBL_URUN_CINSI">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Sil__TBL_URUN_CINSI" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Degistir__TBL_URUN_CINSI">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Degistir__TBL_URUN_CINSI" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Listele__TBL_URUN_CINSI">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Listele__TBL_URUN_CINSI" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Bul_TBL_URUN_CINSI">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Bul_TBL_URUN_CINSI" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ekle__TBL_URUN_FATURA">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Ekle__TBL_URUN_FATURA" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sil__TBL_URUN_FATURA">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Sil__TBL_URUN_FATURA" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Degistir__TBL_URUN_FATURA">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Degistir__TBL_URUN_FATURA" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Listele__TBL_URUN_FATURA">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Listele__TBL_URUN_FATURA" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Bul_TBL_URUN_FATURA">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Bul_TBL_URUN_FATURA" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ekle__TBL_URUN_MARKA">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Ekle__TBL_URUN_MARKA" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sil__TBL_URUN_MARKA">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Sil__TBL_URUN_MARKA" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Degistir__TBL_URUN_MARKA">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Degistir__TBL_URUN_MARKA" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Listele__TBL_URUN_MARKA">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Listele__TBL_URUN_MARKA" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Bul_TBL_URUN_MARKA">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Bul_TBL_URUN_MARKA" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ekle__TBL_URUN_SPARIS">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Ekle__TBL_URUN_SPARIS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sil__TBL_URUN_SPARIS">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Sil__TBL_URUN_SPARIS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Degistir__TBL_URUN_SPARIS">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Degistir__TBL_URUN_SPARIS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Listele__TBL_URUN_SPARIS">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Listele__TBL_URUN_SPARIS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Bul_TBL_URUN_SPARIS">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Bul_TBL_URUN_SPARIS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ekle__TBL_URUN_STOK">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Ekle__TBL_URUN_STOK" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sil__TBL_URUN_STOK">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Sil__TBL_URUN_STOK" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Degistir__TBL_URUN_STOK">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Degistir__TBL_URUN_STOK" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Listele__TBL_URUN_STOK">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Listele__TBL_URUN_STOK" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Bul_TBL_URUN_STOK">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Bul_TBL_URUN_STOK" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ekle__TBL_URUN_TIPI">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Ekle__TBL_URUN_TIPI" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sil__TBL_URUN_TIPI">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Sil__TBL_URUN_TIPI" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Degistir__TBL_URUN_TIPI">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Degistir__TBL_URUN_TIPI" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Listele__TBL_URUN_TIPI">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Listele__TBL_URUN_TIPI" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Bul_TBL_URUN_TIPI">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Bul_TBL_URUN_TIPI" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ekle__TBL_BANKA">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Ekle__TBL_BANKA" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sil__TBL_BANKA">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Sil__TBL_BANKA" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Degistir__TBL_BANKA">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Degistir__TBL_BANKA" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Listele__TBL_BANKA">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Listele__TBL_BANKA" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Bul_TBL_BANKA">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Bul_TBL_BANKA" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ekle__TBL_BANKA_BAKIYE">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Ekle__TBL_BANKA_BAKIYE" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sil__TBL_BANKA_BAKIYE">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Sil__TBL_BANKA_BAKIYE" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Degistir__TBL_BANKA_BAKIYE">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Degistir__TBL_BANKA_BAKIYE" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Listele__TBL_BANKA_BAKIYE">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Listele__TBL_BANKA_BAKIYE" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Bul_TBL_BANKA_BAKIYE">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Bul_TBL_BANKA_BAKIYE" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ekle__TBL_DEPO">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Ekle__TBL_DEPO" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sil__TBL_DEPO">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Sil__TBL_DEPO" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Degistir__TBL_DEPO">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Degistir__TBL_DEPO" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Listele__TBL_DEPO">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Listele__TBL_DEPO" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Bul_TBL_DEPO">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Bul_TBL_DEPO" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ekle__TBL_DEPO_ISLEM">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Ekle__TBL_DEPO_ISLEM" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sil__TBL_DEPO_ISLEM">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Sil__TBL_DEPO_ISLEM" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Degistir__TBL_DEPO_ISLEM">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Degistir__TBL_DEPO_ISLEM" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Listele__TBL_DEPO_ISLEM">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Listele__TBL_DEPO_ISLEM" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Bul_TBL_DEPO_ISLEM">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Bul_TBL_DEPO_ISLEM" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ekle__TBL_DEPO_TRANSFER">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Ekle__TBL_DEPO_TRANSFER" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sil__TBL_DEPO_TRANSFER">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Sil__TBL_DEPO_TRANSFER" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Degistir__TBL_DEPO_TRANSFER">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Degistir__TBL_DEPO_TRANSFER" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Listele__TBL_DEPO_TRANSFER">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Listele__TBL_DEPO_TRANSFER" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Bul_TBL_DEPO_TRANSFER">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Bul_TBL_DEPO_TRANSFER" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ekle__TBL_FATURA">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Ekle__TBL_FATURA" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sil__TBL_FATURA">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Sil__TBL_FATURA" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Degistir__TBL_FATURA">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Degistir__TBL_FATURA" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Listele__TBL_FATURA">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Listele__TBL_FATURA" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Bul_TBL_FATURA">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Bul_TBL_FATURA" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ekle__TBL_FATURA_TURU">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Ekle__TBL_FATURA_TURU" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sil__TBL_FATURA_TURU">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Sil__TBL_FATURA_TURU" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Degistir__TBL_FATURA_TURU">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Degistir__TBL_FATURA_TURU" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Listele__TBL_FATURA_TURU">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Listele__TBL_FATURA_TURU" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Bul_TBL_FATURA_TURU">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Bul_TBL_FATURA_TURU" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ekle__TBL_FIS">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Ekle__TBL_FIS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sil__TBL_FIS">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Sil__TBL_FIS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Degistir__TBL_FIS">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Degistir__TBL_FIS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Listele__TBL_FIS">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Listele__TBL_FIS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Bul_TBL_FIS">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Bul_TBL_FIS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ekle__TBL_GIDER">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Ekle__TBL_GIDER" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sil__TBL_GIDER">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Sil__TBL_GIDER" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Degistir__TBL_GIDER">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Degistir__TBL_GIDER" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Listele__TBL_GIDER">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Listele__TBL_GIDER" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Bul_TBL_GIDER">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Bul_TBL_GIDER" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ekle__TBL_GIDER_BAKIYE">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Ekle__TBL_GIDER_BAKIYE" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sil__TBL_GIDER_BAKIYE">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Sil__TBL_GIDER_BAKIYE" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Degistir__TBL_GIDER_BAKIYE">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Degistir__TBL_GIDER_BAKIYE" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Listele__TBL_GIDER_BAKIYE">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Listele__TBL_GIDER_BAKIYE" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Bul_TBL_GIDER_BAKIYE">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Bul_TBL_GIDER_BAKIYE" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ekle__TBL_KASA">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Ekle__TBL_KASA" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sil__TBL_KASA">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Sil__TBL_KASA" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Degistir__TBL_KASA">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Degistir__TBL_KASA" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Listele__TBL_KASA">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Listele__TBL_KASA" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Bul_TBL_KASA">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Bul_TBL_KASA" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ekle__TBL_KASA_BAKIYE">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Ekle__TBL_KASA_BAKIYE" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sil__TBL_KASA_BAKIYE">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Sil__TBL_KASA_BAKIYE" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Degistir__TBL_KASA_BAKIYE">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Degistir__TBL_KASA_BAKIYE" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Listele__TBL_KASA_BAKIYE">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Listele__TBL_KASA_BAKIYE" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Bul_TBL_KASA_BAKIYE">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Bul_TBL_KASA_BAKIYE" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ekle__TBL_KDV">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Ekle__TBL_KDV" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sil__TBL_KDV">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Sil__TBL_KDV" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Degistir__TBL_KDV">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Degistir__TBL_KDV" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Listele__TBL_KDV">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Listele__TBL_KDV" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Bul_TBL_KDV">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Bul_TBL_KDV" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ekle__TBL_ODEME">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Ekle__TBL_ODEME" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sil__TBL_ODEME">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Sil__TBL_ODEME" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Degistir__TBL_ODEME">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Degistir__TBL_ODEME" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Listele__TBL_ODEME">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Listele__TBL_ODEME" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Bul_TBL_ODEME">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Bul_TBL_ODEME" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ekle__TBL_ODEME_TIPI">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Ekle__TBL_ODEME_TIPI" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sil__TBL_ODEME_TIPI">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Sil__TBL_ODEME_TIPI" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Degistir__TBL_ODEME_TIPI">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Degistir__TBL_ODEME_TIPI" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Listele__TBL_ODEME_TIPI">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Listele__TBL_ODEME_TIPI" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Bul_TBL_ODEME_TIPI">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Bul_TBL_ODEME_TIPI" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ekle__TBL_ODEME_TURU">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Ekle__TBL_ODEME_TURU" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sil__TBL_ODEME_TURU">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Sil__TBL_ODEME_TURU" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Degistir__TBL_ODEME_TURU">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Degistir__TBL_ODEME_TURU" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Listele__TBL_ODEME_TURU">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Listele__TBL_ODEME_TURU" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Bul_TBL_ODEME_TURU">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Bul_TBL_ODEME_TURU" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ekle__TBL_PARA_TIPI">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Ekle__TBL_PARA_TIPI" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sil__TBL_PARA_TIPI">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Sil__TBL_PARA_TIPI" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Degistir__TBL_PARA_TIPI">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Degistir__TBL_PARA_TIPI" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Listele__TBL_PARA_TIPI">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Listele__TBL_PARA_TIPI" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Bul_TBL_PARA_TIPI">
+      <soap12:operation soapAction="http://tempuri.org/IZindeService/Bul_TBL_PARA_TIPI" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ZindeService">
+    <wsdl:port name="ZindeService" binding="tns:ZindeService">
+      <soap12:address location="net.tcp://localhost:3014/ActionService" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://localhost:3014/ActionService</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Upn>ZINDESERVERDEN\muratonur</Upn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

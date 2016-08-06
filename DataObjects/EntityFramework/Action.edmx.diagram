@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0ddd8a99b19e4d2abd04e616ebc193db" Name="Diagram1" ZoomLevel="89" >
+        <EntityTypeShape EntityType="ActionModel.TBL_BANKA" Width="1.5" PointX="3" PointY="43" />
+        <EntityTypeShape EntityType="ActionModel.TBL_BANKA_BAKIYE" Width="1.5" PointX="5.25" PointY="36.25" />
+        <EntityTypeShape EntityType="ActionModel.TBL_DEPO" Width="1.5" PointX="11" PointY="17.625" />
+        <EntityTypeShape EntityType="ActionModel.TBL_DEPO_ISLEM" Width="1.5" PointX="13.25" PointY="19.375" />
+        <EntityTypeShape EntityType="ActionModel.TBL_DEPO_TRANSFER" Width="1.5" PointX="10.25" PointY="21.625" />
+        <EntityTypeShape EntityType="ActionModel.TBL_FATURA" Width="1.5" PointX="5.25" PointY="29.875" />
+        <EntityTypeShape EntityType="ActionModel.TBL_FATURA_TURU" Width="1.5" PointX="3" PointY="34.25" />
+        <EntityTypeShape EntityType="ActionModel.TBL_FIS" Width="1.5" PointX="3" PointY="15.875" />
+        <EntityTypeShape EntityType="ActionModel.TBL_GIDER" Width="1.5" PointX="3" PointY="19.5" />
+        <EntityTypeShape EntityType="ActionModel.TBL_GIDER_BAKIYE" Width="1.5" PointX="5.25" PointY="21.375" />
+        <EntityTypeShape EntityType="ActionModel.TBL_KASA" Width="1.5" PointX="3" PointY="39.25" />
+        <EntityTypeShape EntityType="ActionModel.TBL_KASA_BAKIYE" Width="1.5" PointX="8.25" PointY="30.875" />
+        <EntityTypeShape EntityType="ActionModel.TBL_KDV" Width="1.5" PointX="5.75" PointY="18.125" />
+        <EntityTypeShape EntityType="ActionModel.TBL_ODEME" Width="1.5" PointX="10.25" PointY="25.5" />
+        <EntityTypeShape EntityType="ActionModel.TBL_ODEME_TIPI" Width="1.5" PointX="3" PointY="31.125" />
+        <EntityTypeShape EntityType="ActionModel.TBL_ODEME_TURU" Width="1.5" PointX="8" PointY="18.625" />
+        <EntityTypeShape EntityType="ActionModel.TBL_PARA_TIPI" Width="1.5" PointX="0.75" PointY="23" />
+        <EntityTypeShape EntityType="ActionModel.TBL_PERSONEL" Width="1.5" PointX="3" PointY="52" />
+        <EntityTypeShape EntityType="ActionModel.TBL_SIRKET" Width="1.5" PointX="0.75" PointY="14.375" />
+        <EntityTypeShape EntityType="ActionModel.TBL_SIRKET_BAKIYE" Width="1.5" PointX="3" PointY="23.125" />
+        <EntityTypeShape EntityType="ActionModel.TBL_SIRKET_GRUB" Width="1.5" PointX="1.5" PointY="7.875" />
+        <EntityTypeShape EntityType="ActionModel.TBL_SIRKET_SINIF" Width="1.5" PointX="1.5" PointY="11.375" />
+        <EntityTypeShape EntityType="ActionModel.TBL_SIRKET_TIPI" Width="1.5" PointX="1.5" PointY="27.625" />
+        <EntityTypeShape EntityType="ActionModel.TBL_SPARIS" Width="1.5" PointX="8.25" PointY="35.125" />
+        <EntityTypeShape EntityType="ActionModel.TBL_SPARIS_TURU" Width="1.5" PointX="6" PointY="40.625" />
+        <EntityTypeShape EntityType="ActionModel.TBL_URUN" Width="1.5" PointX="8" PointY="22" />
+        <EntityTypeShape EntityType="ActionModel.TBL_URUN_BIRIM" Width="1.5" PointX="5.75" PointY="15.375" />
+        <EntityTypeShape EntityType="ActionModel.TBL_URUN_CINSI" Width="1.5" PointX="5.75" PointY="48" />
+        <EntityTypeShape EntityType="ActionModel.TBL_URUN_FATURA" Width="1.5" PointX="11.25" PointY="30.375" />
+        <EntityTypeShape EntityType="ActionModel.TBL_URUN_MARKA" Width="1.5" PointX="5.75" PointY="25.875" />
+        <EntityTypeShape EntityType="ActionModel.TBL_URUN_SPARIS" Width="1.5" PointX="13.5" PointY="29.75" />
+        <EntityTypeShape EntityType="ActionModel.TBL_URUN_STOK" Width="1.5" PointX="13.25" PointY="23.5" />
+        <EntityTypeShape EntityType="ActionModel.TBL_URUN_TIPI" Width="1.5" PointX="3.5" PointY="48.125" />
+        <AssociationConnector Association="ActionModel.FK_TBL_BANKA_BAKIYE_TBL_BANKA" />
+        <AssociationConnector Association="ActionModel.FK_TBL_BANKA_TBL_PARA_TIPI" />
+        <AssociationConnector Association="ActionModel.FK_TBL_BANKA_BAKIYE_TBL_FIS" />
+        <AssociationConnector Association="ActionModel.FK_TBL_BANKA_BAKIYE_TBL_PARA_TIPI" />
+        <AssociationConnector Association="ActionModel.FK_TBL_DEPO_ISLEM_TBL_DEPO" />
+        <AssociationConnector Association="ActionModel.FK_TBL_FATURA_TBL_DEPO" />
+        <AssociationConnector Association="ActionModel.FK_TBL_SPARIS_TBL_DEPO" />
+        <AssociationConnector Association="ActionModel.FK_TBL_URUN_STOK_TBL_DEPO" />
+        <AssociationConnector Association="ActionModel.FK_TBL_DEPO_ISLEM_TBL_URUN" />
+        <AssociationConnector Association="ActionModel.FK_TBL_DEPO_TRANSFER_TBL_URUN" />
+        <AssociationConnector Association="ActionModel.FK_TBL_FATURA_TBL_FATURA_TURU" />
+        <AssociationConnector Association="ActionModel.FK_TBL_FATURA_TBL_KASA" />
+        <AssociationConnector Association="ActionModel.FK_TBL_FATURA_TBL_ODEME_TIPI" />
+        <AssociationConnector Association="ActionModel.FK_TBL_FATURA_TBL_PARA_TIPI" />
+        <AssociationConnector Association="ActionModel.FK_TBL_FATURA_TBL_PERSONEL" />
+        <AssociationConnector Association="ActionModel.FK_TBL_FATURA_TBL_SIRKET" />
+        <AssociationConnector Association="ActionModel.FK_TBL_FATURA_TBL_SPARIS" />
+        <AssociationConnector Association="ActionModel.FK_TBL_URUN_FATURA_TBL_FATURA" />
+        <AssociationConnector Association="ActionModel.FK_TBL_GIDER_BAKIYE_TBL_FIS" />
+        <AssociationConnector Association="ActionModel.FK_TBL_KASA_BAKIYE_TBL_FIS" />
+        <AssociationConnector Association="ActionModel.FK_TBL_SIRKET_BAKIYE_TBL_FIS" />
+        <AssociationConnector Association="ActionModel.FK_TBL_GIDER_BAKIYE_TBL_GIDER" />
+        <AssociationConnector Association="ActionModel.FK_TBL_GIDER_TBL_PARA_TIPI" />
+        <AssociationConnector Association="ActionModel.FK_TBL_GIDER_BAKIYE_TBL_PARA_TIPI" />
+        <AssociationConnector Association="ActionModel.FK_TBL_KASA_BAKIYE_TBL_KASA" />
+        <AssociationConnector Association="ActionModel.FK_TBL_KASA_TBL_PARA_TIPI" />
+        <AssociationConnector Association="ActionModel.FK_TBL_ODEME_TBL_KASA" />
+        <AssociationConnector Association="ActionModel.FK_TBL_SPARIS_TBL_KASA" />
+        <AssociationConnector Association="ActionModel.FK_TBL_KASA_BAKIYE_TBL_PARA_TIPI" />
+        <AssociationConnector Association="ActionModel.FK_TBL_URUN_TBL_KDV" />
+        <AssociationConnector Association="ActionModel.FK_TBL_ODEME_TBL_ODEME_TIPI" />
+        <AssociationConnector Association="ActionModel.FK_TBL_ODEME_TBL_ODEME_TURU" />
+        <AssociationConnector Association="ActionModel.FK_TBL_ODEME_TBL_PARA_TIPI" />
+        <AssociationConnector Association="ActionModel.FK_TBL_ODEME_TBL_SIRKET" />
+        <AssociationConnector Association="ActionModel.FK_TBL_SPARIS_TBL_ODEME_TIPI" />
+        <AssociationConnector Association="ActionModel.FK_TBL_SIRKET_BAKIYE_TBL_PARA_TIPI" />
+        <AssociationConnector Association="ActionModel.FK_TBL_SPARIS_TBL_PARA_TIPI" />
+        <AssociationConnector Association="ActionModel.FK_TBL_URUN_TBL_PARA_TIPI" />
+        <AssociationConnector Association="ActionModel.FK_TBL_SPARIS_TBL_PERSONEL" />
+        <AssociationConnector Association="ActionModel.FK_TBL_SIRKET_BAKIYE_TBL_SIRKET" />
+        <AssociationConnector Association="ActionModel.FK_TBL_SIRKET_TBL_SIRKET_GRUB" />
+        <AssociationConnector Association="ActionModel.FK_TBL_SIRKET_TBL_SIRKET_SINIF" />
+        <AssociationConnector Association="ActionModel.FK_TBL_SIRKET_TBL_SIRKET_TIPI" />
+        <AssociationConnector Association="ActionModel.FK_TBL_SPARIS_TBL_SIRKET" />
+        <AssociationConnector Association="ActionModel.FK_TBL_SPARIS_TBL_SPARIS_TURU" />
+        <AssociationConnector Association="ActionModel.FK_TBL_URUN_SPARIS_TBL_SPARIS" />
+        <AssociationConnector Association="ActionModel.FK_TBL_URUN_FATURA_TBL_URUN1" />
+        <AssociationConnector Association="ActionModel.FK_TBL_URUN_SPARIS_TBL_URUN1" />
+        <AssociationConnector Association="ActionModel.FK_TBL_URUN_STOK_TBL_URUN" />
+        <AssociationConnector Association="ActionModel.FK_TBL_URUN_TBL_URUN_BIRIM" />
+        <AssociationConnector Association="ActionModel.FK_TBL_URUN_TBL_URUN_CINSI" />
+        <AssociationConnector Association="ActionModel.FK_TBL_URUN_TBL_URUN_MARKA" />
+        <AssociationConnector Association="ActionModel.FK_TBL_URUN_TBL_URUN_TIPI" />
+        <AssociationConnector Association="ActionModel.FK_TBL_URUN_CINSI_TBL_URUN_TIPI" />
+        <AssociationConnector Association="ActionModel.FK_TBL_URUN_MARKA_TBL_URUN_CINSI" />
+        <AssociationConnector Association="ActionModel.FK_TBL_URUN_MARKA_TBL_URUN_TIPI" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

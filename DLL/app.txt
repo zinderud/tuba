@@ -1,0 +1,67 @@
+<ResourceDictionary.MergedDictionaries>
+        <local:Windows8ResourceDictionary />
+        <local:Windows8TouchResourceDictionary />
+        <ResourceDictionary Source="/Zinderud.Windows.Controls;component/Themes/GenericWindows8Touch.xaml" />
+        <ResourceDictionary Source="/Zinderud.Windows.Controls;component/Themes/GenericWindows8.xaml" />
+        <ResourceDictionary Source="/Zinderud.Windows.Controls;component/Themes/GenericModern.xaml" />
+		<ResourceDictionary Source="/Zinderud.Windows.Controls;component/Themes/GenericExpressionDark.xaml" />
+        <ResourceDictionary Source="/Zinderud.Windows.Controls;component/Themes/GenericTransparent.xaml" />
+		<ResourceDictionary Source="/Zinderud.Windows.Controls;component/Themes/GenericWindows7.xaml" />
+        <ResourceDictionary Source="/Zinderud.Windows.Controls;component/Themes/GenericVista.xaml" />
+        <ResourceDictionary Source="/Zinderud.Windows.Controls;component/Themes/GenericOfficeBlue.xaml" />
+        <ResourceDictionary Source="/Zinderud.Windows.Controls;component/Themes/GenericOfficeSilver.xaml" />
+        <ResourceDictionary Source="/Zinderud.Windows.Controls;component/Themes/GenericSummer.xaml" />
+        <ResourceDictionary Source="/Zinderud.Windows.Controls;component/Themes/GenericOfficeBlack.xaml" />
+
+
+<ResourceDictionary Source="/Zinderud.Windows.Controls.Chart;component/Themes/Chart/OfficeBlue/GenericOfficeBlue.xaml" />
+        <ResourceDictionary Source="/Zinderud.Windows.Controls.Chart;component/Themes/Chart/OfficeSilver/GenericOfficeSilver.xaml" />
+        <ResourceDictionary Source="/Zinderud.Windows.Controls.Chart;component/Themes/Chart/ExpressionDark/GenericExpressionDark.xaml" />
+        <ResourceDictionary Source="/Zinderud.Windows.Controls.Chart;component/Themes/Chart/Windows8/GenericWindows8.xaml" />
+        <ResourceDictionary Source="/Zinderud.Windows.Controls.Chart;component/Themes/Chart/Windows8Touch/GenericWindows8Touch.xaml" />
+        <ResourceDictionary Source="/Zinderud.Windows.Controls.Chart;component/Themes/Chart/Summer/GenericSummer.xaml" />
+        <ResourceDictionary Source="/Zinderud.Windows.Controls.Chart;component/Themes/Chart/Transparent/GenericTransparent.xaml" />
+        <ResourceDictionary Source="/Zinderud.Windows.Controls.Chart;component/Themes/Chart/Vista/GenericVista.xaml" />
+        <ResourceDictionary Source="/Zinderud.Windows.Controls.Chart;component/Themes/Chart/Windows7/GenericWindows7.xaml" />
+        <ResourceDictionary Source="/Zinderud.Windows.Controls.Chart;component/Themes/Chart/Modern/GenericModern.xaml" />
+        <ResourceDictionary Source="/Zinderud.Windows.Controls.Chart;component/Themes/Chart/OfficeBlack/GenericOfficeBlack.xaml" />
+
+
+<ResourceDictionary Source="/Zinderud.Windows.Controls.Input;component/Themes/GenericTransparent.xaml" />
+        <ResourceDictionary Source="/Zinderud.Windows.Controls.Input;component/Themes/GenericVista.xaml" />
+        <ResourceDictionary Source="/Zinderud.Windows.Controls.Input;component/Themes/GenericSummer.xaml" />
+        <ResourceDictionary Source="/Zinderud.Windows.Controls.Input;component/Themes/GenericOfficeBlue.xaml" />
+        <ResourceDictionary Source="/Zinderud.Windows.Controls.Input;component/Themes/GenericOfficeSilver.xaml" />
+        <ResourceDictionary Source="/Zinderud.Windows.Controls.Input;component/Themes/GenericWindows7.xaml" />
+        <ResourceDictionary Source="/Zinderud.Windows.Controls.Input;component/Themes/GenericWindows8.xaml" />
+        <ResourceDictionary Source="/Zinderud.Windows.Controls.Input;component/Themes/GenericModern.xaml" />
+		<ResourceDictionary Source="/Zinderud.Windows.Controls.Input;component/Themes/GenericWindows8Touch.xaml" />
+		<ResourceDictionary Source="/Zinderud.Windows.Controls.Input;component/Themes/GenericOfficeBlack.xaml" />
+<ResourceDictionary Source="/Zinderud.Windows.Controls.Data;component/Themes/GenericExpressionDark.xaml" />
+		<ResourceDictionary Source="/Zinderud.Windows.Controls.Data;component/Themes/GenericOfficeBlue.xaml" />
+		<ResourceDictionary Source="/Zinderud.Windows.Controls.Data;component/Themes/GenericOfficeSilver.xaml" />
+		<ResourceDictionary Source="/Zinderud.Windows.Controls.Data;component/Themes/GenericSummer.xaml" />
+		<ResourceDictionary Source="/Zinderud.Windows.Controls.Data;component/Themes/GenericVista.xaml" />
+		<ResourceDictionary Source="/Zinderud.Windows.Controls.Data;component/Themes/GenericWindows7.xaml" />
+		<ResourceDictionary Source="/Zinderud.Windows.Controls.Data;component/Themes/GenericTransparent.xaml" />
+		<ResourceDictionary Source="/Zinderud.Windows.Controls.Data;component/Themes/GenericOfficeBlack.xaml" />
+        <ResourceDictionary Source="/Zinderud.Windows.Controls.Data;component/Themes/GenericWindows8.xaml" />
+        <ResourceDictionary Source="/Zinderud.Windows.Controls.Data;component/Themes/GenericModern.xaml" />
+		<ResourceDictionary Source="/Zinderud.Windows.Controls.Data;component/Themes/GenericWindows8Touch.xaml" />
+		<ResourceDictionary Source="/Zinderud.Windows.Controls.Data;component/Themes/GenericOfficeBlack.xaml" />
+  <ResourceDictionary Source="/Zinderud.Windows.Controls.Charting;component/Themes/Chart/OfficeSilver/Generic_OfficeSilver.xaml" />
+        <ResourceDictionary Source="/Zinderud.Windows.Controls.Charting;component/Themes/Chart/OfficeBlue/Generic_OfficeBlue.xaml" />
+        <ResourceDictionary Source="/Zinderud.Windows.Controls.Charting;component/Themes/Chart/Summer/Generic_Summer.xaml" />
+        <ResourceDictionary Source="/Zinderud.Windows.Controls.Charting;component/Themes/Chart/Vista/Generic_Vista.xaml" />
+        <ResourceDictionary Source="/Zinderud.Windows.Controls.Charting;component/Themes/Chart/Windows7/Generic_Windows7.xaml" />
+        <ResourceDictionary Source="/Zinderud.Windows.Controls.Charting;component/Themes/Chart/Transparent/Generic_Transparent.xaml" />
+        <ResourceDictionary Source="/Zinderud.Windows.Controls.Charting;component/Themes/Chart/ExpressionDark/Generic_ExpressionDark.xaml" />
+        <!--<ResourceDictionary Source="/Zinderud.Windows.Controls.Charting;component/Themes/Chart/Windows8/Generic_Windows8.xaml" />
+		<ResourceDictionary Source="/Zinderud.Windows.Controls.Charting;component/Themes/Chart/Windows8Touch/Generic_Windows8Touch.xaml" />-->
+        <ResourceDictionary Source="/Zinderud.Windows.Controls.Charting;component/Themes/Chart/Modern/Generic_Modern.xaml" />
+        <ResourceDictionary Source="/Zinderud.Windows.Controls.Charting;component/Themes/Chart/OfficeBlack/Generic_OfficeBlack.xaml" />
+
+
+    </ResourceDictionary.MergedDictionaries>
+
+</ResourceDictionary>

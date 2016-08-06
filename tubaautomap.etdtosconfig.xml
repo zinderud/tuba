@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntitiesToDTOsConfiguration>
+  <GenerateAssemblers>true</GenerateAssemblers>
+  <DTOsConfig>
+    <Target project="AutoBusinessObjects" name="AutoBusinessObjects" type="Project" />
+    <EDMXName>Action.edmx</EDMXName>
+    <GenerateFilter all="true" complex="true" entities="true" />
+    <SourceFileHeaderComment>murat onur karadeniz</SourceFileHeaderComment>
+    <UseProjectDefaultNamespace>true</UseProjectDefaultNamespace>
+    <SourceNamespace>AutoBusinessObjects</SourceNamespace>
+    <DTOsServiceReady>true</DTOsServiceReady>
+    <SourceFileGenerationType>SourceFilePerClass</SourceFileGenerationType>
+    <SourceFileName>Will take the name of the class.</SourceFileName>
+    <AssociationType>ClassType</AssociationType>
+    <GenerateDTOConstructors>true</GenerateDTOConstructors>
+    <ClassIdentifier use="Suffix" word="DTO" />
+  </DTOsConfig>
+  <AssemblersConfig>
+    <Target project="DataObjects" name="ModelMapper" type="ProjectFolder" />
+    <SourceFileHeaderComment>murat onur karadeniz</SourceFileHeaderComment>
+    <UseProjectDefaultNamespace>true</UseProjectDefaultNamespace>
+    <SourceNamespace>DataObjects.ModelMapper</SourceNamespace>
+    <SourceFileGenerationType>OneSourceFile</SourceFileGenerationType>
+    <SourceFileName>Maping</SourceFileName>
+    <IsServiceReady>true</IsServiceReady>
+    <ClassIdentifier use="Suffix" word="Maping" />
+  </AssemblersConfig>
+</EntitiesToDTOsConfiguration>

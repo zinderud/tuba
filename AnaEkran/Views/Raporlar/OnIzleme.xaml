@@ -1,0 +1,8 @@
+﻿<Window x:Class="AnaEkran.Views.Raporlar.OnIzleme"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="OnIzleme" Height="300" Width="300">
+    <Grid>
+        <DocumentViewer  x:Name="XpsOkuyucu" />
+    </Grid>
+</Window>

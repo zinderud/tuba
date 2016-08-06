@@ -1,0 +1,775 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.WebAnalytics.Behaviors</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.WebAnalytics.Behaviors.Handlers.HandleMediaElement">
+            <summary>
+            Track a MediaElement CurrentStateChanged, MediaOpened, and MediaFailed events
+            </summary>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Behaviors.Handlers.HandleMediaElement.Track(System.Windows.FrameworkElement,Microsoft.WebAnalytics.AnalyticsEvent,System.EventArgs)">
+            <summary>
+            Track the media element events
+            </summary>
+            <param name="associatedObject">the associated object</param>
+            <param name="analyticsEvent">the analytics event</param>
+            <param name="eventArgs">the event arguments</param>
+        </member>
+        <member name="P:Microsoft.WebAnalytics.Behaviors.Handlers.HandleMediaElement.Log">
+            <summary>
+            Gets or sets the event Logging method
+            </summary>
+        </member>
+        <member name="T:Microsoft.WebAnalytics.Behaviors.ServiceMethod">
+            <summary>
+            The service method for <see cref="T:Microsoft.WebAnalytics.Behaviors.ServiceOrientedAnalytics"/> 
+            </summary>
+        </member>
+        <member name="F:Microsoft.WebAnalytics.Behaviors.ServiceMethod.Get">
+            <summary>
+            Use HTTP Get
+            </summary>
+        </member>
+        <member name="F:Microsoft.WebAnalytics.Behaviors.ServiceMethod.Post">
+            <summary>
+            Use HTTP Post
+            </summary>
+        </member>
+        <member name="T:Microsoft.WebAnalytics.Behaviors.ServiceOrientedAnalytics">
+            <summary>
+            <img src="../media/Microsoft.WebAnalytics.Behaviors.ServiceOrientedAnalytics.24x24.png"/> 
+            Track an event to a web analytics service
+            </summary>
+            <remarks>See <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="9255fdc2-b6e8-4081-bf08-c172336bf09b">this article</link>
+            for more information on Service Oriented Analytics.
+            </remarks>
+        </member>
+        <member name="F:Microsoft.WebAnalytics.Behaviors.ServiceOrientedAnalytics.UserIdKey">
+            <summary>
+            The isolated storage setting key for the UserId
+            </summary>
+        </member>
+        <member name="F:Microsoft.WebAnalytics.Behaviors.ServiceOrientedAnalytics.userId">
+            <summary>
+            the unique User Id
+            </summary>
+        </member>
+        <member name="F:Microsoft.WebAnalytics.Behaviors.ServiceOrientedAnalytics.serializer">
+            <summary>
+            the data contract serializer
+            </summary>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Behaviors.ServiceOrientedAnalytics.#ctor">
+            <summary>
+            Initializes a new instance of the ServiceOrientedAnalytics class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Behaviors.ServiceOrientedAnalytics.OnAttached">
+            <summary>
+            Initialize the imported parts and attach the TrackEvent handler
+            </summary>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Behaviors.ServiceOrientedAnalytics.OnDetaching">
+            <summary>
+            Detach the TrackEvent() handler
+            </summary>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Behaviors.ServiceOrientedAnalytics.OnTrackEvent(System.Object,Microsoft.WebAnalytics.AnalyticsEventArgs)">
+            <summary>
+            Track the event to the service
+            </summary>
+            <param name="sender">the event tracker</param>
+            <param name="e">the anlalytics event arguments</param>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Behaviors.ServiceOrientedAnalytics.GetEvent(Microsoft.WebAnalytics.AnalyticsEventArgs)">
+            <summary>
+            Use a GET method and put the parameters in the URL
+            </summary>
+            <param name="e">the analytics event argument</param>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Behaviors.ServiceOrientedAnalytics.PostEvent(Microsoft.WebAnalytics.AnalyticsEventArgs)">
+            <summary>
+            Use an HTTP Post event to and put the data in the body of the message
+            </summary>
+            <param name="e">the anaytics event arguments</param>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Behaviors.ServiceOrientedAnalytics.OnRequestStream(System.IAsyncResult)">
+            <summary>
+            Serialize the Analytics event in an XML Stream
+            </summary>
+            <param name="asyncResult">the async result</param>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Behaviors.ServiceOrientedAnalytics.OnPosted(System.IAsyncResult)">
+            <summary>
+            Event handler called when the Analtyics Event is posted to the service
+            </summary>
+            <param name="asyncResult">the async result</param>
+        </member>
+        <member name="P:Microsoft.WebAnalytics.Behaviors.ServiceOrientedAnalytics.Endpoint">
+            <summary>
+            Gets or sets the endpoint for the service 
+            </summary>
+        </member>
+        <member name="P:Microsoft.WebAnalytics.Behaviors.ServiceOrientedAnalytics.AccountId">
+            <summary>
+            Gets or sets the account Id
+            </summary>
+        </member>
+        <member name="P:Microsoft.WebAnalytics.Behaviors.ServiceOrientedAnalytics.Version">
+            <summary>
+            Gets or sets the version of the API
+            </summary>
+        </member>
+        <member name="P:Microsoft.WebAnalytics.Behaviors.ServiceOrientedAnalytics.Method">
+            <summary>
+            Gets or sets the service method to use
+            </summary>
+        </member>
+        <member name="P:Microsoft.WebAnalytics.Behaviors.ServiceOrientedAnalytics.Events">
+            <summary>
+            Gets or sets the events
+            </summary>
+        </member>
+        <member name="P:Microsoft.WebAnalytics.Behaviors.ServiceOrientedAnalytics.Dispatch">
+            <summary>
+            Gets or sets the web message dispatcher
+            </summary>
+        </member>
+        <member name="P:Microsoft.WebAnalytics.Behaviors.ServiceOrientedAnalytics.UserId">
+            <summary>
+            Gets the unique User id
+            </summary>
+        </member>
+        <member name="T:Microsoft.WebAnalytics.Behaviors.ServiceOrientedAnalytics.RequestStream">
+            <summary>
+            The request stream
+            </summary>
+        </member>
+        <member name="P:Microsoft.WebAnalytics.Behaviors.ServiceOrientedAnalytics.RequestStream.Request">
+            <summary>
+            Gets or sets the web request
+            </summary>
+        </member>
+        <member name="P:Microsoft.WebAnalytics.Behaviors.ServiceOrientedAnalytics.RequestStream.AnalyticsEvent">
+            <summary>
+            Gets or sets the analytics event
+            </summary>
+        </member>
+        <member name="T:Microsoft.WebAnalytics.Behaviors.AnalyticsBehaviorHelpers">
+            <summary>
+            AnalyticsBehaviorHelpers extension methods
+            </summary>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Behaviors.AnalyticsBehaviorHelpers.TriggerActions``1(System.Windows.DependencyObject)">
+            <summary>
+            Get the TriggerActions of a particular type attached to the object
+            </summary>
+            <typeparam name="T">the type of TriggerAction to search for</typeparam>
+            <param name="obj">the dependency object</param>
+            <returns>the trigger actions of that type</returns>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Behaviors.AnalyticsBehaviorHelpers.Behavior``1(System.Windows.DependencyObject)">
+            <summary>
+            Get the first behavior of a specific type attached to an object
+            </summary>
+            <typeparam name="T">the type of behaviors</typeparam>
+            <param name="obj">the dependency object</param>
+            <returns>the behavior or null</returns>
+        </member>
+        <member name="T:Microsoft.WebAnalytics.Behaviors.TrackTouch">
+            <summary>
+            <img src="../media/Microsoft.WebAnalytics.Behaviors.TrackTouch.24x24.png"/> 
+            Track Touch.FrameReported events on Windows 7 touch-enabled systems, 
+            logging the number of touch points in the AnalyticsEvent.Value property
+            </summary>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Behaviors.TrackTouch.OnAttached">
+            <summary>
+            Attach the Touch.FrameReported event and initialize parts
+            </summary>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Behaviors.TrackTouch.OnDetaching">
+            <summary>
+            Detach events
+            </summary>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Behaviors.TrackTouch.Touch_FrameReported(System.Object,System.Windows.Input.TouchFrameEventArgs)">
+            <summary>
+            Track the Touch.FrameReported Event, sending the number of touch points in the Value
+            </summary>
+            <param name="sender">the associated object</param>
+            <param name="e">the routed event arugments</param>
+        </member>
+        <member name="P:Microsoft.WebAnalytics.Behaviors.TrackTouch.Log">
+            <summary>
+            Gets or sets the event Logging method
+            </summary>
+        </member>
+        <member name="T:Microsoft.WebAnalytics.Behaviors.FormTrackers.HandleFormRadioButton">
+            <summary>
+            Handle the RadioButton.Checked event for a form control
+            </summary>
+        </member>
+        <member name="F:Microsoft.WebAnalytics.Behaviors.FormTrackers.HandleFormRadioButton.handler">
+            <summary>
+            The event handler to track against
+            </summary>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Behaviors.FormTrackers.HandleFormRadioButton.AttachEvents(System.Windows.Controls.Control,System.EventHandler{Microsoft.WebAnalytics.Contracts.FormEventArgs})">
+            <summary>
+            Attach to the RadioButton Checked event
+            </summary>
+            <param name="control">a CheckBox</param>
+            <param name="eventHandler">the Event handler to dispatch to</param>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Behaviors.FormTrackers.HandleFormRadioButton.Checked(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Handle the RadioButton Checked event
+            </summary>
+            <param name="sender">the RadioButton</param>
+            <param name="e">the routed event arguments</param>
+        </member>
+        <member name="T:Microsoft.WebAnalytics.Behaviors.ConsoleAnalytics">
+            <summary>
+            <img src="../media/Microsoft.WebAnalytics.Behaviors.ConsoleAnalytics.24x24.png"/> 
+            Track an event in the debug console for IE8, Chrome, FireFox FireBug, and Safari
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Behaviors.ConsoleAnalytics.#ctor">
+            <summary>
+            Initializes a new instance of the ConsoleAnalytics class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Behaviors.ConsoleAnalytics.OnAttached">
+            <summary>
+            Initialize the imported parts and attache the TrackEvent handler
+            </summary>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Behaviors.ConsoleAnalytics.OnDetaching">
+            <summary>
+            Detach the TrackEvent() handler
+            </summary>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Behaviors.ConsoleAnalytics.LogToConsole(System.String)">
+            <summary>
+            Log to the Console property
+            </summary>
+            <param name="status">the status message</param>
+            <remarks>This is for Google Chrome on Windows</remarks>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Behaviors.ConsoleAnalytics.Events_TrackEvent(System.Object,Microsoft.WebAnalytics.AnalyticsEventArgs)">
+            <summary>
+            Set the status bar event
+            </summary>
+            <param name="sender">the event tracker</param>
+            <param name="e">the anlalytics event arguments</param>
+        </member>
+        <member name="P:Microsoft.WebAnalytics.Behaviors.ConsoleAnalytics.Events">
+            <summary>
+            Gets or sets the events
+            </summary>
+        </member>
+        <member name="P:Microsoft.WebAnalytics.Behaviors.ConsoleAnalytics.IsConsoleAvailable">
+            <summary>
+            Gets a value indicating whether the browser console is available
+            </summary>
+        </member>
+        <member name="P:Microsoft.WebAnalytics.Behaviors.ConsoleAnalytics.ShouldUseConsoleProperty">
+            <summary>
+            Gets a value indicating whether to use the console.log property
+            </summary>
+        </member>
+        <member name="T:Microsoft.WebAnalytics.Behaviors.Pulse">
+            <summary>
+            <img src="../media/Microsoft.WebAnalytics.Behaviors.Pulse.24x24.png"/> 
+            A Pulse event that sends a "Timer" analytics event at a prescribed interval
+            </summary>
+            <remarks>
+            These are the properties in the AnalyticsEvent that are set by the Pulse behavior at each interval
+            <list type="table">
+            <listheader>
+                <term>AnalyticsEvent Property</term>
+                <description>Description</description>
+            </listheader>
+            <item>
+            <term>Name</term><description>Timer</description>
+            </item>
+            <item>
+            <term>ObjectName</term>
+            <description>AssociatedObject.Name</description>
+            </item>
+            <item>
+            <term>TimeCode</term>
+            <description>timespan since the associated object was loaded</description>
+            </item>
+            <item>
+            <term>Value</term>
+            <description>number of seconds since the associated object was loaded</description>
+            </item>
+            </list>
+            </remarks>
+        </member>
+        <member name="F:Microsoft.WebAnalytics.Behaviors.Pulse.timer">
+            <summary>
+            the Dispatcher Timer
+            </summary>
+        </member>
+        <member name="F:Microsoft.WebAnalytics.Behaviors.Pulse.startTime">
+            <summary>
+            The application start time
+            </summary>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Behaviors.Pulse.#ctor">
+            <summary>
+            Initializes a new instance of the Pulse class
+            </summary>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Behaviors.Pulse.OnAttached">
+            <summary>
+            Attach the timer
+            </summary>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Behaviors.Pulse.OnDetaching">
+            <summary>
+            detach the timer
+            </summary>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Behaviors.Pulse.StartTimer">
+            <summary>
+            Start the timer
+            </summary>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Behaviors.Pulse.OnTick(System.Object,System.EventArgs)">
+            <summary>
+            Log a Timer event
+            </summary>
+            <param name="sender">the dispatch timer</param>
+            <param name="e">the event arguments</param>
+        </member>
+        <member name="P:Microsoft.WebAnalytics.Behaviors.Pulse.Interval">
+            <summary>
+            Gets or sets the interval in seconds
+            </summary>
+            <remarks>Default is 30 seconds</remarks>
+        </member>
+        <member name="P:Microsoft.WebAnalytics.Behaviors.Pulse.Log">
+            <summary>
+            Gets or sets the event Logging method
+            </summary>
+        </member>
+        <member name="T:Microsoft.WebAnalytics.Behaviors.ABTesting">
+            <summary>
+            <img src="../media/Microsoft.WebAnalytics.Behaviors.ABTesting.24x24.png"/> 
+            A/B Testing behavior
+            </summary>
+            <remarks>Add this behavior to use the Visual State Manager to enable 
+            <a href="http://en.wikipedia.org/wiki/A/B_Testing">A/B Testing</a>.
+            You can use the Application Init. Parameters to force the selection of 
+            a variant.
+            <example>
+            Setting the Variant to "A"
+            <code>
+            &lt;object ...&gt;
+                &lt;param name="initparams" value="SAFVariant=A"/&gt;
+            &lt;/object&gt;
+            </code>
+            </example>
+            <example>
+            Setting the Variant to control group (removing the persistent variant - "control" is a special value here).
+            <code>
+            &lt;object ...&gt;
+                &lt;param name="initparams" value="SAFVariant=control"/&gt;
+            &lt;/object&gt;
+            </code>
+            </example>
+            </remarks>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Behaviors.ABTesting.OnAttached">
+            <summary>
+            Attach the A/B testing handler
+            </summary>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Behaviors.ABTesting.FindRoot(System.Windows.FrameworkElement)">
+            <summary>
+            Find the root of the scene
+            </summary>
+            <param name="control">a control in the scene</param>
+            <returns>the root control that has no parent</returns>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Behaviors.ABTesting.AssociatedObject_Loaded(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Update the state
+            </summary>
+            <param name="sender">the AssociatedObject</param>
+            <param name="e">the routed event arguments</param>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Behaviors.ABTesting.UpdateState">
+            <summary>
+            Update the state for A/B testing
+            </summary>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Behaviors.ABTesting.SelectState(System.Windows.Controls.Control)">
+            <summary>
+            Select a state name
+            </summary>
+            <param name="control">the control which contains the Visual State Manager</param>
+        </member>
+        <member name="P:Microsoft.WebAnalytics.Behaviors.ABTesting.ABTestingStateName">
+            <summary>
+            Gets or sets the A/B Testing state name
+            </summary>
+            <remarks>Imported via MEF</remarks>
+        </member>
+        <member name="P:Microsoft.WebAnalytics.Behaviors.ABTesting.SaveTestingState">
+            <summary>
+            Gets or sets the function to save the testing state to isolated storage
+            </summary>
+        </member>
+        <member name="P:Microsoft.WebAnalytics.Behaviors.ABTesting.StateGroup">
+            <summary>
+            Gets or sets the state group to use for A/B Testing
+            </summary>
+        </member>
+        <member name="P:Microsoft.WebAnalytics.Behaviors.ABTesting.DefaultState">
+            <summary>
+            Gets or sets the default state to use when A/B testing is not applied
+            </summary>
+        </member>
+        <member name="P:Microsoft.WebAnalytics.Behaviors.ABTesting.PercentageOfTraffic">
+            <summary>
+            Gets or sets the percent of traffic to try an alternative state design
+            </summary>
+        </member>
+        <member name="T:Microsoft.WebAnalytics.Behaviors.TrackForm">
+            <summary>
+            <img src="../media/Microsoft.WebAnalytics.Behaviors.TrackForm.24x24.png"/> 
+            Track Form Events
+            </summary>
+            <remarks>Add this behavior to Panel-derived classes like Grid and 
+            StackPanel to track form controls that have TrackFormConrol behaviors 
+            on them.</remarks>
+        </member>
+        <member name="F:Microsoft.WebAnalytics.Behaviors.TrackForm.IsTrackingProperty">
+            <summary>
+            IsTracking Custom Attached Property
+            </summary>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Behaviors.TrackForm.#ctor">
+            <summary>
+            Initializes a new instance of the TrackForm class
+            </summary>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Behaviors.TrackForm.SetIsTracking(System.Windows.Controls.Control,System.Boolean)">
+            <summary>
+            Sets the IsTracking Custom Attached property
+            </summary>
+            <param name="control">the control</param>
+            <param name="value">whether tracking is enabled for this control</param>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Behaviors.TrackForm.GetIsTracking(System.Windows.Controls.Control)">
+            <summary>
+            Gets the IsTracking custom attached property
+            </summary>
+            <param name="control">the control</param>
+            <returns>true if tracking is enabled for this control</returns>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Behaviors.TrackForm.Invoke(System.Object)">
+            <summary>
+            Invoke the Submit event.
+            </summary>
+            <param name="parameter">the event argument parameter (typically coming from a Button Clicked event)</param>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Behaviors.TrackForm.OnAttached">
+            <summary>
+            Initialize parts and attach a Loaded handler
+            </summary>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Behaviors.TrackForm.OnDetaching">
+            <summary>
+            Detach events
+            </summary>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Behaviors.TrackForm.OnLoaded(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Attach the events 
+            </summary>
+            <param name="sender">the panel element</param>
+            <param name="e">the routed event arguments</param>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Behaviors.TrackForm.AttachEvents(System.Windows.Controls.UIElementCollection)">
+            <summary>
+            Attach to events for each of the child controls of this Panel
+            </summary>
+            <param name="children">the UI Element collection</param>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Behaviors.TrackForm.HandleFormEvent(System.Object,Microsoft.WebAnalytics.Contracts.FormEventArgs)">
+            <summary>
+            Handle a form event
+            </summary>
+            <param name="sender">the <see cref="T:Microsoft.WebAnalytics.Contracts.ITrackFormControl"/> derived class.</param>
+            <param name="args">the form event arguments</param>
+        </member>
+        <member name="P:Microsoft.WebAnalytics.Behaviors.TrackForm.Category">
+            <summary>
+            Gets or sets the category that will be applied to each form element and the Form Submit event.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WebAnalytics.Behaviors.TrackForm.Value">
+            <summary>
+            Gets or sets an integer that you can use to provide numerical data about the user event.
+            </summary>
+            <remarks>Default value is 0</remarks>
+        </member>
+        <member name="P:Microsoft.WebAnalytics.Behaviors.TrackForm.CustomProperties">
+            <summary>
+            Gets custom properties (name/value pairs) for the action
+            </summary>
+        </member>
+        <member name="P:Microsoft.WebAnalytics.Behaviors.TrackForm.Log">
+            <summary>
+            Gets or sets the event Logging method
+            </summary>
+        </member>
+        <member name="P:Microsoft.WebAnalytics.Behaviors.TrackForm.FormHandlers">
+            <summary>
+            Gets or sets all of the Form Control Handlers
+            </summary>
+        </member>
+        <member name="P:Microsoft.WebAnalytics.Behaviors.TrackForm.Handlers">
+            <summary>
+            Gets or sets the custom actions that can be applied to the event
+            </summary>
+        </member>
+        <member name="T:Microsoft.WebAnalytics.Behaviors.FormTrackers.HandleFormCheckBox">
+            <summary>
+            Handle the Checkbox.Checked event for a form control
+            </summary>
+        </member>
+        <member name="F:Microsoft.WebAnalytics.Behaviors.FormTrackers.HandleFormCheckBox.handler">
+            <summary>
+            The event handler to track against
+            </summary>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Behaviors.FormTrackers.HandleFormCheckBox.AttachEvents(System.Windows.Controls.Control,System.EventHandler{Microsoft.WebAnalytics.Contracts.FormEventArgs})">
+            <summary>
+            Attach to the CheckBox Checked event
+            </summary>
+            <param name="control">a CheckBox</param>
+            <param name="eventHandler">the Event handler to dispatch to</param>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Behaviors.FormTrackers.HandleFormCheckBox.Checked(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Checkbox Checked event handler
+            </summary>
+            <param name="sender">the checkbox</param>
+            <param name="e">the routed event arguments</param>
+        </member>
+        <member name="T:Microsoft.WebAnalytics.Behaviors.Handlers.HandleListBox">
+            <summary>
+            Track a <see cref="T:System.Windows.Controls.ListBox"/>
+            </summary>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Behaviors.Handlers.HandleListBox.Track(System.Windows.FrameworkElement,Microsoft.WebAnalytics.AnalyticsEvent,System.EventArgs)">
+            <summary>
+            Track the media element events
+            </summary>
+            <param name="associatedObject">the associated object</param>
+            <param name="analyticsEvent">the analytics event</param>
+            <param name="eventArgs">the event arguments</param>
+        </member>
+        <member name="P:Microsoft.WebAnalytics.Behaviors.Handlers.HandleListBox.Log">
+            <summary>
+            Gets or sets the event Logging method
+            </summary>
+        </member>
+        <member name="T:Microsoft.WebAnalytics.Behaviors.TrackFormControl">
+            <summary>
+            <img src="../media/Microsoft.WebAnalytics.Behaviors.TrackFormControl.24x24.png"/> 
+            Track Control Events
+            </summary>
+            <remarks>You should use Control Tracking behaviors when raw event 
+            tracking is not sufficient or you want to specify and use additional 
+            parameters as properties.</remarks>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Behaviors.TrackFormControl.OnAttached">
+            <summary>
+            Attach events and initialize parts
+            </summary>
+        </member>
+        <member name="T:Microsoft.WebAnalytics.Behaviors.TrackAction">
+            <summary>
+            <img src="../media/Microsoft.WebAnalytics.Behaviors.TrackAction.24x24.png"/> 
+            Action to track a triggered event
+            </summary>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Behaviors.TrackAction.#ctor">
+            <summary>
+            Initializes a new instance of the TrackAction class
+            </summary>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Behaviors.TrackAction.OnAttached">
+            <summary>
+            Initialize the imported parts
+            </summary>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Behaviors.TrackAction.Invoke(System.Object)">
+            <summary>
+            Invoke the tracking action
+            </summary>
+            <param name="parameter">the event arguments</param>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Behaviors.TrackAction.AssignEventName">
+            <summary>
+            For an Event Trigger, get the name of the event
+            </summary>
+        </member>
+        <member name="P:Microsoft.WebAnalytics.Behaviors.TrackAction.Category">
+            <summary>
+            Gets or sets a category for this action
+            </summary>
+        </member>
+        <member name="P:Microsoft.WebAnalytics.Behaviors.TrackAction.EventName">
+            <summary>
+            Gets the event name
+            </summary>
+        </member>
+        <member name="P:Microsoft.WebAnalytics.Behaviors.TrackAction.Value">
+            <summary>
+            Gets or sets an integer that you can use to provide numerical data about the user event.
+            </summary>
+            <remarks>Default value is 0</remarks>
+        </member>
+        <member name="P:Microsoft.WebAnalytics.Behaviors.TrackAction.CustomProperties">
+            <summary>
+            Gets custom properties (name/value pairs) for the action
+            </summary>
+        </member>
+        <member name="P:Microsoft.WebAnalytics.Behaviors.TrackAction.Log">
+            <summary>
+            Gets or sets the event Logging method
+            </summary>
+        </member>
+        <member name="P:Microsoft.WebAnalytics.Behaviors.TrackAction.Handlers">
+            <summary>
+            Gets or sets the custom actions that can be applied to the event
+            </summary>
+        </member>
+        <member name="T:Microsoft.WebAnalytics.Behaviors.FormTrackers.HandleFormPasswordBox">
+            <summary>
+            Handle the PasswordBox.PasswordChanged event for a form control
+            </summary>
+        </member>
+        <member name="F:Microsoft.WebAnalytics.Behaviors.FormTrackers.HandleFormPasswordBox.handler">
+            <summary>
+            The event handler to track against
+            </summary>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Behaviors.FormTrackers.HandleFormPasswordBox.AttachEvents(System.Windows.Controls.Control,System.EventHandler{Microsoft.WebAnalytics.Contracts.FormEventArgs})">
+            <summary>
+            Attach to the PasswordBox.PasswordChanged event
+            </summary>
+            <param name="control">a CheckBox</param>
+            <param name="eventHandler">the Event handler to dispatch to</param>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Behaviors.FormTrackers.HandleFormPasswordBox.PasswordChanged(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            PasswordChanged event handler
+            </summary>
+            <param name="sender">the PasswordBox</param>
+            <param name="e">the routed event arguments</param>
+        </member>
+        <member name="T:Microsoft.WebAnalytics.Behaviors.FormTrackers.HandleFormTextBox">
+            <summary>
+            Handle the TextBox.TextChanged event for a form control
+            </summary>
+        </member>
+        <member name="F:Microsoft.WebAnalytics.Behaviors.FormTrackers.HandleFormTextBox.handler">
+            <summary>
+            The event handler to track against
+            </summary>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Behaviors.FormTrackers.HandleFormTextBox.AttachEvents(System.Windows.Controls.Control,System.EventHandler{Microsoft.WebAnalytics.Contracts.FormEventArgs})">
+            <summary>
+            Attach to the TextBox.TextChanged event
+            </summary>
+            <param name="control">a TextBox control</param>
+            <param name="eventHandler">the Event handler to dispatch to</param>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Behaviors.FormTrackers.HandleFormTextBox.TextChanged(System.Object,System.Windows.Controls.TextChangedEventArgs)">
+            <summary>
+            Text changed event handler
+            </summary>
+            <param name="sender">the TextBox</param>
+            <param name="e">the Text Changed Event arguments</param>
+        </member>
+        <member name="T:Microsoft.WebAnalytics.Behaviors.FormTrackers.HandleFormComboBox">
+            <summary>
+            Handle the ComboBox SelectionChanged event for a form control
+            </summary>
+        </member>
+        <member name="F:Microsoft.WebAnalytics.Behaviors.FormTrackers.HandleFormComboBox.handler">
+            <summary>
+            The event handler to track against
+            </summary>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Behaviors.FormTrackers.HandleFormComboBox.AttachEvents(System.Windows.Controls.Control,System.EventHandler{Microsoft.WebAnalytics.Contracts.FormEventArgs})">
+            <summary>
+            Attach to the ComboBox SelectionChanged event
+            </summary>
+            <param name="control">a ComboBox</param>
+            <param name="eventHandler">the Event handler to dispatch to</param>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Behaviors.FormTrackers.HandleFormComboBox.SelectionChanged(System.Object,System.Windows.Controls.SelectionChangedEventArgs)">
+            <summary>
+            Selection Changed event handler
+            </summary>
+            <param name="sender">the ComboBox</param>
+            <param name="e">the selection changed event arguments</param>
+        </member>
+        <member name="T:Microsoft.WebAnalytics.Behaviors.FormTrackers.HandleFormListBox">
+            <summary>
+            Handle the Form events for ListBox.SelectionChanged
+            </summary>
+        </member>
+        <member name="F:Microsoft.WebAnalytics.Behaviors.FormTrackers.HandleFormListBox.handler">
+            <summary>
+            The event handler
+            </summary>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Behaviors.FormTrackers.HandleFormListBox.AttachEvents(System.Windows.Controls.Control,System.EventHandler{Microsoft.WebAnalytics.Contracts.FormEventArgs})">
+            <summary>
+            Attach to the ListBox selection changed events
+            </summary>
+            <param name="control">the ListBox control</param>
+            <param name="eventHandler">the event handler to route events to</param>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Behaviors.FormTrackers.HandleFormListBox.SelectionChanged(System.Object,System.Windows.Controls.SelectionChangedEventArgs)">
+            <summary>
+            Route the selection changed event
+            </summary>
+            <param name="sender">the ListBox</param>
+            <param name="e">the selection changed event arguments</param>
+        </member>
+        <member name="T:Microsoft.WebAnalytics.Behaviors.Handlers.HandleComboBox">
+            <summary>
+            Track a combo box
+            </summary>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Behaviors.Handlers.HandleComboBox.Track(System.Windows.FrameworkElement,Microsoft.WebAnalytics.AnalyticsEvent,System.EventArgs)">
+            <summary>
+            Track the media element events
+            </summary>
+            <param name="associatedObject">the associated object</param>
+            <param name="analyticsEvent">the analytics event</param>
+            <param name="eventArgs">the event arguments</param>
+        </member>
+        <member name="P:Microsoft.WebAnalytics.Behaviors.Handlers.HandleComboBox.Log">
+            <summary>
+            Gets or sets the event Logging method
+            </summary>
+        </member>
+    </members>
+</doc>

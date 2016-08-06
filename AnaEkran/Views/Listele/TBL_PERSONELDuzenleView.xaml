@@ -1,0 +1,186 @@
+ 
+ 
+<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
+             xmlns:zinderud="http://schemas.zinderud.com/2008/xaml/presentation"
+             xmlns:converter="clr-namespace:AnaEkran.Converter"
+             x:Class="AnaEkran.Views.Listele.TBL_PERSONELDuzenleView" Background="DarkGray"
+             mc:Ignorable="d" 
+           Loaded="UserControl_Loaded"  DataContext="{Binding Source={StaticResource Locator}, Path=TBL_PERSONELViewModel}">
+      <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <ei:CallMethodAction 
+				  TargetObject="{Binding }"
+				   MethodName="Listele"/>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+<UserControl.Resources>
+        <converter:StringFormatConverter x:Key="StringFormatConverter" />
+
+    </UserControl.Resources>
+    <Grid  >
+
+        <StackPanel  >
+
+            <zinderud:SioGridView x:Name="TBL_PERSONELDTODataGrid" ShowGroupPanel="True" IsReadOnly="False"   
+            RowIndicatorVisibility="Collapsed" HorizontalAlignment="Center"  MinWidth="550" MinHeight="300"  MaxWidth="1200" MaxHeight="600"  VerticalAlignment="Top"
+              RowDetailsVisibilityMode="VisibleWhenSelected" Margin="10"
+            ItemsSource="{Binding ProppersonelListe,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" 
+            SelectedItem="{Binding ProppersonelSecilen}" EnableRowVirtualization="True" AutoGenerateColumns="False">
+                <zinderud:SioGridView.Columns>
+                   
+
+               
+
+
+
+
+	 
+       <zinderud:GridViewDataColumn    IsFilterable="True" IsReadOnly="True" 
+               x:Name="TBL_PERSONEL_IDColumn" Width="Auto"  Header="TBL_PERSONEL_ID" DataMemberBinding="{Binding TBL_PERSONEL_ID,Converter={StaticResource StringFormatConverter}}"/>
+	 
+       <zinderud:GridViewDataColumn    IsFilterable="True" IsReadOnly="False" 
+               x:Name="PERSONEL_AD_SOYADColumn" Width="Auto"  Header="PERSONEL_AD_SOYAD" DataMemberBinding="{Binding PERSONEL_AD_SOYAD,Converter={StaticResource StringFormatConverter}}"/>
+	 
+       <zinderud:GridViewDataColumn    IsFilterable="True" IsReadOnly="False" 
+               x:Name="YETKI_SEVIYESIColumn" Width="Auto"  Header="YETKI_SEVIYESI" DataMemberBinding="{Binding YETKI_SEVIYESI,Converter={StaticResource StringFormatConverter}}"/>
+	 
+       <zinderud:GridViewDataColumn    IsFilterable="True" IsReadOnly="False" 
+               x:Name="SIFREColumn" Width="Auto"  Header="SIFRE" DataMemberBinding="{Binding SIFRE,Converter={StaticResource StringFormatConverter}}"/>
+	 
+       <zinderud:GridViewDataColumn    IsFilterable="True" IsReadOnly="False" 
+               x:Name="BARKOD_IDColumn" Width="Auto"  Header="BARKOD_ID" DataMemberBinding="{Binding BARKOD_ID,Converter={StaticResource StringFormatConverter}}"/>
+	 
+       <zinderud:GridViewDataColumn    IsFilterable="True" IsReadOnly="False" 
+               x:Name="PERSONEL_GOREVIColumn" Width="Auto"  Header="PERSONEL_GOREVI" DataMemberBinding="{Binding PERSONEL_GOREVI,Converter={StaticResource StringFormatConverter}}"/>
+	 
+       <zinderud:GridViewDataColumn    IsFilterable="True" IsReadOnly="False" 
+               x:Name="PERSONEL_TELEFON1Column" Width="Auto"  Header="PERSONEL_TELEFON1" DataMemberBinding="{Binding PERSONEL_TELEFON1,Converter={StaticResource StringFormatConverter}}"/>
+	 
+       <zinderud:GridViewDataColumn    IsFilterable="True" IsReadOnly="False" 
+               x:Name="PERSONEL_TELEFON2Column" Width="Auto"  Header="PERSONEL_TELEFON2" DataMemberBinding="{Binding PERSONEL_TELEFON2,Converter={StaticResource StringFormatConverter}}"/>
+	 
+       <zinderud:GridViewDataColumn    IsFilterable="True" IsReadOnly="False" 
+               x:Name="PERSONEL_MAILColumn" Width="Auto"  Header="PERSONEL_MAIL" DataMemberBinding="{Binding PERSONEL_MAIL,Converter={StaticResource StringFormatConverter}}"/>
+	 
+       <zinderud:GridViewDataColumn    IsFilterable="True" IsReadOnly="False" 
+               x:Name="PERSONEL_CALISMA_DURUMUColumn" Width="Auto"  Header="PERSONEL_CALISMA_DURUMU" DataMemberBinding="{Binding PERSONEL_CALISMA_DURUMU,Converter={StaticResource StringFormatConverter}}"/>
+
+                    <zinderud:GridViewDataColumn    IsFilterable="True" IsReadOnly="False" 
+               x:Name="PERSONEL_ISE_BASLAMA_TARIHIColumn" Width="Auto"  Header="PERSONEL_ISE_BASLAMA_TARIHI" DataMemberBinding="{Binding PERSONEL_ISE_BASLAMA_TARIHI,Converter={StaticResource StringFormatConverter}}">
+                        <zinderud:GridViewDataColumn.CellTemplate>
+                            <DataTemplate>
+                                <zinderud:SioDatePicker   SelectedValue="{Binding PERSONEL_ISE_BASLAMA_TARIHI, Mode=TwoWay,Converter={StaticResource StringFormatConverter}}"></zinderud:SioDatePicker>
+                            </DataTemplate>
+                        </zinderud:GridViewDataColumn.CellTemplate>
+                    </zinderud:GridViewDataColumn>
+
+                    <zinderud:GridViewDataColumn    IsFilterable="True" IsReadOnly="False" 
+               x:Name="PERSONEL_ISTEN_AYRILMA_TARIHIColumn" Width="Auto"  Header="PERSONEL_ISTEN_AYRILMA_TARIHI" DataMemberBinding="{Binding PERSONEL_ISTEN_AYRILMA_TARIHI}">
+                        <zinderud:GridViewDataColumn.CellTemplate>
+                            <DataTemplate>
+                                <zinderud:SioDatePicker   SelectedValue="{Binding PERSONEL_ISTEN_AYRILMA_TARIHI, Mode=TwoWay,Converter={StaticResource StringFormatConverter}}"></zinderud:SioDatePicker>
+                            </DataTemplate>
+                        </zinderud:GridViewDataColumn.CellTemplate>
+                    </zinderud:GridViewDataColumn>
+
+                    <zinderud:GridViewDataColumn    IsFilterable="True" IsReadOnly="False" 
+               x:Name="PERSONEL_ISE_GELIS_SAATIColumn" Width="Auto"  Header="PERSONEL_ISE_GELIS_SAATI" DataMemberBinding="{Binding PERSONEL_ISE_GELIS_SAATI,Converter={StaticResource StringFormatConverter}}">
+                        <zinderud:GridViewDataColumn.CellTemplate>
+                            <DataTemplate>
+                                <zinderud:SioTimePicker DisplayFormat="Short"    SelectedValue="{Binding PERSONEL_ISE_GELIS_SAATI, Mode=TwoWay,Converter={StaticResource StringFormatConverter}}"></zinderud:SioTimePicker>
+                            </DataTemplate>
+                        </zinderud:GridViewDataColumn.CellTemplate>
+                    </zinderud:GridViewDataColumn>
+
+                    <zinderud:GridViewDataColumn    IsFilterable="True" IsReadOnly="False" 
+               x:Name="PERSONEL_ISTEN_CIKIS_SAATIColumn" Width="Auto"  Header="PERSONEL_ISTEN_CIKIS_SAATI" DataMemberBinding="{Binding PERSONEL_ISTEN_CIKIS_SAATI}">
+                        <zinderud:GridViewDataColumn.CellTemplate>
+                            <DataTemplate>
+                                <zinderud:SioTimePicker DisplayFormat="Short"    SelectedValue="{Binding PERSONEL_ISTEN_CIKIS_SAATI, Mode=TwoWay,Converter={StaticResource StringFormatConverter}}"></zinderud:SioTimePicker>
+                            </DataTemplate>
+                        </zinderud:GridViewDataColumn.CellTemplate>
+                    </zinderud:GridViewDataColumn>
+	 
+       <zinderud:GridViewDataColumn    IsFilterable="True" IsReadOnly="False" 
+               x:Name="PERSONEL_SSK_NOColumn" Width="Auto"  Header="PERSONEL_SSK_NO" DataMemberBinding="{Binding PERSONEL_SSK_NO,Converter={StaticResource StringFormatConverter}}"/>
+	 
+       <zinderud:GridViewDataColumn    IsFilterable="True" IsReadOnly="False" 
+               x:Name="PERSONEL_CINSIYETColumn" Width="Auto"  Header="PERSONEL_CINSIYET" DataMemberBinding="{Binding PERSONEL_CINSIYET,Converter={StaticResource StringFormatConverter}}"/>
+	 
+       <zinderud:GridViewDataColumn    IsFilterable="True" IsReadOnly="False" 
+               x:Name="PERSONEL_KIMLIK_NOColumn" Width="Auto"  Header="PERSONEL_KIMLIK_NO" DataMemberBinding="{Binding PERSONEL_KIMLIK_NO,Converter={StaticResource StringFormatConverter}}"/>
+	 
+       <zinderud:GridViewDataColumn    IsFilterable="True" IsReadOnly="False" 
+               x:Name="PERSONEL_DOGUM_TARIHIColumn" Width="Auto"  Header="PERSONEL_DOGUM_TARIHI" DataMemberBinding="{Binding PERSONEL_DOGUM_TARIHI,Converter={StaticResource StringFormatConverter}}"/>
+	 
+       <zinderud:GridViewDataColumn    IsFilterable="True" IsReadOnly="False" 
+               x:Name="PERSONEL_DOGUM_YERIColumn" Width="Auto"  Header="PERSONEL_DOGUM_YERI" DataMemberBinding="{Binding PERSONEL_DOGUM_YERI,Converter={StaticResource StringFormatConverter}}"/>
+	 
+       <zinderud:GridViewDataColumn    IsFilterable="True" IsReadOnly="False" 
+               x:Name="PERSONEL_EGITIM_DURUMUColumn" Width="Auto"  Header="PERSONEL_EGITIM_DURUMU" DataMemberBinding="{Binding PERSONEL_EGITIM_DURUMU,Converter={StaticResource StringFormatConverter}}"/>
+	 
+       <zinderud:GridViewDataColumn    IsFilterable="True" IsReadOnly="False" 
+               x:Name="PERSONEL_ACIKLAMAColumn" Width="Auto"  Header="PERSONEL_ACIKLAMA" DataMemberBinding="{Binding PERSONEL_ACIKLAMA,Converter={StaticResource StringFormatConverter}}"/>
+	 
+       <zinderud:GridViewDataColumn    IsFilterable="True" IsReadOnly="False" 
+               x:Name="PERSONEL_AYAKKABI_NOColumn" Width="Auto"  Header="PERSONEL_AYAKKABI_NO" DataMemberBinding="{Binding PERSONEL_AYAKKABI_NO,Converter={StaticResource StringFormatConverter}}"/>
+	 
+       <zinderud:GridViewDataColumn    IsFilterable="True" IsReadOnly="False" 
+               x:Name="PERSONEL_GOMLEK_NOColumn" Width="Auto"  Header="PERSONEL_GOMLEK_NO" DataMemberBinding="{Binding PERSONEL_GOMLEK_NO,Converter={StaticResource StringFormatConverter}}"/>
+	 
+       <zinderud:GridViewDataColumn    IsFilterable="True" IsReadOnly="False" 
+               x:Name="PERSONEL_MONT_NOColumn" Width="Auto"  Header="PERSONEL_MONT_NO" DataMemberBinding="{Binding PERSONEL_MONT_NO,Converter={StaticResource StringFormatConverter}}"/>
+	 
+       <zinderud:GridViewDataColumn    IsFilterable="True" IsReadOnly="False" 
+               x:Name="PERSONEL_PANTOLON_NOColumn" Width="Auto"  Header="PERSONEL_PANTOLON_NO" DataMemberBinding="{Binding PERSONEL_PANTOLON_NO,Converter={StaticResource StringFormatConverter}}"/>
+
+
+ 
+
+ 
+                </zinderud:SioGridView.Columns>
+            </zinderud:SioGridView>
+            
+            <Grid  VerticalAlignment="Bottom" HorizontalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0">
+                    <Button  Height="50" Width="250" Margin="10" Content="Düzenle"  Style="{StaticResource ProgramButtonStyle}" ContentTemplate="{StaticResource OnayTemplate}">
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="Click">
+                                <ei:CallMethodAction 
+				  TargetObject="{Binding }"
+				   MethodName="Degistir"/>
+                            </i:EventTrigger>
+
+                        </i:Interaction.Triggers>
+                    </Button>
+                </StackPanel>
+                <StackPanel Grid.Column="1">
+                    <Button Height="50" Width="250" Margin="10" Content="Sil"  Style="{StaticResource ProgramButtonStyle}" ContentTemplate="{StaticResource SilTemplate}">
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="Click">
+                                <ei:CallMethodAction 
+				  TargetObject="{Binding }"
+				   MethodName="Sil"/>
+
+                            </i:EventTrigger>
+
+                        </i:Interaction.Triggers>
+                    </Button>
+                </StackPanel>
+            </Grid>
+
+        </StackPanel>
+
+    </Grid>
+</UserControl>
+

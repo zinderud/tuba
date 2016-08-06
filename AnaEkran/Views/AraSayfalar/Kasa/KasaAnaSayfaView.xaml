@@ -1,0 +1,49 @@
+﻿<UserControl x:Class="AnaEkran.Views.AraSayfalar.Kasa.KasaAnaSayfaView"
+              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+	       	 xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
+              xmlns:zinderud="http://schemas.zinderud.com/2008/xaml/presentation"
+              xmlns:listele="clr-namespace:AnaEkran.Views.Listele"
+              mc:Ignorable="d"  Background="DarkGray"
+             
+              DataContext="{Binding Source={StaticResource Locator}, Path=TBL_KASAViewModel}">
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <ei:CallMethodAction 
+				  TargetObject="{Binding }"
+				   MethodName="Listele"/>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+    <Grid>
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+
+        </Grid.RowDefinitions>
+        <Border Grid.Row="0">
+            <TextBlock  Margin="2"    FontSize="25" Padding="10" FontWeight="Bold" TextAlignment="Center" Text="Kasa Ana Sayfa" Foreground="AntiqueWhite"/>
+        </Border>
+        <zinderud:SioTabControl  Grid.Row="1" TabStripPlacement="Top"  Margin="10" HeaderBackground="Bisque"  TabOrientation="Horizontal"   >
+            <zinderud:SioTabItem   Header="KASA BAKİYE DÜZENLE" FontSize="22" Margin="10" HeaderTemplate="{StaticResource ResourceKey=RaporKucult}" >
+
+                <zinderud:SioTabItem.Content>
+                    <listele:TBL_KASA_BAKIYEDuzenleView/>
+                </zinderud:SioTabItem.Content>
+            </zinderud:SioTabItem>
+
+            <zinderud:SioTabItem   Header="KASA  DÜZENLE" FontSize="22" Margin="10" HeaderTemplate="{StaticResource ResourceKey=RaporKucult}" >
+
+                <zinderud:SioTabItem.Content>
+                    <listele:TBL_KASADuzenleView/>
+                </zinderud:SioTabItem.Content>
+            </zinderud:SioTabItem>
+
+
+        </zinderud:SioTabControl>
+
+    </Grid>
+</UserControl>

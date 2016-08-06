@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.WebAnalytics.SMF</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.WebAnalytics.Media.TrackPlayer">
+            <summary>
+            <img src="../media/Microsoft.WebAnalytics.Media.TrackPlayer.24x24.png"/> 
+            Track Log events on a Microsoft Silverlight Media Framework Player
+            </summary>
+            <remarks>The <a href="http://codeplex.com/smf">Microsoft Silverlight Media Framework</a>
+            Player exposes these events:
+            <list type="table">
+            <listheader>
+            <term>Message</term>
+            <description>Properties</description>
+            </listheader>
+            <item>
+                <term>PlaybackBitrateChanged</term>
+                <description>AnalyticsEvent.Value: Playback Bitrate</description>
+            </item>
+            <item>
+                <term>MediaOpened</term>
+                <description>AnalyticsEvent.ContentId: Clip URL; AnalyticsEvent.ActionValue: Clip URL </description>
+            </item>
+            <item>
+                <term>BufferingStatusChanged</term>
+                <description>AnalyticsEvent.Value: Buffering Progress (0-100)</description>
+            </item>
+            <item>
+                <term>ScrubStarted</term>
+                <description>AnalyticsEvent.Value: media position in seconds</description>
+            </item>
+            <item>
+                <term>ScrubCompleted</term>
+                <description>AnalyticsEvent.Value: media position in seconds</description>
+            </item>
+            <item>
+                <term>PlayStateChanged</term>
+                <description>AnalyticsEvent.ContentId: Clip URL; AnalyticsEvent.Value: Current State from SmoothStreamingMediaElementState</description>
+            </item>
+            <item>
+                <term>FullScreenChanged</term>
+                <description>AnalyticsEvent.Value: 1 for full screen, 0 for windowed</description>
+            </item>
+            </list>
+            </remarks>
+        </member>
+        <member name="F:Microsoft.WebAnalytics.Media.TrackPlayer.volumeLevel">
+            <summary>
+            the current volume level (0-1)
+            </summary>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Media.TrackPlayer.#ctor">
+            <summary>
+            Initializes a new instance of the TrackPlayer class
+            </summary>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Media.TrackPlayer.OnAttached">
+            <summary>
+            Attach events and initialize parts
+            </summary>
+            <remarks>This will also attach an event handler to the Logger.LogReceived event.</remarks>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Media.TrackPlayer.OnDetaching">
+            <summary>
+            Detach events
+            </summary>
+            <remarks>This will also detach the event handler from the Logger.LogReceived event.</remarks>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Media.TrackPlayer.ModifyEvent(System.String,Microsoft.SilverlightMediaFramework.Player.CoreSmoothStreamingMediaElement,System.Uri,Microsoft.WebAnalytics.AnalyticsEvent)">
+            <summary>
+            Modify the logEvent based on the type of message
+            </summary>
+            <param name="message">the message</param>
+            <param name="cssme">the Smooth Streaming Media Element</param>
+            <param name="clipUrl">the Clip URL</param>
+            <param name="logEvent">the log event</param>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Media.TrackPlayer.PlayStateChanged(System.Object,Microsoft.SilverlightMediaFramework.Player.PlayStateChangedRoutedEventArgs)">
+            <summary>
+            Log a PlayStateChanged
+            </summary>
+            <param name="sender">the Player</param>
+            <param name="e">the play state changed routed event arguments</param>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Media.TrackPlayer.Logger_LogReceived(System.Object,Microsoft.SilverlightMediaFramework.SimpleEventArgs{Microsoft.SilverlightMediaFramework.Logging.Log})">
+            <summary>
+            Log Received event handler
+            </summary>
+            <param name="sender">the Logger</param>
+            <param name="e">the log simple event argument</param>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Media.TrackPlayer.LogEvent(System.String,System.String)">
+            <summary>
+            Log an event
+            </summary>
+            <param name="message">the message to log</param>
+            <param name="actionValue">the action value</param>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Media.TrackPlayer.GetMessage(System.String,System.String@)">
+            <summary>
+            Get the message name
+            </summary>
+            <param name="message">the message name from the SMF</param>
+            <param name="actionValue">the action value to split out of the message</param>
+            <returns>a message name for the SAF (possibly modified)</returns>
+        </member>
+        <member name="P:Microsoft.WebAnalytics.Media.TrackPlayer.CustomProperties">
+            <summary>
+            Gets custom properties (name/value pairs) for the action
+            </summary>
+        </member>
+        <member name="P:Microsoft.WebAnalytics.Media.TrackPlayer.Log">
+            <summary>
+            Gets or sets the event Logging method
+            </summary>
+            <remarks>This is imported from the Microsoft.WebAnalytics assembly using MEF.</remarks>
+        </member>
+    </members>
+</doc>

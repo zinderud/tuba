@@ -1,0 +1,1912 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+					xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Style x:Key="OtoklavButtonStyle" TargetType="{x:Type Button}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <ControlTemplate.Resources>
+                        <Storyboard x:Key="MouseOverANim">
+                            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Color)" Storyboard.TargetName="rectangle">
+                                <EasingColorKeyFrame KeyTime="0:0:0.2" Value="#FFC8CE5D"/>
+                            </ColorAnimationUsingKeyFrames>
+                            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="rectangle">
+                                <EasingColorKeyFrame KeyTime="0:0:0.2" Value="#FFF9FF93"/>
+                            </ColorAnimationUsingKeyFrames>
+                        </Storyboard>
+                        <Storyboard x:Key="MouseOverANim_Copy1">
+                            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Color)" Storyboard.TargetName="rectangle">
+                                <SplineColorKeyFrame KeyTime="0:0:0.1" Value="#FFC8CE5D"/>
+                                <SplineColorKeyFrame KeyTime="0:0:0.3" Value="#FF818181"/>
+                            </ColorAnimationUsingKeyFrames>
+                            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="rectangle">
+                                <SplineColorKeyFrame KeyTime="0:0:0.1" Value="#FFF9FF93"/>
+                                <SplineColorKeyFrame KeyTime="0:0:0.3" Value="Silver"/>
+                            </ColorAnimationUsingKeyFrames>
+                        </Storyboard>
+                        <Storyboard x:Key="MousePressedAnim">
+                            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle">
+                                <EasingColorKeyFrame KeyTime="0" Value="#FF3CE0FF"/>
+                                <EasingColorKeyFrame KeyTime="0:0:0.3" Value="#FFB6B6B6"/>
+                            </ColorAnimationUsingKeyFrames>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.StrokeThickness)" Storyboard.TargetName="rectangle">
+                                <EasingDoubleKeyFrame KeyTime="0" Value="3"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </ControlTemplate.Resources>
+                    <Grid>
+                        <Rectangle x:Name="rectangle" RadiusY="3" RadiusX="3" Stroke="#FFB6B6B6" IsEnabled="True">
+                            <Rectangle.Fill>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="White" Offset="0"/>
+                                    <GradientStop Color="Silver" Offset="1"/>
+                                    <GradientStop Color="#FF818181" Offset="0.49"/>
+                                </LinearGradientBrush>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                        <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsFocused" Value="True"/>
+                        <Trigger Property="IsDefaulted" Value="True"/>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Trigger.ExitActions>
+                                <BeginStoryboard x:Name="MouseOverANim_Copy1_BeginStoryboard" Storyboard="{StaticResource MouseOverANim_Copy1}"/>
+                            </Trigger.ExitActions>
+                            <Trigger.EnterActions>
+                                <BeginStoryboard Storyboard="{StaticResource MouseOverANim}"/>
+                            </Trigger.EnterActions>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Trigger.EnterActions>
+                                <BeginStoryboard x:Name="MousePressedAnim_BeginStoryboard" Storyboard="{StaticResource MousePressedAnim}"/>
+                            </Trigger.EnterActions>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="True"/>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--soldaki temiz alan vs. menulerinin stilleri-->
+    <Style x:Key="NavigationButtonStyle" TargetType="{x:Type Button}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <ControlTemplate.Resources>
+                        <Storyboard x:Key="MouseOverButtonAnim">
+                            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="rectangle">
+                                <EasingColorKeyFrame KeyTime="0:0:0.3" Value="#FFF3FD9A"/>
+                            </ColorAnimationUsingKeyFrames>
+                            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle1">
+                                <EasingColorKeyFrame KeyTime="0:0:0.3" Value="#FFF3FD9A"/>
+                            </ColorAnimationUsingKeyFrames>
+                            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Effect).(DropShadowEffect.Color)" Storyboard.TargetName="rectangle1">
+                                <EasingColorKeyFrame KeyTime="0:0:0.3" Value="#FFF3FD9A"/>
+                            </ColorAnimationUsingKeyFrames>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Effect).(DropShadowEffect.Opacity)" Storyboard.TargetName="rectangle1">
+                                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                        <Storyboard x:Key="IsButtonEnabledAnim">
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle">
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0.29"/>
+                            </DoubleAnimationUsingKeyFrames>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle1">
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0.25"/>
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                        <Storyboard x:Key="ButtonClickAnim">
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.StrokeThickness)" Storyboard.TargetName="rectangle1">
+                                <EasingDoubleKeyFrame KeyTime="0" Value="3"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
+                            </DoubleAnimationUsingKeyFrames>
+                            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle1">
+                                <EasingColorKeyFrame KeyTime="0" Value="#FFA6E0EB"/>
+                                <EasingColorKeyFrame KeyTime="0:0:0.5" Value="White"/>
+                            </ColorAnimationUsingKeyFrames>
+                        </Storyboard>
+                        <Storyboard x:Key="MouseOverButtonAnim_Copy1">
+                            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="rectangle">
+                                <SplineColorKeyFrame KeyTime="0:0:0.3" Value="#FFCADA3B"/>
+                            </ColorAnimationUsingKeyFrames>
+                            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle1">
+                                <SplineColorKeyFrame KeyTime="0:0:0.3" Value="#FFCADA3B"/>
+                            </ColorAnimationUsingKeyFrames>
+                            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Effect).(DropShadowEffect.Color)" Storyboard.TargetName="rectangle1">
+                                <SplineColorKeyFrame KeyTime="0:0:0.3" Value="#FFF3FD9A"/>
+                            </ColorAnimationUsingKeyFrames>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Effect).(DropShadowEffect.Opacity)" Storyboard.TargetName="rectangle1">
+                                <SplineDoubleKeyFrame KeyTime="0" Value="1"/>
+                                <SplineDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                        <Storyboard x:Key="IsButtonEnabledAnim_Copy1">
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle">
+                                <SplineDoubleKeyFrame KeyTime="0:0:0.4" Value="1"/>
+                            </DoubleAnimationUsingKeyFrames>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle1">
+                                <SplineDoubleKeyFrame KeyTime="0:0:0.4" Value="1"/>
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </ControlTemplate.Resources>
+                    <Grid>
+                        <Rectangle x:Name="rectangle1" RadiusY="3" RadiusX="3" Stroke="White" Fill="#FFCADA3B">
+                            <Rectangle.Effect>
+                                <DropShadowEffect Color="#FFF3FD9A" BlurRadius="20" Opacity="0"/>
+                            </Rectangle.Effect>
+                        </Rectangle>
+                        <Rectangle x:Name="rectangle" RadiusY="3" RadiusX="3" Stroke="White" Margin="4,3.667,3.667,1.25" StrokeThickness="0" Opacity="1">
+                            <Rectangle.Fill>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="White" Offset="0"/>
+                                    <GradientStop Color="#FFCADA3B" Offset="0.584"/>
+                                </LinearGradientBrush>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                        <ContentPresenter TextBlock.Foreground="Navy" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsCancel" Value="False"/>
+                        <Trigger Property="IsCancel" Value="False"/>
+                        <Trigger Property="IsFocused" Value="True"/>
+                        <Trigger Property="IsDefaulted" Value="True"/>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Trigger.ExitActions>
+                                <BeginStoryboard x:Name="MouseOverButtonAnim_Copy1_BeginStoryboard" Storyboard="{StaticResource MouseOverButtonAnim_Copy1}"/>
+                            </Trigger.ExitActions>
+                            <Trigger.EnterActions>
+                                <BeginStoryboard
+									Storyboard="{StaticResource MouseOverButtonAnim}"/>
+                            </Trigger.EnterActions>
+                        </Trigger>
+                        <MultiTrigger>
+                            <MultiTrigger.EnterActions>
+                                <BeginStoryboard x:Name="ButtonClickAnim_BeginStoryboard" Storyboard="{StaticResource ButtonClickAnim}"/>
+                            </MultiTrigger.EnterActions>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsPressed" Value="True"/>
+                                <Condition Property="IsEnabled" Value="True"/>
+                            </MultiTrigger.Conditions>
+                        </MultiTrigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Trigger.ExitActions>
+                                <BeginStoryboard x:Name="IsButtonEnabledAnim_Copy1_BeginStoryboard" Storyboard="{StaticResource IsButtonEnabledAnim_Copy1}"/>
+                            </Trigger.ExitActions>
+                            <Trigger.EnterActions>
+                                <BeginStoryboard x:Name="IsButtonEnabledAnim_BeginStoryboard" Storyboard="{StaticResource IsButtonEnabledAnim}"/>
+                            </Trigger.EnterActions>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- kullanılmıyor-->
+    <Style x:Key="AnimationButtonStyle" TargetType="{x:Type Button}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <ControlTemplate.Resources>
+                        <Storyboard x:Key="MouseOverAnim">
+                            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="rectangle">
+                                <EasingColorKeyFrame KeyTime="0:0:0.3" Value="#FFB3FBF6"/>
+                            </ColorAnimationUsingKeyFrames>
+                        </Storyboard>
+                        <Storyboard x:Key="MouseOverAnim_Copy1">
+                            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="rectangle">
+                                <SplineColorKeyFrame KeyTime="0:0:0.3" Value="#FF3EFDF0"/>
+                            </ColorAnimationUsingKeyFrames>
+                        </Storyboard>
+                        <Storyboard x:Key="MouseClickedAnim">
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.StrokeThickness)" Storyboard.TargetName="rectangle">
+                                <EasingDoubleKeyFrame KeyTime="0" Value="3"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+                            </DoubleAnimationUsingKeyFrames>
+                            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle">
+                                <EasingColorKeyFrame KeyTime="0" Value="#FFA6FFB0"/>
+                                <EasingColorKeyFrame KeyTime="0:0:0.3" Value="#FFFDFDFD"/>
+                            </ColorAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </ControlTemplate.Resources>
+                    <Grid>
+                        <Rectangle x:Name="rectangle" RadiusY="3" RadiusX="3" Stroke="White" StrokeThickness="1">
+                            <Rectangle.Fill>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="White" Offset="1"/>
+                                    <GradientStop Color="#FF3EFDF0"/>
+                                </LinearGradientBrush>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                        <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsFocused" Value="True"/>
+                        <Trigger Property="IsDefaulted" Value="True"/>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Trigger.ExitActions>
+                                <BeginStoryboard x:Name="MouseOverAnim_Copy1_BeginStoryboard" Storyboard="{StaticResource MouseOverAnim_Copy1}"/>
+                            </Trigger.ExitActions>
+                            <Trigger.EnterActions>
+                                <BeginStoryboard Storyboard="{StaticResource MouseOverAnim}"/>
+                            </Trigger.EnterActions>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Trigger.EnterActions>
+                                <BeginStoryboard x:Name="MouseClickedAnim_BeginStoryboard" Storyboard="{StaticResource MouseClickedAnim}"/>
+                            </Trigger.EnterActions>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False"/>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="MenuButtonStyle" TargetType="{x:Type Button}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <ControlTemplate.Resources>
+                        <Storyboard x:Key="MouseOverAnim">
+                            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="rectangle">
+                                <EasingColorKeyFrame KeyTime="0:0:0.3" Value="#FFF8FFFF"/>
+                            </ColorAnimationUsingKeyFrames>
+                            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="rectangle">
+                                <EasingColorKeyFrame KeyTime="0:0:0.3" Value="#FFC2FBFF"/>
+                            </ColorAnimationUsingKeyFrames>
+                            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle1">
+                                <EasingColorKeyFrame KeyTime="0:0:0.3" Value="#FFD0FCFF"/>
+                            </ColorAnimationUsingKeyFrames>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Effect).(DropShadowEffect.Opacity)" Storyboard.TargetName="rectangle1">
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                        <Storyboard x:Key="MouseOverAnim_Copy1">
+                            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="rectangle">
+                                <SplineColorKeyFrame KeyTime="0:0:0.3" Value="#FFE0FDFF"/>
+                            </ColorAnimationUsingKeyFrames>
+                            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="rectangle">
+                                <SplineColorKeyFrame KeyTime="0:0:0.3" Value="#FF81EDF5"/>
+                            </ColorAnimationUsingKeyFrames>
+                            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle1">
+                                <SplineColorKeyFrame KeyTime="0:0:0.3" Value="#FFA8F9FF"/>
+                            </ColorAnimationUsingKeyFrames>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Effect).(DropShadowEffect.Opacity)" Storyboard.TargetName="rectangle1">
+                                <SplineDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                        <Storyboard x:Key="MouseClickAnim">
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.StrokeThickness)" Storyboard.TargetName="rectangle1">
+                                <EasingDoubleKeyFrame KeyTime="0" Value="3"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </ControlTemplate.Resources>
+                    <Grid>
+                        <Rectangle x:Name="rectangle1" RadiusY="3" RadiusX="3" Stroke="#FFC186EB" Fill="#FFA8F9FF" StrokeThickness="0">
+                            <Rectangle.Effect>
+                                <DropShadowEffect BlurRadius="52" Color="#FFE7E7E7" Opacity="0"/>
+                            </Rectangle.Effect>
+                        </Rectangle>
+                        <Rectangle x:Name="rectangle" RadiusY="3" RadiusX="3" Stroke="Black" Margin="3" StrokeThickness="0">
+                            <Rectangle.Fill>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="#FF81EDF5" Offset="1"/>
+                                    <GradientStop Color="#FFE0FDFF"/>
+                                </LinearGradientBrush>
+                            </Rectangle.Fill>
+                            <Rectangle.Effect>
+                                <DropShadowEffect BlurRadius="52" Color="#FFE7E7E7" Opacity="0"/>
+                            </Rectangle.Effect>
+                        </Rectangle>
+                        <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Margin="5,0,5,0"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsFocused" Value="True"/>
+                        <Trigger Property="IsDefaulted" Value="True"/>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Trigger.ExitActions>
+                                <BeginStoryboard x:Name="MouseOverAnim_Copy1_BeginStoryboard" Storyboard="{StaticResource MouseOverAnim_Copy1}"/>
+                            </Trigger.ExitActions>
+                            <Trigger.EnterActions>
+                                <BeginStoryboard Storyboard="{StaticResource MouseOverAnim}"/>
+                            </Trigger.EnterActions>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Trigger.EnterActions>
+                                <BeginStoryboard x:Name="MouseClickAnim_BeginStoryboard" Storyboard="{StaticResource MouseClickAnim}"/>
+                            </Trigger.EnterActions>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False"/>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--navigasyon cubugunun stili-->
+    <Style x:Key="NavigationBarStyle" TargetType="{x:Type Button}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <ControlTemplate.Resources>
+                        <Storyboard x:Key="MouseOverAnim">
+                            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="rectangle">
+                                <EasingColorKeyFrame KeyTime="0:0:0.4" Value="#FFF1F1F1"/>
+                            </ColorAnimationUsingKeyFrames>
+                        </Storyboard>
+                        <Storyboard x:Key="MouseClickAnim">
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.StrokeThickness)" Storyboard.TargetName="rectangle">
+                                <EasingDoubleKeyFrame KeyTime="0" Value="3"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
+                            </DoubleAnimationUsingKeyFrames>
+                            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle">
+                                <EasingColorKeyFrame KeyTime="0" Value="#FFE443FF"/>
+                            </ColorAnimationUsingKeyFrames>
+                        </Storyboard>
+                        <Storyboard x:Key="MouseOverAnim_Copy1">
+                            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="rectangle">
+                                <SplineColorKeyFrame KeyTime="0:0:0.4" Value="#FFCECECE"/>
+                            </ColorAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </ControlTemplate.Resources>
+                    <Grid>
+                        <Rectangle x:Name="rectangle" RadiusY="3" RadiusX="3" Stroke="Black" StrokeThickness="0">
+                            <Rectangle.Fill>
+                                <RadialGradientBrush>
+                                    <GradientStop Color="#FFCECECE" Offset="1"/>
+                                    <GradientStop Color="#FFFDFFFE"/>
+                                </RadialGradientBrush>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                        <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsFocused" Value="True"/>
+                        <Trigger Property="IsDefaulted" Value="True"/>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Trigger.ExitActions>
+                                <BeginStoryboard x:Name="MouseOverAnim_Copy1_BeginStoryboard" Storyboard="{StaticResource MouseOverAnim_Copy1}"/>
+                            </Trigger.ExitActions>
+                            <Trigger.EnterActions>
+                                <BeginStoryboard Storyboard="{StaticResource MouseOverAnim}"/>
+                            </Trigger.EnterActions>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Trigger.EnterActions>
+                                <BeginStoryboard x:Name="MouseClickAnim_BeginStoryboard" Storyboard="{StaticResource MouseClickAnim}"/>
+                            </Trigger.EnterActions>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False"/>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--ustteki sarı menu buttonlarının stilleri-->
+    <Style x:Key="UstMenuButtonStyle" TargetType="{x:Type Button}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <ControlTemplate.Resources>
+                        <Storyboard x:Key="MouseOverAnim">
+                            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle">
+                                <EasingColorKeyFrame KeyTime="0:0:0.3" Value="#FFE7E366"/>
+                            </ColorAnimationUsingKeyFrames>
+                            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="rectangle1">
+                                <EasingColorKeyFrame KeyTime="0:0:0.3" Value="#F6FFFB6E"/>
+                            </ColorAnimationUsingKeyFrames>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Offset)" Storyboard.TargetName="rectangle1">
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0.358"/>
+                            </DoubleAnimationUsingKeyFrames>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Effect).(DropShadowEffect.Opacity)" Storyboard.TargetName="rectangle">
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                        <Storyboard x:Key="MouseOverAnim_Copy1">
+                            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle">
+                                <SplineColorKeyFrame KeyTime="0:0:0.3" Value="#FFE9E205"/>
+                            </ColorAnimationUsingKeyFrames>
+                            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="rectangle1">
+                                <SplineColorKeyFrame KeyTime="0:0:0.3" Value="#F6E9E205"/>
+                            </ColorAnimationUsingKeyFrames>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Offset)" Storyboard.TargetName="rectangle1">
+                                <SplineDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+                            </DoubleAnimationUsingKeyFrames>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Effect).(DropShadowEffect.Opacity)" Storyboard.TargetName="rectangle">
+                                <SplineDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                        <Storyboard x:Key="ClickAnim">
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.StrokeThickness)" Storyboard.TargetName="rectangle">
+                                <EasingDoubleKeyFrame KeyTime="0" Value="3"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+                            </DoubleAnimationUsingKeyFrames>
+                            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle">
+                                <EasingColorKeyFrame KeyTime="0" Value="#FF760183"/>
+                                <EasingColorKeyFrame KeyTime="0:0:0.3" Value="#FF837F01"/>
+                            </ColorAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </ControlTemplate.Resources>
+                    <Grid>
+                        <Rectangle x:Name="rectangle" Fill="#FFE9E205" RadiusY="3" RadiusX="3" Stroke="#FF837F01" StrokeThickness="1">
+                            <Rectangle.Effect>
+                                <DropShadowEffect Color="#FFEFEA54" BlurRadius="35" Direction="277" Opacity="0"/>
+                            </Rectangle.Effect>
+                        </Rectangle>
+                        <Rectangle x:Name="rectangle1" RadiusY="3" RadiusX="3" Stroke="Black" StrokeThickness="0" Margin="4">
+                            <Rectangle.Fill>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="White" Offset="0"/>
+                                    <GradientStop Color="#F6E9E205" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Rectangle.Fill>
+                            <Rectangle.Effect>
+                                <DropShadowEffect Color="#FFEFEA54" BlurRadius="35" Direction="277" Opacity="0"/>
+                            </Rectangle.Effect>
+                        </Rectangle>
+                        <ContentPresenter Margin="9"  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsFocused" Value="True"/>
+                        <Trigger Property="IsDefaulted" Value="True"/>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Trigger.ExitActions>
+                                <BeginStoryboard x:Name="MouseOverAnim_Copy1_BeginStoryboard" Storyboard="{StaticResource MouseOverAnim_Copy1}"/>
+                            </Trigger.ExitActions>
+                            <Trigger.EnterActions>
+                                <BeginStoryboard Storyboard="{StaticResource MouseOverAnim}"/>
+                            </Trigger.EnterActions>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Trigger.EnterActions>
+                                <BeginStoryboard x:Name="ClickAnim_BeginStoryboard" Storyboard="{StaticResource ClickAnim}"/>
+                            </Trigger.EnterActions>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False"/>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--<Style x:Key="MenuButtonStyle" TargetType="{x:Type Button}">
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type Button}">
+					<ControlTemplate.Resources>
+						<Storyboard x:Key="MouseOverButtonAnim">
+							<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="rectangle">
+								<EasingColorKeyFrame KeyTime="0:0:0.3" Value="#FF88FFFC"/>
+							</ColorAnimationUsingKeyFrames>
+							<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle1">
+								<EasingColorKeyFrame KeyTime="0:0:0.3" Value="#FF88FFFC"/>
+							</ColorAnimationUsingKeyFrames>
+							<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Effect).(DropShadowEffect.Color)" Storyboard.TargetName="rectangle1">
+								<EasingColorKeyFrame KeyTime="0" Value="#FF66FFFF"/>
+								<EasingColorKeyFrame KeyTime="0:0:0.3" Value="#FF66FFFF"/>
+							</ColorAnimationUsingKeyFrames>
+							<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Effect).(DropShadowEffect.Opacity)" Storyboard.TargetName="rectangle1">
+								<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+								<EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+							</DoubleAnimationUsingKeyFrames>
+							<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Effect).(DropShadowEffect.BlurRadius)" Storyboard.TargetName="rectangle1">
+								<EasingDoubleKeyFrame KeyTime="0" Value="17"/>
+								<EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="17"/>
+							</DoubleAnimationUsingKeyFrames>
+							<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Effect).(DropShadowEffect.Direction)" Storyboard.TargetName="rectangle1">
+								<EasingDoubleKeyFrame KeyTime="0" Value="297"/>
+								<EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="297"/>
+							</DoubleAnimationUsingKeyFrames>
+							<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Effect).(DropShadowEffect.ShadowDepth)" Storyboard.TargetName="rectangle1">
+								<EasingDoubleKeyFrame KeyTime="0" Value="4"/>
+								<EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="4"/>
+							</DoubleAnimationUsingKeyFrames>
+						</Storyboard>
+						<Storyboard x:Key="IsButtonEnabledAnim">
+							<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle">
+								<EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0.29"/>
+							</DoubleAnimationUsingKeyFrames>
+							<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle1">
+								<EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0.25"/>
+							</DoubleAnimationUsingKeyFrames>
+						</Storyboard>
+						<Storyboard x:Key="ButtonClickAnim">
+							<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.StrokeThickness)" Storyboard.TargetName="rectangle1">
+								<EasingDoubleKeyFrame KeyTime="0" Value="3"/>
+								<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
+							</DoubleAnimationUsingKeyFrames>
+							<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle1">
+								<EasingColorKeyFrame KeyTime="0" Value="#FFC1D1F2"/>
+								<EasingColorKeyFrame KeyTime="0:0:0.5" Value="White"/>
+							</ColorAnimationUsingKeyFrames>
+						</Storyboard>
+						<Storyboard x:Key="IsButtonEnabledAnim_Copy1">
+							<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle">
+								<SplineDoubleKeyFrame KeyTime="0:0:0.4" Value="1"/>
+							</DoubleAnimationUsingKeyFrames>
+							<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle1">
+								<SplineDoubleKeyFrame KeyTime="0:0:0.4" Value="1"/>
+							</DoubleAnimationUsingKeyFrames>
+						</Storyboard>
+						<Storyboard x:Key="MouseOverButtonAnim_Copy1">
+							<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="rectangle">
+								<SplineColorKeyFrame KeyTime="0:0:0.3" Value="#FF04FFF8"/>
+							</ColorAnimationUsingKeyFrames>
+							<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle1">
+								<SplineColorKeyFrame KeyTime="0:0:0.3" Value="#FF04FFF8"/>
+							</ColorAnimationUsingKeyFrames>
+							<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Effect).(DropShadowEffect.Color)" Storyboard.TargetName="rectangle1">
+								<SplineColorKeyFrame KeyTime="0" Value="#FF66FFFF"/>
+								<SplineColorKeyFrame KeyTime="0:0:0.3" Value="#FF66FFFF"/>
+							</ColorAnimationUsingKeyFrames>
+							<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Effect).(DropShadowEffect.Opacity)" Storyboard.TargetName="rectangle1">
+								<SplineDoubleKeyFrame KeyTime="0" Value="1"/>
+								<SplineDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
+							</DoubleAnimationUsingKeyFrames>
+							<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Effect).(DropShadowEffect.BlurRadius)" Storyboard.TargetName="rectangle1">
+								<SplineDoubleKeyFrame KeyTime="0" Value="17"/>
+								<SplineDoubleKeyFrame KeyTime="0:0:0.3" Value="17"/>
+							</DoubleAnimationUsingKeyFrames>
+							<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Effect).(DropShadowEffect.Direction)" Storyboard.TargetName="rectangle1">
+								<SplineDoubleKeyFrame KeyTime="0" Value="297"/>
+								<SplineDoubleKeyFrame KeyTime="0:0:0.3" Value="297"/>
+							</DoubleAnimationUsingKeyFrames>
+							<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Effect).(DropShadowEffect.ShadowDepth)" Storyboard.TargetName="rectangle1">
+								<SplineDoubleKeyFrame KeyTime="0" Value="4"/>
+								<SplineDoubleKeyFrame KeyTime="0:0:0.3" Value="4"/>
+							</DoubleAnimationUsingKeyFrames>
+						</Storyboard>
+					</ControlTemplate.Resources>
+					<Grid>
+						<Rectangle x:Name="rectangle1" RadiusY="3" RadiusX="3" Stroke="#FF00F7F7" Fill="#FF04FFF8">
+							<Rectangle.Effect>
+								<DropShadowEffect Color="#FFF3FD9A" BlurRadius="20" Opacity="0"/>
+							</Rectangle.Effect>
+						</Rectangle>
+						<Rectangle x:Name="rectangle" RadiusY="3" RadiusX="3" Stroke="White" Margin="4,3.667,3.667,1.25" StrokeThickness="0" Opacity="0.705">
+							<Rectangle.Fill>
+								<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+									<GradientStop Color="White" Offset="0.139"/>
+									<GradientStop Color="#FD04FFF8" Offset="1"/>
+								</LinearGradientBrush>
+							</Rectangle.Fill>
+						</Rectangle>
+						<ContentPresenter Margin="{TemplateBinding Padding}"  TextBlock.Foreground="Navy" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+					</Grid>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsCancel" Value="False"/>
+						<Trigger Property="IsCancel" Value="False"/>
+						<Trigger Property="IsFocused" Value="True"/>
+						<Trigger Property="IsDefaulted" Value="True"/>
+						<Trigger Property="IsMouseOver" Value="True">
+							<Trigger.ExitActions>
+								<BeginStoryboard x:Name="MouseOverButtonAnim_Copy1_BeginStoryboard" Storyboard="{StaticResource MouseOverButtonAnim_Copy1}"/>
+							</Trigger.ExitActions>
+							<Trigger.EnterActions>
+								<BeginStoryboard
+									Storyboard="{StaticResource MouseOverButtonAnim}"/>
+							</Trigger.EnterActions>
+						</Trigger>
+						<MultiTrigger>
+							<MultiTrigger.EnterActions>
+								<BeginStoryboard x:Name="ButtonClickAnim_BeginStoryboard" Storyboard="{StaticResource ButtonClickAnim}"/>
+							</MultiTrigger.EnterActions>
+							<MultiTrigger.Conditions>
+								<Condition Property="IsPressed" Value="True"/>
+								<Condition Property="IsEnabled" Value="True"/>
+							</MultiTrigger.Conditions>
+						</MultiTrigger>
+						<Trigger Property="IsEnabled" Value="False">
+							<Trigger.ExitActions>
+								<BeginStoryboard x:Name="IsButtonEnabledAnim_Copy1_BeginStoryboard" Storyboard="{StaticResource IsButtonEnabledAnim_Copy1}"/>
+							</Trigger.ExitActions>
+							<Trigger.EnterActions>
+								<BeginStoryboard x:Name="IsButtonEnabledAnim_BeginStoryboard" Storyboard="{StaticResource IsButtonEnabledAnim}"/>
+							</Trigger.EnterActions>
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>-->
+
+    <!--<Style x:Key="NavigationBarStyle" TargetType="{x:Type Button}">
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type Button}">
+					<ControlTemplate.Resources>
+						<Storyboard x:Key="MouseOverAnim">
+							<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="rectangle">
+								<EasingColorKeyFrame KeyTime="0:0:0.4" Value="#FFFF7BF1"/>
+							</ColorAnimationUsingKeyFrames>
+						</Storyboard>
+						<Storyboard x:Key="MouseOverAnim_Copy1">
+							<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="rectangle">
+								<SplineColorKeyFrame KeyTime="0:0:0.4" Value="#FFFFBEF8"/>
+							</ColorAnimationUsingKeyFrames>
+						</Storyboard>
+						<Storyboard x:Key="MouseClickedAnim">
+							<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.StrokeThickness)" Storyboard.TargetName="rectangle">
+								<EasingDoubleKeyFrame KeyTime="0" Value="3"/>
+								<EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="1"/>
+							</DoubleAnimationUsingKeyFrames>
+							<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle">
+								<EasingColorKeyFrame KeyTime="0" Value="#FF37C5E0"/>
+								<EasingColorKeyFrame KeyTime="0:0:0.4" Value="#FF313131"/>
+							</ColorAnimationUsingKeyFrames>
+						</Storyboard>
+					</ControlTemplate.Resources>
+					<Grid>
+						<Rectangle x:Name="rectangle" Stroke="#FF2B2B2B" RadiusX="3" RadiusY="3">
+							<Rectangle.Fill>
+								<RadialGradientBrush>
+									<GradientStop Color="White" Offset="0.009"/>
+									<GradientStop Color="#FFFFBEF8" Offset="0.978"/>
+								</RadialGradientBrush>
+							</Rectangle.Fill>
+						</Rectangle>
+						<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+					</Grid>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsMouseOver" Value="True">
+							<Trigger.ExitActions>
+								<BeginStoryboard x:Name="MouseOverAnim_Copy1_BeginStoryboard" Storyboard="{StaticResource MouseOverAnim_Copy1}"/>
+							</Trigger.ExitActions>
+							<Trigger.EnterActions>
+								<BeginStoryboard Storyboard="{StaticResource MouseOverAnim}"/>
+							</Trigger.EnterActions>
+						</Trigger>
+						<Trigger Property="IsCancel" Value="False"/>
+						<EventTrigger RoutedEvent="FrameworkElement.Loaded"/>
+						<Trigger Property="IsFocused" Value="True"/>
+						<Trigger Property="IsDefaulted" Value="True"/>
+						<Trigger Property="IsMouseOver" Value="True"/>
+						<Trigger Property="IsPressed" Value="True">
+							<Trigger.EnterActions>
+								<BeginStoryboard x:Name="MouseClickedAnim_BeginStoryboard" Storyboard="{StaticResource MouseClickedAnim}"/>
+							</Trigger.EnterActions>
+						</Trigger>
+						<Trigger Property="IsEnabled" Value="False"/>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>-->
+
+    <!-- turuncu olan onaylama vs buttonların stilleri-->
+    <Style x:Key="ProgramButtonStyle" TargetType="{x:Type Button}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <ControlTemplate.Resources>
+                        <Storyboard x:Key="MouseOverAnim">
+                            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle">
+                                <EasingColorKeyFrame KeyTime="0:0:0.4" Value="#FFFFB32C"/>
+                            </ColorAnimationUsingKeyFrames>
+                        </Storyboard>
+                        <Storyboard x:Key="MouseOverAnim_Copy1">
+                            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle">
+                                <SplineColorKeyFrame KeyTime="0:0:0.4" Value="#FFFDDFA9"/>
+                            </ColorAnimationUsingKeyFrames>
+                        </Storyboard>
+                        <Storyboard x:Key="MouseClickAnim">
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.StrokeThickness)" Storyboard.TargetName="rectangle">
+                                <EasingDoubleKeyFrame KeyTime="0" Value="3"/>
+                            </DoubleAnimationUsingKeyFrames>
+                            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle">
+                                <EasingColorKeyFrame KeyTime="0" Value="#FF2BFFF0"/>
+                                <EasingColorKeyFrame KeyTime="0:0:0.4" Value="#FFFFA400"/>
+                            </ColorAnimationUsingKeyFrames>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Rectangle.RadiusX)" Storyboard.TargetName="rectangle">
+                                <EasingDoubleKeyFrame KeyTime="0" Value="3"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="2"/>
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </ControlTemplate.Resources>
+                    <Grid>
+                        <Rectangle x:Name="rectangle" Fill="#FFFDDFA9" RadiusY="3" RadiusX="3" Stroke="#FFFFA400" StrokeThickness="2"/>
+                        <ContentPresenter Margin="{TemplateBinding Padding}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"  RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsFocused" Value="True"/>
+                        <Trigger Property="IsDefaulted" Value="True"/>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Trigger.ExitActions>
+                                <BeginStoryboard x:Name="MouseOverAnim_Copy1_BeginStoryboard" Storyboard="{StaticResource MouseOverAnim_Copy1}"/>
+                            </Trigger.ExitActions>
+                            <Trigger.EnterActions>
+                                <BeginStoryboard Storyboard="{StaticResource MouseOverAnim}"/>
+                            </Trigger.EnterActions>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Trigger.EnterActions>
+                                <BeginStoryboard x:Name="MouseClickAnim_BeginStoryboard" Storyboard="{StaticResource MouseClickAnim}"/>
+                            </Trigger.EnterActions>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False"/>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- datatemplateler buttonların içersindeki resimlerin cizilmesi icin kullanılır. örnegin anasayfa buttonunun
+    uzerindeki ev işareti <path data="..." içersindeki veridir. bu datayı, blendde pen ile cizdiginiz bir şeklin datasını
+    kopyalayarak (sag taraftaki menuden) alabilirsiniz-->
+
+    <DataTemplate x:Key="KirliAlanTemplate">
+        <!--<StackPanel Orientation="Horizontal">
+			<Grid Height="8" Width="8">
+				<Path HorizontalAlignment="Stretch" 
+		   Margin="0,0,1.8,1.8" 
+		   VerticalAlignment="Stretch" Stretch="Fill" Stroke="#FF000000" 
+		   Data="M0.5,5.7 L0.5,0.5 L5.7,0.5"/>
+				<Path HorizontalAlignment="Stretch" 
+		   Margin="2,3,0,0" 
+		   VerticalAlignment="Stretch" Stretch="Fill" Stroke="#FFFFFFFF" 
+		   Data="M3.2,7.5 L7.5,7.5 L7.5,3.5"/>
+				<Path HorizontalAlignment="Stretch" 
+		   Margin="1.2,1.4,0.7,0.7" 
+		   VerticalAlignment="Stretch" Fill="#FFFFFFFF" Stretch="Fill" Stroke="#FF000000" 
+		   Data="M2.5,2.5 L7.5,7.5"/>
+				<Path HorizontalAlignment="Stretch" 
+		   Margin="1.7,2.0,1,1" 
+		   VerticalAlignment="Stretch" Stretch="Fill" Stroke="#FF000000" 
+		   Data="M3,7.5 L7.5,7.5 L7.5,3.5"/>
+				<Path HorizontalAlignment="Stretch" 
+		   Margin="1,1,1,1" 
+		   VerticalAlignment="Stretch" Stretch="Fill" Stroke="#FFFFFFFF" 
+		   Data="M1.5,6.5 L1.5,1 L6.5,1.5"/>
+			</Grid>
+			<ContentPresenter Content="{Binding}"/>
+		</StackPanel>-->
+
+        <Grid Height="85" Width="85">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="2*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <!--Ana dikdortgen-->
+            <Path HorizontalAlignment="Stretch" 
+				  Grid.RowSpan="2" 
+				  Margin="10,10,10,5" 
+				  VerticalAlignment="Stretch"  
+				  Stretch="Fill" 
+				  Stroke="#FF28ABFF"
+				  StrokeThickness="3"
+				  Data="M215,30L214.75,96.5 262.25,97 262.5,30z"/>
+
+            <!--Çember-->
+            <Path Stretch="Fill" 
+				  Stroke="#FF28ABFF"
+				  Fill="Transparent" Grid.Row="1" 
+				  Margin="25,5,25,15"
+				  StrokeThickness="3" 
+				  Data="M 0,0 A 180,180 180 1 1 1,1 Z"/>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"></ColumnDefinition>
+                    <ColumnDefinition Width="3*"></ColumnDefinition>
+                    <ColumnDefinition Width="4*"></ColumnDefinition>
+                    <!--<ColumnDefinition Width="3*"></ColumnDefinition>-->
+                </Grid.ColumnDefinitions>
+
+                <Path Margin="15,15,15,0" Grid.ColumnSpan="3"
+					  Stretch="Fill" 
+					  Stroke="#FF28ABFF" 
+					  StrokeThickness="3"
+					  Data="M215,30L214.75,96.5 262.25,97 262.5,30z"/>
+
+                <Path Margin="5,20,20,5" Grid.Column="2" 
+					  Stretch="Fill" 
+					  Stroke="#FF28ABFF" 
+					  StrokeThickness="2"
+					  Data="M215,30L214.75,96.5 262.25,97 262.5,30z"/>
+            </Grid>
+
+
+
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="TemizAlanTemplate">
+        <Grid   Width="85" Height="85">
+            <Path Data="F1M1013.96,379.778L998.937,352.287 998.937,340.606 998.937,339.489C999.153,338.044 1001.11,338.663 1001.98,337.838 1002.4,336.809 1002.4,334.742 1002.4,334.742L984.662,334.742C984.662,334.742 984.662,336.809 985.098,337.838 985.966,338.663 987.919,338.044 988.128,339.489L988.128,352.287 981.067,365.243 987.262,365.243 987.262,366.717 980.26,366.717 978.002,370.858 984.283,370.858 984.283,372.333 977.197,372.333 975.135,376.106 981.447,376.106 981.447,377.583 974.334,377.583 973.132,379.778C973.132,379.778,969.176,386.301,979.658,386.301L1007.42,386.301C1017.91,386.301,1013.96,379.778,1013.96,379.778z M990.208,361.606L983.067,361.606 983.854,360.133 990.208,360.133 990.208,361.606z" 
+				  Margin="15,10,15,5"
+				  Stretch="Fill" 
+				  Stroke="#FF28ABFF" 
+				  Fill="#FF6EC4FB"
+				  StrokeThickness="3"/>
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="YoneticiTemplate">
+        <Grid Width="85" Height="85"  >
+            <Path Data="F1M15.9238,2.47778C15.1904,2.47778,14.5905,3.07813,14.5905,3.81104L14.5905,61.2122C14.5905,61.9453,15.1904,62.5454,15.9238,62.5454L50.7988,62.5454C51.5322,62.5454,52.1321,61.9453,52.1321,61.2122L52.1321,3.81104C52.1321,3.07813,51.5322,2.47778,50.7988,2.47778L15.9238,2.47778z M33.3613,55.1743C32.0237,55.1743 30.9326,54.0884 30.9326,52.7473 30.9326,51.4099 32.0237,50.3242 33.3613,50.3242 34.7037,50.3242 35.7897,51.4099 35.7897,52.7473 35.7897,54.0884 34.7037,55.1743 33.3613,55.1743z M45.7955,31.7512C45.7955,32.4844,45.1956,33.0845,44.4622,33.0845L22.2604,33.0845C21.527,33.0845,20.9271,32.4844,20.9271,31.7512L20.9271,29.729C20.9271,28.9961,21.527,28.3958,22.2604,28.3958L44.4622,28.3958C45.1956,28.3958,45.7955,28.9961,45.7955,29.729L45.7955,31.7512z M45.7955,22.4805C45.7955,23.2135,45.1956,23.8137,44.4622,23.8137L22.2604,23.8137C21.527,23.8137,20.9271,23.2135,20.9271,22.4805L20.9271,20.4583C20.9271,19.7252,21.527,19.125,22.2604,19.125L44.4622,19.125C45.1956,19.125,45.7955,19.7252,45.7955,20.4583L45.7955,22.4805z M45.7955,13.2083C45.7955,13.9414,45.1956,14.5416,44.4622,14.5416L22.2604,14.5416C21.527,14.5416,20.9271,13.9414,20.9271,13.2083L20.9271,11.1862C20.9271,10.4531,21.527,9.85278,22.2604,9.85278L44.4622,9.85278C45.1956,9.85278,45.7955,10.4531,45.7955,11.1862L45.7955,13.2083z" 
+				  Margin="15,10,15,5"
+				  Stretch="Fill" 
+				  Stroke="#FF28ABFF" 
+				  HorizontalAlignment="Center" VerticalAlignment="Center"
+				  Fill="#FF6EC4FB"
+				  StrokeThickness="3"/>
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="DepoTemplate">
+        <Grid  Width="85" Height="85" >
+            <Path Data="M23.829986,44.708987C22.73001,44.708987 21.829986,45.608881 21.829986,46.708426 21.829986,47.818223 22.73001,48.707865 23.829986,48.707865L35.669952,48.707865C36.770049,48.707865 37.659942,47.818223 37.659942,46.708426 37.659942,45.608881 36.770049,44.708987 35.669952,44.708987z M2.5000299,41.829912L57.00003,41.829912C58.380035,41.829912,59.50003,42.949471,59.50003,44.329211L59.50003,60.164612C59.50003,61.544107,58.380035,62.663912,57.00003,62.663912L2.5000299,62.663912C1.1200248,62.663912,2.969562E-05,61.544107,2.9880482E-05,60.164612L2.9880482E-05,44.329211C2.969562E-05,42.949471,1.1200248,41.829912,2.5000299,41.829912z M23.500001,18.669638C22.39,18.669638 21.500001,19.559519 21.500001,20.669369 21.500001,21.76922 22.39,22.6691 23.500001,22.6691L35.330001,22.6691C36.440002,22.6691 37.330001,21.76922 37.330001,20.669369 37.330001,19.559519 36.440002,18.669638 35.330001,18.669638z M2.4999999,15.999998L56.999999,15.999998C58.38,15.999998,59.499999,17.119848,59.499999,18.49966L59.499999,35.167414C59.499999,36.547227,58.38,37.667077,56.999999,37.667077L54.240001,37.667077 52.499999,26.708554 14.87,37.667077 2.4999999,37.667077C1.1200004,37.667077,3.9874612E-07,36.547227,0,35.167414L0,18.49966C3.9874612E-07,17.119848,1.1200004,15.999998,2.4999999,15.999998z M12.500075,0L45.830081,0 57.040084,9.8399982 57.000083,11.999998 2.5000738,11.999998 2.3000745,9.7999992z"
+				  Margin="15,10,15,5"
+				  Stretch="Fill" 
+				  Stroke="#FF28ABFF" 
+				  Fill="#FF6EC4FB"
+				  StrokeThickness="3"/>
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="DestekTemplate">
+        <Grid  Width="85" Height="85" >
+            <Path Data="F1M50.6954,32.1146C50.7057,31.1041,50.6068,30.1107,50.4583,29.1459L54.5052,25.9193C53.4636,22.0377,51.4583,18.5612,48.7409,15.7604L43.9063,17.5885C42.3776,16.3229,40.6407,15.3099,38.7552,14.5814L37.9857,9.47656C36.1237,8.98181 34.1719,8.68225 32.1511,8.66663 30.1302,8.65625 28.1771,8.92578 26.2995,9.39844L25.4714,14.4948C23.5794,15.2057,21.8229,16.1901,20.2813,17.4401L15.4675,15.5521C12.7201,18.3138,10.6706,21.7631,9.57556,25.6328L13.582,28.9088C13.4193,29.875 13.3164,30.8658 13.3047,31.8776 13.2969,32.8984 13.3945,33.8854 13.5469,34.8588L9.49353,38.0807C10.5417,41.9584,12.5469,45.4401,15.2604,48.2383L20.0938,46.4127C21.6224,47.6744,23.3659,48.6875,25.2513,49.4193L26.0091,54.5234C27.8802,55.0209 29.8333,55.3177 31.8503,55.3334 33.8698,55.3385 35.8243,55.0729 37.6979,54.6041L38.5352,49.5C40.4219,48.7916,42.1784,47.806,43.7253,46.5664L48.53,48.4531C51.2813,45.6836,53.3268,42.233,54.4245,38.3685L50.418,35.0963C50.5833,34.1224,50.6862,33.1354,50.6954,32.1146 M31.9362,41.6615C26.6068,41.6302 22.3073,37.2734 22.3411,31.9375 22.3776,26.6002 26.7266,22.3008 32.0651,22.3359 37.4011,22.3698 41.7005,26.7252 41.6653,32.0625 41.629,37.4023 37.2786,41.6979 31.9362,41.6615"
+				  Margin="15,10,15,10"
+				  Stretch="Fill" 
+				  Stroke="#FF28ABFF" 
+				  Fill="#FF6EC4FB"
+				  StrokeThickness="3"/>
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="YonTemplate">
+        <Grid Width="30" Height="150">
+            <Path Data="F1M47.2995,28.7356L37.5052,20.6887C35.3229,18.8893,31.7474,15.9537,29.5599,14.1549L19.4114,6.10669C17.2266,4.30859,15.0807,5.75647,15.0807,9.32288L15.0807,25.5195 15.0807,38.4805 15.0807,54.6783C15.0807,58.2408,17.2266,59.6926,19.4114,57.8945L29.3802,49.8418C31.5703,48.0455,35.2344,45.1119,37.4193,43.3125L47.2578,35.2643C49.4427,33.4674,49.487,30.5325,47.2995,28.7356" 
+				  Stretch="Fill" 
+				  Stroke="#FF4E4E4E" 
+				  Fill="#FFAFAFAF" Margin="3"
+				  StrokeThickness="2"/>
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="AnaSayfaTemplate">
+        <StackPanel Orientation="Horizontal">
+            <Grid Width="35" Height="30">
+                <Path Data="M26.713752,11.853999L45.164001,28.287033 45.164001,48.171997 32.794368,48.171997 32.794368,31.485661 20.635734,31.485661 20.635734,48.108196 7.7140004,48.108196 7.7140004,28.412735z M26.672147,0.00044345856C26.778947,-0.0034627914 26.870048,0.018693924 26.909149,0.056475639 27.11745,0.12221241 27.32055,0.25698376 27.476852,0.45102119L27.693054,0.64634037 39.325922,10.943619 39.325922,6.5189247C39.325922,5.8926129,39.771224,5.3912554,40.325927,5.3912559L44.099349,5.3912559C44.669654,5.3912554,45.164459,5.8926129,45.164459,6.5189247L45.164459,16.042696 53.096805,23.157545C53.451007,23.363252,53.401508,23.996074,52.995204,24.358087L50.604591,27.092582C50.232189,27.559999,49.677585,27.691503,49.388481,27.378992L26.672147,7.3418837 3.9454517,27.378992C3.6642003,27.691503,3.1147566,27.559999,2.7032542,27.092582L0.28136587,24.358087C-0.057137012,23.996074,-0.10401249,23.363252,0.21630239,23.157545L25.64874,0.64634037 25.851842,0.45102119C26.023742,0.25698376 26.232044,0.12221241 26.367445,0.056475639 26.466445,0.018693924 26.570547,-0.0034627914 26.672147,0.00044345856z"
+				  Stretch="Fill" 
+				  Stroke="#FF28ABFF" 
+				  Fill="#FF6EC4FB" Margin="2"
+				  StrokeThickness="2"/>
+            </Grid>
+            <ContentPresenter VerticalAlignment="Center" Content="{Binding}"></ContentPresenter>
+        </StackPanel>
+    </DataTemplate>
+
+    <DataTemplate x:Key="MakineTemplate">
+        <StackPanel Orientation="Horizontal">
+            <Grid Width="35" Height="30">
+                <Path Data="M14.79953,5.5920006L14.79953,14.736493C10.632922,17.849793 7.8854559,22.774394 7.8854564,28.381797 7.898516,37.808198 15.528631,45.444901 24.961052,45.459199 34.39077,45.444901 42.007984,37.808198 42.036484,28.381797 42.026184,22.774394 39.291778,17.849793 35.119873,14.736493L35.119873,5.5985905C43.836086,9.4970315,49.911503,18.214394,49.911503,28.381797L49.922005,28.381797C49.911503,42.170102 38.739681,53.333001 24.961052,53.333001 11.171922,53.333001 -1.8522978E-07,42.170102 0,28.381797 -1.8522978E-07,18.211893 6.0833223,9.4892113 14.79953,5.5920006z M21.203413,0L28.721685,0C29.454693,0,30.054998,0.60022354,30.054998,1.3333778L30.054998,32.63169C30.054998,33.364795,29.454693,33.964997,28.721685,33.964997L21.203413,33.964997C20.470205,33.964997,19.869999,33.364795,19.869999,32.63169L19.869999,1.3333778C19.869999,0.60022354,20.470205,0,21.203413,0z"
+				  Stretch="Fill" 
+				  Stroke="#FF28ABFF" 
+				  Fill="#FF6EC4FB" Margin="3"
+				  StrokeThickness="2"/>
+            </Grid>
+            <ContentPresenter VerticalAlignment="Center" Content="{Binding}"></ContentPresenter>
+        </StackPanel>
+
+    </DataTemplate>
+
+    <DataTemplate x:Key="SetCikisTemplate">
+        <StackPanel Orientation="Horizontal">
+            <Grid Width="35" Height="30">
+                <Path  Data="F1M58.0065,34.1653C58.0612,34.0846 58.1158,34.0026 58.1627,33.918 58.2135,33.8268 58.2591,33.7356 58.3021,33.6406 58.3255,33.5898 58.3568,33.5416 58.4063,33.4036 58.4453,33.3059 58.4752,33.2031 58.5065,33.1016 58.5325,33.0168 58.556,32.9348 58.5755,32.8516 58.5989,32.7512 58.6119,32.6484 58.6276,32.5469 58.638,32.4609 58.651,32.375 58.6602,32.2883 58.6693,32.1848 58.6666,32.0793 58.6641,31.9752 58.6641,31.8918 58.6666,31.8086 58.6602,31.7239 58.6536,31.6172 58.6367,31.5129 58.6211,31.4063 58.608,31.3242 58.5989,31.2448 58.5794,31.1641 58.5586,31.0586 58.526,30.9551 58.4935,30.8516 58.4688,30.7708 58.4453,30.6926 58.3802,30.5051 58.3541,30.4414 58.3151,30.3854 58.2864,30.3229 58.25,30.2422 58.2109,30.1666 58.168,30.0885 58.1172,29.9973 58.0586,29.9063 57.9987,29.8203 57.9505,29.75 57.9049,29.6797 57.8528,29.6133 57.7838,29.5234 57.7096,29.4401 57.5313,29.2422L39.2721,10.9817C37.7461,9.45703 35.2786,9.45703 33.7578,10.9817 32.2344,12.5039 32.2344,14.9766 33.7578,16.4973L45.3619,28.0977 9.23438,28.0977C7.88928,28.0977 6.7005,28.7799 6.00128,29.8176 5.58069,30.4414 5.33331,31.1901 5.33331,32 5.33331,33.0768 5.77081,34.052 6.47656,34.7565 7.18225,35.4635 8.15625,35.901 9.23438,35.901L9.23438,35.8977 45.3594,35.8977 33.7552,47.5012C32.2344,49.0221 32.2318,51.4908 33.7552,53.0168 34.5169,53.7799 35.5182,54.1602 36.5156,54.1602 37.5143,54.1602 38.513,53.7813 39.2721,53.0221L57.5338,34.7565 57.638,34.6328C57.7122,34.5547 57.7838,34.4739 57.8489,34.3879 57.9049,34.3151 57.957,34.2395 58.0065,34.1653z"
+				  Stretch="Fill" 
+				  Stroke="#FF28ABFF" 
+				  Fill="#FF6EC4FB" Margin="3"
+				  StrokeThickness="2"/>
+            </Grid>
+            <ContentPresenter VerticalAlignment="Center" Content="{Binding}"></ContentPresenter>
+        </StackPanel>
+
+    </DataTemplate>
+
+    <DataTemplate x:Key="EnUstKullaniciTemplate">
+        <StackPanel Orientation="Horizontal">
+            <Grid Width="35" Height="30">
+
+                <Path Data="M42.917957,36.640002C42.917957,36.640002,60.947113,40.930449,62.667,58.102001L0,58.102001C0,58.102001,5.1497741,39.21007,20.598974,37.49018L24.788836,55.411804 27.868641,55.391783 31.358461,46.22099 28.09861,40.550529 34.618313,40.550529 31.488461,46.360652 35.478256,55.331718 37.878166,55.311697z M30.899479,0C40.449177,0 48.198929,7.7390842 48.198929,17.297953 48.198929,26.846822 40.449177,34.595904 30.899479,34.595903 21.339783,34.595904 13.600028,26.846822 13.600028,17.297953 13.600028,7.7390842 21.339783,0 30.899479,0z" 
+                      Stretch="Fill" 
+				  Stroke="#FF28ABFF" 
+				  Fill="#FF6EC4FB" Margin="3"
+				  StrokeThickness="2"/>
+            </Grid>
+            <ContentPresenter VerticalAlignment="Center" Content="{Binding}"></ContentPresenter>
+        </StackPanel>
+
+         
+    </DataTemplate>
+    <DataTemplate x:Key="EnUstRaporOlusturTemplate">
+        <StackPanel Orientation="Horizontal">
+            <Grid Width="35" Height="30">
+
+
+                <Path Data="M0.91982964,18.979936L23.287594,41.356934C24.027512,42.087063,25.217455,42.087063,25.957373,41.356934L38.396074,28.918595 36.796259,34.167918 46.215361,26.198976 49.004999,34.268003 49.004999,49.155975C49.004999,50.086031,48.245188,50.835936,47.325235,50.835936L1.6797642,50.835936C0.74992522,50.835936,0,50.086031,0,49.155975L0,20.469734C0,19.819915,0.37984493,19.259928,0.91982964,18.979936z M3.5138338,15.120126L36.753977,15.120126 37.923983,15.840126 28.083939,23.28013 38.953985,22.48013 25.723929,35.630136C25.073927,36.270136,24.033922,36.270136,23.41392,35.630136L3.9538353,16.320127C3.6338345,15.990126,3.4838339,15.550126,3.5138338,15.120126z M48.500944,0L51.241121,7.9200239 57.641535,2.5100079 55.20138,10.530033 63.561918,9.9100304 56.871485,14.970047 64.001944,19.380061 55.621405,19.540062 58.791609,27.300086 51.911165,22.500071 49.911036,30.650097 47.170858,22.720072 40.770445,28.140089 43.210604,20.110064 34.850065,20.740066 41.540495,15.680049 34.410036,11.260035 42.800577,11.110034 39.620371,3.3400097 46.500815,8.1400251z" 
+                      Stretch="Fill" 
+				  Stroke="#FF28ABFF" 
+				  Fill="#FF6EC4FB" Margin="3"
+				  StrokeThickness="2"/>
+            </Grid>
+            <ContentPresenter VerticalAlignment="Center" Content="{Binding}"></ContentPresenter>
+        </StackPanel>
+
+
+    </DataTemplate>
+    <DataTemplate x:Key="EnUstYanMenuGosterTemplate">
+        <StackPanel Orientation="Horizontal">
+            <Grid Width="35" Height="30">
+
+                <Path Data="M54.649097,21.262036L54.649097,30.349 49.050073,30.349 49.050073,28.667007 52.539465,28.667007 52.539465,21.551034C53.249342,21.514035,53.94922,21.420035,54.649097,21.262036z M6.9200783,11.657016L40.080828,11.657016C40.500837,13.999838 41.610862,16.242667 43.410903,18.050531 44.840935,19.479423 46.550974,20.469346 48.361015,21.029304L48.361015,24.628032 6.9200783,24.628032z M0,5.8630215L5.5980263,5.8630215 5.5980263,7.5450216 2.1092567,7.5450216 2.1092567,28.594022 5.5980263,28.594022 5.5980263,30.277021 0,30.277021z M51.918038,1.749232C50.858314,1.7492329,49.988492,2.6162499,49.978485,3.6892632L49.988492,7.6763202 46.219225,7.6763202C45.149371,7.6763202 44.27955,8.5473653 44.27955,9.6163512 44.27955,10.685397 45.149371,11.555405 46.219225,11.555405L49.978485,11.556381 49.978485,15.170447C49.988492,16.242484 50.858314,17.1095 51.918038,17.1095 52.987893,17.1095 53.857715,16.242484 53.857715,15.170447L53.857715,11.556381 57.696913,11.556381C58.776653,11.555405 59.636589,10.683383 59.636589,9.6143972 59.636589,8.5473653 58.776653,7.6763202 57.696913,7.6763202L53.857715,7.6773573 53.857715,3.6892632C53.857715,2.6162499,52.987893,1.7492329,51.918038,1.749232z M51.943058,0C54.380071,1.1240245E-06 56.817084,0.92976307 58.676699,2.7892865 62.395926,6.5063206 62.395926,12.53839 58.676699,16.254447 54.95747,19.972518 48.928645,19.972518 45.209417,16.254447 41.49019,12.53839 41.49019,6.5083347 45.209417,2.7892865 47.069031,0.92976307 49.506044,1.1240245E-06 51.943058,0z"         
+                      
+                      Stretch="Fill" 
+				  Stroke="#FF28ABFF" 
+				  Fill="#FF6EC4FB" Margin="3"
+				  StrokeThickness="2"/>
+            </Grid>
+            <ContentPresenter VerticalAlignment="Center" Content="{Binding}"></ContentPresenter>
+        </StackPanel>
+
+
+    </DataTemplate>
+    <DataTemplate x:Key="Ok_Template">
+
+        <Grid Width="40" Height="100">
+            <Path  Data="M120.0625,60.6875L167.583833333333,84.3328333333333 119.812998258015,108.312669374333 119.812998258015,101.416310208325 154.167544547349,84.332916667521 120.000995264746,69.3328638024251z"
+				  Stretch="Fill" 
+				   
+				  Stroke="#FFFF54E4" 
+				  Fill="#FFFF99EF" Margin="7,10,7,10"
+				  StrokeThickness="2"/>
+        </Grid>
+    </DataTemplate>
+    <DataTemplate x:Key="TersOkTemplate">
+
+        <Grid Width="40" Height="100">
+            <Path  Data="M120.0625,60.6875L167.583833333333,84.3328333333333 119.812998258015,108.312669374333 119.812998258015,101.416310208325 154.167544547349,84.332916667521 120.000995264746,69.3328638024251z"
+				  Stretch="Fill" 
+				   
+				  Stroke="#FFFF54E4" 
+				  Fill="#FFFF99EF" Margin="7,10,7,10"
+				  StrokeThickness="2" RenderTransformOrigin="0.5,0.5">
+                <Path.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="180"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Path.RenderTransform>
+            </Path>
+        </Grid>
+    </DataTemplate>
+    <DataTemplate x:Key="OnayTemplate">
+        <StackPanel Orientation="Horizontal">
+            <Grid Width="35" Height="30">
+                <Path Data="M57.926673,6.2402933C58.343139,6.2401565,59.959781,6.3539213,59.172241,8.1829098L29.760808,31.435939C29.760808,31.435939,28.570751,33.07615,26.030628,31.585957L14.560068,17.424113C14.560068,17.424113,13.660024,12.063414,19.480308,12.803511L28.270736,23.244872 57.832176,6.2426565C57.832176,6.2426565,57.867175,6.2403124,57.926673,6.2402933z M3.4601315,0L40.88058,0C42.790641,2.7589704E-07,44.330703,1.5500848,44.330703,3.4602855L44.330703,8.6703661 38.790584,11.860381 38.790584,5.5401667 5.5401175,5.5401667 5.5401175,38.790932 38.790584,38.790932 38.790584,30.180871 44.330703,25.800643 44.330703,40.881066C44.330703,42.791024,42.790641,44.331097,40.88058,44.331097L3.4601315,44.331097C1.5500707,44.331097,0,42.791024,0,40.881066L0,3.4602855C0,1.5500848,1.5500707,2.7589704E-07,3.4601315,0z" 
+				  Stretch="Fill" 
+				  Stroke="#FF28ABFF" 
+				  Fill="#FF6EC4FB"  Margin="2"
+				  StrokeThickness="2"/>
+            </Grid>
+            <ContentPresenter VerticalAlignment="Center" Content="{Binding}"></ContentPresenter>
+        </StackPanel>
+    </DataTemplate>
+
+    <DataTemplate x:Key="KirliAlanSetleriTemplate">
+        <StackPanel Orientation="Horizontal">
+            <Grid Width="35" Height="30">
+                <Path Data="M0,27.006001L37.806999,27.006001 37.806999,31.806 0,31.806z M0,18.003L37.806999,18.003 37.806999,22.806 0,22.806z M0,8.9999999L37.806999,8.9999999 37.806999,13.803 0,13.803z M0,0L37.806999,0 37.806999,4.8030009 0,4.8030009z" 
+				  Stretch="Fill" 
+				  Stroke="#FFFD00FF" 
+				  Fill="#FFFE73FF"  Margin="3,1,3,1"
+				  StrokeThickness="2"/>
+            </Grid>
+            <ContentPresenter VerticalAlignment="Center"  Content="{Binding}"></ContentPresenter>
+        </StackPanel>
+    </DataTemplate>
+
+    <DataTemplate x:Key="MakinayiCalistirTemplate">
+        <StackPanel Orientation="Horizontal">
+            <Grid Width="35" Height="30">
+                <Path Data="M14.79953,5.5920006L14.79953,14.736493C10.632922,17.849793 7.8854559,22.774394 7.8854564,28.381797 7.898516,37.808198 15.528631,45.444901 24.961052,45.459199 34.39077,45.444901 42.007984,37.808198 42.036484,28.381797 42.026184,22.774394 39.291778,17.849793 35.119873,14.736493L35.119873,5.5985905C43.836086,9.4970315,49.911503,18.214394,49.911503,28.381797L49.922005,28.381797C49.911503,42.170102 38.739681,53.333001 24.961052,53.333001 11.171922,53.333001 -1.8522978E-07,42.170102 0,28.381797 -1.8522978E-07,18.211893 6.0833223,9.4892113 14.79953,5.5920006z M21.203413,0L28.721685,0C29.454693,0,30.054998,0.60022354,30.054998,1.3333778L30.054998,32.63169C30.054998,33.364795,29.454693,33.964997,28.721685,33.964997L21.203413,33.964997C20.470205,33.964997,19.869999,33.364795,19.869999,32.63169L19.869999,1.3333778C19.869999,0.60022354,20.470205,0,21.203413,0z"
+				  Stretch="Fill" 
+				  Stroke="#FFFD00FF" 
+				  Fill="#FFFE73FF"  Margin="3,1,3,1"
+				  StrokeThickness="2"/>
+            </Grid>
+            <ContentPresenter VerticalAlignment="Center"  Content="{Binding}"></ContentPresenter>
+        </StackPanel>
+    </DataTemplate>
+
+    <DataTemplate x:Key="TarihiGecenSetlerTemplate">
+        <StackPanel Orientation="Horizontal">
+            <Grid Width="35" Height="30">
+                <Path Data="M53.2285,10.5C47.7799,4.85278 40.4479,0.518188 29.3063,1.13416 20.8926,1.599 14.2773,5.45313 9.68616,10.3737 4.95245,15.4492 1.58624,22.2045 1.58624,31.0052 1.58624,39.5 5.27441,46.97 9.81281,51.5105 14.4193,56.1145 20.7122,60.302 29.5596,60.8763 30.7832,60.8763 32.0065,60.8763 33.2298,60.8763 41.5547,60.2916 48.7347,56.2552 53.1016,51.6367 57.5631,46.9167 61.1966,39.8177 61.3284,31.1328 61.4593,22.5496 57.8066,15.2473 53.2285,10.5z M34.1849,37C34.1315,37 34.0804,36.9908 34.0273,36.9896 34.0059,37.073 33.9935,37.1615 33.942,37.2344L24.681,50.2539C24.3658,50.6953,23.598,50.6902,22.9635,50.2383L22.5247,49.9258 22.4036,49.9635 22.4036,49.8398 21.8145,49.4219C21.1813,48.97,20.9212,48.2461,21.2357,47.8033L26.5361,40.3516C27.0674,39.556,27.6133,38.7787,28.1868,38.0299L30.4609,34.832C30.0957,34.2006 29.876,33.4739 29.876,32.6927 29.876,32.3411 29.9199,32 30,31.6744L13.8271,11.9127C13.2513,11.2058,13.2705,10.2332,13.8734,9.74353L14.4313,9.28638C14.4752,9.21094 14.541,9.15747 14.5455,9.04163 14.6061,9.04163 14.668,9.04163 14.7298,9.04163L14.9648,8.849C15.5674,8.35938,16.524,8.52991,17.0996,9.23438L32.9283,28.5781C33.3262,28.4558 33.7467,28.3867 34.1849,28.3867 36.5631,28.3867 38.4893,30.3151 38.4893,32.6927 38.4893,35.0717 36.5631,37 34.1849,37z"
+				  Stretch="Fill" 
+				  Stroke="#FFFD00FF" 
+				  Fill="#FFFE73FF"  Margin="3,1,3,1"
+				  StrokeThickness="2"/>
+            </Grid>
+            <ContentPresenter VerticalAlignment="Center"  Content="{Binding}"></ContentPresenter>
+        </StackPanel>
+    </DataTemplate>
+
+    <DataTemplate x:Key="OtoklavEkraniTemplate">
+        <StackPanel Orientation="Horizontal">
+            <Grid Width="35" Height="30">
+                <Path Data="M16.6693,45.905003L43.4757,45.905003C44.112999,45.905003,44.628002,46.421967,44.628002,47.056145L44.628002,48.788155C44.628002,49.425034,44.112999,49.941998,43.4757,49.941998L16.6693,49.941998C16.0326,49.941998,15.517,49.425034,15.517,48.788155L15.517,47.056145C15.517,46.421967,16.0326,45.905003,16.6693,45.905003z M49.41954,39.667637C48.692036,39.667637 48.101837,40.270634 48.101837,41.014027 48.101837,41.76012 48.692036,42.362915 49.41954,42.362915 50.145443,42.362915 50.735249,41.76012 50.735249,41.014027 50.735249,40.270634 50.145443,39.667637 49.41954,39.667637z M44.825417,39.607838C44.097614,39.607838 43.509415,40.210533 43.509415,40.953926 43.509415,41.69762 44.097614,42.303116 44.825417,42.303116 45.55172,42.303116 46.141525,41.69762 46.141525,40.953926 46.141525,40.210533 45.55172,39.607838 44.825417,39.607838z M6.3522615,5.5287595C5.911829,5.5287595,5.5541072,5.8554168,5.5541077,6.2604427L5.5541077,37.508957C5.5541072,37.913853,5.911829,38.240654,6.3522615,38.240654L55.388371,38.240654C55.828773,38.240654,56.188175,37.913853,56.188175,37.508957L56.188175,6.2604427C56.188175,5.8554168,55.828773,5.5287595,55.388371,5.5287595z M0.98016852,0L61.087196,0C61.629902,-2.3297311E-09,62.068005,0.436275,62.068005,0.97923898L62.068005,42.791309C62.068005,43.333004,61.629902,43.772999,61.087196,43.772999L38.711491,43.772999 38.711491,42.46711C38.711491,41.924217,38.272388,41.484024,37.729683,41.484024L24.010818,41.484024C23.471514,41.484024,23.030712,41.924217,23.030712,42.46711L23.030712,43.772999 0.98016852,43.772999C0.43945515,43.772999,-3.5527137E-15,43.333004,0,42.791309L0,0.97923898C-3.5527137E-15,0.436275,0.43945515,-2.3297311E-09,0.98016852,0z"
+				  Stretch="Fill" 
+				  Stroke="#FFFD00FF" 
+				  Fill="#FFFE73FF"  Margin="3,1,3,1"
+				  StrokeThickness="2"/>
+            </Grid>
+            <ContentPresenter VerticalAlignment="Center"  Content="{Binding}"></ContentPresenter>
+        </StackPanel>
+    </DataTemplate>
+
+    <DataTemplate x:Key="SetTeslimTemplate">
+        <StackPanel Orientation="Horizontal">
+            <Grid Width="35" Height="30">
+                <Path  Data="F1M1739.41,3787.44L1720.92,3787.44C1722.09,3787.44 1723.03,3786.5 1723.03,3785.34 1723.03,3784.17 1722.09,3783.23 1720.92,3783.23L1737.13,3783.23C1739.29,3783.23,1741.04,3781.48,1741.04,3779.31L1741.04,3750.26C1741.04,3748.1,1739.29,3746.35,1737.13,3746.35L1683.44,3746.35C1681.27,3746.35,1679.52,3748.1,1679.52,3750.26L1679.52,3779.31C1679.52,3781.48,1681.27,3783.23,1683.44,3783.23L1698.95,3783.23C1697.79,3783.23 1696.84,3784.17 1696.84,3785.34 1696.84,3786.5 1697.79,3787.44 1698.95,3787.44L1681.16,3787.44C1679.94,3787.44 1678.95,3788.92 1678.95,3790.75 1678.95,3792.57 1679.94,3794.05 1681.16,3794.05L1739.41,3794.05C1740.63,3794.05 1741.61,3792.57 1741.61,3790.75 1741.61,3788.92 1740.63,3787.44 1739.41,3787.44 M1685.83,3780.07C1684.36,3780.07,1683.17,3778.83,1683.17,3777.29L1683.17,3752.91C1683.17,3751.37,1684.36,3750.12,1685.83,3750.12L1734.47,3750.12C1735.94,3750.12,1737.13,3751.37,1737.13,3752.91L1737.13,3777.29C1737.13,3778.83,1735.94,3780.07,1734.47,3780.07L1685.83,3780.07z"
+				  Stretch="Fill" 
+				  Stroke="#FFFD00FF" 
+				  Fill="#FFFE73FF"  Margin="3,1,3,1"
+				  StrokeThickness="2"/>
+            </Grid>
+            <ContentPresenter VerticalAlignment="Center"  Content="{Binding}"></ContentPresenter>
+        </StackPanel>
+    </DataTemplate>
+
+    <DataTemplate x:Key="BitirTemplate">
+        <StackPanel Orientation="Horizontal">
+            <Grid Width="35" Height="30">
+                <Path Data="F1M57.0078,13.3424C54.8815,11.3346,51.5313,11.4283,49.5221,13.5521L23.7877,39.6022 14.0924,31.125C11.8854,29.2084 8.53906,29.4531 6.62231,31.6666 4.71094,33.8776 4.95313,37.224 7.16528,39.1342L19.9426,50.3125C20.1731,50.5131 20.4244,50.6771 20.6809,50.8307 22.8112,52.6484 26.0065,52.5143 27.9479,50.4557L57.2161,20.8295C59.2291,18.7045,59.1354,15.3516,57.0078,13.3424z" 
+				  Stretch="Fill" 
+				  Stroke="#FFFD00FF" 
+				  Fill="#FFFE73FF"  Margin="2"
+				  StrokeThickness="2"/>
+            </Grid>
+            <ContentPresenter VerticalAlignment="Center" Content="{Binding}"></ContentPresenter>
+        </StackPanel>
+    </DataTemplate>
+
+    <DataTemplate x:Key="OtoklavAktarTemplate">
+        <StackPanel Orientation="Horizontal">
+            <Grid Width="35" Height="30">
+                <Path Data="F1M58.6666,33.0059L41.7747,16.0267 41.7747,24.0085C7.98303,24.0085 5.33331,43.9851 5.33331,47.972 12.6211,32.0033 41.7747,39.9851 41.7747,39.9851L41.7747,47.972 58.6666,33.0059z" 
+				  Stretch="Fill" 
+				  Stroke="#FFFD00FF" 
+				  Fill="#FFFE73FF"  Margin="2"
+				  StrokeThickness="2"/>
+            </Grid>
+            <ContentPresenter VerticalAlignment="Center" Content="{Binding}"></ContentPresenter>
+        </StackPanel>
+    </DataTemplate>
+
+    <DataTemplate x:Key="RaporTemplate">
+        <StackPanel Orientation="Horizontal">
+            <Grid Width="35" Height="40">
+                <Path Data="M10.310104,42.259933L23.948304,42.259933 23.948304,45.626144 10.310104,45.626144z M41.136796,37.940132C39.637154,37.940132,38.407448,39.160278,38.407448,40.680465L38.407448,46.091121 32.77879,46.091121C31.259152,46.091121 30.039445,47.321273 30.039445,48.831455 30.039445,50.34164 31.259152,51.571788 32.77879,51.571788L38.407448,51.571788 38.407448,56.882434C38.407448,58.402622 39.637154,59.622768 41.136796,59.622768 42.646435,59.622768 43.876141,58.402622 43.876141,56.882434L43.876141,51.571788 48.984921,51.571788C50.494561,51.571788 51.714272,50.34164 51.714272,48.831455 51.714272,47.321273 50.494561,46.091121 48.984921,46.091121L43.876141,46.091121 43.876141,40.680465C43.876141,39.160278,42.646435,37.940132,41.136796,37.940132z M40.876858,34.889758C48.545025,34.889758 54.763543,41.110515 54.763543,48.781448 54.763543,56.452384 48.545025,62.663139 40.876858,62.663139 33.208687,62.663139 26.990172,56.452384 26.990172,48.781448 26.990172,41.110515 33.208687,34.889758 40.876858,34.889758z M10.310104,33.849933L25.729504,33.849933 25.729504,37.213214 10.310104,37.213214z M18.662564,0L38.115021,0C41.305375,0,43.895798,2.5801919,43.895798,5.7702735L43.895798,32.901355C42.915692,32.721168 41.915562,32.611301 40.885399,32.611301 40.345292,32.611301 39.805184,32.641578 39.275086,32.691383L39.275086,5.7702735C39.275086,5.1403635,38.754998,4.6203211,38.115021,4.6203206L20.792721,4.6203206 20.792721,14.780437C20.792721,14.780437,20.592744,21.451141,13.231687,20.871038L4.6207119,20.900825 4.6207119,49.011928C4.6207129,49.642326,5.1307884,50.162368,5.770764,50.162368L24.783225,50.162368C24.92338,51.78207,25.303313,53.332431,25.883465,54.782203L5.770764,54.782203C2.5804108,54.782203,-1.2958481E-08,52.202499,0,49.011928L0,19.690811 4.1904813,15.260438 4.200493,15.240419 14.391993,4.4401372 14.451815,4.4401372z" 
+				  Stretch="Fill" 
+				  Stroke="#FFFD00FF" 
+				  Fill="#FFFE73FF"  Margin="2"
+				  StrokeThickness="2"/>
+            </Grid>
+            <ContentPresenter VerticalAlignment="Center" Content="{Binding}"></ContentPresenter>
+        </StackPanel>
+    </DataTemplate>
+
+    <DataTemplate x:Key="AraTemplate">
+        <StackPanel Orientation="Horizontal">
+            <Grid Width="35" Height="35">
+                <Path Data="F1M1737.15,7883.85L1722.17,7866.04C1724.67,7862.82 1726.34,7858.9 1726.78,7854.55 1728.03,7842.26 1719.09,7831.29 1706.79,7830.04 1694.51,7828.8 1683.54,7837.74 1682.28,7850.03 1681.03,7862.32 1689.99,7873.3 1702.28,7874.55 1706.37,7874.96 1710.33,7874.24 1713.82,7872.64L1728.99,7890.7C1730.89,7892.94 1734.25,7893.24 1736.49,7891.35 1738.75,7889.46 1739.04,7886.1 1737.15,7883.85 M1717.85,7853.55C1717.11,7860.87 1710.6,7866.19 1703.28,7865.45 1695.97,7864.71 1690.65,7858.19 1691.39,7850.88 1692.13,7843.56 1698.66,7838.24 1705.97,7838.98 1713.29,7839.73 1718.6,7846.25 1717.85,7853.55"
+				  Stretch="Fill" 
+				  Stroke="#FFFD00FF" 
+				  Fill="#FFFE73FF"  Margin="2"
+				  StrokeThickness="2"/>
+            </Grid>
+            <ContentPresenter VerticalAlignment="Center" Content="{Binding}"></ContentPresenter>
+        </StackPanel>
+    </DataTemplate>
+
+    <DataTemplate x:Key="SilTemplate">
+        <StackPanel Orientation="Horizontal">
+            <Grid Width="35" Height="35">
+                <Path Data="F1M1737.88,3617.83L1724.69,3604.65 1738.69,3590.66C1742.6,3586.75 1742.59,3580.41 1738.69,3576.51 1734.79,3572.62 1728.46,3572.61 1724.54,3576.52L1710.56,3590.51 1696.02,3575.98C1692.11,3572.07 1685.77,3572.08 1681.87,3575.98 1677.98,3579.87 1677.97,3586.2 1681.88,3590.11L1696.42,3604.65 1682.7,3618.37C1678.78,3622.28 1678.8,3628.61 1682.69,3632.51 1686.59,3636.41 1692.92,3636.42 1696.83,3632.51L1710.55,3618.79 1723.74,3631.97C1727.64,3635.87 1733.97,3635.86 1737.87,3631.97 1741.77,3628.07 1741.78,3621.74 1737.88,3617.83"
+				  Stretch="Fill" 
+				  Stroke="#FFFD00FF" 
+				  Fill="#FFFE73FF"  Margin="2"
+				  StrokeThickness="2"/>
+            </Grid>
+            <ContentPresenter VerticalAlignment="Center" Content="{Binding}"></ContentPresenter>
+        </StackPanel>
+    </DataTemplate>
+
+    <DataTemplate x:Key="GuncelTemplate">
+        <StackPanel Orientation="Horizontal">
+            <Grid Width="35" Height="35">
+                <Path Data="F1M2278.07,1272.94C2265.47,1272.94,2254.91,1281.77,2252.19,1293.55L2241.99,1293.43 2255.8,1315.74 2270.14,1293.77 2260.66,1293.66C2263.13,1286.36 2269.96,1281.07 2278.07,1281.07 2288.24,1281.07 2296.52,1289.35 2296.52,1299.52 2296.52,1309.7 2288.24,1317.98 2278.07,1317.98 2274.31,1317.98 2270.81,1316.84 2267.89,1314.9L2263.45,1321.7C2267.65,1324.48 2272.67,1326.11 2278.07,1326.11 2292.73,1326.11 2304.65,1314.18 2304.65,1299.52 2304.65,1284.87 2292.73,1272.94 2278.07,1272.94"
+				  Stretch="Fill" 
+				  Stroke="#FFFD00FF" 
+				  Fill="#FFFE73FF"  Margin="2"
+				  StrokeThickness="2"/>
+            </Grid>
+            <ContentPresenter VerticalAlignment="Center" Content="{Binding}"></ContentPresenter>
+        </StackPanel>
+    </DataTemplate>
+
+    <DataTemplate x:Key="KaydetTemplate">
+        <StackPanel Orientation="Horizontal">
+            <Grid Width="35" Height="35">
+                <Path Data="M10.280033,48.087753L10.280033,54.397381 50.810078,54.397381 50.810078,48.087753z M15.900046,6.4432963E-05L23.693047,6.4432963E-05 23.693047,15.900064 15.900046,15.900064z M3.4200456,0L10.280033,0 10.280033,19.019096 50.810078,19.019096 50.810078,0 58.300069,0C60.190087,0,61.730004,1.5399642,61.730004,3.4298871L61.730004,59.237114C61.730004,61.137043,60.190087,62.667,58.300069,62.667L3.4200456,62.667C1.53003,62.667,1.896733E-07,61.137043,0,59.237114L0,3.4298871C1.896733E-07,1.5399642,1.53003,0,3.4200456,0z"
+				  Stretch="Fill" 
+				  Stroke="#FFFD00FF" 
+				  Fill="#FFFE73FF"  Margin="2"
+				  StrokeThickness="2"/>
+            </Grid>
+            <ContentPresenter VerticalAlignment="Center" Content="{Binding}"></ContentPresenter>
+        </StackPanel>
+    </DataTemplate>
+    <DataTemplate x:Key="KapiTemplate">
+        <StackPanel Orientation="Horizontal">
+            <Grid Width="45" Height="45">
+                <Path Data="M7.9807694,58.050023L40.4539,58.050023 47.864614,62.659543 0,62.659543z M15.330997,23.551408C14.210819,23.551408 13.300636,24.461118 13.300636,25.581289 13.300636,26.711225 14.210819,27.621425 15.330997,27.621425 16.451176,27.621425 17.361237,26.711225 17.361237,25.581289 17.361237,24.461118 16.451176,23.551408 15.330997,23.551408z M10.51014,0L37.954694,0C38.664771,0,39.234811,0.57033947,39.234811,1.2700793L39.234811,51.192365C39.234811,51.902849,38.664771,52.472699,37.954694,52.472699L10.51014,52.472699C9.8100743,52.472699,9.2399126,51.902849,9.2399124,51.192365L9.2399124,1.2700793C9.2399126,0.57033947,9.8100743,0,10.51014,0z" 
+				  Stretch="Fill" 
+				  Stroke="#FF1BA0F5" 
+				  Fill="#FF291029"  Margin="2"
+				  StrokeThickness="2"/>
+            </Grid>
+            <ContentPresenter VerticalAlignment="Center" Content="{Binding}"></ContentPresenter>
+        </StackPanel>
+    </DataTemplate>
+    <DataTemplate x:Key="MesajTemplate">
+        <StackPanel Orientation="Horizontal">
+            <Grid Width="45" Height="45">
+                <Path Data="F1M-1780.39,-2662.83L-1826.22,-2662.83C-1830.76,-2662.83,-1834.43,-2659.15,-1834.43,-2654.62L-1834.43,-2625.45C-1834.43,-2620.92,-1830.76,-2617.24,-1826.22,-2617.24L-1816.63,-2617.24 -1790.88,-2600.16 -1796.11,-2617.24 -1780.39,-2617.24C-1775.86,-2617.24,-1772.19,-2620.92,-1772.19,-2625.45L-1772.19,-2654.62C-1772.19,-2659.15,-1775.86,-2662.83,-1780.39,-2662.83 M-1819.26,-2651.5L-1787.41,-2651.5C-1786.02,-2651.5 -1784.9,-2650.38 -1784.9,-2649 -1784.9,-2647.61 -1786.02,-2646.49 -1787.41,-2646.49L-1819.26,-2646.49C-1820.64,-2646.49 -1821.77,-2647.61 -1821.77,-2649 -1821.77,-2650.38 -1820.64,-2651.5 -1819.26,-2651.5 M-1787.38,-2629.35L-1819.23,-2629.35C-1820.62,-2629.35 -1821.74,-2630.47 -1821.74,-2631.86 -1821.74,-2633.24 -1820.62,-2634.36 -1819.23,-2634.36L-1787.38,-2634.36C-1786,-2634.36 -1784.87,-2633.24 -1784.87,-2631.86 -1784.87,-2630.47 -1786,-2629.35 -1787.38,-2629.35" 
+				  Stretch="Fill" 
+				  Stroke="#FF273945" 
+				  Fill="#FFCCC7B9"  Margin="2"
+				  StrokeThickness="2"/>
+            </Grid>
+            <ContentPresenter VerticalAlignment="Center" Content="{Binding}"></ContentPresenter>
+        </StackPanel>
+    </DataTemplate>
+    <DataTemplate x:Key="HesapMakinesiTemplate">
+        <StackPanel Orientation="Horizontal">
+            <Grid Width="45" Height="45">
+                <Path Data="F1M43.1797,0.955811L20.2217,0.955811C16.9189,0.955811,14.2369,3.79053,14.2369,7.28247L14.2369,56.5847C14.2369,60.0769,16.9189,62.9102,20.2217,62.9102L43.1797,62.9102C46.486,62.9102,49.1641,60.0769,49.1641,56.5847L49.1641,7.28247C49.1641,3.79053,46.486,0.955811,43.1797,0.955811z M23.1028,55.5325C21.1959,55.5325 19.6461,53.8933 19.6461,51.8738 19.6461,49.8516 21.1959,48.2124 23.1028,48.2124 25.013,48.2124 26.5621,49.8516 26.5621,51.8738 26.5621,53.8933 25.013,55.5325 23.1028,55.5325z M23.1028,45.9675C21.1959,45.9675 19.6461,44.3281 19.6461,42.3074 19.6461,40.2866 21.1959,38.6511 23.1028,38.6511 25.013,38.6511 26.5621,40.2866 26.5621,42.3074 26.5621,44.3281 25.013,45.9675 23.1028,45.9675z M23.1028,37.3606C21.1959,37.3606 19.6461,35.7227 19.6461,33.7019 19.6461,31.6836 21.1959,30.0417 23.1028,30.0417 25.013,30.0417 26.5621,31.6836 26.5621,33.7019 26.5621,35.7227 25.013,37.3606 23.1028,37.3606z M31.7005,55.5325C29.791,55.5325 28.2422,53.8933 28.2422,51.8738 28.2422,49.8516 29.791,48.2124 31.7005,48.2124 33.6146,48.2124 35.1614,49.8516 35.1614,51.8738 35.1614,53.8933 33.6146,55.5325 31.7005,55.5325z M31.7005,45.9675C29.791,45.9675 28.2422,44.3281 28.2422,42.3074 28.2422,40.2866 29.791,38.6511 31.7005,38.6511 33.6146,38.6511 35.1614,40.2866 35.1614,42.3074 35.1614,44.3281 33.6146,45.9675 31.7005,45.9675z M31.7005,37.3606C29.791,37.3606 28.2422,35.7227 28.2422,33.7019 28.2422,31.6836 29.791,30.0417 31.7005,30.0417 33.6146,30.0417 35.1614,31.6836 35.1614,33.7019 35.1614,35.7227 33.6146,37.3606 31.7005,37.3606z M40.3021,55.5325C38.3912,55.5325 36.8389,53.8933 36.8389,51.8738 36.8389,49.8516 38.3912,48.2124 40.3021,48.2124 42.2106,48.2124 43.7581,49.8516 43.7581,51.8738 43.7581,53.8933 42.2106,55.5325 40.3021,55.5325z M40.3021,45.9675C38.3912,45.9675 36.8389,44.3281 36.8389,42.3074 36.8389,40.2866 38.3912,38.6511 40.3021,38.6511 42.2106,38.6511 43.7581,40.2866 43.7581,42.3074 43.7581,44.3281 42.2106,45.9675 40.3021,45.9675z M40.3021,37.3606C38.3912,37.3606 36.8389,35.7227 36.8389,33.7019 36.8389,31.6836 38.3912,30.0417 40.3021,30.0417 42.2106,30.0417 43.7581,31.6836 43.7581,33.7019 43.7581,35.7227 42.2106,37.3606 40.3021,37.3606z M46.2272,13.5562C46.2272,16.0352,44.3258,18.0417,41.9808,18.0417L21.4205,18.0417C19.0768,18.0417,17.1783,16.0352,17.1783,13.5562L17.1783,9.92847C17.1783,7.45459,19.0768,5.44141,21.4205,5.44141L41.9808,5.44141C44.3258,5.44141,46.2272,7.45459,46.2272,9.92847L46.2272,13.5562z" 
+				   Stretch="Fill" 
+				  Stroke="#FF273945" 
+				  Fill="#FFCCC7B9"  Margin="2"
+				  StrokeThickness="2"/>
+            </Grid>
+            <ContentPresenter VerticalAlignment="Center" Content="{Binding}"></ContentPresenter>
+        </StackPanel>
+    </DataTemplate>
+
+    <DataTemplate x:Key="QrCodeTemplate">
+        <StackPanel Orientation="Horizontal">
+            <Grid Width="35" Height="35">
+                <Path Data="M20.896996,45.594005L22.797995,45.594005 22.797995,47.495006 20.896996,47.495006z M45.594004,39.896003L47.495003,39.896003 47.495003,47.495006 45.594004,47.495006 43.693999,47.495006 43.693999,45.594005 45.594004,45.594005z M15.198,37.995997L17.098007,37.995997 17.098007,41.795016 18.997982,41.795016 18.997982,43.693006 20.896996,43.693006 20.896996,45.594005 18.997982,45.594005 18.997982,47.495006 17.098007,47.495006 17.098007,43.693006 15.198,43.693006z M3.7989883,37.995997L5.6989937,37.995997 7.598999,37.995997 9.4990044,37.995997 9.4990044,43.693006 7.598999,43.693006 5.6989937,43.693006 3.7989883,43.693006z M1.9000053,36.094005L1.9000053,45.594005 3.7989883,45.594005 3.8000107,45.594005 5.6989937,45.594005 7.598999,45.594005 9.4990044,45.594005 11.400005,45.594005 11.400005,36.094005 9.4990044,36.094005 7.598999,36.094005 5.6989937,36.094005 3.8000107,36.094005 3.7989883,36.094005z M34.195984,34.195024L36.094997,34.195024 36.094997,36.094005 34.195984,36.094005z M0,34.195024L1.9000053,34.195024 3.7989883,34.195024 3.8000107,34.195024 5.6989937,34.195024 7.598999,34.195024 9.4990044,34.195024 11.400005,34.195024 13.298994,34.195024 13.298994,47.495006 11.400005,47.495006 9.4990044,47.495006 7.598999,47.495006 5.6989937,47.495006 3.8000107,47.495006 3.7989883,47.495006 1.9000053,47.495006 0,47.495006z M32.296009,32.295016L32.296009,37.995004 34.195984,37.995004 34.197008,37.995004 36.094997,37.995004 37.995004,37.995004 37.995004,32.295016 36.094997,32.295016 34.197008,32.295016 34.195984,32.295016z M3.7989883,28.495997L5.6989937,28.495997 5.6989937,32.295016 3.7989883,32.295016z M32.296009,26.596022L34.197008,26.596022 34.197008,30.396004 36.094997,30.396004 37.995004,30.396004 39.893986,30.396004 39.89501,30.396004 41.795009,30.396004 41.795009,32.295016 39.89501,32.295016 39.89501,36.094005 41.795009,36.094005 41.795009,43.693006 39.893986,43.693006 39.893986,39.896003 37.995004,39.896003 37.995004,45.594005 36.094997,45.594005 36.094997,47.495006 34.195984,47.495006 34.195984,45.594005 32.296009,45.594005 30.396996,45.594005 28.495996,45.594005 28.495996,43.693006 30.396996,43.693006 32.296009,43.693006 34.195984,43.693006 34.195984,43.692014 36.094997,43.692014 36.094997,41.795016 34.197008,41.795016 34.195984,41.795016 32.296009,41.795016 32.296009,39.896003 30.396996,39.896003 28.495996,39.896003 28.495996,43.693006 26.595991,43.693006 26.595991,41.795016 24.697008,41.795016 24.697008,43.693006 26.595991,43.693006 26.595991,45.594005 24.697008,45.594005 24.695984,45.594005 22.797995,45.594005 22.797995,41.795016 20.896996,41.795016 20.896996,39.896003 22.797995,39.896003 22.797995,41.794024 24.695984,41.794024 24.695984,39.896003 22.797995,39.896003 22.797995,37.995004 24.695984,37.995004 24.695984,36.094998 26.595991,36.094998 26.595991,37.995997 28.495996,37.995997 28.495996,32.295016 30.396996,32.295016 30.396996,28.495997 32.296009,28.495997z M41.796009,26.594998L43.694999,26.594998 43.694999,26.596022 45.594004,26.596022 45.594004,26.594998 47.495003,26.594998 47.495003,30.396004 45.594004,30.396004 45.594004,32.295016 43.694999,32.295016 43.694999,34.196015 45.594004,34.196015 45.594004,34.195024 47.495003,34.195024 47.495003,37.995004 45.594004,37.995004 45.594004,39.896003 43.694999,39.896003 43.693999,39.896003 41.796009,39.896003 41.796009,37.995004 43.693999,37.995004 43.693999,36.094005 41.796009,36.094005 41.796009,30.397027 43.693999,30.397027 43.693999,28.495997 41.796009,28.495997z M24.697008,24.698002L24.697008,26.594998 26.595991,26.594998 26.595991,24.698002z M37.995004,22.797003L39.89501,22.797003 39.89501,24.698002 41.795009,24.698002 41.795009,28.496998 39.893986,28.496998 39.893986,28.495997 37.995004,28.495997 37.995004,26.594998 39.893986,26.594998 39.893986,24.698002 37.995004,24.698002z M20.896996,22.797003L22.797995,22.797003 22.797995,24.698002 20.896996,24.698002z M39.893986,18.998014L41.795009,18.998014 41.795009,20.897003 39.893986,20.897003z M1.9000053,18.998014L3.8000107,18.998014 3.8000107,22.797003 5.6989937,22.797003 5.6989937,24.698002 7.598999,24.698002 7.598999,26.594998 5.6989937,26.594998 5.6989937,26.595999 3.7989883,26.595999 3.7989883,26.594998 1.9000053,26.594998 1.9000053,24.698002 0,24.698002 0,20.89501 1.9000053,20.89501z M18.99699,17.096022L20.896996,17.096022 20.896996,18.997014 18.99699,18.997014z M0,17.096022L1.9000053,17.096022 1.9000053,18.997014 0,18.997014z M41.796009,15.198002L43.694999,15.198002 45.594004,15.198012 47.495003,15.198002 47.495003,17.097015 45.594004,17.097015 45.594004,18.998014 47.495003,18.998014 47.495003,24.698002 45.594004,24.698002 43.694004,24.698012 41.796009,24.698002 41.796009,22.797003 43.694004,22.797003 43.694004,17.097015 41.796009,17.097015z M3.7989883,15.198002L5.6989937,15.198002 7.598999,15.198002 9.4990044,15.198002 9.4990044,17.097015 7.598999,17.097015 7.598999,18.998014 5.6989937,18.998014 5.6989937,17.097015 3.7989883,17.097015z M30.396996,11.399013L32.296009,11.399013 32.296009,15.198002 34.195984,15.198002 34.197008,15.198002 36.094997,15.198002 37.995004,15.198002 37.995004,18.998014 36.094997,18.998014 36.094997,17.097015 34.197008,17.097015 34.195984,17.097015 32.296009,17.097015 32.296009,17.096014 30.396996,17.096014z M26.595991,5.6980019L28.495996,5.6980019 30.396996,5.6980019 30.396996,9.498014 28.495996,9.498014 26.595991,9.498014z M41.796009,3.8000116L43.694999,3.8000116 43.694999,9.497014 41.796009,9.497014z M37.995004,3.8000116L39.893986,3.8000116 39.89501,3.8000116 41.795009,3.8000116 41.795009,9.497014 39.89501,9.497014 39.893986,9.497014 37.995004,9.497014z M3.7989883,3.8000116L5.6989937,3.8000116 7.598999,3.8000116 9.4990044,3.8000116 9.4990044,9.497014 7.598999,9.497014 5.6989937,9.497014 3.7989883,9.497014z M1.9000053,1.8990126L1.9000053,11.39802 3.7989883,11.39802 3.8000107,11.39802 5.6989937,11.39802 7.598999,11.39802 9.4990044,11.39802 11.400005,11.39802 11.400005,1.8990126 9.4990044,1.8990126 7.598999,1.8990126 5.6989937,1.8990126 3.8000107,1.8990126 3.7989883,1.8990126z M30.396996,0.0010232925L32.296009,0.0010232925 32.296009,5.6980019 30.396996,5.6980019z M15.198,0.0010232925L17.098007,0.0010232925 17.098007,3.8000116 18.99699,3.8000116 18.99699,3.7990189 20.896996,3.7990189 22.797995,3.7990189 22.797995,5.6980019 20.896996,5.6980019 20.896996,7.5990005 18.997982,7.5990005 18.997982,9.498014 20.896996,9.498014 20.896996,7.5990005 22.797995,7.5990005 24.697008,7.5990005 24.697008,17.096014 22.797995,17.096014 22.797995,11.399013 20.896996,11.399013 20.896996,15.198002 18.99699,15.198002 18.99699,11.399013 17.098007,11.399013 17.098007,17.097015 15.198,17.097015 15.198,18.998014 17.098007,18.998014 17.098007,22.797003 18.997982,22.797003 18.997982,24.698002 20.896996,24.698002 20.896996,26.594998 18.99699,26.594998 18.99699,24.698002 17.098007,24.698002 15.198,24.698002 15.198,20.896004 13.298994,20.896004 13.298994,20.897003 11.400005,20.897003 11.400005,22.797003 13.298994,22.797003 13.298994,24.698002 11.400005,24.698002 11.400005,26.594998 13.298994,26.594998 13.298994,28.495997 15.198,28.495997 15.198,30.396004 17.098007,30.396004 17.098007,28.495997 15.198,28.495997 15.198,26.594998 17.098007,26.594998 17.098007,26.596022 18.997982,26.596022 18.997982,28.495997 20.896996,28.495997 22.797995,28.495997 22.797995,30.396004 20.896996,30.396004 20.896996,32.295016 18.997982,32.295016 18.99699,32.295016 17.098007,32.295016 17.098007,34.195024 18.99699,34.195024 18.997982,34.195024 20.896996,34.195024 20.896996,32.295016 22.797995,32.295016 22.797995,30.396004 24.695984,30.396004 24.695984,26.594998 22.797995,26.594998 22.797995,24.698002 24.695984,24.698002 24.695984,22.797003 22.797995,22.797003 22.797995,20.897003 20.896996,20.897003 20.896996,18.998014 22.797995,18.998014 22.797995,20.896004 24.695984,20.896004 24.695984,17.097015 26.595991,17.097015 26.595991,11.399013 28.495996,11.399013 28.495996,18.998014 30.396996,18.998014 30.396996,20.896004 32.296009,20.896004 32.296009,20.89501 34.195984,20.89501 34.195984,18.998014 36.094997,18.998014 36.094997,20.897003 34.197008,20.897003 34.197008,22.797003 36.094997,22.797003 36.094997,24.698002 34.197008,24.698002 34.195984,24.698002 32.296009,24.698002 32.296009,22.797003 30.396996,22.797003 30.396996,20.897003 28.495996,20.897003 28.495996,24.698002 30.396996,24.698002 32.296009,24.698002 32.296009,26.594998 30.396996,26.594998 28.495996,26.594998 28.495996,32.295016 26.595991,32.295016 26.595991,30.396004 24.697008,30.396004 24.697008,34.196015 22.797995,34.196015 22.797995,37.995004 20.896996,37.995004 18.997982,37.995004 18.99699,37.995004 17.098007,37.995004 17.098007,34.196015 15.198,34.196015 15.198,32.295016 13.298994,32.295016 13.297995,32.295016 11.400005,32.295016 9.4990044,32.295016 7.598999,32.295016 7.598999,30.396004 9.4990044,30.396004 9.4990044,28.495997 11.400005,28.495997 11.400005,30.396004 13.297995,30.396004 13.297995,28.495997 11.400005,28.495997 11.400005,26.595999 9.4990044,26.595999 9.4990044,28.495997 7.598999,28.495997 7.598999,26.594998 9.4990044,26.594998 9.4990044,24.698002 7.598999,24.698002 7.598999,18.998014 9.4990044,18.998014 9.4990044,17.097015 11.400005,17.097015 11.400005,18.998014 13.297995,18.998014 13.297995,17.097015 11.400005,17.097015 11.400005,15.198002 13.298994,15.198002 13.298994,17.096022 15.198,17.096022 15.198,9.498014 17.098007,9.498014 17.098007,5.6980019 15.198,5.6980019z M41.796009,0L43.693999,0 43.694999,0 45.594004,0 47.495003,0 47.495003,13.297003 45.594004,13.297003 43.694999,13.297003 43.693999,13.297003 41.796009,13.297003 41.796009,11.39802 43.693999,11.39802 43.694999,11.39802 45.594004,11.39802 45.594004,1.8990126 43.694999,1.8990126 43.693999,1.8990126 41.796009,1.8990126z M34.195984,0L36.094997,0 37.995004,0 39.893986,0 39.89501,0 41.795009,0 41.795009,1.8990126 39.89501,1.8990126 39.893986,1.8990126 37.995004,1.8990126 36.094997,1.8990126 36.094997,11.39802 37.995004,11.39802 39.893986,11.39802 39.89501,11.39802 41.795009,11.39802 41.795009,13.297003 39.89501,13.297003 39.893986,13.297003 37.995004,13.297003 36.094997,13.297003 34.195984,13.297003z M24.695984,0L26.595991,0 28.495996,0 28.495996,1.8990126 26.595991,1.8990126 26.595991,3.8000116 24.695984,3.8000116z M0,0L1.9000053,0 3.7989883,0 3.8000107,0 5.6989937,0 7.598999,0 9.4990044,0 11.400005,0 13.298994,0 13.298994,13.297003 11.400005,13.297003 9.4990044,13.297003 7.598999,13.297003 5.6989937,13.297003 3.8000107,13.297003 3.7989883,13.297003 1.9000053,13.297003 0,13.297002z" 
+				 Fill="Black" 
+				    Stretch="Fill" 
+			  
+				     Margin="2"
+				  StrokeThickness="2"/>
+            </Grid>
+            <ContentPresenter VerticalAlignment="Center" Content="{Binding}"></ContentPresenter>
+        </StackPanel>
+    </DataTemplate>
+
+    <DataTemplate x:Key="KullaniciEkleTemplate">
+        <StackPanel Orientation="Horizontal">
+            <Grid Width="35" Height="35" >
+                <Path Data="M36.782698,26.849903C36.782698,26.849903 37.322737,26.979881 38.212803,27.289828 38.052791,28.129684 37.962784,28.989538 37.962784,29.869388 37.962784,37.388105 44.073232,43.487064 51.583783,43.487064 52.203829,43.487064 52.813873,43.437073 53.413917,43.357086 53.523925,43.966984 53.633933,44.586878 53.693937,45.236767L0,45.236767C0,45.236767,4.4103241,29.059526,17.651295,27.579779L21.241558,42.937159 23.411718,42.917162 26.911974,33.748726 24.151772,28.969542 29.662176,28.969542 27.021982,33.868706 31.022275,42.857172 32.462381,42.847174z M51.747447,22.210526C50.69776,22.210526,49.857863,23.051012,49.857863,24.091242L49.857863,27.861956 46.008766,27.861956C44.929055,27.861956 44.059258,28.742001 44.059258,29.822277 44.059258,30.902554 44.929055,31.782598 46.008766,31.782598L49.857863,31.782598 49.857863,35.993334C49.857863,37.033564 50.69776,37.873562 51.747447,37.873562 52.777242,37.873562 53.627024,37.033564 53.627024,35.993334L53.627024,31.782598 57.616104,31.782598C58.695936,31.782598 59.575619,30.902554 59.575619,29.822277 59.575619,28.742001 58.695936,27.861956 57.616104,27.861956L53.627024,27.861956 53.627024,24.091242C53.627024,23.051012,52.777242,22.210526,51.747447,22.210526z M51.577442,18.789974C57.696165,18.789975 62.665003,23.750848 62.665003,29.872091 62.665003,36.003101 57.696165,40.963974 51.577442,40.963974 45.458841,40.963974 40.490003,36.003101 40.490003,29.872091 40.490003,23.750848 45.458841,18.789975 51.577442,18.789974z M27.088974,0C34.118399,0 39.817933,5.7002335 39.817933,12.730521 39.817933,19.760807 34.118399,25.46104 27.088974,25.46104 20.059549,25.46104 14.360016,19.760807 14.360016,12.730521 14.360016,5.7002335 20.059549,0 27.088974,0z" 		 
+ Fill="#FF0F68A1"   Stroke="#FF1F6D9F" 
+				    Stretch="Fill" 
+			  
+				     Margin="2"
+				  StrokeThickness="2"/>
+            </Grid>
+            <ContentPresenter VerticalAlignment="Center" Content="{Binding}"></ContentPresenter>
+        </StackPanel>
+    </DataTemplate>
+    <DataTemplate x:Key="TabletKullaniciEkleTemplate">
+        <StackPanel Orientation="Horizontal">
+            <Grid Width="45" Height="45" >
+                <Path Data="M36.782698,26.849903C36.782698,26.849903 37.322737,26.979881 38.212803,27.289828 38.052791,28.129684 37.962784,28.989538 37.962784,29.869388 37.962784,37.388105 44.073232,43.487064 51.583783,43.487064 52.203829,43.487064 52.813873,43.437073 53.413917,43.357086 53.523925,43.966984 53.633933,44.586878 53.693937,45.236767L0,45.236767C0,45.236767,4.4103241,29.059526,17.651295,27.579779L21.241558,42.937159 23.411718,42.917162 26.911974,33.748726 24.151772,28.969542 29.662176,28.969542 27.021982,33.868706 31.022275,42.857172 32.462381,42.847174z M51.747447,22.210526C50.69776,22.210526,49.857863,23.051012,49.857863,24.091242L49.857863,27.861956 46.008766,27.861956C44.929055,27.861956 44.059258,28.742001 44.059258,29.822277 44.059258,30.902554 44.929055,31.782598 46.008766,31.782598L49.857863,31.782598 49.857863,35.993334C49.857863,37.033564 50.69776,37.873562 51.747447,37.873562 52.777242,37.873562 53.627024,37.033564 53.627024,35.993334L53.627024,31.782598 57.616104,31.782598C58.695936,31.782598 59.575619,30.902554 59.575619,29.822277 59.575619,28.742001 58.695936,27.861956 57.616104,27.861956L53.627024,27.861956 53.627024,24.091242C53.627024,23.051012,52.777242,22.210526,51.747447,22.210526z M51.577442,18.789974C57.696165,18.789975 62.665003,23.750848 62.665003,29.872091 62.665003,36.003101 57.696165,40.963974 51.577442,40.963974 45.458841,40.963974 40.490003,36.003101 40.490003,29.872091 40.490003,23.750848 45.458841,18.789975 51.577442,18.789974z M27.088974,0C34.118399,0 39.817933,5.7002335 39.817933,12.730521 39.817933,19.760807 34.118399,25.46104 27.088974,25.46104 20.059549,25.46104 14.360016,19.760807 14.360016,12.730521 14.360016,5.7002335 20.059549,0 27.088974,0z" 		 
+ Fill="#FF0F68A1"   Stroke="#FF1F6D9F" 
+				    Stretch="Fill" 
+			  
+				     Margin="2"
+				  StrokeThickness="2"/>
+            </Grid>
+            <ContentPresenter VerticalAlignment="Center" Content="{Binding}"></ContentPresenter>
+        </StackPanel>
+    </DataTemplate>
+    <DataTemplate x:Key="TabletKasaTemplate">
+        <StackPanel Orientation="Horizontal">
+            <Grid Width="45" Height="45" >
+
+                <Path Data="M18.819984,16.568133C17.357708,16.568133 16.172928,17.734797 16.172928,19.19825 16.172928,19.592737 16.256227,19.969126 16.437224,20.298414 16.847416,21.203485 17.751002,21.828365 18.819984,21.828365 19.855167,21.828365 20.760051,21.220285 21.170145,20.331114 21.351341,19.987225 21.450239,19.609636 21.450239,19.19825 21.450239,17.734797 20.265258,16.568133 18.819984,16.568133z M1.3958462,14.497999L4.6340823,14.497999 4.6340823,14.513599 19.132478,14.513599C21.713134,14.513599 23.816,16.617632 23.816,19.19825 23.816,19.592737 23.7679,19.969126 23.668802,20.331114 23.159811,22.37015 21.318641,23.883001 19.132478,23.883001L4.6340823,23.883001 1.3958462,23.883001 0,23.883001 0,18.129284 0,14.513599 1.3958462,14.513599z M10.765571,3.0070001L35.14327,3.0070001C39.319086,3.007,42.718999,6.4093499,42.718999,10.601936L42.718999,19.000189 42.718999,27.794334C42.718999,27.958431 42.718999,28.122429 42.7031,28.272224 42.455801,32.231657 39.152284,35.388 35.14327,35.388L10.765571,35.388C6.8046446,35.388 3.5493813,32.315056 3.2212498,28.434923 3.2056299,28.222727 3.1899999,28.007931 3.1899996,27.794334L3.1899996,26.710953 19.132803,26.710953C22.895921,26.710953 26.019432,23.931204 26.561233,20.315266 26.613435,19.953371 26.644536,19.575779 26.644536,19.198086 26.644536,15.054958 23.274721,11.686618 19.132803,11.686618L3.1899996,11.686618 3.1899996,10.601936C3.1899999,6.4093499,6.5897937,3.007,10.765571,3.0070001z M10.157644,0L35.750154,0C41.372579,0,45.926,4.5521318,45.926,10.157626L45.926,17.833447 45.926,28.222773C45.926,28.565174 45.908998,28.895975 45.875101,29.225376 45.365999,34.385489 41.027479,38.396 35.750154,38.396L10.157644,38.396C4.9961118,38.396 0.75390935,34.55739 0.096314192,29.571777 0.032593012,29.143276 0,28.716274 0,28.273474L0,26.760469 2.0546987,26.760469 2.0546987,27.846472C2.0546989,28.140673 2.0716691,28.437473 2.1210992,28.731773 2.5794812,33.086185 6.2773674,36.505295 10.765647,36.505295L35.143352,36.505295C39.678472,36.505295 43.442888,33.003885 43.804891,28.550875 43.838689,28.304773 43.854291,28.057373 43.854291,27.794373L43.854291,18.656348 43.854291,10.601627C43.854291,5.7851748,39.942873,1.8724449,35.143352,1.8724451L10.765647,1.8724451C5.9662161,1.8724449,2.0546989,5.7851748,2.0546987,10.601627L2.0546987,11.68633 0,11.68633 0,10.157626C0,4.5521318,4.5365198,0,10.157644,0z" 		 
+ Fill="#FF0F68A1"   Stroke="#FF1F6D9F" 
+				    Stretch="Fill" 
+			  
+				     Margin="2"
+				  StrokeThickness="2"/>
+            </Grid>
+            <ContentPresenter VerticalAlignment="Center" Content="{Binding}"></ContentPresenter>
+        </StackPanel>
+    </DataTemplate>
+
+    <DataTemplate x:Key="KullaniciSilTemplate">
+        <StackPanel Orientation="Horizontal">
+            <Grid Width="45" Height="45" >
+                <Path Data="M46.008255,27.857281C44.928598,27.857281 44.058874,28.737046 44.058874,29.816757 44.058874,30.896469 44.928598,31.776234 46.008255,31.776234L57.614563,31.776234C58.694218,31.776234 59.57394,30.896469 59.57394,29.816757 59.57394,28.737046 58.694218,27.857281 57.614563,27.857281z M36.782696,26.849886C36.782696,26.849886 37.322737,26.97992 38.212801,27.279999 38.05279,28.120222 37.962784,28.990452 37.962784,29.870686 37.962784,37.382675 44.073231,43.494297 51.583782,43.494297 52.203827,43.494297 52.813873,43.444283 53.413918,43.35426 53.523926,43.964421 53.633934,44.584587 53.693935,45.234757L0,45.234757C0,45.234757,4.4103231,29.050469,17.651294,27.580078L21.241557,42.944153 23.411716,42.924145 26.911973,33.741711 24.151771,28.960446 29.662174,28.960446 27.021981,33.861744 31.022274,42.864128 32.462379,42.844124z M51.576485,18.779709C57.694538,18.779709 62.662956,23.748381 62.662956,29.866743 62.662956,35.995106 57.694538,40.953778 51.576485,40.953778 45.458429,40.953778 40.490009,35.995106 40.490009,29.866743 40.490009,23.748381 45.458429,18.779709 51.576485,18.779709z M27.088964,0C34.11842,-8.889765E-08 39.818026,5.7001837 39.818026,12.7305 39.818026,19.760815 34.11842,25.460999 27.088964,25.460999 20.059633,25.460999 14.360026,19.760815 14.360027,12.7305 14.360026,5.7001837 20.059633,-8.889765E-08 27.088964,0z"   
+  Fill="#FF0F68A1"   Stroke="#FF1F6D9F" 
+				    Stretch="Fill" 
+			  
+				     Margin="2"
+				  StrokeThickness="2"/>
+            </Grid>
+            <ContentPresenter VerticalAlignment="Center" Content="{Binding}"></ContentPresenter>
+        </StackPanel>
+    </DataTemplate>
+
+    <DataTemplate x:Key="KullaniciGuncelleTemplate">
+        <StackPanel Orientation="Horizontal">
+            <Grid  Width="45" Height="45">
+
+                <Path Data="M35.249334,25.739939C35.249334,25.739939 35.769325,25.859974 36.629309,26.160061 36.469313,26.960295 36.389313,27.790537 36.389313,28.630781 36.389313,35.832876 42.239202,41.694582 49.439068,41.694582 50.039055,41.694582 50.619045,41.644568 51.189034,41.564543 51.309032,42.144713 51.399029,42.744887 51.469028,43.365065L0,43.365065C0,43.365065,4.2299204,27.850554,16.919681,26.440144L20.359616,41.164427 22.439577,41.144419 25.789514,32.351862 23.149563,27.760527 28.429463,27.760527 25.899511,32.461893 29.729439,41.084402 31.109413,41.0744z M51.498966,22.390538C48.849205,22.380537 46.679401,24.52068 46.659401,27.170855 46.639404,29.831032 48.779213,31.991175 51.438972,32.011175 54.08873,32.031176 56.258533,29.891035 56.278534,27.230858 56.288532,24.580683 54.158726,22.410538 51.498966,22.390538z M51.538963,15.590086C52.54887,15.600086,53.518784,15.750097,54.4487,15.990113L54.828663,18.530281C55.768581,18.900305,56.628502,19.400339,57.388432,20.030381L59.798214,19.12032C61.148094,20.510412,62.148003,22.250529,62.667957,24.170656L60.64814,25.780762C60.72813,26.260794 60.778126,26.760828 60.768127,27.260861 60.768127,27.760893 60.718132,28.260927 60.628139,28.740959L62.62796,30.371067C62.078011,32.291193,61.058102,34.011309,59.688225,35.391402L57.298443,34.451338C56.528511,35.071379,55.658588,35.561411,54.718674,35.911436L54.298714,38.451605C53.368797,38.68162 52.398884,38.821627 51.388977,38.811629 50.389065,38.801626 49.419155,38.651617 48.489239,38.4116L48.109272,35.871432C47.169357,35.501406,46.299435,35.001375,45.539503,34.371332L43.139721,35.281393C41.789843,33.891302,40.789934,32.161185,40.269979,30.231058L42.279799,28.620951C42.209805,28.140919 42.159809,27.650887 42.159809,27.140852 42.169809,26.64082 42.219805,26.150788 42.299797,25.660755L40.309977,24.030646C40.849928,22.11052,41.869835,20.390404,43.239712,19.010313L45.629496,19.950375C46.399426,19.330334,47.279346,18.840302,48.219261,18.490279L48.629223,15.95011C49.569141,15.720095,50.539051,15.590086,51.538963,15.590086z M25.971828,0C32.712917,-1.0428607E-07 38.173889,5.4615491 38.173889,12.2035 38.173889,18.94545 32.712917,24.407 25.971828,24.407 19.23074,24.407 13.769889,18.94545 13.769889,12.2035 13.769889,5.4615491 19.23074,-1.0428607E-07 25.971828,0z" 	   
+				    
+					 Fill="#FF0F68A1"   Stroke="#FF1F6D9F" 
+				    Stretch="Fill" 
+			  
+				     Margin="2"
+				  StrokeThickness="2"/>
+            </Grid>
+            <ContentPresenter VerticalAlignment="Center" Content="{Binding}"></ContentPresenter>
+        </StackPanel>
+    </DataTemplate>
+    <DataTemplate x:Key="KullaniciSifreTemplate">
+        <StackPanel Orientation="Horizontal">
+            <Grid  >
+
+
+                <Path Data="M55.711631,45.259814C59.542456,45.259813 62.663158,48.390036 62.663158,52.230297 62.663158,56.071046 59.542456,59.191013 55.711631,59.191013 51.860783,59.191013 48.739958,56.071046 48.739958,52.230297 48.739958,48.390036 51.860783,45.259813 55.711631,45.259814z M31.332283,45.259746C35.173541,45.259747 38.294561,48.390087 38.294561,52.230504 38.294561,56.07092 35.173541,59.191259 31.332283,59.191259 27.491028,59.191259 24.370007,56.07092 24.370007,52.230504 24.370007,48.390087 27.491028,45.259747 31.332283,45.259746z M6.9628792,45.259746C10.804466,45.259747 13.925758,48.390087 13.925758,52.230504 13.925758,56.07092 10.804466,59.191259 6.9628792,59.191259 3.1212921,59.191259 0,56.07092 0,52.230504 0,48.390087 3.1212921,45.259747 6.9628792,45.259746z M55.711591,22.599903C59.542459,22.599903 62.663167,25.730021 62.663167,29.570166 62.663167,33.41031 59.542459,36.530427 55.711591,36.530427 51.860718,36.530427 48.740011,33.41031 48.74001,29.570166 48.740011,25.730021 51.860718,22.599903 55.711591,22.599903z M31.332283,22.599903C35.173541,22.599903 38.294561,25.730021 38.294561,29.570166 38.294561,33.41031 35.173541,36.530427 31.332283,36.530427 27.491028,36.530427 24.370007,33.41031 24.370007,29.570166 24.370007,25.730021 27.491028,22.599903 31.332283,22.599903z M6.9628792,22.599903C10.804466,22.599903 13.925758,25.730021 13.925758,29.570166 13.925758,33.41031 10.804466,36.530427 6.9628792,36.530427 3.1212921,36.530427 0,33.41031 0,29.570166 0,25.730021 3.1212921,22.599903 6.9628792,22.599903z M55.711591,0C59.542459,0 62.663167,3.1290169 62.663167,6.9578133 62.663167,10.806606 59.542459,13.925625 55.711591,13.925625 51.860718,13.925625 48.740011,10.806606 48.74001,6.9578133 48.740011,3.1290169 51.860718,0 55.711591,0z M31.332283,0C35.173541,0 38.294561,3.1290169 38.294561,6.9578133 38.294561,10.806606 35.173541,13.925625 31.332283,13.925625 27.491028,13.925625 24.370007,10.806606 24.370007,6.9578133 24.370007,3.1290169 27.491028,0 31.332283,0z M6.9628792,0C10.804466,0 13.925758,3.1290169 13.925758,6.9578133 13.925758,10.806606 10.804466,13.925625 6.9628792,13.925625 3.1212921,13.925625 0,10.806606 0,6.9578133 0,3.1290169 3.1212921,0 6.9628792,0z"   
+					 Fill="#FF0F68A1"   Stroke="#FF1F6D9F" 
+				    Stretch="Fill" 
+			  
+				     Margin="2"
+				  StrokeThickness="2"/>
+            </Grid>
+            <ContentPresenter VerticalAlignment="Center" Content="{Binding}"></ContentPresenter>
+        </StackPanel>
+    </DataTemplate>
+    <DataTemplate x:Key="KullaniciIsSorgulaTemplate">
+        <StackPanel Orientation="Horizontal">
+            <Grid Width="45" Height="45"  >
+
+
+                <Path Data="M36.163429,31.410047C36.163429,31.410048 37.053528,31.62992 38.413643,32.149707 37.843521,35.198392 38.493607,38.276849 40.233761,40.815753 41.973915,43.364661 44.614178,45.083863 47.644489,45.653677 48.344505,45.773496 49.064667,45.843533 49.774696,45.843533 50.534775,45.843533 51.284847,45.773496 52.024906,45.623661L52.034916,45.643671C52.394936,46.83308,52.664982,48.102531,52.794998,49.492048L0,49.492048C0,49.492048,4.3403736,33.578999,17.361616,32.139701L20.881966,47.233048 23.472176,47.203032 26.422525,39.486513 23.672268,34.708621 29.172785,34.708621 26.532522,39.596328 29.892822,47.153006 31.913033,47.132996z M49.707706,28.697959C47.119999,28.744989 44.830875,30.598832 44.340897,33.241243 43.77092,36.26114 45.760838,39.171041 48.780712,39.741022 51.810589,40.301003 54.710472,38.31107 55.280449,35.291173 55.840424,32.271276 53.850506,29.361374 50.830631,28.791394 50.453148,28.721396 50.077381,28.691241 49.707706,28.697959z M49.601913,24.941388C50.223625,24.931056 50.855629,24.982773 51.490604,25.101519 56.570396,26.051486 59.910259,30.941321 58.960297,36.021148 58.63031,37.821087 57.790344,39.391034 56.640392,40.650991L62.260162,48.600721C62.970131,49.600687 62.730141,50.990641 61.720184,51.700617 60.720226,52.410593 59.33028,52.170601 58.620312,51.170635L52.920544,43.100908C51.410606,43.650889 49.740673,43.810884 48.040745,43.490895 42.970951,42.540927 39.62109,37.651093 40.571049,32.571265 41.402267,28.126416 45.249924,25.01371 49.601913,24.941388z M26.307999,0C34.34689,0 40.875988,6.5189037 40.875988,14.567551 40.875988,22.616197 34.34689,29.145099 26.307999,29.145099 18.25911,29.145099 11.730011,22.616197 11.730011,14.567551 11.730011,6.5189037 18.25911,0 26.307999,0z" 		    
+					 Fill="#FF0F68A1"   Stroke="#FF1F6D9F" 
+				    Stretch="Fill" 
+			  
+				     Margin="2"
+				  StrokeThickness="2"/>
+            </Grid>
+            <ContentPresenter VerticalAlignment="Center" Content="{Binding}"></ContentPresenter>
+        </StackPanel>
+    </DataTemplate>
+
+
+    <DataTemplate x:Key="RaporOnayTemplate">
+        <StackPanel Orientation="Horizontal">
+            <Grid  Width="45" Height="45"  >
+
+
+                <Path Data="M42.368789,49.868975C41.048824,49.868975 39.988849,50.928938 39.988849,52.258894 39.988849,53.578848 41.048824,54.648809 42.368789,54.648809 43.698753,54.648809 44.758728,53.578848 44.758728,52.258894 44.758728,50.928938 43.698753,49.868975 42.368789,49.868975z M2.850532,35.180069L20.733137,35.180069C18.982881,38.952475,17.032598,44.275871,17.102607,49.229029L2.850532,49.229029C1.2703024,49.229029,0.00011739042,47.95822,0.00011765846,46.377211L0.00011765846,38.031887C0.00011739042,36.45088,1.2703024,35.180069,2.850532,35.180069z M42.478946,27.209148C42.440147,27.2088 42.418789,27.209767 42.418789,27.209767 39.818855,27.619753 39.748855,29.929672 39.748855,29.929672L39.748855,32.429585 40.378841,41.619265C40.78883,43.919184 41.078823,44.759155 41.078823,44.759155 42.238792,45.969112 43.278766,45.049145 43.278766,45.049145 44.148742,44.179174 44.208744,42.149246 44.208744,42.149246 45.248714,32.429585 44.958721,29.649682 44.958721,29.649682 44.859035,27.338825 42.854011,27.212522 42.478946,27.209148z M42.228794,19.98002C51.818546,19.98002 67.168155,45.539127 61.408302,53.198858 55.63845,60.868593 27.889158,61.478571 23.049282,53.198858 18.199405,44.929148 32.639038,19.98002 42.228794,19.98002z M2.8503883,17.430009L34.834999,17.430009C28.904211,21.219224 24.383535,28.417613 22.813362,31.147001 22.753296,31.247077 22.69335,31.366924 22.633281,31.477008L2.8503883,31.477008C1.2702032,31.477008,-2.114175E-07,30.197256,0,28.617521L0,20.279488C-2.114175E-07,18.699752,1.2702032,17.430008,2.8503883,17.430009z M8.3893792,3.7821436C6.6195352,3.7821436 5.1596634,5.2329655 5.1596644,7.0239811 5.1596634,8.8149958 6.6195352,10.265818 8.3893792,10.265818 10.189221,10.265818 11.629095,8.8149958 11.629095,7.0239811 11.629095,5.2329655 10.189221,3.7821436 8.3893792,3.7821436z M2.8498671,0L42.776355,0C44.346218,0,45.636104,1.2707195,45.636104,2.8516159L45.636104,11.206351C45.636104,12.777241,44.346218,14.047961,42.776355,14.047961L2.8498671,14.047961C1.2700057,14.047961,0.000117387,12.777241,0.00011765846,11.206351L0.00011765846,2.8516159C0.000117387,1.2707195,1.2700057,0,2.8498671,0z" 
+		    
+					 Fill="#FF0F68A1"   Stroke="#FF1F6D9F" 
+				    Stretch="Fill" 
+			  
+				     Margin="2"
+				  StrokeThickness="2"/>
+            </Grid>
+            <ContentPresenter VerticalAlignment="Center" Content="{Binding}"></ContentPresenter>
+        </StackPanel>
+    </DataTemplate>
+
+    <DataTemplate x:Key="RaporSorgulaTemplate">
+        <StackPanel Orientation="Horizontal">
+            <Grid Width="45" Height="45" >
+
+                <Path Data="M2.9405556,36.27997L19.353662,36.27997C19.613712,40.570866 21.184009,44.681723 23.964536,48.082432 24.764687,49.062635 25.654855,49.952822 26.595033,50.762989L2.9405556,50.762989C1.3202496,50.762989,0,49.442715,0,47.822376L0,39.220583C0,37.590244,1.3202496,36.27997,2.9405556,36.27997z M40.07915,26.039505C35.567814,26.037608 31.697568,29.460962 31.228801,34.03541 30.738794,38.924829 34.298976,43.284515 39.189158,43.784468 44.07922,44.27441 48.429468,40.724705 48.929485,35.825276 49.429502,30.945621 45.879332,26.576171 40.989147,26.086228 40.683511,26.054981 40.379906,26.039631 40.07915,26.039505z M40.001466,20.029883C40.506362,20.029675 41.016065,20.054951 41.529205,20.106826 49.749458,20.93658 55.729645,28.275957 54.89966,36.495132 54.609612,39.405008 53.489578,42.024628 51.809589,44.174322L61.82983,56.083324C63.099895,57.583179 62.899937,59.832962 61.399883,61.09285 59.889824,62.362747 57.649757,62.162815 56.379692,60.66296L46.229319,48.584051C43.899282,49.654016 41.249166,50.133951 38.509082,49.863956 30.298838,49.023951 24.308641,41.694582 25.148636,33.475406 25.936131,25.769929 32.428023,20.033003 40.001466,20.029883z M2.9403095,17.98002L28.162965,17.98002C23.482472,21.2416,20.202127,26.404101,19.462048,32.467039L2.9403095,32.467039C1.3201389,32.467039,0,31.146399,0,29.525614L0,20.921445C0,19.290654,1.3201389,17.980019,2.9403095,17.98002z M2.9399338,0L44.119007,0C45.73897,0,47.058941,1.3100014,47.058941,2.9400024L47.058941,11.550008C47.058941,13.170009,45.73897,14.490009,44.119007,14.490009L2.9399338,14.490009C1.3199692,14.490009,0,13.170009,0,11.550008L0,2.9400024C0,1.3100014,1.3199692,0,2.9399338,0z" 	    
+					 Fill="#FF0F68A1"   Stroke="#FF1F6D9F" 
+				    Stretch="Fill" 
+			  
+				     Margin="2"
+				  StrokeThickness="2"/>
+            </Grid>
+            <ContentPresenter VerticalAlignment="Center" Content="{Binding}"></ContentPresenter>
+        </StackPanel>
+    </DataTemplate>
+
+    <DataTemplate x:Key="ArsivSorgulaTemplate">
+        <StackPanel Orientation="Horizontal">
+            <Grid  Width="45" Height="45" >
+
+                <Path Data="M2.1299944,9.9798575L55.945994,9.9798575 35.197562,34.081179 35.197562,62.672859 23.428433,55.942383 23.428433,33.52121z M1.3001332,0L56.635813,0C57.355887,0,57.935946,0.5891428,57.935946,1.3080959L57.935946,2.8258877C57.935946,3.5448422,57.355887,4.133985,56.635813,4.133985L1.3001332,4.133985C0.58005941,4.133985,-2.3841858E-07,3.5448422,0,2.8258877L0,1.3080959C-2.3841858E-07,0.5891428,0.58005941,0,1.3001332,0z"					
+					 
+					 Fill="#FF0F68A1"   Stroke="#FF1F6D9F" 
+				    Stretch="Fill" 
+			  
+				     Margin="2"
+				  StrokeThickness="2"/>
+            </Grid>
+            <ContentPresenter VerticalAlignment="Center" Content="{Binding}"></ContentPresenter>
+        </StackPanel>
+    </DataTemplate>
+
+    <DataTemplate x:Key="AletGuncelleTemplate">
+        <StackPanel Orientation="Horizontal">
+            <Grid   >
+
+                <Path Data="F1M-1803.23,-5285.4L-1790.99,-5315.36 -1799.38,-5310.37 -1807.26,-5295.34 -1807.5,-5288.15 -1808.4,-5285.98 -1809.3,-5286.08C-1808.79,-5288.15 -1808.59,-5290.94 -1810.15,-5293.56 -1811.64,-5296.07 -1814.38,-5297.79 -1818.29,-5298.68 -1825.1,-5300.24 -1830.04,-5297.33 -1832.2,-5294.37 -1834.07,-5291.8 -1834.1,-5288.31 -1832.7,-5285.96 -1832.03,-5284.83 -1827.29,-5282.69 -1826.97,-5282.63L-1822.91,-5282.44 -1810.34,-5281.2 -1815.39,-5269.17 -1817.05,-5265.52C-1817.12,-5265.31 -1817.51,-5260.43 -1816.82,-5259.27 -1815.43,-5256.92 -1812.51,-5255.56 -1809.36,-5255.98 -1805.73,-5256.46 -1800.72,-5259.25 -1798.83,-5265.99 -1797.75,-5269.85 -1797.96,-5273.07 -1799.46,-5275.58 -1800.98,-5278.14 -1803.46,-5279.31 -1805.49,-5279.86L-1805.15,-5280.72 -1802.95,-5280.49 -1796.44,-5277.15 -1779.41,-5276.79 -1771.02,-5281.79 -1803.23,-5285.4z M-1814.15,-5286.79L-1818.23,-5287.09 -1819.73,-5287.25 -1819.83,-5287.2 -1826.46,-5287.69C-1828.92,-5288.15 -1829.56,-5289.7 -1828.25,-5291.49 -1826.97,-5293.26 -1823.87,-5294.95 -1819.37,-5293.92 -1816.82,-5293.34 -1815.13,-5292.38 -1814.35,-5291.06 -1813.52,-5289.67 -1813.78,-5287.96 -1814.15,-5286.79 M-1803.65,-5273.09C-1802.87,-5271.77 -1802.83,-5269.83 -1803.54,-5267.3 -1804.78,-5262.86 -1807.75,-5260.94 -1809.91,-5260.66 -1811.08,-5260.5 -1812.05,-5260.81 -1812.44,-5261.45 -1812.77,-5262.01 -1812.76,-5262.94 -1812.5,-5263.79L-1809.75,-5269.89 -1809.5,-5270.06 -1807.78,-5274.26 -1807.31,-5275.3C-1806.11,-5275.06,-1804.48,-5274.48,-1803.65,-5273.09" 				 
+					 Fill="#FF0F68A1"   Stroke="#FF1F6D9F" 
+				    Stretch="Fill" 
+			  
+				     Margin="2"
+				  StrokeThickness="2"/>
+            </Grid>
+            <ContentPresenter VerticalAlignment="Center" Content="{Binding}"></ContentPresenter>
+        </StackPanel>
+    </DataTemplate>
+    <DataTemplate x:Key="BolumGuncelleTemplate">
+        <StackPanel Orientation="Horizontal">
+            <Grid   >
+
+
+                <Path Data="F1M1684.04,4776.03L1709.08,4776.03C1714.04,4776.03 1717.74,4776.24 1720.18,4776.65 1722.61,4777.06 1724.8,4777.93 1726.72,4779.24 1728.64,4780.55 1730.24,4782.29 1731.53,4784.47 1732.81,4786.65 1733.45,4789.1 1733.45,4791.8 1733.45,4794.74 1732.66,4797.43 1731.08,4799.88 1729.5,4802.34 1727.35,4804.17 1724.65,4805.4 1728.46,4806.51 1731.4,4808.41 1733.45,4811.08 1735.5,4813.77 1736.53,4816.91 1736.53,4820.53 1736.53,4823.38 1735.87,4826.15 1734.54,4828.85 1733.21,4831.54 1731.41,4833.69 1729.11,4835.3 1726.82,4836.91 1723.99,4837.91 1720.63,4838.27 1718.52,4838.5 1713.43,4838.64 1705.37,4838.7L1684.04,4838.7 1684.04,4776.03z M1696.69,4786.46L1696.69,4800.95 1704.98,4800.95C1709.91,4800.95 1712.97,4800.88 1714.17,4800.74 1716.33,4800.48 1718.04,4799.73 1719.28,4798.49 1720.52,4797.26 1721.14,4795.63 1721.14,4793.6 1721.14,4791.66 1720.6,4790.09 1719.54,4788.88 1718.47,4787.67 1716.88,4786.93 1714.77,4786.67 1713.52,4786.53 1709.91,4786.46 1703.95,4786.46L1696.69,4786.46z M1696.69,4811.38L1696.69,4828.14 1708.4,4828.14C1712.96,4828.14 1715.85,4828.01 1717.08,4827.76 1718.96,4827.41 1720.49,4826.58 1721.67,4825.26 1722.86,4823.93 1723.45,4822.16 1723.45,4819.93 1723.45,4818.05 1722.99,4816.46 1722.08,4815.14 1721.17,4813.83 1719.85,4812.88 1718.13,4812.28 1716.4,4811.68 1712.66,4811.38 1706.91,4811.38L1696.69,4811.38z" 	
+					 Fill="#FF0F68A1"   Stroke="#FF1F6D9F" 
+				    Stretch="Fill" 
+			  
+				     Margin="2"
+				  StrokeThickness="2"/>
+            </Grid>
+            <ContentPresenter VerticalAlignment="Center" Content="{Binding}"></ContentPresenter>
+        </StackPanel>
+    </DataTemplate>
+    <DataTemplate x:Key="SetGuncelleTemplate">
+        <StackPanel Orientation="Horizontal">
+            <Grid   >
+
+
+                <Path Data="M18.819984,16.568133C17.357708,16.568133 16.172928,17.734797 16.172928,19.19825 16.172928,19.592737 16.256227,19.969126 16.437224,20.298414 16.847416,21.203485 17.751002,21.828365 18.819984,21.828365 19.855167,21.828365 20.760051,21.220285 21.170145,20.331114 21.351341,19.987225 21.450239,19.609636 21.450239,19.19825 21.450239,17.734797 20.265258,16.568133 18.819984,16.568133z M1.3958462,14.497999L4.6340823,14.497999 4.6340823,14.513599 19.132478,14.513599C21.713134,14.513599 23.816,16.617632 23.816,19.19825 23.816,19.592737 23.7679,19.969126 23.668802,20.331114 23.159811,22.37015 21.318641,23.883001 19.132478,23.883001L4.6340823,23.883001 1.3958462,23.883001 0,23.883001 0,18.129284 0,14.513599 1.3958462,14.513599z M10.765571,3.0070001L35.14327,3.0070001C39.319086,3.007,42.718999,6.4093499,42.718999,10.601936L42.718999,19.000189 42.718999,27.794334C42.718999,27.958431 42.718999,28.122429 42.7031,28.272224 42.455801,32.231657 39.152284,35.388 35.14327,35.388L10.765571,35.388C6.8046446,35.388 3.5493813,32.315056 3.2212498,28.434923 3.2056299,28.222727 3.1899999,28.007931 3.1899996,27.794334L3.1899996,26.710953 19.132803,26.710953C22.895921,26.710953 26.019432,23.931204 26.561233,20.315266 26.613435,19.953371 26.644536,19.575779 26.644536,19.198086 26.644536,15.054958 23.274721,11.686618 19.132803,11.686618L3.1899996,11.686618 3.1899996,10.601936C3.1899999,6.4093499,6.5897937,3.007,10.765571,3.0070001z M10.157644,0L35.750154,0C41.372579,0,45.926,4.5521318,45.926,10.157626L45.926,17.833447 45.926,28.222773C45.926,28.565174 45.908998,28.895975 45.875101,29.225376 45.365999,34.385489 41.027479,38.396 35.750154,38.396L10.157644,38.396C4.9961118,38.396 0.75390935,34.55739 0.096314192,29.571777 0.032593012,29.143276 0,28.716274 0,28.273474L0,26.760469 2.0546987,26.760469 2.0546987,27.846472C2.0546989,28.140673 2.0716691,28.437473 2.1210992,28.731773 2.5794812,33.086185 6.2773674,36.505295 10.765647,36.505295L35.143352,36.505295C39.678472,36.505295 43.442888,33.003885 43.804891,28.550875 43.838689,28.304773 43.854291,28.057373 43.854291,27.794373L43.854291,18.656348 43.854291,10.601627C43.854291,5.7851748,39.942873,1.8724449,35.143352,1.8724451L10.765647,1.8724451C5.9662161,1.8724449,2.0546989,5.7851748,2.0546987,10.601627L2.0546987,11.68633 0,11.68633 0,10.157626C0,4.5521318,4.5365198,0,10.157644,0z" 		
+					 Fill="#FF0F68A1"   Stroke="#FF1F6D9F" 
+				    Stretch="Fill" 
+			  
+				     Margin="2"
+				  StrokeThickness="2"/>
+            </Grid>
+            <ContentPresenter VerticalAlignment="Center" Content="{Binding}"></ContentPresenter>
+        </StackPanel>
+    </DataTemplate>
+
+    <DataTemplate x:Key="SetNeredeTemplate">
+        <StackPanel Orientation="Horizontal">
+            <Grid  Width="45" Height="45" >
+
+                <Path Data="M34.4,57.260012L61.237001,57.260012 61.237001,61.041014 34.4,61.041014z M19.66,57.260012L28.353001,57.260012 28.353001,61.041014 19.66,61.041014z M0,49.700014L13.607,49.700014 13.607,61.040015 0,61.040015z M58.366865,0.001318883C59.747869,0.030781931 61.122957,0.55389105 62.205778,1.5758266 64.515921,3.7557126 64.6159,7.4055379 62.435766,9.7255576L30.604643,41.92483C28.494579,44.16477 25.014471,44.314917 22.694319,42.344984 22.4144,42.174822 22.154381,41.984885 21.904372,41.764921L8.0038372,29.62504C5.5937148,27.54525 5.3336955,23.90519 7.4138497,21.495329 9.4938824,19.085467 13.134031,18.825463 15.534143,20.915263L26.084457,30.135039 54.065466,1.7957924C55.228979,0.56860022,56.801722,-0.03207104,58.366865,0.001318883z" 
+					 Fill="#FF0F68A1"   Stroke="#FF1F6D9F" 
+				    Stretch="Fill" 
+			  
+				     Margin="2"
+				  StrokeThickness="2"/>
+            </Grid>
+            <ContentPresenter VerticalAlignment="Center" Content="{Binding}"></ContentPresenter>
+        </StackPanel>
+    </DataTemplate>
+
+    <DataTemplate x:Key="GunlukUrunMiktariTemplate">
+        <StackPanel Orientation="Horizontal">
+            <Grid   >
+
+                <Path Data="M52.543901,0L52.543901,19.131868 48.043516,14.631428 21.68127,52.615137 16.810854,44.174313 13.430567,47.554644 6.1199959,35.733573 6.1199959,55.534899 48.829965,55.534899 48.829965,26.298931 44.679941,26.298931 48.260019,19.770044 55.359999,19.770044 55.359999,62.664045 0,62.664045 0,19.770044 34.599985,19.770044 31.150032,26.298931 6.1199959,26.298931 6.1199959,35.727809 6.1199959,35.733547 13.150542,43.614258 16.810854,39.323839 21.68127,47.274616 43.823156,12.381208 37.07258,11.251099z" 			
+					
+					 Fill="#FF0F68A1"   Stroke="#FF1F6D9F" 
+				    Stretch="Fill" 
+			  
+				     Margin="2"
+				  StrokeThickness="2"/>
+            </Grid>
+            <ContentPresenter VerticalAlignment="Center" Content="{Binding}"></ContentPresenter>
+        </StackPanel>
+    </DataTemplate>
+    <DataTemplate x:Key="SetDevirSorgulaTemplate">
+        <StackPanel Orientation="Horizontal">
+            <Grid   >
+                <Path Data="M49.84131,22.521472C46.786588,22.521472 44.30417,25.004427 44.30417,28.059071 44.30417,31.113719 46.786588,33.595573 49.84131,33.595573 52.896035,33.595573 55.377847,31.113719 55.377847,28.059071 55.377847,25.004427 52.896035,22.521472 49.84131,22.521472z M49.84131,15.235002C56.924756,15.235001 62.666997,20.9759 62.666997,28.059071 62.666997,33.490076 59.285375,38.122791 54.515741,39.992458 30.122478,55.941372 3.2329975,38.856981 3.2329976,38.856981L6.3703187,32.582493C25.322244,42.531515 38.454534,39.239973 41.851655,38.082394 38.906335,35.734634 37.014425,32.118999 37.014425,28.059071 37.014425,20.9759 42.757264,15.235001 49.84131,15.235002z M12.828186,13.20281C9.7735655,13.20281 7.2910488,15.684495 7.2910488,18.739176 7.2910488,21.793858 9.7735655,24.275643 12.828186,24.275643 15.882906,24.275643 18.364123,21.793858 18.364123,18.739176 18.364123,15.684495 15.882906,13.20281 12.828186,13.20281z M30.853595,0.0016927719C46.724519,-0.13405323,59.433999,7.941041,59.433999,7.9410415L56.297277,14.214503C37.345952,4.2666636 24.213762,7.5582433 20.817939,8.7158365 23.760659,11.064822 25.653873,14.679401 25.653873,18.739176 25.653873,25.822534 19.912233,31.566 12.828186,31.566 5.7442384,31.566 0,25.822534 0,18.739176 0,13.308209 3.3816226,8.6781368 8.1485546,6.8056479 15.772293,1.8215532 23.639539,0.0633955 30.853595,0.0016927719z" 			
+					 Fill="#FF0F68A1"   Stroke="#FF1F6D9F" 
+				    Stretch="Fill" 
+			  
+				     Margin="2"
+				  StrokeThickness="2"/>
+            </Grid>
+            <ContentPresenter VerticalAlignment="Center" Content="{Binding}"></ContentPresenter>
+        </StackPanel>
+    </DataTemplate>
+    <DataTemplate x:Key="SeciliUrunTarihTemplate">
+        <StackPanel Orientation="Horizontal">
+            <Grid   >
+
+
+
+                <Path Data="M0.31999578,10.863998L35.747339,10.863998C35.737329,11.144022 35.707303,11.423007 35.707303,11.706021 35.707303,16.25091 37.857171,20.297823 41.176996,22.914773L31.797675,33.809566 31.797675,61.02 20.598421,54.620109 20.598421,33.276557z M1.2401302,3.9059939L38.253999,3.9059939C37.47392,5.1049876,36.863855,6.4279809,36.463815,7.8399732L1.2401302,7.8399732C0.56005897,7.8399732,3.8743019E-07,7.2839761,0,6.5989799L0,5.1499877C3.8743019E-07,4.4609914,0.56005897,3.9059944,1.2401302,3.9059939z M51.60898,2.2789993L50.489084,6.8569989 46.619443,4.158999 48.409276,8.5179985 43.689714,8.6079986 47.699342,11.086998 43.939691,13.927998 48.639257,13.580997 47.269384,18.086997 50.859052,15.043997 52.398908,19.495996 53.518804,14.922998 57.388444,17.619998 55.598611,13.258998 60.318174,13.170998 56.308545,10.690998 60.068197,7.8499987 55.368631,8.1989992 56.738504,3.6899996 53.148839,6.7339993z M51.91895,0C57.848401,0 62.667955,4.8659992 62.667955,10.865999 62.667955,16.862997 57.848401,21.728996 51.91895,21.728996 45.989499,21.728996 41.179948,16.862997 41.179948,10.865999 41.179948,4.8659992 45.989499,0 51.91895,0z" 
+                      Fill="#FF0F68A1"   Stroke="#FF1F6D9F" 
+				    Stretch="Fill" 
+			  
+				     Margin="2"
+				  StrokeThickness="2"/>
+            </Grid>
+            <ContentPresenter VerticalAlignment="Center" Content="{Binding}"></ContentPresenter>
+        </StackPanel>
+    </DataTemplate>
+    <DataTemplate x:Key="KbTestSonucTemplate">
+        <StackPanel Orientation="Horizontal">
+            <Grid   >
+
+
+                <Path Data="M2.3971662,58.812351C2.4564169,58.815586,2.5176974,58.84129,2.5668324,58.888138L4.0675144,60.354363C4.1658447,60.448162,4.1781747,60.593968,4.094184,60.679966L1.9105777,62.918305C1.8272672,63.004204,1.6807761,62.996407,1.5824549,62.901303L0.082134247,61.436379C-0.016499281,61.341377,-0.027546644,61.194275,0.055766821,61.109673L2.2396801,58.871338C2.2806956,58.828335,2.337916,58.809113,2.3971662,58.812351z M39.319198,15.787949L23.106523,32.040535 19.524385,41.160324 21.449506,43.022324 29.847095,38.971527 46.390567,22.686341z M50.18161,4.8999081L42.100124,13.001451 49.196601,19.922144 57.419986,11.827052z M50.16341,3.3959998L58.962001,11.817852 30.472402,39.862126 20.307594,44.765824 5.1375523,60.315308C5.0177314,60.438908,4.8055093,60.427208,4.6639075,60.290509L2.741647,58.416806C2.6013858,58.277508,2.5834456,58.065308,2.7045371,57.942806L17.895467,42.368622 22.188814,31.440333z M53.258262,9.1075897E-05C53.590049,-0.0038304329,53.923225,0.11888576,54.179222,0.36889529L61.970607,7.9695385C62.483604,8.4682181,62.493705,9.289901,61.992706,9.8028615L61.179206,10.636304C60.67921,11.149325,59.858909,11.159725,59.346912,10.659705L51.555229,3.0591927C51.042831,2.5591728,51.032432,1.7388202,51.531829,1.22574L52.345626,0.391114C52.596076,0.13457227,52.926475,0.0040128231,53.258262,9.1075897E-05z" 
+
+                Fill="#FF0F68A1"   Stroke="#FF1F6D9F" 
+				    Stretch="Fill" 
+			  
+				     Margin="2"
+				  StrokeThickness="2"/>
+            </Grid>
+            <ContentPresenter VerticalAlignment="Center" Content="{Binding}"></ContentPresenter>
+        </StackPanel>
+    </DataTemplate>
+    <DataTemplate x:Key="OtoklavKontrolemplate">
+        <StackPanel Orientation="Horizontal">
+            <Grid   >
+
+
+
+                <Path Data="M2.4915056,2.2260001C3.8691173,2.2260004,4.9830005,3.3431869,4.9830005,4.7181533L4.9830005,52.518807C4.9830005,53.897702 3.8691173,55.010998 2.4915056,55.010998 1.1132736,55.010998 0,53.897702 0,52.518807L0,4.7181533C0,3.3431869,1.1132736,2.2260004,2.4915056,2.2260001z M21.916903,2.1072685E-05C34.563281,-0.013741149 44.850898,6.7199533 60.671,0.96500372 60.671,11.992384 60.671,23.027636 60.671,34.061489 39.577531,41.738621 28.30889,27.205954 8.1920012,36.075898L8.1920012,2.9753833C13.223898,0.75891303,17.701443,0.0046082785,21.916903,2.1072685E-05z" 
+                Fill="#FF0F68A1"   Stroke="#FF1F6D9F" 
+				    Stretch="Fill" 
+			  
+				     Margin="2"
+				  StrokeThickness="2"/>
+            </Grid>
+            <ContentPresenter VerticalAlignment="Center" Content="{Binding}"></ContentPresenter>
+        </StackPanel>
+    </DataTemplate>
+
+    <DataTemplate x:Key="AdminKuralOlusturTemplate">
+        <StackPanel Orientation="Horizontal">
+            <Grid   >
+                <Path Data="M29.90025,54.630235L64.724792,54.630235C65.794933,54.630235,66.665047,55.349832,66.665047,56.239332L66.665047,59.857297C66.665047,60.746797,65.794933,61.46639,64.724792,61.46639L29.90025,61.46639C28.830111,61.46639,27.959997,60.746797,27.959998,59.857297L27.959998,56.239332C27.959997,55.349832,28.830111,54.630235,29.90025,54.630235z M32.410007,47.900312L61.752007,47.900312 61.752007,52.548315 32.410007,52.548315z M24.230171,25.590274L27.959997,29.329828 7.6409445,52.007127C5.7410336,53.9069 2.8311691,54.076879 1.151247,52.397081 -0.52867508,50.717279 -0.3486824,47.817625 1.5512276,45.917852z M50.42058,22.789961C51.27545,22.789961 52.130322,23.114902 52.780222,23.764783 54.080025,25.064544 54.080025,27.184156 52.780222,28.483919L43.321655,37.932188C42.021852,39.241949 39.91217,39.241949 38.612368,37.932188 37.302567,36.632427 37.302567,34.522813 38.612368,33.223051L48.060938,23.764783C48.710838,23.114902,49.56571,22.789961,50.42058,22.789961z M33.353241,6.9408636C33.764563,6.9558785,34.182142,7.1283655,34.507208,7.4584469L45.898958,18.848202C46.549088,19.4986,46.589134,20.518629,45.989059,21.118244L35.977418,31.128591C35.377344,31.728694,34.357159,31.688655,33.707028,31.038747L22.315157,19.638249C21.665026,18.988341,21.625102,17.978566,22.225176,17.368208L32.236817,7.3681132C32.536854,7.0683064,32.941919,6.925849,33.353241,6.9408636z M27.631915,0C28.485877,4.7683716E-07 29.338589,0.32494116 29.98875,0.97482109 31.289073,2.2745838 31.289073,4.3941956 29.98875,5.6939578L20.5264,15.142227C19.226077,16.451987 17.115552,16.451987 15.815229,15.142227 14.514906,13.842465 14.514906,11.732852 15.815229,10.433089L25.267577,0.97482109C25.92274,0.32494116,26.777953,4.7683716E-07,27.631915,0z" 
+                Fill="#FF0F68A1"   Stroke="#FF1F6D9F" 
+				    Stretch="Fill" 
+			  
+				     Margin="2"
+				  StrokeThickness="2"/>
+            </Grid>
+            <ContentPresenter VerticalAlignment="Center" Content="{Binding}"></ContentPresenter>
+        </StackPanel>
+    </DataTemplate>
+
+    <DataTemplate x:Key="AletDurumGuncelleTemplate">
+        <StackPanel Orientation="Horizontal">
+            <Grid   >
+
+                <Path Data="M9.7230167,29.40369C9.8678837,29.417752 10.002905,29.473996 10.115423,29.563987 10.265448,29.693973 10.365463,29.873955 10.375465,30.063934 10.575497,32.533676 11.265608,34.993418 12.505806,37.303177 14.276089,40.602831 16.916512,43.132566 19.987003,44.782394L21.207199,40.052889C21.27721,39.772919 21.517248,39.562941 21.797293,39.512945 22.087339,39.47295 22.367384,39.602936 22.517409,39.852909L27.078139,47.182142 31.118786,53.691462C31.238805,53.91144 31.258809,54.121416 31.188797,54.321394 31.118786,54.531374 30.948759,54.691359 30.738725,54.761351L24.177674,56.961119 14.866184,60.080793C14.58614,60.170782 14.286091,60.090792 14.09606,59.870813 13.896029,59.640841 13.866024,59.33087 13.996044,59.0609L16.276409,54.591368C10.935555,52.051634 6.3248177,47.842073 3.3143349,42.23266 1.4240303,38.71303 0.33385468,34.973421 0.0038032532,31.223812 -0.036201477,30.833853 0.24384308,30.483891 0.6339035,30.433895L9.5753365,29.404003C9.6253433,29.399004,9.6747265,29.399004,9.7230167,29.40369z M49.431429,13.790726C49.594047,13.797754,49.749643,13.859645,49.877161,13.972074L55.066456,18.552248 62.425526,25.052382C62.645468,25.242327 62.725536,25.552392 62.625574,25.822417 62.525488,26.102208 62.27552,26.292397 61.97563,26.312418L56.966244,26.572433C57.436157,32.472458 56.106365,38.562672 52.756807,43.982706 50.656971,47.382677 47.947348,50.192797 44.877784,52.362764 44.557755,52.582739 44.117869,52.512911 43.877908,52.202848L38.508582,44.982727C38.398488,44.822811 38.348568,44.622612 38.378593,44.432667 38.418505,44.232712 38.528477,44.062786 38.678482,43.952677 40.718268,42.552744 42.508084,40.72263 43.887917,38.492601 45.857642,35.302595 46.72753,31.752472 46.617558,28.272419L41.908061,29.582261C41.628189,29.662341 41.338186,29.562485 41.158155,29.342266 40.968236,29.112281 40.938211,28.80246 41.078208,28.542444L45.147647,20.932179 48.757305,14.17203C48.897181,13.962064 49.067204,13.841944 49.267252,13.802149 49.322238,13.792138 49.377224,13.788385 49.431429,13.790726z M29.337934,0C33.337984,0 37.148031,0.81992054 40.608073,2.2997789 40.968077,2.4497643 41.138079,2.859725 40.998077,3.2296896L37.678037,11.588886C37.608036,11.768868 37.458034,11.918854 37.278032,11.988847 37.09803,12.06884 36.898028,12.058841 36.718025,11.978848 34.457998,10.988943 31.957967,10.428997 29.337934,10.428998 25.587889,10.428997 22.107847,11.558889 19.207811,13.478705L22.797854,16.798385C23.017858,16.998366 23.087858,17.298337 22.987857,17.568311 22.897856,17.848284 22.647853,18.038266 22.357849,18.048265L13.737743,18.598211 6.0876503,19.078166C5.8376465,19.078166 5.647644,18.998173 5.5076447,18.838188 5.3576431,18.678204 5.2976418,18.458225 5.3276405,18.238246L6.4976559,11.418901 8.1476746,1.7498312C8.1976757,1.4498606 8.4176788,1.219883 8.7076817,1.1598883 8.9976864,1.0998936 9.2876892,1.2098837 9.4576912,1.4498606L12.317726,5.579463C17.077785,2.0698004,22.967857,0,29.337934,0z" 
+                      
+                      Fill="#FF0F68A1"   Stroke="#FF1F6D9F" 
+				    Stretch="Fill" 
+			  
+				     Margin="2"
+				  StrokeThickness="2"/>
+            </Grid>
+            <ContentPresenter VerticalAlignment="Center" Content="{Binding}"></ContentPresenter>
+        </StackPanel>
+    </DataTemplate>
+    <DataTemplate x:Key="KirliAlanAnaSayfaTemplate">
+        <StackPanel Orientation="Horizontal">
+            <Grid Width="45" Height="45"  >
+
+
+                <Path Data="M31.427649,15.523999L53.103002,34.871683 53.103002,59.723391C53.088601,60.666094 52.466603,61.263796 51.961408,61.544996 51.426911,61.845797 50.850717,61.972101 50.232221,61.976L38.688001,61.976C38.2909,61.976 37.902205,61.821096 37.619008,61.544996 37.340407,61.272898 37.179908,60.890093 37.179908,60.502092L37.179908,48.548944 25.677389,48.548944 25.677389,60.502092C25.677389,60.890093 25.514991,61.272898 25.235993,61.544996 24.953094,61.821096 24.564398,61.976 24.1673,61.976L12.622781,61.976C12.008585,61.972101 11.428489,61.845797 10.895992,61.544996 10.390396,61.263796 9.7670005,60.666094 9.752,59.723391L9.752,34.871683z M31.430007,0C32.412786,0,33.395349,0.34765434,34.172341,1.0429621L61.536054,25.469772C63.191937,26.947757 63.306836,29.45413 61.791253,31.072613 60.273667,32.685896 57.703996,32.796495 56.048413,31.31991L31.427569,9.3424339 6.8067472,31.31991C6.0245249,32.015303 5.0434551,32.358999 4.0678854,32.358999 2.9643769,32.358999 1.8680081,31.925505 1.0659571,31.072613L1.0623569,31.066113C-0.44769764,29.45413,-0.33539391,26.945057,1.3191938,25.469772L28.686399,1.0429621C29.46424,0.34765434,30.44723,0,31.430007,0z"  
+					 Fill="#FF0F68A1"   Stroke="#FF1F6D9F" 
+				    Stretch="Fill" 
+			  
+				     Margin="2"
+				  StrokeThickness="2"/>
+            </Grid>
+            <ContentPresenter VerticalAlignment="Center" Content="{Binding}"></ContentPresenter>
+        </StackPanel>
+    </DataTemplate>
+
+    <DataTemplate x:Key="KirliAlanMakineTemplate">
+        <StackPanel Orientation="Horizontal">
+            <Grid  Width="45" Height="45"  >
+
+
+                <Path Data="M0,27.006001L37.806999,27.006001 37.806999,31.806 0,31.806z M0,18.003L37.806999,18.003 37.806999,22.806 0,22.806z M0,8.9999999L37.806999,8.9999999 37.806999,13.803 0,13.803z M0,0L37.806999,0 37.806999,4.8030009 0,4.8030009z" 	
+					
+					 Fill="#FF0F68A1"   Stroke="#FF1F6D9F" 
+				    Stretch="Fill" 
+			  
+				     Margin="2"
+				  StrokeThickness="2"/>
+            </Grid>
+            <ContentPresenter VerticalAlignment="Center" Content="{Binding}"></ContentPresenter>
+        </StackPanel>
+    </DataTemplate>
+
+    <DataTemplate x:Key="KirliCihazRaporlaTemplate">
+        <StackPanel Orientation="Horizontal">
+            <Grid  Width="45" Height="45" >
+
+
+                <Path Data="M32.072464,0.310874C33.433838,0.32337291 34.813961,0.47335751 36.199085,0.76832677 40.589481,1.7182295 44.349819,4.0379912 47.120064,7.1676694L49.710297,4.737919C49.86031,4.5979334 50.090332,4.5679366 50.270348,4.6479284 50.460365,4.737919 50.580376,4.9278995 50.570374,5.1378786L50.270348,12.067166 50.060329,16.946664C50.050327,17.106647 49.970322,17.246633 49.850311,17.346622 49.730301,17.426614 49.580288,17.456611 49.440273,17.426614L44.199802,15.946767 38.329277,14.286937C38.129261,14.226944 37.989246,14.056961 37.959244,13.856982 37.929241,13.657002 38.029251,13.457022 38.199265,13.357033L41.179535,11.597214C39.459377,9.827396 37.229179,8.5375286 34.638947,7.9775859 32.828785,7.5876261 31.018621,7.5976249 29.30847,7.9475891 29.168457,7.9775859 29.028444,7.9475891 28.918434,7.8675977 28.808424,7.7876054 28.728416,7.6676179 28.698414,7.5376312L27.658321,1.258277C27.608316,0.98830457 27.788332,0.72833128 28.058357,0.67833616 29.368475,0.42336266 30.711094,0.2983755 32.072464,0.310874z M7.0300293,0L16.410034,0C17.450073,3.4354161E-07,18.290039,0.83989085,18.290039,1.8798371L18.290039,49.235576C18.290039,49.43563,18.25,49.625557,18.190063,49.805595L25.650024,49.805595C25.590088,49.625557,25.560059,49.43563,25.560059,49.235576L25.560059,18.998296C25.560059,17.958351,26.390015,17.118461,27.430054,17.118461L36.810059,17.118461C37.840088,17.118461,38.680054,17.958351,38.680054,18.998296L38.680054,49.235576C38.680054,49.43563,38.640015,49.625557,38.580078,49.805595L45.340088,49.805595C45.290039,49.625557,45.240112,49.43563,45.240112,49.235576L45.240112,30.947178C45.240112,29.907354,46.090088,29.067341,47.119995,29.067341L56.5,29.067341C57.530029,29.067341,58.380005,29.907354,58.380005,30.947178L58.380005,49.235576C58.380005,49.43563,58.340088,49.625557,58.280029,49.805595L62.590088,49.805595C63.369995,49.805595 64,51.105404 64,52.705234 64,54.305191 63.369995,55.604999 62.590088,55.604999L1.4100342,55.604999C0.63000488,55.604999 0,54.305191 0,52.705234 0,51.105404 0.63000488,49.805595 1.4100342,49.805595L5.2600098,49.805595C5.2000732,49.625557,5.1600342,49.43563,5.1600342,49.235576L5.1600342,1.8798371C5.1600342,0.83989085,6,3.4354161E-07,7.0300293,0z" 	
+					 Fill="#FF0F68A1"   Stroke="#FF1F6D9F" 
+				    Stretch="Fill" 
+			  
+				     Margin="2"
+				  StrokeThickness="2"/>
+            </Grid>
+            <ContentPresenter VerticalAlignment="Center" Content="{Binding}"></ContentPresenter>
+        </StackPanel>
+    </DataTemplate>
+
+    <DataTemplate x:Key="KirliAlandakiAletlerTemplate">
+        <StackPanel Orientation="Horizontal">
+            <Grid Width="45"  Height="45" >
+
+                <Path Data="M38.481593,21.48002C40.292418,21.480019 41.743075,22.941632 41.743075,24.753632 41.743075,26.555621 40.292418,28.017234 38.481593,28.017234 36.670772,28.017234 35.210105,26.555621 35.210105,24.753632 35.210105,22.941632 36.670772,21.480019 38.481593,21.48002z M22.786181,19.00007C22.786181,19.00007 18.796168,30.950106 22.786181,34.930196 22.786181,34.930196 26.886182,38.790653 27.516191,40.530447 27.516191,40.530447 34.106193,53.751028 18.056174,56.711069 18.056174,56.711069 24.89618,52.48097 18.676173,47.500854 18.676173,47.500854 14.946172,44.810839 16.18617,42.07053 16.18617,42.07053 9.2961149,43.730732 11.126081,50.200636 11.126081,50.200636 12.336049,52.280771 14.426149,53.851126 14.426149,53.851126 16.686172,55.680769 16.43617,56.711069 16.43617,56.711069 -0.36397457,53.110872 0.0060229615,38.29064 0.0060226649,38.29064 -0.7439816,21.370252 22.786181,19.00007z M38.529044,17.890378C34.759204,17.890378 31.709334,20.950442 31.709334,24.710522 31.709334,28.480601 34.759204,31.530666 38.529044,31.530666 42.298884,31.530666 45.348758,28.480601 45.348758,24.710522 45.348758,20.950442 42.298884,17.890378 38.529044,17.890378z M39.587035,4.3709784C39.11412,4.3718605,38.849032,4.4000931,38.849032,4.4000931L37.69908,15.490328C37.69908,15.490327 39.778991,15.440326 41.108935,15.820334 42.618873,16.250343 44.038814,17.590371 44.038814,17.590371L49.998561,7.9401674C45.615932,4.7135372,41.276031,4.3678265,39.587035,4.3709784z M38.559043,0C51.86848,0 62.668025,10.800228 62.668025,24.110509 62.668025,37.44079 51.86848,48.23102 38.559043,48.23102 36.349139,48.23102 34.219226,47.911013 32.189315,47.361 32.429305,43.400917 30.989364,39.990845 30.61938,39.190828 29.729419,37.030783 26.799542,34.07072 25.16961,32.540688 23.749671,31.120658 24.429643,24.780523 25.989575,20.070424L27.639506,15.120319 22.449727,15.64033C19.899835,15.900336 17.619931,16.320345 15.550018,16.860356 18.629888,7.0901499 27.759501,0 38.559043,0z" 
+					 Fill="#FF0F68A1"   Stroke="#FF1F6D9F" 
+				    Stretch="Fill" 
+			  
+				     Margin="2"
+				  StrokeThickness="2"/>
+            </Grid>
+            <ContentPresenter VerticalAlignment="Center" Content="{Binding}"></ContentPresenter>
+        </StackPanel>
+    </DataTemplate>
+    <DataTemplate x:Key="DestekRaporTemplate">
+        <StackPanel Orientation="Horizontal">
+            <Grid   >
+
+
+
+                <Path Data="M35.720001,55.296002L35.720001,58.502999 44.405998,58.502999 44.405998,55.296002z M35.720001,47.921002L35.720001,51.619999 44.405998,51.619999 44.405998,47.921002z M35.720001,40.544998L35.720001,44.244 44.405998,44.244 44.405998,40.544998z M35.720001,33.169001L35.720001,36.868 44.405998,36.868 44.405998,33.169001z M52.085999,26.156L62.201,26.156 62.201,36.369 52.085999,36.369z M35.720001,25.792L35.720001,29.492001 44.405998,29.492001 44.405998,25.792z M35.720001,18.417L35.720001,22.117001 44.405998,22.117001 44.405998,18.417z M35.720001,11.041001L35.720001,14.74 44.405998,14.74 44.405998,11.041001z M35.720001,4.5869999L35.720001,7.3640003 44.405998,7.3640003 44.405998,4.5869999z M0,3.6879997L10.211749,3.6879997 10.211749,26.155388 27.576,26.155388 27.576,36.368325 10.211749,36.368325 10.211749,58.838001 0,58.838001z M34.078999,0L35.720001,0 35.720001,0.91100025 44.405998,0.91100025 44.405998,0 46.047001,0 46.047001,0.91100025 49.375,0.91100025 49.375,4.5869999 46.047001,4.5869999 46.047001,7.3640003 49.375,7.3640003 49.375,11.041001 46.047001,11.041001 46.047001,14.74 49.375,14.74 49.375,18.417 46.047001,18.417 46.047001,22.117001 49.375,22.117001 49.375,25.792 46.047001,25.792 46.047001,29.492001 49.375,29.492001 49.375,33.169001 46.047001,33.169001 46.047001,36.868 49.375,36.868 49.375,40.544998 46.047001,40.544998 46.047001,44.244 49.375,44.244 49.375,47.921002 46.047001,47.921002 46.047001,51.619999 49.375,51.619999 49.375,55.296002 46.047001,55.296002 46.047001,58.502999 49.375,58.502999 49.375,62.180001 46.047001,62.180001 46.047001,64 44.405998,64 44.405998,62.180001 35.720001,62.180001 35.720001,64 34.078999,64 34.078999,62.180001 30.257,62.180001 30.257,58.502999 34.078999,58.502999 34.078999,55.296002 30.257,55.296002 30.257,51.619999 34.078999,51.619999 34.078999,47.921002 30.257,47.921002 30.257,44.244 34.078999,44.244 34.078999,40.544998 30.257,40.544998 30.257,36.868 34.078999,36.868 34.078999,33.169001 30.257,33.169001 30.257,29.492001 34.078999,29.492001 34.078999,25.792 30.257,25.792 30.257,22.117001 34.078999,22.117001 34.078999,18.417 30.257,18.417 30.257,14.74 34.078999,14.74 34.078999,11.041001 30.257,11.041001 30.257,7.3640003 34.078999,7.3640003 34.078999,4.5869999 30.257,4.5869999 30.257,0.91100025 34.078999,0.91100025z" 
+					 Fill="#FF0F68A1"   Stroke="#FF1F6D9F" 
+				    Stretch="Fill" 
+			  
+				     Margin="2"
+				  StrokeThickness="2"/>
+            </Grid>
+            <ContentPresenter VerticalAlignment="Center" Content="{Binding}"></ContentPresenter>
+        </StackPanel>
+    </DataTemplate>
+    <DataTemplate x:Key="DepoCikisTemplate">
+        <StackPanel Orientation="Horizontal">
+            <Grid Width="45" Height="45"   >
+
+                <Path Data="M30.789947,34.479814L32.089942,35.369634 32.089942,57.365194C32.089942,57.865095,31.689944,58.275011,31.179946,58.275011L25.069963,58.275011 25.069963,56.965276 30.789947,56.965276z M19.245124,28.008594C18.285407,28.008594 17.505574,28.788583 17.505574,29.748497 17.505574,30.708652 18.285407,31.488399 19.245124,31.488399 20.204965,31.488399 20.984674,30.708652 20.984674,29.748497 20.984674,28.788583 20.204965,28.008594 19.245124,28.008594z M40.987151,24.839952L40.987151,28.290458 48.414989,28.290458 48.414989,34.681394 40.987151,34.681394 40.987151,38.141905 31.140018,31.490928z M25.069963,4.6898548L31.179946,4.6898548C31.689944,4.6898548,32.089942,5.0997721,32.089942,5.5996706L32.089942,27.605228 30.789947,28.48505 30.789947,5.9995901 25.069963,5.9995901z M22.854196,0C23.35407,0,23.763999,0.41013552,23.763999,0.91010997L23.763999,61.756887C23.763999,62.256864,23.35407,62.666998,22.854196,62.666998L0.90980371,59.037054C0.40993031,59.037054,-2.206707E-08,58.627165,0,58.127187L0,5.4499199C-2.206707E-08,4.9499451,0.40993031,4.5398094,0.90980371,4.5398094z" 
+					
+					
+					 Fill="#FF0F68A1"   Stroke="#FF1F6D9F" 
+				    Stretch="Fill" 
+			  
+				     Margin="2"
+				  StrokeThickness="2"/>
+            </Grid>
+            <ContentPresenter VerticalAlignment="Center" Content="{Binding}"></ContentPresenter>
+        </StackPanel>
+    </DataTemplate>
+    <DataTemplate x:Key="DepoSonKullanimTarihiYaklasanTemplate">
+        <StackPanel Orientation="Horizontal">
+            <Grid  Width="45" Height="45"  >
+
+                <Path Data="M27.11695,36.864998C27.683156,36.864998,28.14,37.323441,28.14,37.887291L28.14,40.166104C28.14,40.731358 27.683156,41.190999 27.11695,41.190999 26.554645,41.190999 26.099,40.731358 26.099,40.166104L26.099,37.887291C26.099,37.323441,26.554645,36.864998,27.11695,36.864998z M38.524354,26.116L40.802949,26.116C41.366723,26.116 41.825002,26.575613 41.825002,27.138251 41.825002,27.702889 41.366723,28.162001 40.802949,28.162001L38.524354,28.162001C37.956681,28.162001 37.501,27.702889 37.501,27.138251 37.501,26.575613 37.956681,26.116 38.524354,26.116z M12.471358,26.116L14.752342,26.116C15.314764,26.116 15.773001,26.575613 15.773001,27.138251 15.773001,27.702889 15.314764,28.162001 14.752342,28.162001L12.471358,28.162001C11.907637,28.162001 11.452,27.702889 11.452,27.138251 11.452,26.575613 11.907637,26.116 12.471358,26.116z M27.1172,13.322C28.044255,13.322,28.797,14.073406,28.797,15.001711L28.797,27.06309 28.793279,27.136784 28.797,27.214879C28.797,27.6449,28.63325,28.074919,28.305751,28.403065L19.775869,36.932858C19.119671,37.589047 18.055773,37.589047 17.402174,36.932858 16.743276,36.276564 16.743276,35.212779 17.402174,34.559187L25.44,26.517676 25.44,15.001711C25.44,14.073406,26.193946,13.322,27.1172,13.322z M26.70572,9.2591157C17.175916,9.2591152 9.4206934,17.013572 9.4206934,26.544821 9.4206934,36.07737 17.175916,43.831227 26.70572,43.831227 36.238221,43.831227 43.993245,36.07737 43.993245,26.544821 43.993245,17.013572 36.238221,9.2591152 26.70572,9.2591157z M26.70572,4.7089998C38.768102,4.7090004 48.544,14.485688 48.544,26.544821 48.544,33.51616 45.276616,39.725495 40.188996,43.723874L40.136098,43.764435 42.792523,48.926716C43.395368,50.094716 42.931909,51.52892 41.765321,52.12922 40.596135,52.72942 39.163972,52.271119 38.561231,51.101918L36.079621,46.272442 35.693587,46.452694C32.952533,47.692051 29.909791,48.382 26.70572,48.382 23.314273,48.382 20.103275,47.608494 17.239493,46.22831L16.778316,45.999089 14.155955,51.101918C13.555627,52.271119 12.119461,52.72942 10.955306,52.12922 9.7859526,51.52892 9.3237314,50.094716 9.9239588,48.926716L12.784047,43.367325 12.416296,43.056336C7.7941015,39.051991 4.8699996,33.13933 4.8699996,26.544821 4.8699995,14.485688 14.647242,4.7090004 26.70572,4.7089998z M7.2920272,0.00063514709C9.3020134,-0.025627613 11.315322,0.7636168 12.79427,2.350467 13.105481,2.6799352 13.373791,3.0354137 13.612,3.4026126L2.9827539,13.322C2.6324911,13.060295 2.299129,12.766087 1.9866176,12.434079 -0.79732323,9.4483075 -0.63587952,4.7737354 2.3486011,1.9871786 3.7475798,0.68188953 5.5185099,0.023807049 7.2920272,0.00063514709z M46.045011,0.00063419342C47.818315,0.023807049 49.588861,0.68188953 50.987161,1.9871786 53.969007,4.7737354 54.130509,9.4483075 51.350469,12.434079 51.037961,12.766087 50.704659,13.060295 50.354352,13.322L39.724,3.4026117C39.961003,3.0354137 40.231805,2.6799352 40.543012,2.350467 42.021981,0.7636168 44.035268,-0.025627613 46.045011,0.00063419342z" 			
+					
+					 Fill="#FF0F68A1"   Stroke="#FF1F6D9F" 
+				    Stretch="Fill" 
+			  
+				     Margin="2"
+				  StrokeThickness="2"/>
+            </Grid>
+            <ContentPresenter VerticalAlignment="Center" Content="{Binding}"></ContentPresenter>
+        </StackPanel>
+    </DataTemplate>
+
+    <DataTemplate x:Key="DepoSonKullanimTarihiBitenTemplate">
+        <StackPanel Orientation="Horizontal">
+            <Grid   >
+
+                <Path Data="M21.169974,13.746946L27.037992,13.746946 24.318965,22.048944 32.621983,22.048944 29.186981,30.923941 31.618991,30.923941 24.461971,38.795946 21.884972,31.210928 24.176966,31.210928 25.892972,25.912956 17.162983,25.912956z M25.605993,4.0009995C20.207463,4.0009995,15.265365,5.990777,11.474494,9.2755337L11.311369,9.4203172 18.073979,16.181988 16.82598,19.972987 8.8437052,11.990713 8.6146345,12.275012C5.7257881,15.949205 4.0009985,20.579776 4.0009985,25.605993 4.0009985,37.51799 13.691996,47.209988 25.605993,47.209988 30.632211,47.209988 35.262604,45.48502 38.936592,42.596119L39.21999,42.367756 31.825976,34.97098 33.748976,32.856981 34.225975,32.332981 41.791264,39.899197 41.935883,39.736248C45.220415,35.945425 47.209988,31.003616 47.209988,25.605993 47.209988,13.691997 37.519991,4.0009995 25.605993,4.0009995z M25.605993,0C39.745989,0 51.212986,11.463997 51.212986,25.605993 51.212986,39.748991 39.745989,51.212986 25.605993,51.212986 11.465997,51.212986 0,39.748991 0,25.605993 0,11.463997 11.465997,0 25.605993,0z" 		
+					 Fill="#FF0F68A1"   Stroke="#FF1F6D9F" 
+				    Stretch="Fill" 
+			  
+				     Margin="2"
+				  StrokeThickness="2"/>
+            </Grid>
+            <ContentPresenter VerticalAlignment="Center" Content="{Binding}"></ContentPresenter>
+        </StackPanel>
+    </DataTemplate>
+    <Style x:Key="ButtonFocusVisual">
+        <Setter Property="Control.Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Rectangle Margin="2" SnapsToDevicePixels="true" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" StrokeThickness="1" StrokeDashArray="1 2"/>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <LinearGradientBrush x:Key="ButtonNormalBackground" EndPoint="0,1" StartPoint="0,0">
+        <GradientStop Color="#F3F3F3" Offset="0"/>
+        <GradientStop Color="#EBEBEB" Offset="0.5"/>
+        <GradientStop Color="#DDDDDD" Offset="0.5"/>
+        <GradientStop Color="#CDCDCD" Offset="1"/>
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="ButtonNormalBorder" Color="#FF707070"/>
+    <Style x:Key="LoginButtonStyle" TargetType="{x:Type Button}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <ControlTemplate.Resources>
+                        <Storyboard x:Key="ButtonClickAnim">
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="contentPresenter">
+                                <EasingDoubleKeyFrame KeyTime="0" Value="6"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                        <Storyboard x:Key="ButtonClickStrokeAnim">
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.StrokeThickness)" Storyboard.TargetName="Glow">
+                                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                            </DoubleAnimationUsingKeyFrames>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.StrokeThickness)" Storyboard.TargetName="Glass">
+                                <EasingDoubleKeyFrame KeyTime="0" Value="4"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </ControlTemplate.Resources>
+                    <Grid>
+                        <Rectangle x:Name="Base" RadiusY="10" RadiusX="10" Stroke="#FFACD4FF" StrokeThickness="1" Fill="Black" Opacity="0.025">
+                            <Rectangle.Effect>
+                                <DropShadowEffect ShadowDepth="7" BlurRadius="31"/>
+                            </Rectangle.Effect>
+                        </Rectangle>
+                        <Rectangle x:Name="Glow" RadiusY="10" RadiusX="10" Stroke="#FFACD4FF" StrokeThickness="1" Visibility="Hidden">
+                            <Rectangle.Fill>
+                                <RadialGradientBrush Center="0.514,1.024" GradientOrigin="0.514,1.024" RadiusX="0.459">
+                                    <GradientStop Offset="1"/>
+                                    <GradientStop Color="#FF79D7FF"/>
+                                </RadialGradientBrush>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                        <Rectangle x:Name="Glass" RadiusY="10" RadiusX="10" Stroke="#FFACD4FF" StrokeThickness="1">
+                            <Rectangle.Fill>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="White" Offset="0.009"/>
+                                    <GradientStop Offset="1"/>
+                                    <GradientStop Color="#44FFFFFF" Offset="0.16"/>
+                                    <GradientStop Color="#ADFFFFFF" Offset="0.1"/>
+                                </LinearGradientBrush>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                        <ContentPresenter x:Name="contentPresenter" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RenderTransformOrigin="0.5,0.5">
+                            <ContentPresenter.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </ContentPresenter.RenderTransform>
+                        </ContentPresenter>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Visibility" TargetName="Glow" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="IsCancel" Value="False"/>
+                        <Trigger Property="IsCancel" Value="False"/>
+                        <Trigger Property="IsFocused" Value="True"/>
+                        <Trigger Property="IsDefaulted" Value="True"/>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Trigger.EnterActions>
+                                <BeginStoryboard x:Name="ButtonClickStrokeAnim_BeginStoryboard" Storyboard="{StaticResource ButtonClickStrokeAnim}"/>
+                            </Trigger.EnterActions>
+                            <Setter Property="StrokeThickness" TargetName="Base" Value="0"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False"/>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Effect">
+            <Setter.Value>
+                <DropShadowEffect BlurRadius="11" ShadowDepth="7"/>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <DataTemplate x:Key="RaporPdf">
+        <StackPanel Orientation="Horizontal">
+            <Grid  Width="45" Height="45" >
+
+
+
+                <Path Data="M87.987685,71.850047L87.642849,73.196971C84.17019,86.201007 78.476041,101.03891 69.059853,119.17729 64.475087,128.00938 60.146568,135.95397 56.063217,143.07086L55.472909,144.09326 56.149806,143.78811C79.318293,133.64486,105.0835,126.79551,128.08159,123.22901L128.22711,123.20725 126.93525,122.40305C122.96857,119.85043 119.1918,117.0776 115.73519,114.10311 103.99102,103.99612 95.080978,89.486034 88.85547,74.086101z M84.472383,0.653295L88.40833,0.68429651C90.155331,0.68429991 96.388326,0.23428846 93.964328,12.99028 93.234292,6.0822708 89.991331,2.7832955 87.307326,1.4412893 86.617327,1.9342978 85.061367,4.1362902 84.423374,6.019282 81.610267,14.288897 82.471757,30.510276 86.831146,48.195319L87.365746,50.257491 87.874964,48.07788C91.205634,33.409167 92.152107,23.013347 93.44069,16.669284 93.145851,30.375535 93.287601,43.127952 90.935193,57.79098L90.443284,60.675445 91.420272,63.561053C97.764038,81.552837 107.55522,99.154552 120.61712,109.87809 125.35466,113.65021 130.52507,117.14014 135.86544,120.28941L138.51519,121.81615 140.05473,121.63808C175.00623,117.79869 200.43275,122.35838 194.36396,135.27194 194.86927,127.1951 174.61223,124.74401 147.74766,126.42215L147.38489,126.44647 149.41826,127.41906C168.46186,136.31227 186.90332,140.43569 193.46971,137.28308 191.95566,146.27134 162.23989,141.5914 136.12578,127.76704L135.50726,127.42891 133.83028,127.5984C107.84456,130.32891,78.369689,136.24589,55.940994,144.23547L55.244842,144.48828 54.711162,145.41259C30.537115,187.01475,15.144712,199.05873,6.1402716,194.46029L1.2702994,191.9633 1.2731528,191.96435 1.2698798,191.9627C-1.6211114,188.42976 4.9488577,169.47903 36.110708,152.91026 17.678045,166.67469 4.2762808,185.50366 5.0444464,192.3345L5.1145911,192.68548 5.2827735,192.68649C18.797094,192.31755 37.987432,165.90063 63.394891,114.73828 73.184201,95.027911 79.470144,78.212581 83.648588,64.17908L84.418645,61.526027 83.519263,58.519687C77.582669,37.715968 76.329914,17.412254 79.406371,5.9362737 80.352412,2.3952955 82.302351,0.65329411 84.472383,0.653295z" 
+                Fill="#FF0F68A1"   Stroke="#FF1F6D9F" 
+				    Stretch="Fill" 
+			  
+				     Margin="2"
+				  StrokeThickness="2"/>
+            </Grid>
+            <ContentPresenter VerticalAlignment="Center" Content="{Binding}"></ContentPresenter>
+        </StackPanel>
+    </DataTemplate>
+    <DataTemplate x:Key="RaporEkraniKapla">
+        <StackPanel Orientation="Horizontal">
+            <Grid  Width="45" Height="45" >
+
+
+
+                <Path Data="F1M2302.41,5429.26L2244.22,5429.26C2242.98,5429.26,2241.99,5430.27,2241.99,5431.51L2241.99,5474.78C2241.99,5476.03,2242.98,5477.04,2244.22,5477.04L2302.41,5477.04C2303.64,5477.04,2304.66,5476.03,2304.66,5474.78L2304.66,5431.51C2304.66,5430.27,2303.64,5429.26,2302.41,5429.26 M2272.45,5433.57C2274.26,5433.57 2275.72,5435.03 2275.72,5436.84 2275.72,5438.64 2274.26,5440.1 2272.45,5440.1 2270.64,5440.1 2269.19,5438.64 2269.19,5436.84 2269.19,5435.03 2270.64,5433.57 2272.45,5433.57 M2261.8,5433.57C2263.61,5433.57 2265.08,5435.03 2265.08,5436.84 2265.08,5438.64 2263.61,5440.1 2261.8,5440.1 2260,5440.1 2258.54,5438.64 2258.54,5436.84 2258.54,5435.03 2260,5433.57 2261.8,5433.57 M2251.15,5433.57C2252.96,5433.57 2254.41,5435.03 2254.41,5436.84 2254.41,5438.64 2252.96,5440.1 2251.15,5440.1 2249.35,5440.1 2247.89,5438.64 2247.89,5436.84 2247.89,5435.03 2249.35,5433.57 2251.15,5433.57 M2298.57,5469.15C2298.57,5470.24,2297.56,5471.13,2296.32,5471.13L2250.98,5471.13C2249.74,5471.13,2248.74,5470.24,2248.74,5469.15L2248.74,5444.95C2248.74,5443.85,2249.74,5442.96,2250.98,5442.96L2296.32,5442.96C2297.56,5442.96,2298.57,5443.85,2298.57,5444.95L2298.57,5469.15z" 
+                Fill="#FF0F68A1"   Stroke="#FF1F6D9F" 
+				    Stretch="Fill" 
+			  
+				     Margin="2"
+				  StrokeThickness="2"/>
+            </Grid>
+            <ContentPresenter VerticalAlignment="Center" Content="{Binding}"></ContentPresenter>
+        </StackPanel>
+    </DataTemplate>
+    <DataTemplate x:Key="RaporIkiSayfa">
+        <StackPanel Orientation="Horizontal">
+            <Grid  Width="45" Height="45" >
+
+
+
+                <Path Data="M57.063873,8.2469999L57.194774,8.2469999C58.06459,8.2469999,58.770999,8.9514209,58.770999,9.8225261L58.770999,38.854286C58.770999,39.686402 58.124488,40.367417 57.307075,40.424717 56.906971,40.55492 56.374462,40.53672 55.876354,40.273613 48.230434,36.226635 40.325012,36.824349 32.9743,41.024929 31.999685,41.57964 29.228841,40.213814 30.578762,39.441597 38.462085,34.938812 47.255821,34.282601 55.487049,38.005371L55.487049,9.8225261C55.487049,8.9514209,56.192459,8.2469999,57.063873,8.2469999z M1.5765214,7.9829995L1.7070088,7.9829995C2.578099,7.9829999,3.2835305,8.6900875,3.2835302,9.5586101L3.2835302,37.740711C11.514862,34.018036 20.308356,34.675633 28.191061,39.178204 29.541345,39.950298 26.770578,41.31749 25.79599,40.761494 18.445078,36.56102 10.540273,35.963425 2.8941953,40.011498 2.3958411,40.274498 1.8639274,40.291496 1.4628725,40.162499 0.64586639,40.103897 0,39.424301 0,38.589607L0,9.5586101C0,8.6900875,0.70641232,7.9829999,1.5765214,7.9829995z M44.139385,0.16105747C46.482063,0.15614485,49.207069,0.47021243,52.3661,1.2507425L52.368,34.715408C52.368,34.715408,41.521152,29.005823,30.824001,36.980999L31.015398,6.1933586C31.015398,6.1933586,33.987775,0.18234282,44.139385,0.16105747z M14.511298,0.00071966404C24.722303,0.075802114,27.714494,5.9942452,27.714494,5.9942447L27.947002,36.718002C16.608066,29.606054,6.4020005,34.451019,6.4020007,34.451019L6.4039606,0.98775288C9.2928014,0.31748327 11.818138,0.025515687 14.019586,0.0016085565 14.18532,-0.00019056614 14.349218,-0.00047104831 14.511298,0.00071966404z" 
+                      Fill="#FF0F68A1"   Stroke="#FF1F6D9F" 
+				    Stretch="Fill" 
+			  
+				     Margin="2"
+				  StrokeThickness="2"/>
+            </Grid>
+            <ContentPresenter VerticalAlignment="Center" Content="{Binding}"></ContentPresenter>
+        </StackPanel>
+    </DataTemplate>
+    <DataTemplate x:Key="RaporYazdir">
+        <StackPanel Orientation="Horizontal">
+            <Grid  Width="45" Height="45" >
+
+
+                <Path  Data="F1 M 33.3992,9.62706L 29.655,9.62706L 29.655,5.01427L 28.242,5.01427L 28.242,1.52588e-005L 8.17798,1.52588e-005L 8.17798,5.01427L 6.76501,5.01427L 6.76501,9.62706L 2.87057,9.62706C 2.02097,9.64934 1.33395,9.94521 0.80957,10.5146C 0.285156,11.084 0.0153198,11.7933 0,12.6425L 0,26.5654C 0.0153198,27.4037 0.285156,28.104 0.80957,28.6662C 1.33395,29.2284 2.02097,29.5205 2.87057,29.5425L 6.20847,29.5425L 5.09583,35.4001L 31.5272,35.4001L 30.2598,29.5425L 33.1231,29.5425C 33.8977,29.5205 34.5549,29.2284 35.0948,28.6662C 35.6348,28.104 35.9165,27.4037 35.94,26.5654L 35.94,12.6425C 35.9165,11.7933 35.6348,11.084 35.0948,10.5146C 34.5549,9.94518 33.8977,9.64934 33.1231,9.62706L 33.3992,9.62706 Z M 9.495,1.82411L 26.88,1.82411L 26.88,12.987L 9.495,12.987L 9.495,1.82411 Z M 4.99469,16.7608C 4.39514,16.7467 3.88733,16.5451 3.47116,16.156C 3.05499,15.7669 2.83789,15.275 2.82001,14.6803C 2.83795,14.1166 3.05499,13.6703 3.47116,13.3414C 3.88733,13.0124 4.39514,12.8443 4.99469,12.8371C 5.6181,12.8443 6.13928,13.0124 6.55835,13.3414C 6.97742,13.6703 7.19519,14.1166 7.21173,14.6803C 7.19519,15.275 6.97742,15.7669 6.55835,16.156C 6.13928,16.5451 5.6181,16.7467 4.99469,16.7608 Z M 7.50952,33.624L 8.94897,24.357L 27.3494,24.357L 29.1332,33.624L 7.50952,33.624 Z M 17.1979,29.3039L 11.92,29.3039L 11.92,27.9592L 17.1979,27.9592L 17.1979,29.3039 Z M 24.7106,29.3039L 19.4327,29.3039L 19.4327,27.9592L 24.7106,27.9592L 24.7106,29.3039 Z " 
+
+                         Fill="#FF0F68A1"   Stroke="#FF1F6D9F" 
+				    Stretch="Fill" 
+			  
+				     Margin="2"
+				  StrokeThickness="2"/>
+            </Grid>
+            <ContentPresenter VerticalAlignment="Center" Content="{Binding}"></ContentPresenter>
+        </StackPanel>
+    </DataTemplate>
+    <DataTemplate x:Key="RaporBuyut">
+        <StackPanel Orientation="Horizontal">
+            <Grid  Width="45" Height="45" >
+
+
+
+
+
+                <Path Data="F1M5.46094,34.1641C5.40881,34.0847 5.35413,34.0026 5.30469,33.9167 5.25513,33.8256 5.21094,33.7344 5.16663,33.6406 5.14319,33.5892 5.11194,33.5404 5.0625,33.4037 5.02344,33.3047 4.99219,33.2012 4.96094,33.1003 4.9375,33.017 4.91138,32.9336 4.89319,32.8503 4.86975,32.75 4.85669,32.6484 4.84106,32.5469 4.83069,32.4609 4.81506,32.375 4.80725,32.2891 4.79944,32.1849 4.802,32.0795 4.802,31.9753 4.802,31.8906 4.802,31.8073 4.80725,31.724 4.81506,31.6172 4.83325,31.5131 4.84631,31.405 4.85938,31.3242 4.86975,31.2435 4.88794,31.1641 4.91138,31.0573 4.94263,30.9557 4.97388,30.8516 5,30.7709 5.02344,30.6927 5.0885,30.5052 5.1145,30.4401 5.15356,30.3842 5.18225,30.3229 5.21875,30.2422 5.25781,30.1667 5.29944,30.0886 5.35156,29.9974 5.40881,29.9063 5.46875,29.8203 5.51819,29.75 5.5625,29.6797 5.61719,29.612 5.68481,29.5234 5.76038,29.4401 5.9375,29.2422L24.1953,10.9831C25.7213,9.45703 28.1875,9.45703 29.7109,10.9831 31.2317,12.5026 31.2317,14.9753 29.7109,16.4974L18.1067,28.0964 54.2317,28.0964C55.5781,28.0964 56.7656,28.7787 57.4661,29.8164 57.8879,30.4401 58.1354,31.1901 58.1354,31.9987 58.1354,33.0756 57.6953,34.0521 56.9922,34.7552 56.2864,35.4623 55.3098,35.9011 54.2317,35.9011L54.2317,35.8972 18.1094,35.8972 29.7135,47.5013C31.2317,49.0209 31.2369,51.4909 29.7135,53.0156 28.9504,53.7773 27.9504,54.1602 26.9531,54.1602 25.9557,54.1602 24.9557,53.78 24.1953,53.0209L5.93481,34.7552 5.83069,34.6328C5.75781,34.5547 5.6875,34.474 5.61975,34.3881 5.5625,34.3151 5.51294,34.2396 5.46094,34.1641z" 
+                      Fill="#FF0F68A1"   Stroke="#FF1F6D9F" 
+				    Stretch="Fill" 
+			  
+				     Margin="2"
+				  StrokeThickness="2"/>
+            </Grid>
+            <ContentPresenter VerticalAlignment="Center" Content="{Binding}"></ContentPresenter>
+        </StackPanel>
+    </DataTemplate>
+    <DataTemplate x:Key="RaporKucult">
+        <StackPanel Orientation="Horizontal">
+            <Grid  Width="45" Height="45" >
+ 
+
+                <Path Data="F1M58.0065,34.1653C58.0612,34.0846 58.1158,34.0026 58.1627,33.918 58.2135,33.8268 58.2591,33.7356 58.3021,33.6406 58.3255,33.5898 58.3568,33.5416 58.4063,33.4036 58.4453,33.3059 58.4752,33.2031 58.5065,33.1016 58.5325,33.0168 58.556,32.9348 58.5755,32.8516 58.5989,32.7512 58.6119,32.6484 58.6276,32.5469 58.638,32.4609 58.651,32.375 58.6602,32.2883 58.6693,32.1848 58.6666,32.0793 58.6641,31.9752 58.6641,31.8918 58.6666,31.8086 58.6602,31.7239 58.6536,31.6172 58.6367,31.5129 58.6211,31.4063 58.608,31.3242 58.5989,31.2448 58.5794,31.1641 58.5586,31.0586 58.526,30.9551 58.4935,30.8516 58.4688,30.7708 58.4453,30.6926 58.3802,30.5051 58.3541,30.4414 58.3151,30.3854 58.2864,30.3229 58.25,30.2422 58.2109,30.1666 58.168,30.0885 58.1172,29.9973 58.0586,29.9063 57.9987,29.8203 57.9505,29.75 57.9049,29.6797 57.8528,29.6133 57.7838,29.5234 57.7096,29.4401 57.5313,29.2422L39.2721,10.9817C37.7461,9.45703 35.2786,9.45703 33.7578,10.9817 32.2344,12.5039 32.2344,14.9766 33.7578,16.4973L45.3619,28.0977 9.23438,28.0977C7.88928,28.0977 6.7005,28.7799 6.00128,29.8176 5.58069,30.4414 5.33331,31.1901 5.33331,32 5.33331,33.0768 5.77081,34.052 6.47656,34.7565 7.18225,35.4635 8.15625,35.901 9.23438,35.901L9.23438,35.8977 45.3594,35.8977 33.7552,47.5012C32.2344,49.0221 32.2318,51.4908 33.7552,53.0168 34.5169,53.7799 35.5182,54.1602 36.5156,54.1602 37.5143,54.1602 38.513,53.7813 39.2721,53.0221L57.5338,34.7565 57.638,34.6328C57.7122,34.5547 57.7838,34.4739 57.8489,34.3879 57.9049,34.3151 57.957,34.2395 58.0065,34.1653z" 
+
+                Fill="#FF0F68A1"   Stroke="#FF1F6D9F" 
+				    Stretch="Fill" 
+			  
+				     Margin="2"
+				  StrokeThickness="2"/>
+            </Grid>
+            <ContentPresenter VerticalAlignment="Center" Content="{Binding}"></ContentPresenter>
+        </StackPanel>
+    </DataTemplate>
+    <DataTemplate x:Key="RaporTamEkran">
+        <StackPanel Orientation="Horizontal">
+            <Grid  Width="45" Height="45" >
+
+
+
+                <Path Data="F1M1739.41,3787.44L1720.92,3787.44C1722.09,3787.44 1723.03,3786.5 1723.03,3785.34 1723.03,3784.17 1722.09,3783.23 1720.92,3783.23L1737.13,3783.23C1739.29,3783.23,1741.04,3781.48,1741.04,3779.31L1741.04,3750.26C1741.04,3748.1,1739.29,3746.35,1737.13,3746.35L1683.44,3746.35C1681.27,3746.35,1679.52,3748.1,1679.52,3750.26L1679.52,3779.31C1679.52,3781.48,1681.27,3783.23,1683.44,3783.23L1698.95,3783.23C1697.79,3783.23 1696.84,3784.17 1696.84,3785.34 1696.84,3786.5 1697.79,3787.44 1698.95,3787.44L1681.16,3787.44C1679.94,3787.44 1678.95,3788.92 1678.95,3790.75 1678.95,3792.57 1679.94,3794.05 1681.16,3794.05L1739.41,3794.05C1740.63,3794.05 1741.61,3792.57 1741.61,3790.75 1741.61,3788.92 1740.63,3787.44 1739.41,3787.44 M1685.83,3780.07C1684.36,3780.07,1683.17,3778.83,1683.17,3777.29L1683.17,3752.91C1683.17,3751.37,1684.36,3750.12,1685.83,3750.12L1734.47,3750.12C1735.94,3750.12,1737.13,3751.37,1737.13,3752.91L1737.13,3777.29C1737.13,3778.83,1735.94,3780.07,1734.47,3780.07L1685.83,3780.07z"
+                      
+                      Fill="#FF0F68A1"   Stroke="#FF1F6D9F" 
+				    Stretch="Fill" 
+			  
+				     Margin="2"
+				  StrokeThickness="2"/>
+            </Grid>
+            <ContentPresenter VerticalAlignment="Center" Content="{Binding}"></ContentPresenter>
+        </StackPanel>
+    </DataTemplate>
+    <DataTemplate x:Key="RaporGenis">
+        <StackPanel Orientation="Horizontal">
+            <Grid  Width="45" Height="45" >
+
+
+
+
+                <Path Data="F1M15.9238,2.47778C15.1904,2.47778,14.5905,3.07813,14.5905,3.81104L14.5905,61.2122C14.5905,61.9453,15.1904,62.5454,15.9238,62.5454L50.7988,62.5454C51.5322,62.5454,52.1321,61.9453,52.1321,61.2122L52.1321,3.81104C52.1321,3.07813,51.5322,2.47778,50.7988,2.47778L15.9238,2.47778z M33.3613,55.1743C32.0237,55.1743 30.9326,54.0884 30.9326,52.7473 30.9326,51.4099 32.0237,50.3242 33.3613,50.3242 34.7037,50.3242 35.7897,51.4099 35.7897,52.7473 35.7897,54.0884 34.7037,55.1743 33.3613,55.1743z M45.7955,31.7512C45.7955,32.4844,45.1956,33.0845,44.4622,33.0845L22.2604,33.0845C21.527,33.0845,20.9271,32.4844,20.9271,31.7512L20.9271,29.729C20.9271,28.9961,21.527,28.3958,22.2604,28.3958L44.4622,28.3958C45.1956,28.3958,45.7955,28.9961,45.7955,29.729L45.7955,31.7512z M45.7955,22.4805C45.7955,23.2135,45.1956,23.8137,44.4622,23.8137L22.2604,23.8137C21.527,23.8137,20.9271,23.2135,20.9271,22.4805L20.9271,20.4583C20.9271,19.7252,21.527,19.125,22.2604,19.125L44.4622,19.125C45.1956,19.125,45.7955,19.7252,45.7955,20.4583L45.7955,22.4805z M45.7955,13.2083C45.7955,13.9414,45.1956,14.5416,44.4622,14.5416L22.2604,14.5416C21.527,14.5416,20.9271,13.9414,20.9271,13.2083L20.9271,11.1862C20.9271,10.4531,21.527,9.85278,22.2604,9.85278L44.4622,9.85278C45.1956,9.85278,45.7955,10.4531,45.7955,11.1862L45.7955,13.2083z" 
+                      Fill="#FF0F68A1"   Stroke="#FF1F6D9F" 
+				    Stretch="Fill" 
+			  
+				     Margin="2"
+				  StrokeThickness="2"/>
+            </Grid>
+            <ContentPresenter VerticalAlignment="Center" Content="{Binding}"></ContentPresenter>
+        </StackPanel>
+    </DataTemplate>
+    <DataTemplate x:Key="RaporSabit">
+        <StackPanel Orientation="Horizontal">
+            <Grid  Width="45" Height="45" >
+
+                <Path Data="F1M57.86,10.0996L57.86,13.4902 50.6243,13.4902 50.6243,10.0996 46.5621,10.0996 46.5621,16.1863 16.9596,16.1863 16.9596,10.0996 13.5342,10.0996 13.5342,13.4902 6.29492,13.4902 6.29492,10.0996 2.24152,10.0996 2.24152,53.707 6.1416,53.707 6.1416,50.2749 13.376,50.2749 13.376,53.707 16.9596,53.707 16.9596,48.1824 46.5621,48.1824 46.5621,53.707 50.4648,53.707 50.4648,50.2749 57.7002,50.2749 57.7002,53.707 61.2848,53.707 61.2848,10.0996 57.86,10.0996z M13.511,44.4604L6.27667,44.4604 6.27667,39.5007 13.511,39.5007 13.511,44.4604z M13.511,34.3276L6.27667,34.3276 6.27667,29.3679 13.511,29.3679 13.511,34.3276z M13.511,24.1973L6.27667,24.1973 6.27667,19.2351 13.511,19.2351 13.511,24.1973z M46.5621,43.8887L16.9596,43.8887 16.9596,20.4805 46.5621,20.4805 46.5621,43.8887z M57.8369,44.4604L50.6019,44.4604 50.6019,39.5007 57.8369,39.5007 57.8369,44.4604z M57.8369,34.3276L50.6019,34.3276 50.6019,29.3679 57.8369,29.3679 57.8369,34.3276z M57.8369,24.1973L50.6019,24.1973 50.6019,19.2351 57.8369,19.2351 57.8369,24.1973z" 
+                Fill="#FF0F68A1"   Stroke="#FF1F6D9F" 
+				    Stretch="Fill" 
+			  
+				     Margin="2"
+				  StrokeThickness="2"/>
+            </Grid>
+            <ContentPresenter VerticalAlignment="Center" Content="{Binding}"></ContentPresenter>
+        </StackPanel>
+    </DataTemplate>
+    <DataTemplate x:Key="FirmaIslemleri">
+        <StackPanel Orientation="Horizontal">
+            <Grid  Width="45" Height="45" >
+
+                <Path Data="M12.867,56.499001L12.867,61.499001 17.867001,61.499001 17.867001,56.499001z M6.6660004,48.699001L6.6660004,52.999001 23.765999,52.999001 23.765999,48.699001z M47.099998,43.833L51.099998,43.833 51.099998,47.833 47.099998,47.833z M39.299999,43.833L43.299999,43.833 43.299999,47.833 39.299999,47.833z M31.5,43.833L35.5,43.833 35.5,47.833 31.5,47.833z M6.6660004,39.598999L6.6660004,43.900002 23.765999,43.900002 23.765999,39.598999z M47.099998,35.033001L51.099998,35.033001 51.099998,39.033001 47.099998,39.033001z M39.299999,35.033001L43.299999,35.033001 43.299999,39.033001 39.299999,39.033001z M31.5,35.033001L35.5,35.033001 35.5,39.033001 31.5,39.033001z M6.6660004,30.498999L6.6660004,34.799999 23.765999,34.799999 23.765999,30.498999z M47.099998,26.632999L51.099998,26.632999 51.099998,30.632999 47.099998,30.632999z M39.299999,26.632999L43.299999,26.632999 43.299999,30.632999 39.299999,30.632999z M31.5,26.632999L35.5,26.632999 35.5,30.632999 31.5,30.632999z M6.6660004,21.598999L6.6660004,25.9 23.765999,25.9 23.765999,21.598999z M6.6660004,12.699L6.6660004,16.999001 23.765999,16.999001 23.765999,12.699z M2.9330006,7.2010002L27.466,7.2010002 27.466,60.799999 31.5,60.799999 31.5,52.132999 35.5,52.132999 35.5,60.799999 39.299999,60.799999 39.299999,52.132999 43.299999,52.132999 43.299999,60.799999 47.099998,60.799999 47.099998,52.132999 51.099998,52.132999 51.099998,60.799999 56,60.799999 56,21.065998 31.200001,21.065998 31.200001,17.866001 59.200001,17.866001 59.200001,21.065998 58.932999,21.065998 58.932999,60.799999 62.400002,60.799999 62.400002,64 0,64 0,60.799999 2.9330006,60.799999z M19.200001,0L46.932999,0 46.932999,0.53300095 46.932999,3.7329979 46.932999,14.667 43.733002,14.667 43.733002,3.7329979 19.200001,3.7329979z"
+                Fill="#FF0F68A1"   Stroke="#FF1F6D9F" 
+				    Stretch="Fill" 
+			  
+				     Margin="2"
+				  StrokeThickness="2"/>
+            </Grid>
+            <ContentPresenter VerticalAlignment="Center" Content="{Binding}"></ContentPresenter>
+        </StackPanel>
+    </DataTemplate>
+</ResourceDictionary>

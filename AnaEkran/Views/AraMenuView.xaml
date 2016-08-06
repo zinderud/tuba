@@ -1,0 +1,366 @@
+﻿<UserControl x:Class="AnaEkran.Views.AraMenuView"
+              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+		     xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions" 
+               xmlns:zinderud="http://schemas.zinderud.com/2008/xaml/presentation"
+
+               xmlns:converters="clr-namespace:ZindeUI.Metro.Converters;assembly=ZindeUI.Metro"
+             xmlns:viewModel="clr-namespace:AnaEkran.ViewModels" Background="Black"
+             Name="AraMenu"
+                   mc:Ignorable="d"  
+                           DataContext="{Binding Source={StaticResource Locator}, Path=TBL_PERSONELViewModel}"  
+
+               >
+
+    <UserControl.Resources>
+        <converters:StringToVisibilityConverter x:Key="StringToVisibilityConverter" />
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="5"/>
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="5"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel  Name="SpAna" Grid.Row="1" Grid.Column="1" >
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
+
+                <Border Grid.Row="0" x:Name="BorderYonetici" Margin="2" BorderBrush="White" CornerRadius="3" BorderThickness="1"  >
+                    <StackPanel Name="SpYonetici" Orientation="Horizontal" Grid.Column="0" Grid.Row="0"  Margin="2"   >
+                        <Grid  >
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="auto"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Grid Width="150" Grid.RowSpan="2">
+
+                                <Grid.Background>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FF81EDF5"/>
+                                        <GradientStop Color="White" Offset="1"/>
+                                    </LinearGradientBrush>
+                                </Grid.Background>
+                                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Bottom" FontWeight="Medium" Padding="10,0,10,0" TextWrapping="Wrap" FontFamily="Sylfaen" Text="Yönetici İşlemleri"   Foreground="#FF1F6D9F" FontSize="30" Margin="0,0,12,1" Grid.RowSpan="2"></TextBlock>
+                            </Grid>
+
+                            <StackPanel   Name="SpAdminKullaniciIslemleri" Orientation="Horizontal" Grid.Row="0" Grid.Column="1"   Margin="2" ScrollViewer.CanContentScroll="True" ScrollViewer.HorizontalScrollBarVisibility="Visible">
+                                <Grid Name="GridKullaniciIslemleri"   >
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="auto"/>
+                                        <RowDefinition Height="auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Border Grid.Row="1" Grid.Column="0"  x:Name="BorderPersonelEkle"  Margin="2" BorderBrush="White"  CornerRadius="3" BorderThickness="1" Width="165">
+                                        <StackPanel  Margin="2"  Orientation="Vertical"  >
+                                            <Button    IsEnabled="True"  ContentTemplate="{StaticResource TabletKullaniciEkleTemplate}"   FontWeight="SemiBold"  Style="{StaticResource MenuButtonStyle}" MaxHeight="45"  Margin="10,10,10,5" x:Name="BtnPersonelSayfasi" Click="BtnKullaniciEkle_OnClick"   />
+                                            <TextBlock  Margin="2"    FontSize="15" Padding="5" FontWeight="Bold" TextAlignment="Center" Text="Personel Sayfası" Foreground="AntiqueWhite"/>
+                                        </StackPanel>
+                                    </Border>
+                                    <Border Grid.Row="1" Grid.Column="1"  x:Name="BorderKasaSayfası"  Margin="2" BorderBrush="White"  CornerRadius="3" BorderThickness="1" Width="165">
+                                        <StackPanel  Margin="2"  Orientation="Vertical"  >
+                                            <Button    IsEnabled="True"  ContentTemplate="{StaticResource TabletKasaTemplate}"   FontWeight="SemiBold"  Style="{StaticResource MenuButtonStyle}" MaxHeight="45"  Margin="10,10,10,5" x:Name="BtnKasaSayfasi" Click="BtnKasaSayfasi_OnClick"  />
+                                            <TextBlock  Margin="2"    FontSize="15" Padding="5" FontWeight="Bold" TextAlignment="Center" Text="Kasa Sayfası" Foreground="AntiqueWhite"/>
+                                        </StackPanel>
+                                    </Border>
+                                    <Border Grid.Row="1" Grid.Column="2"  x:Name="BorderDepoSayfası"  Margin="2" BorderBrush="White"  CornerRadius="3" BorderThickness="1" Width="165">
+                                        <StackPanel  Margin="2"  Orientation="Vertical"  >
+                                            <Button    IsEnabled="True"  ContentTemplate="{StaticResource DepoCikisTemplate}"   FontWeight="SemiBold"  Style="{StaticResource MenuButtonStyle}" MaxHeight="45"  Margin="10,10,10,5" x:Name="BtnDepoSayfasi" Click="BtnDepoSayfasi_OnClick" />
+                                            <TextBlock  Margin="2"    FontSize="15" Padding="5" FontWeight="Bold" TextAlignment="Center" Text="Depo Sayfası" Foreground="AntiqueWhite"/>
+                                        </StackPanel>
+                                    </Border>
+                                    <Border Grid.Row="1" Grid.Column="3"  x:Name="BorderFaturaSayfası"  Margin="2" BorderBrush="White"  CornerRadius="3" BorderThickness="1" Width="165">
+                                        <StackPanel  Margin="2"  Orientation="Vertical"  >
+                                            <Button    IsEnabled="True"  ContentTemplate="{StaticResource DepoCikisTemplate}"   FontWeight="SemiBold"  Style="{StaticResource MenuButtonStyle}" MaxHeight="45"  Margin="10,10,10,5" x:Name="BtnFaturaSayfasi" Click="BtnFaturaSayfasi_OnClick"/>
+                                            <TextBlock  Margin="2"    FontSize="15" Padding="5" FontWeight="Bold" TextAlignment="Center" Text="Fatura Sayfası" Foreground="AntiqueWhite"/>
+                                        </StackPanel>
+                                    </Border>
+                                    <Border Grid.Row="1" Grid.Column="4"  x:Name="BorderSirketSayfası"  Margin="2" BorderBrush="White"  CornerRadius="3" BorderThickness="1" Width="165">
+                                        <StackPanel  Margin="2"  Orientation="Vertical"  >
+                                            <Button    IsEnabled="True"  ContentTemplate="{StaticResource FirmaIslemleri}"   FontWeight="SemiBold"  Style="{StaticResource MenuButtonStyle}" MaxHeight="45"  Margin="10,10,10,5" x:Name="BtnSirketSayfasi" Click="BtnSirketSayfasi_OnClick"/>
+                                            <TextBlock  Margin="2"    FontSize="15" Padding="5" FontWeight="Bold" TextAlignment="Center" Text="Sirket Sayfası" Foreground="AntiqueWhite"/>
+                                        </StackPanel>
+                                    </Border>
+                                    <Border Grid.Row="1" Grid.Column="5"  x:Name="BorderUrunSayfası"  Margin="2" BorderBrush="White"  CornerRadius="3" BorderThickness="1" Width="165">
+                                        <StackPanel  Margin="2"  Orientation="Vertical"  >
+                                            <Button    IsEnabled="True"  ContentTemplate="{StaticResource DepoCikisTemplate}"   FontWeight="SemiBold"  Style="{StaticResource MenuButtonStyle}" MaxHeight="45"  Margin="10,10,10,5" x:Name="BtnUrunSayfasi" Click="BtnUrunSayfasi_OnClick"/>
+                                            <TextBlock  Margin="2"    FontSize="15" Padding="5" FontWeight="Bold" TextAlignment="Center" Text="Ürün Sayfası" Foreground="AntiqueWhite"/>
+                                        </StackPanel>
+                                    </Border>
+                                </Grid>
+                            </StackPanel>
+                            <StackPanel   Name="SpAdminRaporIslemleri" Orientation="Horizontal" Grid.Row="1" Grid.Column="1"  Margin="2">
+                                <Grid Name="GridRaporIslemleri"   >
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="auto"/>
+                                        <RowDefinition Height="auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Border Grid.Row="1" Grid.Column="0"  x:Name="BorderRaporOnay"  Margin="2" BorderBrush="White"  CornerRadius="3" BorderThickness="1" Width="165">
+                                        <StackPanel  Margin="2"  Orientation="Vertical"  >
+                                            <Button    IsEnabled="True"  ContentTemplate="{StaticResource RaporOnayTemplate}"   FontWeight="SemiBold"  Style="{StaticResource MenuButtonStyle}" MaxHeight="45"  Margin="10,10,10,5"  x:Name="BtnBankaAnaSAyfasi" Click="BtnBankaAnaSAyfasi_OnClick"  />
+                                            <TextBlock  Margin="2"    FontSize="15" Padding="5" FontWeight="Bold" TextAlignment="Center" Text="Banka Sayfası"  Foreground="AntiqueWhite"/>
+                                        </StackPanel>
+                                    </Border>
+                                    <Border Grid.Row="1" Grid.Column="1"  x:Name="BorderFis"  Margin="2" BorderBrush="White"  CornerRadius="3" BorderThickness="1" Width="165">
+                                        <StackPanel  Margin="2"  Orientation="Vertical"  >
+                                            <Button    IsEnabled="True"  ContentTemplate="{StaticResource RaporOnayTemplate}"   FontWeight="SemiBold"  Style="{StaticResource MenuButtonStyle}" MaxHeight="45"  Margin="10,10,10,5"  x:Name="BtnFisAnaSAyfasi" Click="BtnFisAnaSAyfasi_OnClick" />
+                                            <TextBlock  Margin="2"    FontSize="15" Padding="5" FontWeight="Bold" TextAlignment="Center" Text="Fis Sayfası"  Foreground="AntiqueWhite"/>
+                                        </StackPanel>
+                                    </Border>
+                                    <Border Grid.Row="1" Grid.Column="2"  x:Name="BorderGider"  Margin="2" BorderBrush="White"  CornerRadius="3" BorderThickness="1" Width="165">
+                                        <StackPanel  Margin="2"  Orientation="Vertical"  >
+                                            <Button    IsEnabled="True"  ContentTemplate="{StaticResource RaporOnayTemplate}"   FontWeight="SemiBold"  Style="{StaticResource MenuButtonStyle}" MaxHeight="45"  Margin="10,10,10,5"  x:Name="BtnGiderAnaSAyfasi" Click="BtnGiderAnaSAyfasi_OnClick"/>
+                                            <TextBlock  Margin="2"    FontSize="15" Padding="5" FontWeight="Bold" TextAlignment="Center" Text="Gider Sayfası"  Foreground="AntiqueWhite"/>
+                                        </StackPanel>
+                                    </Border>
+                                    <Border Grid.Row="1" Grid.Column="3"  x:Name="BorderOdeme"  Margin="2" BorderBrush="White"  CornerRadius="3" BorderThickness="1" Width="165">
+                                        <StackPanel  Margin="2"  Orientation="Vertical"  >
+                                            <Button    IsEnabled="True"  ContentTemplate="{StaticResource RaporOnayTemplate}"   FontWeight="SemiBold"  Style="{StaticResource MenuButtonStyle}" MaxHeight="45"  Margin="10,10,10,5"  x:Name="BtnOdemeaSAyfasi" Click="BtnOdemeaSAyfasi_OnClick"/>
+                                            <TextBlock  Margin="2"    FontSize="15" Padding="5" FontWeight="Bold" TextAlignment="Center" Text="Ödeme Sayfası"  Foreground="AntiqueWhite"/>
+                                        </StackPanel>
+                                    </Border>
+                                    <Border Grid.Row="1" Grid.Column="4"  x:Name="BorderParaTipi"  Margin="2" BorderBrush="White"  CornerRadius="3" BorderThickness="1" Width="165">
+                                        <StackPanel  Margin="2"  Orientation="Vertical"  >
+                                            <Button    IsEnabled="True"  ContentTemplate="{StaticResource RaporOnayTemplate}"   FontWeight="SemiBold"  Style="{StaticResource MenuButtonStyle}" MaxHeight="45"  Margin="10,10,10,5"  x:Name="BtnParaTipiaSAyfasi" Click="BtnParaTipiaSAyfasi_OnClick"/>
+                                            <TextBlock  Margin="2"    FontSize="15" Padding="5" FontWeight="Bold" TextAlignment="Center" Text="ParaTipi Sayfası"  Foreground="AntiqueWhite"/>
+                                        </StackPanel>
+                                    </Border>
+                                    <Border Grid.Row="1" Grid.Column="5"  x:Name="BorderSiparis"  Margin="2" BorderBrush="White"  CornerRadius="3" BorderThickness="1" Width="165">
+                                        <StackPanel  Margin="2"  Orientation="Vertical"  >
+                                            <Button    IsEnabled="True"  ContentTemplate="{StaticResource RaporOnayTemplate}"   FontWeight="SemiBold"  Style="{StaticResource MenuButtonStyle}" MaxHeight="45"  Margin="10,10,10,5"  x:Name="BtnSiparisAyfasi" Click="BtnSiparisAyfasi_OnClick"/>
+                                            <TextBlock  Margin="2"    FontSize="15" Padding="5" FontWeight="Bold" TextAlignment="Center" Text="Sipariş Sayfası"  Foreground="AntiqueWhite"/>
+                                        </StackPanel>
+                                    </Border>
+
+
+                                </Grid>
+                            </StackPanel>
+                        </Grid>
+
+
+
+                    </StackPanel>
+                </Border>
+                <Border Grid.Row="1" x:Name="BorderSatis"  Margin="2" BorderBrush="White"  CornerRadius="3" BorderThickness="1">
+                    <StackPanel Name="SpKirli" Orientation="Horizontal" Grid.Row="1"     Margin="2">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid  Width="150">
+
+                                <Grid.Background>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FF81EDF5"/>
+                                        <GradientStop Color="White" Offset="1"/>
+                                    </LinearGradientBrush>
+                                </Grid.Background>
+                                <TextBlock   HorizontalAlignment="Center" VerticalAlignment="Bottom" FontWeight="Medium" Padding="10,0,10,0" TextWrapping="Wrap" FontFamily="Sylfaen" Text="SATIŞ  " Foreground="#FF1F6D9F" FontSize="30" Height="90" Margin="0,0,12,1" Grid.RowSpan="2"></TextBlock>
+                            </Grid>
+
+                           
+
+
+                        </Grid>
+                        <Border Grid.Row="0" Grid.Column="1"  x:Name="BordeerAnaGoruntu"  Margin="2" BorderBrush="White"  CornerRadius="3" BorderThickness="1" Width="165">
+                            <StackPanel  Margin="2"  Orientation="Vertical"  >
+                                <Button    IsEnabled="True"  ContentTemplate="{StaticResource TabletKullaniciEkleTemplate}"   FontWeight="SemiBold"  Style="{StaticResource MenuButtonStyle}" MaxHeight="45"  Margin="10,10,10,5" x:Name="BtnAnaGoruntu" Click="BtnAnaGoruntu_OnClick"   />
+                                <TextBlock  Margin="2"    FontSize="15" Padding="5" FontWeight="Bold" TextAlignment="Center" Text="Genel Durum" Foreground="AntiqueWhite"/>
+                            </StackPanel>
+                        </Border>
+                        <Border Grid.Row="0" Grid.Column="1"  x:Name="BordeerBolumSiparisDuzenle"  Margin="2" BorderBrush="White"  CornerRadius="3" BorderThickness="1" Width="165">
+                            <StackPanel  Margin="2"  Orientation="Vertical"  >
+                                <Button    IsEnabled="True"  ContentTemplate="{StaticResource SetDevirSorgulaTemplate}"   FontWeight="SemiBold"  Style="{StaticResource MenuButtonStyle}" MaxHeight="45"  Margin="10,10,10,5" x:Name="BtnBolumSiparisDuzenle" Click="BtnBolumSiparisDuzenle_OnClick"  />
+                                <TextBlock  Margin="2"    FontSize="15" Padding="5" FontWeight="Bold" TextAlignment="Center" Text="Sipariş Ekle" Foreground="AntiqueWhite"/>
+                            </StackPanel>
+                        </Border>
+                        <Border Grid.Row="0" Grid.Column="1"  x:Name="BordeerBolumFaturaEkle"  Margin="2" BorderBrush="White"  CornerRadius="3" BorderThickness="1" Width="165">
+                            <StackPanel  Margin="2"  Orientation="Vertical"  >
+                                <Button    IsEnabled="True"  ContentTemplate="{StaticResource SetDevirSorgulaTemplate}"   FontWeight="SemiBold"  Style="{StaticResource MenuButtonStyle}" MaxHeight="45"  Margin="10,10,10,5" x:Name="BtnBolumFaturaEkle" Click="BtnBolumFaturaEkle_OnClick"  />
+                                <TextBlock  Margin="2"    FontSize="15" Padding="5" FontWeight="Bold" TextAlignment="Center" Text="Fatura Ekle" Foreground="AntiqueWhite"/>
+                            </StackPanel>
+                        </Border>
+                    </StackPanel>
+                </Border>
+                <!--<Border Grid.Row="2"  x:Name="BorderPazarlama" Margin="2" BorderBrush="White" CornerRadius="3"   BorderThickness="1">
+                    <StackPanel Name="SpTemiz" Orientation="Horizontal" Grid.Row="2"  Margin="2">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid Width="150">
+
+                                <Grid.Background>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FF81EDF5"/>
+                                        <GradientStop Color="White" Offset="1"/>
+                                    </LinearGradientBrush>
+                                </Grid.Background>
+                                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Bottom" FontWeight="Medium" Padding="10,0,10,0" TextWrapping="Wrap" FontFamily="Sylfaen" Text="Pazarlama" Foreground="#FF1F6D9F" FontSize="30" Margin="0,0,12,1" Grid.RowSpan="2"></TextBlock>
+                            </Grid>
+
+
+                            <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.Column="1" Margin="2">
+                                <Grid Name="GridTemizIsler"   >
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="auto"/>
+                                        <RowDefinition Height="auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="auto"/>
+                                    </Grid.ColumnDefinitions>
+                                     
+                                </Grid>
+
+                            </StackPanel>
+
+
+                        </Grid>
+                    </StackPanel>
+
+                </Border>-->
+
+                <Border Grid.Row="3"  x:Name="BorderDepo" Margin="2" BorderBrush="White" CornerRadius="3"   BorderThickness="1">
+                    <StackPanel Name="spDepo" Orientation="Horizontal" Grid.Row="3"  Margin="2">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid Width="150">
+
+                                <Grid.Background>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FF81EDF5"/>
+                                        <GradientStop Color="White" Offset="1"/>
+                                    </LinearGradientBrush>
+                                </Grid.Background>
+                                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Bottom" FontWeight="Medium" Padding="10,0,10,0" TextWrapping="Wrap" FontFamily="Sylfaen" Text="Depo" Foreground="#FF1F6D9F" FontSize="30" Margin="0,0,12,1" Height="90" Grid.RowSpan="2"></TextBlock>
+                            </Grid>
+
+
+                            <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.Column="1" Margin="2">
+                                <Grid Name="GridDepo"   >
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="auto"/>
+                                        <RowDefinition Height="auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="auto"/>
+                                    </Grid.ColumnDefinitions>
+                                                                   </Grid>
+                            </StackPanel>
+
+
+                        </Grid>
+                        <Border Grid.Row="0" Grid.Column="1"  x:Name="BordeerBolumDepoIslem"  Margin="2" BorderBrush="White"  CornerRadius="3" BorderThickness="1" Width="165">
+                            <StackPanel  Margin="2"  Orientation="Vertical"  >
+                                <Button    IsEnabled="True"  ContentTemplate="{StaticResource DepoCikisTemplate}"   FontWeight="SemiBold"  Style="{StaticResource MenuButtonStyle}" MaxHeight="45"  Margin="10,10,10,5" x:Name="BtnBolumDepoIslem" Click="BtnBolumDepoIslem_OnClick"  />
+                                <TextBlock  Margin="2"    FontSize="15" Padding="5" FontWeight="Bold" TextAlignment="Center" Text="Depo İşlem" Foreground="AntiqueWhite"/>
+                            </StackPanel>
+                        </Border>
+                        <Border Grid.Row="0" Grid.Column="1"  x:Name="BordeerBolumDepoTransfer"  Margin="2" BorderBrush="White"  CornerRadius="3" BorderThickness="1" Width="165">
+                            <StackPanel  Margin="2"  Orientation="Vertical"  >
+                                <Button    IsEnabled="True"  ContentTemplate="{StaticResource AletDurumGuncelleTemplate}"   FontWeight="SemiBold"  Style="{StaticResource MenuButtonStyle}" MaxHeight="45"  Margin="10,10,10,5" x:Name="BtnBolumDepoTransfer" Click="BtnBolumDepoTransfer_OnClick" />
+                                <TextBlock  Margin="2"    FontSize="15" Padding="5" FontWeight="Bold" TextAlignment="Center" Text="Depo Transfer" Foreground="AntiqueWhite"/>
+                            </StackPanel>
+                        </Border>
+                        <Border Grid.Row="0" Grid.Column="1"  x:Name="BordeerBolumDepoDuzenle"  Margin="2" BorderBrush="White"  CornerRadius="3" BorderThickness="1" Width="165">
+                            <StackPanel  Margin="2"  Orientation="Vertical"  >
+                                <Button    IsEnabled="True"  ContentTemplate="{StaticResource ArsivSorgulaTemplate}"   FontWeight="SemiBold"  Style="{StaticResource MenuButtonStyle}" MaxHeight="45"  Margin="10,10,10,5" x:Name="BtnBolumBolumDepoDuzenle" Click="BtnBolumDepoTransfer_OnClick" />
+                                <TextBlock  Margin="2"    FontSize="15" Padding="5" FontWeight="Bold" TextAlignment="Center" Text="Depo Düzenle" Foreground="AntiqueWhite"/>
+                            </StackPanel>
+                        </Border>
+                    </StackPanel>
+                </Border>
+               
+            </Grid>
+        </StackPanel>
+
+
+    </Grid>
+
+</UserControl>

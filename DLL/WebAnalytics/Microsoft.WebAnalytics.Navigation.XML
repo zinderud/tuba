@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.WebAnalytics.Navigation</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.WebAnalytics.Navigation.HandleFrame">
+            <summary>
+            Handle Frame events
+            </summary>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Navigation.HandleFrame.Track(System.Windows.FrameworkElement,Microsoft.WebAnalytics.AnalyticsEvent,System.EventArgs)">
+            <summary>
+            Track the Frame Navigated and NavigationFailed events.
+            </summary>
+            <param name="associatedObject">the associated object</param>
+            <param name="analyticsEvent">the analytics event</param>
+            <param name="eventArgs">the event arguments</param>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Navigation.HandleFrame.TrackNavigationFailed(System.Windows.Controls.Frame,Microsoft.WebAnalytics.AnalyticsEvent,System.Windows.Navigation.NavigationFailedEventArgs)">
+            <summary>
+            Track frame navigation failed events
+            </summary>
+            <param name="frame">the navigation frame</param>
+            <param name="analyticsEvent">the analytics event</param>
+            <param name="navigationFailedEventArgs">the navigation failed event arguments</param>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Navigation.HandleFrame.TrackNavigated(System.Windows.Controls.Frame,Microsoft.WebAnalytics.AnalyticsEvent,System.Windows.Navigation.NavigationEventArgs)">
+            <summary>
+            Track frame navigated events
+            </summary>
+            <param name="frame">the navigation frame</param>
+            <param name="analyticsEvent">the analytics event</param>
+            <param name="navigationEventArgs">the navigation event arguments</param>
+        </member>
+        <member name="P:Microsoft.WebAnalytics.Navigation.HandleFrame.Log">
+            <summary>
+            Gets or sets the event Logging method
+            </summary>
+        </member>
+    </members>
+</doc>

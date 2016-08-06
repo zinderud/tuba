@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.WebAnalytics.Testing</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.WebAnalytics.Testing.AnalyticsUnitTesting">
+            <summary>
+            Unit Test utility class for Silverlight Analytics Framework
+            </summary>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Testing.AnalyticsUnitTesting.#ctor">
+            <summary>
+            Prevents a default instance of the AnalyticsUnitTesting class from being created.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WebAnalytics.Testing.AnalyticsUnitTesting.CreateAnalyticsTestPage(System.Windows.Application,System.Windows.UIElement)">
+            <summary>
+            Create a test page for a web analytics service
+            </summary>
+            <param name="app">the Silverlight application</param>
+            <param name="testPage">the test page returned from 
+            <see cref="M:Microsoft.Silverlight.Testing.UnitTestSystem.CreateTestPage"/></param>
+            <returns>the root visual</returns>
+            <remarks>Call this function from the <see cref="E:System.Windows.Application.Startup"/> event 
+            handler and set <see cref="P:System.Windows.Application.RootVisual"/> to its return value.</remarks>
+        </member>
+    </members>
+</doc>

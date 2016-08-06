@@ -1,0 +1,56 @@
+//===================================================================================
+// Sio
+// Sio
+//===================================================================================
+
+#region
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using AutoBusinessObjects;
+using DataObjects.EntityFramework;
+#endregion
+
+namespace DataObjects
+{
+	public partial interface ITBL_SPARIS_TURU   
+    {
+		/// <summary>
+        ///TBL_SPARIS_TURU  Ekle komutu
+        /// </summary>
+        /// <param name="item">Item</param>
+		 
+        bool  Ekle__TBL_SPARIS_TURU(TBL_SPARIS_TURUDTO item);
+        
+        /// <summary>
+        ///TBL_SPARIS_TURU  sil komutu
+        /// </summary>
+        /// <param name="item">Item</param>
+		 
+        bool  Sil__TBL_SPARIS_TURU(TBL_SPARIS_TURUDTO item);
+        
+        /// <summary>
+        ///TBL_SPARIS_TURU  degistir komutu
+        /// </summary>
+        /// <param name="item">Item</param>
+		 
+        bool  Degistir__TBL_SPARIS_TURU(TBL_SPARIS_TURUDTO item);
+		 /// <summary>
+        ///TBL_SPARIS_TURU  listele komutu
+        /// </summary>
+        /// <param name="item">Item</param>
+		 
+         List<TBL_SPARIS_TURUDTO>  Listele__TBL_SPARIS_TURU();
+         /// <summary>
+        ///TBL_SPARIS_TURU  Bul komutu
+        /// </summary>
+        /// <param name="item">Item</param>
+		 
+         TBL_SPARIS_TURUDTO  Bul_TBL_SPARIS_TURU(int ID);
+        
+        
+         
+	}
+}

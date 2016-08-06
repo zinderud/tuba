@@ -1,0 +1,287 @@
+﻿<FlowDocument xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+              xmlns:xrd="clr-namespace:CodeReason.Reports.Document;assembly=CodeReason.Reports" 
+              xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+              xmlns:triggers="clr-namespace:MVVM;assembly=MVVM"
+              xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions" 
+              DataContext="{Binding Source={StaticResource Locator}, Path=KimyasalBiyolojikTestSonucViewModel}"
+             PageHeight="29.7cm" PageWidth="21cm" ColumnWidth="21cm" >
+    <xrd:ReportProperties>
+        <xrd:ReportProperties.ReportName>KBTestRaporu</xrd:ReportProperties.ReportName>
+        <xrd:ReportProperties.ReportTitle>KBTestRaporu</xrd:ReportProperties.ReportTitle>
+    </xrd:ReportProperties>
+    <Section Padding="40,40,40,20" FontSize="12">
+        <Table  CellSpacing="5" Margin="10,10,10,10" BorderBrush="Black" BorderThickness="0.02cm">
+            <Table.Resources>
+                <!-- Style for header/footer rows. -->
+                <Style x:Key="headerFooterRowStyle" TargetType="{x:Type TableRowGroup}">
+                    <Setter Property="FontWeight" Value="DemiBold"/>
+                    <Setter Property="FontSize" Value="14"/>
+                    <Setter Property="Background" Value="LightGray"/>
+                </Style>
+
+                <!-- Style for data rows. -->
+                <Style x:Key="dataRowStyle" TargetType="{x:Type TableRowGroup}">
+                    <Setter Property="FontSize" Value="12"/>
+                </Style>
+
+                <!-- Style for data cells. -->
+                <Style TargetType="{x:Type TableCell}">
+                    <Setter Property="Padding" Value="0.1cm"/>
+                    <Setter Property="BorderBrush" Value="Gray"/>
+                    <Setter Property="BorderThickness" Value="0.01cm"/>
+                </Style>
+            </Table.Resources>
+            <Table.Columns>
+                <TableColumn Width="*" />
+            </Table.Columns>
+            <TableRowGroup>
+                <TableRow>
+                    <TableCell>
+
+                        <Paragraph    FontSize="16" TextAlignment="Center">
+                            <Bold >
+                                <Run Text="ONDOKUZ MAYIS ÜNİVERSİTESİ"></Run>
+                            </Bold>
+                        </Paragraph>
+                    </TableCell>
+
+                </TableRow>
+            </TableRowGroup>
+        </Table>
+        <Table CellSpacing="5" Margin="0,0,0,0" BorderBrush="Black" BorderThickness="0.02cm">
+            <Table.Resources>
+                <!-- Style for header/footer rows. -->
+                <Style x:Key="headerFooterRowStyle" TargetType="{x:Type TableRowGroup}">
+                    <Setter Property="FontWeight" Value="DemiBold"/>
+                    <Setter Property="FontSize" Value="14"/>
+                    <Setter Property="Background" Value="LightGray"/>
+                </Style>
+
+                <!-- Style for data rows. -->
+                <Style x:Key="dataRowStyle" TargetType="{x:Type TableRowGroup}">
+                    <Setter Property="FontSize" Value="12"/>
+                </Style>
+
+                <!-- Style for data cells. -->
+                <Style TargetType="{x:Type TableCell}">
+                    <Setter Property="Padding" Value="0.1cm"/>
+                    <Setter Property="BorderBrush" Value="Gray"/>
+                    <Setter Property="BorderThickness" Value="0.01cm"/>
+                </Style>
+            </Table.Resources>
+            <Table.Columns>
+                <TableColumn Width="*" />
+            </Table.Columns>
+            <TableRowGroup>
+                <TableRow>
+                    <TableCell>
+                        <Paragraph    FontSize="16" TextAlignment="Center">
+                            <Bold >
+                                <Run Text="TEMİZ ALAN KİMYASAL BİYOLOJİK TEST RAPORU"></Run>
+                            </Bold>
+                        </Paragraph>
+                    </TableCell>
+
+                </TableRow>
+            </TableRowGroup>
+        </Table>
+      
+    </Section>
+    <Section Padding="40,5,40,20" >  
+        <Table CellSpacing="0" Margin="0,0,0,0" BorderBrush="Black">
+            <Table.Resources>
+                <!-- Style for header/footer rows. -->
+                <Style x:Key="headerFooterRowStyle" TargetType="{x:Type TableRowGroup}">
+                    <Setter Property="FontWeight" Value="DemiBold"/>
+                    <Setter Property="FontSize" Value="16"/>
+                    <Setter Property="Background" Value="LightGray"/>
+                </Style>
+
+                <!-- Style for data rows. -->
+                <Style x:Key="dataRowStyle" TargetType="{x:Type TableRowGroup}">
+                    <Setter Property="FontSize" Value="12"/>
+                </Style>
+
+                <!-- Style for data cells. -->
+                <Style TargetType="{x:Type TableCell}">
+                    <Setter Property="Padding" Value="0.1cm"/>
+                    <Setter Property="BorderBrush" Value="Gray"/>
+                    <Setter Property="BorderThickness" Value="0.02cm"/>
+                </Style>
+            </Table.Resources>
+            <Table.Columns>
+                <TableColumn Width="*" />
+                <TableColumn Width="*" />
+            </Table.Columns>
+            <TableRowGroup Style="{StaticResource dataRowStyle}">
+                <TableRow>
+                    <TableCell>
+                        <Paragraph TextAlignment="Left">
+                            <Bold>OTOKLAV NUMARASI </Bold>
+                        </Paragraph>
+                    </TableCell>
+                    <TableCell>
+                        <Paragraph TextAlignment="Left">
+                            <xrd:InlineDocumentValue PropertyName="OtoklavId" />
+                        </Paragraph>
+                    </TableCell>
+                </TableRow>
+            </TableRowGroup>
+            <TableRowGroup Style="{StaticResource dataRowStyle}">
+                <TableRow>
+                    <TableCell>
+                        <Paragraph TextAlignment="Left">
+                            <Bold>ÇEVRİM NUMARASI</Bold>
+                        </Paragraph>
+                    </TableCell>
+                    <TableCell>
+                        <Paragraph TextAlignment="Left">
+                            <xrd:InlineDocumentValue PropertyName="CevrimNo" />
+                        </Paragraph>
+                    </TableCell>
+                </TableRow>
+            </TableRowGroup>
+            <TableRowGroup Style="{StaticResource dataRowStyle}">
+                <TableRow>
+                    <TableCell>
+                        <Paragraph TextAlignment="Left">
+                            <Bold>OTOKLAV YÜKLEYEN YETKİLİ</Bold>
+                        </Paragraph>
+                    </TableCell>
+                    <TableCell>
+                        <Paragraph TextAlignment="Left">
+                            <xrd:InlineDocumentValue PropertyName="OtoklavYukleyen" />
+                        </Paragraph>
+                    </TableCell>
+                </TableRow>
+            </TableRowGroup>
+            <TableRowGroup Style="{StaticResource dataRowStyle}">
+                <TableRow>
+                    <TableCell>
+                        <Paragraph TextAlignment="Left">
+                            <Bold>SONUCLARI ONAYLAYAN YETKİLİ</Bold>
+                        </Paragraph>
+                    </TableCell>
+                    <TableCell>
+                        <Paragraph TextAlignment="Left">
+                            <xrd:InlineDocumentValue PropertyName="Onaylayan" />
+                        </Paragraph>
+                    </TableCell>
+                </TableRow>
+            </TableRowGroup>
+            <TableRowGroup Style="{StaticResource dataRowStyle}">
+                <TableRow>
+                    <TableCell>
+                        <Paragraph TextAlignment="Left">
+                            <Bold>KİMYASAL SONUC</Bold>
+                        </Paragraph>
+                    </TableCell>
+                    <TableCell>
+                        <Paragraph TextAlignment="Left">
+                            <xrd:InlineDocumentValue PropertyName="KimyasalSonuc" />
+                        </Paragraph>
+                    </TableCell>
+                </TableRow>
+            </TableRowGroup>
+            <TableRowGroup Style="{StaticResource dataRowStyle}">
+                <TableRow>
+                    <TableCell>
+                        <Paragraph TextAlignment="Left">
+                            <Bold>BİYOLOJİK SONUC</Bold>
+                        </Paragraph>
+                    </TableCell>
+                    <TableCell>
+                        <Paragraph TextAlignment="Left">
+                            <xrd:InlineDocumentValue PropertyName="BiyolojikSonuc" />
+                        </Paragraph>
+                    </TableCell>
+                </TableRow>
+            </TableRowGroup>
+            <TableRowGroup Style="{StaticResource dataRowStyle}">
+                <TableRow>
+                    <TableCell>
+                        <Paragraph TextAlignment="Left">
+                            <Bold>ONAYLANMA TARİHİ</Bold>
+                        </Paragraph>
+                    </TableCell>
+                    <TableCell>
+                        <Paragraph TextAlignment="Left">
+                            <xrd:InlineDocumentValue PropertyName="OnaylanmaTarihi" />
+                        </Paragraph>
+                    </TableCell>
+                </TableRow>
+            </TableRowGroup>
+        </Table>
+    </Section>
+    <Section Padding="40,5,40,5" >
+        <xrd:SectionDataGroup DataGroupName="ItemList">
+            <Table  CellSpacing="0" Margin="0,0,0,0" BorderBrush="Black" BorderThickness="0.02cm">
+                <Table.Resources>
+                    <!-- Style for header/footer rows. -->
+                    <Style x:Key="headerFooterRowStyle" TargetType="{x:Type TableRowGroup}">
+                        <Setter Property="FontWeight" Value="DemiBold"/>
+                        <Setter Property="FontSize" Value="16"/>
+                        <Setter Property="Background" Value="LightGray"/>
+                    </Style>
+
+                    <!-- Style for data rows. -->
+                    <Style x:Key="dataRowStyle" TargetType="{x:Type TableRowGroup}">
+                        <Setter Property="FontSize" Value="12"/>
+                    </Style>
+
+                    <!-- Style for data cells. -->
+                    <Style TargetType="{x:Type TableCell}">
+                        <Setter Property="Padding" Value="0.1cm"/>
+                        <Setter Property="BorderBrush" Value="Gray"/>
+                        <Setter Property="BorderThickness" Value="0.02cm"/>
+                    </Style>
+                </Table.Resources>
+                <Table.Columns>
+                    <TableColumn Width="0.7*" />
+                    <TableColumn Width="2*" />
+                    <TableColumn Width="0.6*" />
+                </Table.Columns>
+                <TableRowGroup Style="{StaticResource headerFooterRowStyle}">
+                    <TableRow>
+                        <TableCell>
+                            <Paragraph TextAlignment="Center">
+                                <Bold>SET/DESTEK BARKODU</Bold>
+                            </Paragraph>
+                        </TableCell>
+                        <TableCell>
+                            <Paragraph TextAlignment="Center">
+                                <Bold>SET/DESTEK ADI</Bold>
+                            </Paragraph>
+                        </TableCell>
+                    </TableRow>
+                </TableRowGroup>
+                <TableRowGroup Style="{StaticResource dataRowStyle}">
+                    <xrd:TableRowForDataTable TableName="Ean">
+                        <TableCell>
+                            <Paragraph FontSize="12"  TextAlignment="Center">
+                                <xrd:InlineTableCellValue PropertyName="State" />
+                            </Paragraph>
+                        </TableCell>
+                        <TableCell>
+                            <Paragraph FontSize="12"  TextAlignment="Center">
+                                <xrd:InlineTableCellValue PropertyName="Item" />
+                            </Paragraph>
+                        </TableCell>
+
+                        <TableCell>
+                            <Paragraph FontSize="12"  TextAlignment="Center">
+                                <xrd:InlineTableCellValue PropertyName="Count" AggregateGroup="ItemCount"/>
+                            </Paragraph>
+                        </TableCell>
+
+                    </xrd:TableRowForDataTable>
+                </TableRowGroup>
+            </Table>
+        </xrd:SectionDataGroup>
+
+    </Section>
+
+
+
+</FlowDocument>

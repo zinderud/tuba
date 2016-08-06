@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{479EF705-1E06-4836-A337-A66E09DBDD85}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ZindeService</RootNamespace>
+    <AssemblyName>ZindeService</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceContracts\ITBL_BANKAZindeService.cs" />
+    <Compile Include="ServiceContracts\ITBL_BANKA_BAKIYEZindeService.cs" />
+    <Compile Include="ServiceContracts\ITBL_DEPOZindeService.cs" />
+    <Compile Include="ServiceContracts\ITBL_DEPO_ISLEMZindeService.cs" />
+    <Compile Include="ServiceContracts\ITBL_DEPO_TRANSFERZindeService.cs" />
+    <Compile Include="ServiceContracts\ITBL_FATURAZindeService.cs" />
+    <Compile Include="ServiceContracts\ITBL_FATURA_TURUZindeService.cs" />
+    <Compile Include="ServiceContracts\ITBL_FISZindeService.cs" />
+    <Compile Include="ServiceContracts\ITBL_GIDERZindeService.cs" />
+    <Compile Include="ServiceContracts\ITBL_GIDER_BAKIYEZindeService.cs" />
+    <Compile Include="ServiceContracts\ITBL_KASAZindeService.cs" />
+    <Compile Include="ServiceContracts\ITBL_KASA_BAKIYEZindeService.cs" />
+    <Compile Include="ServiceContracts\ITBL_KDVZindeService.cs" />
+    <Compile Include="ServiceContracts\ITBL_ODEMEZindeService.cs" />
+    <Compile Include="ServiceContracts\ITBL_ODEME_TIPIZindeService.cs" />
+    <Compile Include="ServiceContracts\ITBL_ODEME_TURUZindeService.cs" />
+    <Compile Include="ServiceContracts\ITBL_PARA_TIPIZindeService.cs" />
+    <Compile Include="ServiceContracts\ITBL_PERSONELZindeService.cs" />
+    <Compile Include="ServiceContracts\ITBL_SIRKETZindeService.cs" />
+    <Compile Include="ServiceContracts\ITBL_SIRKET_BAKIYEZindeService.cs" />
+    <Compile Include="ServiceContracts\ITBL_SIRKET_GRUBZindeService.cs" />
+    <Compile Include="ServiceContracts\ITBL_SIRKET_SINIFZindeService.cs" />
+    <Compile Include="ServiceContracts\ITBL_SIRKET_TIPIZindeService.cs" />
+    <Compile Include="ServiceContracts\ITBL_SPARISZindeService.cs" />
+    <Compile Include="ServiceContracts\ITBL_SPARIS_TURUZindeService.cs" />
+    <Compile Include="ServiceContracts\ITBL_URUNZindeService.cs" />
+    <Compile Include="ServiceContracts\ITBL_URUN_BIRIMZindeService.cs" />
+    <Compile Include="ServiceContracts\ITBL_URUN_CINSIZindeService.cs" />
+    <Compile Include="ServiceContracts\ITBL_URUN_FATURAZindeService.cs" />
+    <Compile Include="ServiceContracts\ITBL_URUN_MARKAZindeService.cs" />
+    <Compile Include="ServiceContracts\ITBL_URUN_SPARISZindeService.cs" />
+    <Compile Include="ServiceContracts\ITBL_URUN_STOKZindeService.cs" />
+    <Compile Include="ServiceContracts\ITBL_URUN_TIPIZindeService.cs" />
+    <Compile Include="ServiceContracts\IZindeService.cs" />
+    <Compile Include="ServiceContracts\IZindeServiceAuto.cs" />
+    <Compile Include="ServiceImplementations\ZindeService.cs" />
+    <Compile Include="ServiceImplementations\ZindeServiceAuto.cs" />
+    <Compile Include="ServiceImplementations\ZindeServiceTBL_BANKAAuto.cs" />
+    <Compile Include="ServiceImplementations\ZindeServiceTBL_BANKA_BAKIYEAuto.cs" />
+    <Compile Include="ServiceImplementations\ZindeServiceTBL_DEPOAuto.cs" />
+    <Compile Include="ServiceImplementations\ZindeServiceTBL_DEPO_ISLEMAuto.cs" />
+    <Compile Include="ServiceImplementations\ZindeServiceTBL_DEPO_TRANSFERAuto.cs" />
+    <Compile Include="ServiceImplementations\ZindeServiceTBL_FATURAAuto.cs" />
+    <Compile Include="ServiceImplementations\ZindeServiceTBL_FATURA_TURUAuto.cs" />
+    <Compile Include="ServiceImplementations\ZindeServiceTBL_FISAuto.cs" />
+    <Compile Include="ServiceImplementations\ZindeServiceTBL_GIDERAuto.cs" />
+    <Compile Include="ServiceImplementations\ZindeServiceTBL_GIDER_BAKIYEAuto.cs" />
+    <Compile Include="ServiceImplementations\ZindeServiceTBL_KASAAuto.cs" />
+    <Compile Include="ServiceImplementations\ZindeServiceTBL_KASA_BAKIYEAuto.cs" />
+    <Compile Include="ServiceImplementations\ZindeServiceTBL_KDVAuto.cs" />
+    <Compile Include="ServiceImplementations\ZindeServiceTBL_ODEMEAuto.cs" />
+    <Compile Include="ServiceImplementations\ZindeServiceTBL_ODEME_TIPIAuto.cs" />
+    <Compile Include="ServiceImplementations\ZindeServiceTBL_ODEME_TURUAuto.cs" />
+    <Compile Include="ServiceImplementations\ZindeServiceTBL_PARA_TIPIAuto.cs" />
+    <Compile Include="ServiceImplementations\ZindeServiceTBL_PERSONELAuto.cs" />
+    <Compile Include="ServiceImplementations\ZindeServiceTBL_SIRKETAuto.cs" />
+    <Compile Include="ServiceImplementations\ZindeServiceTBL_SIRKET_BAKIYEAuto.cs" />
+    <Compile Include="ServiceImplementations\ZindeServiceTBL_SIRKET_GRUBAuto.cs" />
+    <Compile Include="ServiceImplementations\ZindeServiceTBL_SIRKET_SINIFAuto.cs" />
+    <Compile Include="ServiceImplementations\ZindeServiceTBL_SIRKET_TIPIAuto.cs" />
+    <Compile Include="ServiceImplementations\ZindeServiceTBL_SPARISAuto.cs" />
+    <Compile Include="ServiceImplementations\ZindeServiceTBL_SPARIS_TURUAuto.cs" />
+    <Compile Include="ServiceImplementations\ZindeServiceTBL_URUNAuto.cs" />
+    <Compile Include="ServiceImplementations\ZindeServiceTBL_URUN_BIRIMAuto.cs" />
+    <Compile Include="ServiceImplementations\ZindeServiceTBL_URUN_CINSIAuto.cs" />
+    <Compile Include="ServiceImplementations\ZindeServiceTBL_URUN_FATURAAuto.cs" />
+    <Compile Include="ServiceImplementations\ZindeServiceTBL_URUN_MARKAAuto.cs" />
+    <Compile Include="ServiceImplementations\ZindeServiceTBL_URUN_SPARISAuto.cs" />
+    <Compile Include="ServiceImplementations\ZindeServiceTBL_URUN_STOKAuto.cs" />
+    <Compile Include="ServiceImplementations\ZindeServiceTBL_URUN_TIPIAuto.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AutoBusinessObjects\AutoBusinessObjects.csproj">
+      <Project>{d40ebac3-9459-447a-b3ba-e7491a83534d}</Project>
+      <Name>AutoBusinessObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataObjects\DataObjects.csproj">
+      <Project>{a800186f-95fc-410d-8837-20ad6ff03cff}</Project>
+      <Name>DataObjects</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

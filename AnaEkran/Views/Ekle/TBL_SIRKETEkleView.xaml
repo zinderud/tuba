@@ -1,0 +1,401 @@
+﻿<UserControl
+              x:Class="AnaEkran.Views.Ekle.TBL_SIRKETEkleView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+	       	 xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
+            Background="DarkGray"
+             mc:Ignorable="d"  FontSize="12"
+              Loaded="UserControl_Loaded"  DataContext="{Binding Source={StaticResource Locator}, Path=  TBL_SIRKETViewModel}">
+    <UserControl.Resources>
+
+    </UserControl.Resources>
+    <Grid    >
+        <StackPanel>
+            <TextBlock  Margin="2"    FontSize="15" Padding="5" FontWeight="Bold" TextAlignment="Center" Text="Şirket  Ekle" Foreground="AntiqueWhite"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid x:Name="grid2" VerticalAlignment="Top" Margin="10" HorizontalAlignment="Left"   >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <!--<Label VerticalAlignment="Center" Grid.Row="1" Margin="3" HorizontalAlignment="Left" Grid.Column="0" Content="TBL_SIRKET_ID:"/>
+                <TextBox x:Name="_tBL_SIRKET_IDTextBox" Width="160" VerticalAlignment="Center" Text="{Binding Model.TBL_SIRKET_ID, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Grid.Row="1" Margin="3" Height="38" HorizontalAlignment="Left" Grid.Column="1"/>-->
+
+
+
+
+
+
+                    <Label VerticalAlignment="Center" Grid.Row="2" Margin="3" HorizontalAlignment="Left" Grid.Column="0" Content="TBL_SIRKET_GRUB_ID:"/>
+                    <!--<TextBox x:Name="_tBL_SIRKET_GRUB_IDTextBox" Width="160" VerticalAlignment="Center" Text="{Binding Model.TBL_SIRKET_GRUB_ID, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Grid.Row="2" Margin="3" Height="38" HorizontalAlignment="Left" Grid.Column="1"/>-->
+
+                    <ComboBox Grid.Row="2" Grid.Column="1" x:Name="CmbxTBL_SIRKET_GRUBBox" Width="160" Height="38" Margin="3" 
+ ItemsSource="{Binding PropTBL_SIRKET_GRUBlistesiCollection,Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"     
+ SelectedItem="{Binding SecilenTBL_SIRKET_GRUB_MODEL , Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" >
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <Border CornerRadius="6" BorderBrush="DeepSkyBlue">
+                                    <StackPanel>
+                                        <TextBlock Text="{Binding SIRKET_GRUP_ADI,Mode=OneWay}"></TextBlock>
+
+                                    </StackPanel>
+                                </Border>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+
+                    </ComboBox>
+
+
+
+
+                    <Label VerticalAlignment="Center" Grid.Row="3" Margin="3" HorizontalAlignment="Left" Grid.Column="0" Content="TBL_SIRKET_SINIF_ID:"/>
+                    <!--<TextBox x:Name="_tBL_SIRKET_SINIF_IDTextBox" Width="160" VerticalAlignment="Center" Text="{Binding Model.TBL_SIRKET_SINIF_ID, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Grid.Row="3" Margin="3" Height="38" HorizontalAlignment="Left" Grid.Column="1"/>-->
+
+                    <ComboBox Grid.Row="3" Grid.Column="1" x:Name="CmbxTBL_SIRKET_SINIFBox" Width="160" Height="38" Margin="3" 
+ ItemsSource="{Binding PropTBL_SIRKET_SINIFlistesiCollection,Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"     
+ SelectedItem="{Binding SecilenTBL_SIRKET_SINIF_MODEL , Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" >
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <Border CornerRadius="6" BorderBrush="DeepSkyBlue">
+                                    <StackPanel>
+                                        <TextBlock Text="{Binding SIRKET_SINIF_ADI,Mode=OneWay}"></TextBlock>
+
+                                    </StackPanel>
+                                </Border>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+
+                    </ComboBox>
+
+
+
+
+                    <Label VerticalAlignment="Center" Grid.Row="4" Margin="3" HorizontalAlignment="Left" Grid.Column="0" Content="TBL_SIRKET_TIPI_ID:"/>
+                    <!--<TextBox x:Name="_tBL_SIRKET_TIPI_IDTextBox" Width="160" VerticalAlignment="Center" Text="{Binding Model.TBL_SIRKET_TIPI_ID, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Grid.Row="4" Margin="3" Height="38" HorizontalAlignment="Left" Grid.Column="1"/>-->
+
+
+                    <ComboBox Grid.Row="4" Grid.Column="1" x:Name="CmbxTBL_SIRKET_TIPIBox" Width="160" Height="38" Margin="3" 
+ ItemsSource="{Binding PropTBL_SIRKET_TIPIlistesiCollection,Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"     
+ SelectedItem="{Binding SecilenTBL_SIRKET_TIPI_MODEL , Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" >
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <Border CornerRadius="6" BorderBrush="DeepSkyBlue">
+                                    <StackPanel>
+                                        <TextBlock Text="{Binding SIRKET_TIPI_ADI,Mode=OneWay}"></TextBlock>
+
+                                    </StackPanel>
+                                </Border>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+
+                    </ComboBox>
+
+
+
+                    <Label VerticalAlignment="Center" Grid.Row="5" Margin="3" HorizontalAlignment="Left" Grid.Column="0" Content="SIRKET_ADI:"/>
+                    <TextBox x:Name="_sIRKET_ADITextBox" Width="160" VerticalAlignment="Center" Text="{Binding Model.SIRKET_ADI, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Grid.Row="5" Margin="3" Height="38" HorizontalAlignment="Left" Grid.Column="1"/>
+
+
+
+
+
+
+                    <Label VerticalAlignment="Center" Grid.Row="6" Margin="3" HorizontalAlignment="Left" Grid.Column="0" Content="SIRKET_TELEFON_1:"/>
+                    <TextBox x:Name="_sIRKET_TELEFON_1TextBox" Width="160" VerticalAlignment="Center" Text="{Binding Model.SIRKET_TELEFON_1, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Grid.Row="6" Margin="3" Height="38" HorizontalAlignment="Left" Grid.Column="1"/>
+
+
+
+
+
+
+                    <Label VerticalAlignment="Center" Grid.Row="7" Margin="3" HorizontalAlignment="Left" Grid.Column="0" Content="SIRKET_TELEFON_2:"/>
+                    <TextBox x:Name="_sIRKET_TELEFON_2TextBox" Width="160" VerticalAlignment="Center" Text="{Binding Model.SIRKET_TELEFON_2, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Grid.Row="7" Margin="3" Height="38" HorizontalAlignment="Left" Grid.Column="1"/>
+
+
+
+
+
+
+                    <Label VerticalAlignment="Center" Grid.Row="8" Margin="3" HorizontalAlignment="Left" Grid.Column="0" Content="SIRKET_FAX_1:"/>
+                    <TextBox x:Name="_sIRKET_FAX_1TextBox" Width="160" VerticalAlignment="Center" Text="{Binding Model.SIRKET_FAX_1, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Grid.Row="8" Margin="3" Height="38" HorizontalAlignment="Left" Grid.Column="1"/>
+
+
+
+
+
+
+                    <Label VerticalAlignment="Center" Grid.Row="9" Margin="3" HorizontalAlignment="Left" Grid.Column="0" Content="SIRKET_FAX_2:"/>
+                    <TextBox x:Name="_sIRKET_FAX_2TextBox" Width="160" VerticalAlignment="Center" Text="{Binding Model.SIRKET_FAX_2, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Grid.Row="9" Margin="3" Height="38" HorizontalAlignment="Left" Grid.Column="1"/>
+
+
+
+
+
+
+                    <Label VerticalAlignment="Center" Grid.Row="10" Margin="3" HorizontalAlignment="Left" Grid.Column="0" Content="SIRKET_MAIL_1:"/>
+                    <TextBox x:Name="_sIRKET_MAIL_1TextBox" Width="160" VerticalAlignment="Center" Text="{Binding Model.SIRKET_MAIL_1, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Grid.Row="10" Margin="3" Height="38" HorizontalAlignment="Left" Grid.Column="1"/>
+
+
+
+
+
+
+                    <Label VerticalAlignment="Center" Grid.Row="11" Margin="3" HorizontalAlignment="Left" Grid.Column="0" Content="SIRKET_MAIL_2:"/>
+                    <TextBox x:Name="_sIRKET_MAIL_2TextBox" Width="160" VerticalAlignment="Center" Text="{Binding Model.SIRKET_MAIL_2, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Grid.Row="11" Margin="3" Height="38" HorizontalAlignment="Left" Grid.Column="1"/>
+
+
+
+
+
+
+                    <Label VerticalAlignment="Center" Grid.Row="12" Margin="3" HorizontalAlignment="Left" Grid.Column="0" Content="SIRKET_WEB_ADRES:"/>
+                    <TextBox x:Name="_sIRKET_WEB_ADRESTextBox" Width="160" VerticalAlignment="Center" Text="{Binding Model.SIRKET_WEB_ADRES, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Grid.Row="12" Margin="3" Height="38" HorizontalAlignment="Left" Grid.Column="1"/>
+
+
+
+
+
+
+
+
+
+
+                </Grid>
+                <Grid x:Name="grid1" Grid.Column="1" VerticalAlignment="Top" Margin="10" HorizontalAlignment="Left"   >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+
+
+
+
+
+                    <Label VerticalAlignment="Center" Grid.Row="13" Margin="3" HorizontalAlignment="Left" Grid.Column="0" Content="SIRKET_VERGI_DAIRESI:"/>
+                    <TextBox x:Name="_sIRKET_VERGI_DAIRESITextBox" Width="160" VerticalAlignment="Center" Text="{Binding Model.SIRKET_VERGI_DAIRESI, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Grid.Row="13" Margin="3" Height="38" HorizontalAlignment="Left" Grid.Column="1"/>
+
+
+
+
+
+
+                    <Label VerticalAlignment="Center" Grid.Row="14" Margin="3" HorizontalAlignment="Left" Grid.Column="0" Content="SIRKET_VERGI_NO:"/>
+                    <TextBox x:Name="_sIRKET_VERGI_NOTextBox" Width="160" VerticalAlignment="Center" Text="{Binding Model.SIRKET_VERGI_NO, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Grid.Row="14" Margin="3" Height="38" HorizontalAlignment="Left" Grid.Column="1"/>
+
+
+
+
+
+
+                    <Label VerticalAlignment="Center" Grid.Row="15" Margin="3" HorizontalAlignment="Left" Grid.Column="0" Content="SIRKET_ADRES:"/>
+                    <TextBox x:Name="_sIRKET_ADRESTextBox" Width="160" VerticalAlignment="Center" Text="{Binding Model.SIRKET_ADRES, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Grid.Row="15" Margin="3" Height="38" HorizontalAlignment="Left" Grid.Column="1"/>
+
+
+
+
+
+
+                    <Label VerticalAlignment="Center" Grid.Row="16" Margin="3" HorizontalAlignment="Left" Grid.Column="0" Content="SIRKET_IL:"/>
+                    <TextBox x:Name="_sIRKET_ILTextBox" Width="160" VerticalAlignment="Center" Text="{Binding Model.SIRKET_IL, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Grid.Row="16" Margin="3" Height="38" HorizontalAlignment="Left" Grid.Column="1"/>
+
+
+
+
+
+
+                    <Label VerticalAlignment="Center" Grid.Row="17" Margin="3" HorizontalAlignment="Left" Grid.Column="0" Content="SIRKET_ILCE:"/>
+                    <TextBox x:Name="_sIRKET_ILCETextBox" Width="160" VerticalAlignment="Center" Text="{Binding Model.SIRKET_ILCE, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Grid.Row="17" Margin="3" Height="38" HorizontalAlignment="Left" Grid.Column="1"/>
+
+
+
+
+
+
+                    <Label VerticalAlignment="Center" Grid.Row="18" Margin="3" HorizontalAlignment="Left" Grid.Column="0" Content="SIRKET_POSTA_KODU:"/>
+                    <TextBox x:Name="_sIRKET_POSTA_KODUTextBox" Width="160" VerticalAlignment="Center" Text="{Binding Model.SIRKET_POSTA_KODU, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Grid.Row="18" Margin="3" Height="38" HorizontalAlignment="Left" Grid.Column="1"/>
+
+
+
+
+
+
+                    <Label VerticalAlignment="Center" Grid.Row="19" Margin="3" HorizontalAlignment="Left" Grid.Column="0" Content="SIRKET_BANKA_ADI:"/>
+                    <TextBox x:Name="_sIRKET_BANKA_ADITextBox" Width="160" VerticalAlignment="Center" Text="{Binding Model.SIRKET_BANKA_ADI, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Grid.Row="19" Margin="3" Height="38" HorizontalAlignment="Left" Grid.Column="1"/>
+
+
+
+
+
+
+                    <Label VerticalAlignment="Center" Grid.Row="20" Margin="3" HorizontalAlignment="Left" Grid.Column="0" Content="SIRKET_BANKA_SUBE_ADI:"/>
+                    <TextBox x:Name="_sIRKET_BANKA_SUBE_ADITextBox" Width="160" VerticalAlignment="Center" Text="{Binding Model.SIRKET_BANKA_SUBE_ADI, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Grid.Row="20" Margin="3" Height="38" HorizontalAlignment="Left" Grid.Column="1"/>
+
+
+
+
+
+
+                    <Label VerticalAlignment="Center" Grid.Row="21" Margin="3" HorizontalAlignment="Left" Grid.Column="0" Content="SIRKET_HESAP_NO:"/>
+                    <TextBox x:Name="_sIRKET_HESAP_NOTextBox" Width="160" VerticalAlignment="Center" Text="{Binding Model.SIRKET_HESAP_NO, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Grid.Row="21" Margin="3" Height="38" HorizontalAlignment="Left" Grid.Column="1"/>
+
+
+
+
+
+
+                    <Label VerticalAlignment="Center" Grid.Row="22" Margin="3" HorizontalAlignment="Left" Grid.Column="0" Content="SIRKET_IBAN:"/>
+                    <TextBox x:Name="_sIRKET_IBANTextBox" Width="160" VerticalAlignment="Center" Text="{Binding Model.SIRKET_IBAN, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Grid.Row="22" Margin="3" Height="38" HorizontalAlignment="Left" Grid.Column="1"/>
+
+
+
+
+
+
+                    <Label VerticalAlignment="Center" Grid.Row="23" Margin="3" HorizontalAlignment="Left" Grid.Column="0" Content="SIRKET_ACIKLAMA:"/>
+                    <TextBox x:Name="_sIRKET_ACIKLAMATextBox" Width="160" VerticalAlignment="Center" Text="{Binding Model.SIRKET_ACIKLAMA, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Grid.Row="23" Margin="3" Height="38" HorizontalAlignment="Left" Grid.Column="1"/>
+
+
+
+
+
+
+                </Grid>
+
+            </Grid>
+
+
+
+            <StackPanel  Margin="2"  Orientation="Vertical"  >
+
+                <Button    IsEnabled="True"  ContentTemplate="{StaticResource TabletKullaniciEkleTemplate}"   FontWeight="SemiBold"  Style="{StaticResource ProgramButtonStyle}" MaxHeight="45"  Margin="5" x:Name="Btnekle" Content="Personel Ekle"    >
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="Click">
+                            <ei:CallMethodAction 
+				  TargetObject="{Binding }"
+				   MethodName="Ekle"/>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </Button>
+
+            </StackPanel>
+        </StackPanel>
+
+    </Grid>
+</UserControl>

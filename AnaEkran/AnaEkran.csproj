@@ -1,0 +1,1878 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8CF77EB6-3593-4010-B4A5-8E33B144B2A4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AnaEkran</RootNamespace>
+    <AssemblyName>AnaEkran</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>A7BC7BC9EFFA35E920BDBC0AB61617BA444845D9</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>AnaEkran_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CodeReason.Reports, Version=0.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\CodeReason.Reports.dll</HintPath>
+    </Reference>
+    <Reference Include="DataProviders">
+      <HintPath>..\bin\majorsilence-reporting-build-dot-net-4-x86\DataProviders.dll</HintPath>
+    </Reference>
+    <Reference Include="InputSimulator">
+      <HintPath>..\DLL\InputSimulator.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.3.3.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="LibRdlWpfViewer">
+      <HintPath>..\bin\majorsilence-reporting-build-dot-net-4-x86\LibRdlWpfViewer.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\DLL\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Interactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\SimpleMvvmToolkit.5.0.1.0\lib\net45\Microsoft.Expression.Interactions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="MVVM, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\MVVM.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework.Aero" />
+    <Reference Include="PresentationFramework.Aero2" />
+    <Reference Include="PresentationFramework.AeroLite" />
+    <Reference Include="RdlCri">
+      <HintPath>..\bin\majorsilence-reporting-build-dot-net-4-x86\RdlCri.dll</HintPath>
+    </Reference>
+    <Reference Include="RdlEngine">
+      <HintPath>..\bin\majorsilence-reporting-build-dot-net-4-x86\RdlEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="RdlViewer">
+      <HintPath>..\bin\majorsilence-reporting-build-dot-net-4-x86\RdlViewer.dll</HintPath>
+    </Reference>
+    <Reference Include="ReachFramework" />
+    <Reference Include="SimpleMvvmToolkit-Common">
+      <HintPath>..\packages\SimpleMvvmToolkit.5.0.1.0\lib\net45\SimpleMvvmToolkit-Common.dll</HintPath>
+    </Reference>
+    <Reference Include="SimpleMvvmToolkit-WPF">
+      <HintPath>..\packages\SimpleMvvmToolkit.5.0.1.0\lib\net45\SimpleMvvmToolkit-WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="SioSanalKlavye">
+      <HintPath>..\DLL\SioSanalKlavye.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\SimpleMvvmToolkit.5.0.1.0\lib\net45\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="WPFSpark">
+      <HintPath>..\DLL\WPFSpark.dll</HintPath>
+    </Reference>
+    <Reference Include="Zinde.BonusSkins.v13.2">
+      <HintPath>F:\zinde.dev.dene\Bin\Framework\Zinde.BonusSkins.v13.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Zinde.Data.v13.2">
+      <HintPath>F:\zinde.dev.dene\Bin\Framework\Zinde.Data.v13.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Zinde.Printing.v13.2.Core">
+      <HintPath>F:\zinde.dev.dene\Bin\Framework\Zinde.Printing.v13.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Zinde.Utils.v13.2">
+      <HintPath>F:\zinde.dev.dene\Bin\Framework\Zinde.Utils.v13.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Zinde.Utils.v13.2.UI">
+      <HintPath>F:\zinde.dev.dene\Bin\Framework\Zinde.Utils.v13.2.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Zinde.Xpf.Charts.v13.2">
+      <HintPath>F:\zinde.dev.dene\Bin\Framework\Zinde.Xpf.Charts.v13.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Zinde.Xpf.Controls.v13.2">
+      <HintPath>F:\zinde.dev.dene\Bin\Framework\Zinde.Xpf.Controls.v13.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Zinde.Xpf.Core.v13.2">
+      <HintPath>F:\zinde.dev.dene\Bin\Framework\Zinde.Xpf.Core.v13.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Zinde.Xpf.Grid.v13.2">
+      <HintPath>F:\zinde.dev.dene\Bin\Framework\Zinde.Xpf.Grid.v13.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Zinde.Xpf.Mvvm.v13.2">
+      <HintPath>F:\zinde.dev.dene\Bin\Framework\Zinde.Xpf.Mvvm.v13.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Zinde.Xpf.PdfViewer.v13.2">
+      <HintPath>F:\zinde.dev.dene\Bin\Framework\Zinde.Xpf.PdfViewer.v13.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Zinde.Xpf.Printing.v13.2">
+      <HintPath>F:\zinde.dev.dene\Bin\Framework\Zinde.Xpf.Printing.v13.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Zinde.Xpf.PropertyGrid.v13.2">
+      <HintPath>F:\zinde.dev.dene\Bin\Framework\Zinde.Xpf.PropertyGrid.v13.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Zinde.Xpf.Themes.MetropolisLight.v13.2">
+      <HintPath>F:\zinde.dev.dene\Bin\Framework\Zinde.Xpf.Themes.MetropolisLight.v13.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Zinde.XtraCharts.v13.2">
+      <HintPath>F:\zinde.dev.dene\Bin\Framework\Zinde.XtraCharts.v13.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Zinde.XtraCharts.v13.2.Extensions">
+      <HintPath>F:\zinde.dev.dene\Bin\Framework\Zinde.XtraCharts.v13.2.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Zinde.XtraCharts.v13.2.UI">
+      <HintPath>F:\zinde.dev.dene\Bin\Framework\Zinde.XtraCharts.v13.2.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Zinde.XtraGrid.v13.2">
+      <HintPath>F:\zinde.dev.dene\Bin\Framework\Zinde.XtraGrid.v13.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Zinde.XtraPivotGrid.v13.2">
+      <HintPath>F:\zinde.dev.dene\Bin\Framework\Zinde.XtraPivotGrid.v13.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Zinde.XtraPrinting.v13.2">
+      <HintPath>F:\zinde.dev.dene\Bin\Framework\Zinde.XtraPrinting.v13.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Zinde.XtraReports.v13.2">
+      <HintPath>F:\zinde.dev.dene\Bin\Framework\Zinde.XtraReports.v13.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Zinde.XtraReports.v13.2.Extensions">
+      <HintPath>F:\zinde.dev.dene\Bin\Framework\Zinde.XtraReports.v13.2.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="ZindeMesajServisi">
+      <HintPath>..\DLL\ZindeMesajServisi.dll</HintPath>
+    </Reference>
+    <Reference Include="Zinderud.Windows.Controls">
+      <HintPath>..\DLL\Zinderud.Windows.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Zinderud.Windows.Controls.Chart">
+      <HintPath>..\DLL\Zinderud.Windows.Controls.Chart.dll</HintPath>
+    </Reference>
+    <Reference Include="Zinderud.Windows.Controls.Charting">
+      <HintPath>..\DLL\Zinderud.Windows.Controls.Charting.dll</HintPath>
+    </Reference>
+    <Reference Include="Zinderud.Windows.Controls.Data">
+      <HintPath>..\DLL\Zinderud.Windows.Controls.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Zinderud.Windows.Controls.GridView">
+      <HintPath>..\DLL\Zinderud.Windows.Controls.GridView.dll</HintPath>
+    </Reference>
+    <Reference Include="Zinderud.Windows.Controls.Input">
+      <HintPath>..\DLL\Zinderud.Windows.Controls.Input.dll</HintPath>
+    </Reference>
+    <Reference Include="Zinderud.Windows.Controls.Navigation">
+      <HintPath>..\DLL\Zinderud.Windows.Controls.Navigation.dll</HintPath>
+    </Reference>
+    <Reference Include="Zinderud.Windows.Controls.TransitionEffects">
+      <HintPath>..\DLL\Zinderud.Windows.Controls.TransitionEffects.dll</HintPath>
+    </Reference>
+    <Reference Include="Zinderud.Windows.Data">
+      <HintPath>..\DLL\Zinderud.Windows.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Zinderud.Windows.Maths">
+      <HintPath>..\DLL\Zinderud.Windows.Maths.dll</HintPath>
+    </Reference>
+    <Reference Include="Zinderud.Windows.PersistenceFramework">
+      <HintPath>..\DLL\Zinderud.Windows.PersistenceFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Zinderud.Windows.Zip">
+      <HintPath>..\DLL\Zinderud.Windows.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="ZindeUI.Metro">
+      <HintPath>..\DLL\ZindeUI.Metro.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Converter\DateTimeConverter .cs" />
+    <Compile Include="Converter\StringFormatConverter .cs" />
+    <Compile Include="Helpers\AnimationHelper.cs" />
+    <Compile Include="Helpers\AppAyarlari.cs" />
+    <Compile Include="Helpers\IAnimationHelper.cs" />
+    <Compile Include="Helpers\MesajDurumlari.cs" />
+    <Compile Include="Helpers\MesajDurumlariAuto.cs" />
+    <Compile Include="Helpers\MyMultiSelectBehavior .cs" />
+    <Compile Include="Helpers\PasswordHelper.cs" />
+    <Compile Include="Helpers\ResourcesDosyalari.cs" />
+    <Compile Include="Helpers\SioDateFormatWorkaround.cs" />
+    <Compile Include="Locators\ViewModelLocator2.cs" />
+    <Compile Include="Locators\ViewModelLocatorTBL_BANKA.cs" />
+    <Compile Include="Locators\ViewModelLocatorTBL_BANKA_BAKIYE.cs" />
+    <Compile Include="Locators\ViewModelLocatorTBL_DEPO.cs" />
+    <Compile Include="Locators\ViewModelLocatorTBL_DEPO_ISLEM.cs" />
+    <Compile Include="Locators\ViewModelLocatorTBL_DEPO_TRANSFER.cs" />
+    <Compile Include="Locators\ViewModelLocatorTBL_FATURA.cs" />
+    <Compile Include="Locators\ViewModelLocatorTBL_FATURA_TURU.cs" />
+    <Compile Include="Locators\ViewModelLocatorTBL_FIS.cs" />
+    <Compile Include="Locators\ViewModelLocatorTBL_GIDER.cs" />
+    <Compile Include="Locators\ViewModelLocatorTBL_GIDER_BAKIYE.cs" />
+    <Compile Include="Locators\ViewModelLocatorTBL_KASA.cs" />
+    <Compile Include="Locators\ViewModelLocatorTBL_KASA_BAKIYE.cs" />
+    <Compile Include="Locators\ViewModelLocatorTBL_KDV.cs" />
+    <Compile Include="Locators\ViewModelLocatorTBL_ODEME.cs" />
+    <Compile Include="Locators\ViewModelLocatorTBL_ODEME_TIPI.cs" />
+    <Compile Include="Locators\ViewModelLocatorTBL_ODEME_TURU.cs" />
+    <Compile Include="Locators\ViewModelLocatorTBL_PARA_TIPI.cs" />
+    <Compile Include="Locators\ViewModelLocatorTBL_PERSONEL.cs" />
+    <Compile Include="Locators\ViewModelLocatorTBL_SIRKET.cs" />
+    <Compile Include="Locators\ViewModelLocatorTBL_SIRKET_BAKIYE.cs" />
+    <Compile Include="Locators\ViewModelLocatorTBL_SIRKET_GRUB.cs" />
+    <Compile Include="Locators\ViewModelLocatorTBL_SIRKET_SINIF.cs" />
+    <Compile Include="Locators\ViewModelLocatorTBL_SIRKET_TIPI.cs" />
+    <Compile Include="Locators\ViewModelLocatorTBL_SPARIS.cs" />
+    <Compile Include="Locators\ViewModelLocatorTBL_SPARIS_TURU.cs" />
+    <Compile Include="Locators\ViewModelLocatorTBL_URUN.cs" />
+    <Compile Include="Locators\ViewModelLocatorTBL_URUN_BIRIM.cs" />
+    <Compile Include="Locators\ViewModelLocatorTBL_URUN_CINSI.cs" />
+    <Compile Include="Locators\ViewModelLocatorTBL_URUN_FATURA.cs" />
+    <Compile Include="Locators\ViewModelLocatorTBL_URUN_MARKA.cs" />
+    <Compile Include="Locators\ViewModelLocatorTBL_URUN_SPARIS.cs" />
+    <Compile Include="Locators\ViewModelLocatorTBL_URUN_STOK.cs" />
+    <Compile Include="Locators\ViewModelLocatorTBL_URUN_TIPI.cs" />
+    <Compile Include="Mapper\Maping.cs" />
+    <Compile Include="Mapper\ViewTBL_BANKAMapperAuto.cs" />
+    <Compile Include="Mapper\ViewTBL_BANKA_BAKIYEMapperAuto.cs" />
+    <Compile Include="Mapper\ViewTBL_DEPOMapperAuto.cs" />
+    <Compile Include="Mapper\ViewTBL_DEPO_ISLEMMapperAuto.cs" />
+    <Compile Include="Mapper\ViewTBL_DEPO_TRANSFERMapperAuto.cs" />
+    <Compile Include="Mapper\ViewTBL_FATURAMapperAuto.cs" />
+    <Compile Include="Mapper\ViewTBL_FATURA_TURUMapperAuto.cs" />
+    <Compile Include="Mapper\ViewTBL_FISMapperAuto.cs" />
+    <Compile Include="Mapper\ViewTBL_GIDERMapperAuto.cs" />
+    <Compile Include="Mapper\ViewTBL_GIDER_BAKIYEMapperAuto.cs" />
+    <Compile Include="Mapper\ViewTBL_KASAMapperAuto.cs" />
+    <Compile Include="Mapper\ViewTBL_KASA_BAKIYEMapperAuto.cs" />
+    <Compile Include="Mapper\ViewTBL_KDVMapperAuto.cs" />
+    <Compile Include="Mapper\ViewTBL_ODEMEMapperAuto.cs" />
+    <Compile Include="Mapper\ViewTBL_ODEME_TIPIMapperAuto.cs" />
+    <Compile Include="Mapper\ViewTBL_ODEME_TURUMapperAuto.cs" />
+    <Compile Include="Mapper\ViewTBL_PARA_TIPIMapperAuto.cs" />
+    <Compile Include="Mapper\ViewTBL_PERSONELMapperAuto.cs" />
+    <Compile Include="Mapper\ViewTBL_SIRKETMapperAuto.cs" />
+    <Compile Include="Mapper\ViewTBL_SIRKET_BAKIYEMapperAuto.cs" />
+    <Compile Include="Mapper\ViewTBL_SIRKET_GRUBMapperAuto.cs" />
+    <Compile Include="Mapper\ViewTBL_SIRKET_SINIFMapperAuto.cs" />
+    <Compile Include="Mapper\ViewTBL_SIRKET_TIPIMapperAuto.cs" />
+    <Compile Include="Mapper\ViewTBL_SPARISMapperAuto.cs" />
+    <Compile Include="Mapper\ViewTBL_SPARIS_TURUMapperAuto.cs" />
+    <Compile Include="Mapper\ViewTBL_URUNMapperAuto.cs" />
+    <Compile Include="Mapper\ViewTBL_URUN_BIRIMMapperAuto.cs" />
+    <Compile Include="Mapper\ViewTBL_URUN_CINSIMapperAuto.cs" />
+    <Compile Include="Mapper\ViewTBL_URUN_FATURAMapperAuto.cs" />
+    <Compile Include="Mapper\ViewTBL_URUN_MARKAMapperAuto.cs" />
+    <Compile Include="Mapper\ViewTBL_URUN_SPARISMapperAuto.cs" />
+    <Compile Include="Mapper\ViewTBL_URUN_STOKMapperAuto.cs" />
+    <Compile Include="Mapper\ViewTBL_URUN_TIPIMapperAuto.cs" />
+    <Compile Include="Mesaj\MesajlarAuto.cs" />
+    <Compile Include="Models\Durumlar.cs" />
+    <Compile Include="Models\GrupToplamModel.cs" />
+    <Compile Include="Models\ModelsAuto.cs" />
+    <Compile Include="Models\PersonelYetki.cs" />
+    <Compile Include="Models\TBL_BANKAModel.cs" />
+    <Compile Include="Models\TBL_BANKA_BAKIYEModel.cs" />
+    <Compile Include="Models\TBL_DEPOModel.cs" />
+    <Compile Include="Models\TBL_DEPO_ISLEMModel.cs" />
+    <Compile Include="Models\TBL_DEPO_TRANSFERModel.cs" />
+    <Compile Include="Models\TBL_FATURAModel.cs" />
+    <Compile Include="Models\TBL_FATURA_TURUModel.cs" />
+    <Compile Include="Models\TBL_FISModel.cs" />
+    <Compile Include="Models\TBL_GIDERModel.cs" />
+    <Compile Include="Models\TBL_GIDER_BAKIYEModel.cs" />
+    <Compile Include="Models\TBL_KASAModel.cs" />
+    <Compile Include="Models\TBL_KASA_BAKIYEModel.cs" />
+    <Compile Include="Models\TBL_KDVModel.cs" />
+    <Compile Include="Models\TBL_ODEMEModel.cs" />
+    <Compile Include="Models\TBL_ODEME_TIPIModel.cs" />
+    <Compile Include="Models\TBL_ODEME_TURUModel.cs" />
+    <Compile Include="Models\TBL_PARA_TIPIModel.cs" />
+    <Compile Include="Models\TBL_PERSONELModel.cs" />
+    <Compile Include="Models\TBL_SIRKETModel.cs" />
+    <Compile Include="Models\TBL_SIRKET_BAKIYEModel.cs" />
+    <Compile Include="Models\TBL_SIRKET_GRUBModel.cs" />
+    <Compile Include="Models\TBL_SIRKET_SINIFModel.cs" />
+    <Compile Include="Models\TBL_SIRKET_TIPIModel.cs" />
+    <Compile Include="Models\TBL_SPARISModel.cs" />
+    <Compile Include="Models\TBL_SPARIS_TURUModel.cs" />
+    <Compile Include="Models\TBL_URUNModel.cs" />
+    <Compile Include="Models\TBL_URUN_BIRIMModel.cs" />
+    <Compile Include="Models\TBL_URUN_CINSIModel.cs" />
+    <Compile Include="Models\TBL_URUN_FATURAModel.cs" />
+    <Compile Include="Models\TBL_URUN_MARKAModel.cs" />
+    <Compile Include="Models\TBL_URUN_SPARISModel.cs" />
+    <Compile Include="Models\TBL_URUN_STOKModel.cs" />
+    <Compile Include="Models\TBL_URUN_TIPIModel.cs" />
+    <Compile Include="Models\UrunSparisListesiModel.cs" />
+    <Compile Include="Properties\Annotations.cs" />
+    <Compile Include="Provider\IProvider.cs" />
+    <Compile Include="Provider\IProviderAuto.cs" />
+    <Compile Include="Provider\ITBL_BANKAProvider.cs" />
+    <Compile Include="Provider\ITBL_BANKA_BAKIYEProvider.cs" />
+    <Compile Include="Provider\ITBL_DEPOProvider.cs" />
+    <Compile Include="Provider\ITBL_DEPO_ISLEMProvider.cs" />
+    <Compile Include="Provider\ITBL_DEPO_TRANSFERProvider.cs" />
+    <Compile Include="Provider\ITBL_FATURAProvider.cs" />
+    <Compile Include="Provider\ITBL_FATURA_TURUProvider.cs" />
+    <Compile Include="Provider\ITBL_FISProvider.cs" />
+    <Compile Include="Provider\ITBL_GIDERProvider.cs" />
+    <Compile Include="Provider\ITBL_GIDER_BAKIYEProvider.cs" />
+    <Compile Include="Provider\ITBL_KASAProvider.cs" />
+    <Compile Include="Provider\ITBL_KASA_BAKIYEProvider.cs" />
+    <Compile Include="Provider\ITBL_KDVProvider.cs" />
+    <Compile Include="Provider\ITBL_ODEMEProvider.cs" />
+    <Compile Include="Provider\ITBL_ODEME_TIPIProvider.cs" />
+    <Compile Include="Provider\ITBL_ODEME_TURUProvider.cs" />
+    <Compile Include="Provider\ITBL_PARA_TIPIProvider.cs" />
+    <Compile Include="Provider\ITBL_PERSONELProvider.cs" />
+    <Compile Include="Provider\ITBL_SIRKETProvider.cs" />
+    <Compile Include="Provider\ITBL_SIRKET_BAKIYEProvider.cs" />
+    <Compile Include="Provider\ITBL_SIRKET_GRUBProvider.cs" />
+    <Compile Include="Provider\ITBL_SIRKET_SINIFProvider.cs" />
+    <Compile Include="Provider\ITBL_SIRKET_TIPIProvider.cs" />
+    <Compile Include="Provider\ITBL_SPARISProvider.cs" />
+    <Compile Include="Provider\ITBL_SPARIS_TURUProvider.cs" />
+    <Compile Include="Provider\ITBL_URUNProvider.cs" />
+    <Compile Include="Provider\ITBL_URUN_BIRIMProvider.cs" />
+    <Compile Include="Provider\ITBL_URUN_CINSIProvider.cs" />
+    <Compile Include="Provider\ITBL_URUN_FATURAProvider.cs" />
+    <Compile Include="Provider\ITBL_URUN_MARKAProvider.cs" />
+    <Compile Include="Provider\ITBL_URUN_SPARISProvider.cs" />
+    <Compile Include="Provider\ITBL_URUN_STOKProvider.cs" />
+    <Compile Include="Provider\ITBL_URUN_TIPIProvider.cs" />
+    <Compile Include="Provider\Provider.cs" />
+    <Compile Include="Provider\ProviderAuto.cs" />
+    <Compile Include="Provider\ProviderTBL_BANKAAuto.cs" />
+    <Compile Include="Provider\ProviderTBL_BANKA_BAKIYEAuto.cs" />
+    <Compile Include="Provider\ProviderTBL_DEPOAuto.cs" />
+    <Compile Include="Provider\ProviderTBL_DEPO_ISLEMAuto.cs" />
+    <Compile Include="Provider\ProviderTBL_DEPO_TRANSFERAuto.cs" />
+    <Compile Include="Provider\ProviderTBL_FATURAAuto.cs" />
+    <Compile Include="Provider\ProviderTBL_FATURA_TURUAuto.cs" />
+    <Compile Include="Provider\ProviderTBL_FISAuto.cs" />
+    <Compile Include="Provider\ProviderTBL_GIDERAuto.cs" />
+    <Compile Include="Provider\ProviderTBL_GIDER_BAKIYEAuto.cs" />
+    <Compile Include="Provider\ProviderTBL_KASAAuto.cs" />
+    <Compile Include="Provider\ProviderTBL_KASA_BAKIYEAuto.cs" />
+    <Compile Include="Provider\ProviderTBL_KDVAuto.cs" />
+    <Compile Include="Provider\ProviderTBL_ODEMEAuto.cs" />
+    <Compile Include="Provider\ProviderTBL_ODEME_TIPIAuto.cs" />
+    <Compile Include="Provider\ProviderTBL_ODEME_TURUAuto.cs" />
+    <Compile Include="Provider\ProviderTBL_PARA_TIPIAuto.cs" />
+    <Compile Include="Provider\ProviderTBL_PERSONELAuto.cs" />
+    <Compile Include="Provider\ProviderTBL_SIRKETAuto.cs" />
+    <Compile Include="Provider\ProviderTBL_SIRKET_BAKIYEAuto.cs" />
+    <Compile Include="Provider\ProviderTBL_SIRKET_GRUBAuto.cs" />
+    <Compile Include="Provider\ProviderTBL_SIRKET_SINIFAuto.cs" />
+    <Compile Include="Provider\ProviderTBL_SIRKET_TIPIAuto.cs" />
+    <Compile Include="Provider\ProviderTBL_SPARISAuto.cs" />
+    <Compile Include="Provider\ProviderTBL_SPARIS_TURUAuto.cs" />
+    <Compile Include="Provider\ProviderTBL_URUNAuto.cs" />
+    <Compile Include="Provider\ProviderTBL_URUN_BIRIMAuto.cs" />
+    <Compile Include="Provider\ProviderTBL_URUN_CINSIAuto.cs" />
+    <Compile Include="Provider\ProviderTBL_URUN_FATURAAuto.cs" />
+    <Compile Include="Provider\ProviderTBL_URUN_MARKAAuto.cs" />
+    <Compile Include="Provider\ProviderTBL_URUN_SPARISAuto.cs" />
+    <Compile Include="Provider\ProviderTBL_URUN_STOKAuto.cs" />
+    <Compile Include="Provider\ProviderTBL_URUN_TIPIAuto.cs" />
+    <Compile Include="Service References\ZindeServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Static\CollectionUtils.cs" />
+    <Compile Include="Static\ExtensionManager.cs" />
+    <Compile Include="ViewModels\Auto\TBL_BANKAViewModelAuto.cs" />
+    <Compile Include="ViewModels\Auto\TBL_BANKA_BAKIYEViewModelAuto.cs" />
+    <Compile Include="ViewModels\Auto\TBL_DEPOViewModelAuto.cs" />
+    <Compile Include="ViewModels\Auto\TBL_DEPO_ISLEMViewModelAuto.cs" />
+    <Compile Include="ViewModels\Auto\TBL_DEPO_TRANSFERViewModelAuto.cs" />
+    <Compile Include="ViewModels\Auto\TBL_FATURAViewModelAuto.cs" />
+    <Compile Include="ViewModels\Auto\TBL_FATURA_TURUViewModelAuto.cs" />
+    <Compile Include="ViewModels\Auto\TBL_FISViewModelAuto.cs" />
+    <Compile Include="ViewModels\Auto\TBL_GIDERViewModelAuto.cs" />
+    <Compile Include="ViewModels\Auto\TBL_GIDER_BAKIYEViewModelAuto.cs" />
+    <Compile Include="ViewModels\Auto\TBL_KASAViewModelAuto.cs" />
+    <Compile Include="ViewModels\Auto\TBL_KASA_BAKIYEViewModelAuto.cs" />
+    <Compile Include="ViewModels\Auto\TBL_KDVViewModelAuto.cs" />
+    <Compile Include="ViewModels\Auto\TBL_ODEMEViewModelAuto.cs" />
+    <Compile Include="ViewModels\Auto\TBL_ODEME_TIPIViewModelAuto.cs" />
+    <Compile Include="ViewModels\Auto\TBL_ODEME_TURUViewModelAuto.cs" />
+    <Compile Include="ViewModels\Auto\TBL_PARA_TIPIViewModelAuto.cs" />
+    <Compile Include="ViewModels\Auto\TBL_PERSONELViewModelAuto.cs" />
+    <Compile Include="ViewModels\Auto\TBL_SIRKETViewModelAuto.cs" />
+    <Compile Include="ViewModels\Auto\TBL_SIRKET_BAKIYEViewModelAuto.cs" />
+    <Compile Include="ViewModels\Auto\TBL_SIRKET_GRUBViewModelAuto.cs" />
+    <Compile Include="ViewModels\Auto\TBL_SIRKET_SINIFViewModelAuto.cs" />
+    <Compile Include="ViewModels\Auto\TBL_SIRKET_TIPIViewModelAuto.cs" />
+    <Compile Include="ViewModels\Auto\TBL_SPARISViewModelAuto.cs" />
+    <Compile Include="ViewModels\Auto\TBL_SPARIS_TURUViewModelAuto.cs" />
+    <Compile Include="ViewModels\Auto\TBL_URUNViewModelAuto.cs" />
+    <Compile Include="ViewModels\Auto\TBL_URUN_BIRIMViewModelAuto.cs" />
+    <Compile Include="ViewModels\Auto\TBL_URUN_CINSIViewModelAuto.cs" />
+    <Compile Include="ViewModels\Auto\TBL_URUN_FATURAViewModelAuto.cs" />
+    <Compile Include="ViewModels\Auto\TBL_URUN_MARKAViewModelAuto.cs" />
+    <Compile Include="ViewModels\Auto\TBL_URUN_SPARISViewModelAuto.cs" />
+    <Compile Include="ViewModels\Auto\TBL_URUN_STOKViewModelAuto.cs" />
+    <Compile Include="ViewModels\Auto\TBL_URUN_TIPIViewModelAuto.cs" />
+    <Compile Include="ViewModels\SiparisEkleViewModel.cs" />
+    <Compile Include="ViewModels\TBL_BANKAViewModel.cs" />
+    <Compile Include="ViewModels\TBL_BANKA_BAKIYEViewModel.cs" />
+    <Compile Include="ViewModels\TBL_DEPOViewModel.cs" />
+    <Compile Include="ViewModels\TBL_DEPO_ISLEMViewModel.cs" />
+    <Compile Include="ViewModels\TBL_DEPO_TRANSFERViewModel.cs" />
+    <Compile Include="ViewModels\TBL_FATURAViewModel.cs" />
+    <Compile Include="ViewModels\TBL_FATURA_TURUViewModel.cs" />
+    <Compile Include="ViewModels\TBL_FISViewModel.cs" />
+    <Compile Include="ViewModels\TBL_GIDERViewModel.cs" />
+    <Compile Include="ViewModels\TBL_GIDER_BAKIYEViewModel.cs" />
+    <Compile Include="ViewModels\TBL_KASAViewModel.cs" />
+    <Compile Include="ViewModels\TBL_KASA_BAKIYEViewModel.cs" />
+    <Compile Include="ViewModels\TBL_KDVViewModel.cs" />
+    <Compile Include="ViewModels\TBL_ODEMEViewModel.cs" />
+    <Compile Include="ViewModels\TBL_ODEME_TIPIViewModel.cs" />
+    <Compile Include="ViewModels\TBL_ODEME_TURUViewModel.cs" />
+    <Compile Include="ViewModels\TBL_PARA_TIPIViewModel.cs" />
+    <Compile Include="ViewModels\TBL_PERSONELViewModel.cs" />
+    <Compile Include="ViewModels\TBL_SIRKETViewModel.cs" />
+    <Compile Include="ViewModels\TBL_SIRKET_BAKIYEViewModel.cs" />
+    <Compile Include="ViewModels\TBL_SIRKET_GRUBViewModel.cs" />
+    <Compile Include="ViewModels\TBL_SIRKET_SINIFViewModel.cs" />
+    <Compile Include="ViewModels\TBL_SIRKET_TIPIViewModel.cs" />
+    <Compile Include="ViewModels\TBL_SPARISViewModel.cs" />
+    <Compile Include="ViewModels\TBL_SPARIS_TURUViewModel.cs" />
+    <Compile Include="ViewModels\TBL_URUNViewModel.cs" />
+    <Compile Include="ViewModels\TBL_URUN_BIRIMViewModel.cs" />
+    <Compile Include="ViewModels\TBL_URUN_CINSIViewModel.cs" />
+    <Compile Include="ViewModels\TBL_URUN_FATURAViewModel.cs" />
+    <Compile Include="ViewModels\TBL_URUN_MARKAViewModel.cs" />
+    <Compile Include="ViewModels\TBL_URUN_SPARISViewModel.cs" />
+    <Compile Include="ViewModels\TBL_URUN_STOKViewModel.cs" />
+    <Compile Include="ViewModels\TBL_URUN_TIPIViewModel.cs" />
+    <Compile Include="Views\AnaMenuView.xaml.cs">
+      <DependentUpon>AnaMenuView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AraMenuView.xaml.cs">
+      <DependentUpon>AraMenuView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AraSayfalar\Banka\BankaAnaSayfaView.xaml.cs">
+      <DependentUpon>BankaAnaSayfaView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AraSayfalar\Banka\BankaBakiyeEklemeSayfasi.xaml.cs">
+      <DependentUpon>BankaBakiyeEklemeSayfasi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AraSayfalar\Banka\BankaEkleSayfası.xaml.cs">
+      <DependentUpon>BankaEkleSayfası.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AraSayfalar\Depo\DepoAnaSayfaView.xaml.cs">
+      <DependentUpon>DepoAnaSayfaView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AraSayfalar\Depo\DepoEkleSayfasi.xaml.cs">
+      <DependentUpon>DepoEkleSayfasi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AraSayfalar\Depo\DepoIslemEkleSayfasi.xaml.cs">
+      <DependentUpon>DepoIslemEkleSayfasi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AraSayfalar\Depo\DepoTransferEkleSayfasi.xaml.cs">
+      <DependentUpon>DepoTransferEkleSayfasi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AraSayfalar\Fatura\FaturaAnaSayfaView.xaml.cs">
+      <DependentUpon>FaturaAnaSayfaView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AraSayfalar\Fatura\FaturaEkleSayfasi.xaml.cs">
+      <DependentUpon>FaturaEkleSayfasi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AraSayfalar\Fatura\FaturaTuruEkleSayfasi.xaml.cs">
+      <DependentUpon>FaturaTuruEkleSayfasi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AraSayfalar\Fis\FisAnaSayfaView.xaml.cs">
+      <DependentUpon>FisAnaSayfaView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AraSayfalar\Fis\FisEkleSayfasi.xaml.cs">
+      <DependentUpon>FisEkleSayfasi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AraSayfalar\Gider\GiderAnaSayfaView.xaml.cs">
+      <DependentUpon>GiderAnaSayfaView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AraSayfalar\Gider\GiderBakiyeEkleSayfasi.xaml.cs">
+      <DependentUpon>GiderBakiyeEkleSayfasi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AraSayfalar\Gider\GiderEkleSayfasi.xaml.cs">
+      <DependentUpon>GiderEkleSayfasi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AraSayfalar\Kasa\KasaAnaSayfaView.xaml.cs">
+      <DependentUpon>KasaAnaSayfaView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AraSayfalar\Kasa\KasaBakiyeEkleSayfasi.xaml.cs">
+      <DependentUpon>KasaBakiyeEkleSayfasi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AraSayfalar\Kasa\KasaEkleSayfasiView.xaml.cs">
+      <DependentUpon>KasaEkleSayfasiView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AraSayfalar\Kdv\KdvAnaSayfaView.xaml.cs">
+      <DependentUpon>KdvAnaSayfaView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AraSayfalar\Kdv\KdvEkleSayfasi.xaml.cs">
+      <DependentUpon>KdvEkleSayfasi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AraSayfalar\Odeme\OdemeAnaSayfaView.xaml.cs">
+      <DependentUpon>OdemeAnaSayfaView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AraSayfalar\Odeme\OdemeEkleSayfasi.xaml.cs">
+      <DependentUpon>OdemeEkleSayfasi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AraSayfalar\Odeme\OdemeTipiEkleSayfasi.xaml.cs">
+      <DependentUpon>OdemeTipiEkleSayfasi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AraSayfalar\Odeme\OdemeTuruEkleSayfsi.xaml.cs">
+      <DependentUpon>OdemeTuruEkleSayfsi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AraSayfalar\ParaTipi\ParaTipiAnaSayfaView.xaml.cs">
+      <DependentUpon>ParaTipiAnaSayfaView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AraSayfalar\ParaTipi\ParaTipiEkleSayfasi.xaml.cs">
+      <DependentUpon>ParaTipiEkleSayfasi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AraSayfalar\Personel\PersonelAnasayfaView.xaml.cs">
+      <DependentUpon>PersonelAnasayfaView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AraSayfalar\Personel\PERSONELEkleView.xaml.cs">
+      <DependentUpon>PERSONELEkleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AraSayfalar\Siparis\SiparisAnaSayfaView.xaml.cs">
+      <DependentUpon>SiparisAnaSayfaView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AraSayfalar\Siparis\SiparisEkleSayfasi.xaml.cs">
+      <DependentUpon>SiparisEkleSayfasi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AraSayfalar\Siparis\SiparisTuruEkleSayfasi.xaml.cs">
+      <DependentUpon>SiparisTuruEkleSayfasi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AraSayfalar\Sirket\SirketAnaSayfaView.xaml.cs">
+      <DependentUpon>SirketAnaSayfaView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AraSayfalar\Sirket\SirketBakiyeEkleSayfasi.xaml.cs">
+      <DependentUpon>SirketBakiyeEkleSayfasi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AraSayfalar\Sirket\SirketEkleSayfasi.xaml.cs">
+      <DependentUpon>SirketEkleSayfasi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AraSayfalar\Sirket\SirketGrupEkleSayfasi.xaml.cs">
+      <DependentUpon>SirketGrupEkleSayfasi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AraSayfalar\Sirket\SirketSinifEkleSayfasi.xaml.cs">
+      <DependentUpon>SirketSinifEkleSayfasi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AraSayfalar\Sirket\SirketTipiEkleSayfasi.xaml.cs">
+      <DependentUpon>SirketTipiEkleSayfasi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AraSayfalar\Urun\UrunAnaSayfaView.xaml.cs">
+      <DependentUpon>UrunAnaSayfaView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AraSayfalar\Urun\UrunBirimEkleSayfasi.xaml.cs">
+      <DependentUpon>UrunBirimEkleSayfasi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AraSayfalar\Urun\UrunCinsiEkleSayfasi.xaml.cs">
+      <DependentUpon>UrunCinsiEkleSayfasi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AraSayfalar\Urun\UrunEkleSayfasi.xaml.cs">
+      <DependentUpon>UrunEkleSayfasi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AraSayfalar\Urun\UrunMarkaEkleSayfasi.xaml.cs">
+      <DependentUpon>UrunMarkaEkleSayfasi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AraSayfalar\Urun\UrunStokEkleSayfasi.xaml.cs">
+      <DependentUpon>UrunStokEkleSayfasi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AraSayfalar\Urun\UrunTipiEkleSayfasi.xaml.cs">
+      <DependentUpon>UrunTipiEkleSayfasi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Baglantilar\Banka\BankaParaDurumuSayfasi.xaml.cs">
+      <DependentUpon>BankaParaDurumuSayfasi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Baglantilar\Banka\BankaParaDurumuView.xaml.cs">
+      <DependentUpon>BankaParaDurumuView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Baglantilar\Kasa\KasaParaDurumuSayfasi.xaml.cs">
+      <DependentUpon>KasaParaDurumuSayfasi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Baglantilar\Kasa\KasaParaDurumuView.xaml.cs">
+      <DependentUpon>KasaParaDurumuView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Baglantilar\Sirket\SirketParaDurumuSayfasi.xaml.cs">
+      <DependentUpon>SirketParaDurumuSayfasi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Baglantilar\Sirket\SirketParaDurumuView.xaml.cs">
+      <DependentUpon>SirketParaDurumuView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Baglantilar\Urun\UrunStokDepoİliskisiView.xaml.cs">
+      <DependentUpon>UrunStokDepoİliskisiView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Baglantilar\Urun\UrunAdetListesiSayfasi.xaml.cs">
+      <DependentUpon>UrunAdetListesiSayfasi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Bolumler\Depo\BolumDepoDuzenle.xaml.cs">
+      <DependentUpon>BolumDepoDuzenle.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Bolumler\Depo\BolumDepoIslemView.xaml.cs">
+      <DependentUpon>BolumDepoIslemView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Bolumler\Depo\BolumDepoTransferView.xaml.cs">
+      <DependentUpon>BolumDepoTransferView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Bolumler\Satis\BolumFaturaEkleView.xaml.cs">
+      <DependentUpon>BolumFaturaEkleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Bolumler\Satis\BolumSiparisDuzenleView.xaml.cs">
+      <DependentUpon>BolumSiparisDuzenleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CustomerView.xaml.cs">
+      <DependentUpon>CustomerView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Locators\ViewModelLocator.cs" />
+    <Compile Include="ViewModels\MainPageViewModel.cs" />
+    <Compile Include="Services\ICustomerServiceAgent.cs" />
+    <Compile Include="Services\MockCustomerServiceAgent.cs" />
+    <Compile Include="ViewModels\CustomerViewModel.cs" />
+    <Compile Include="Views\Ekle\TBL_BANKAEkleView.xaml.cs">
+      <DependentUpon>TBL_BANKAEkleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Ekle\TBL_BANKA_BAKIYEEkleView.xaml.cs">
+      <DependentUpon>TBL_BANKA_BAKIYEEkleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Ekle\TBL_DEPOEkleView.xaml.cs">
+      <DependentUpon>TBL_DEPOEkleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Ekle\TBL_DEPO_ISLEMEkleView.xaml.cs">
+      <DependentUpon>TBL_DEPO_ISLEMEkleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Ekle\TBL_DEPO_TRANSFEREkleView.xaml.cs">
+      <DependentUpon>TBL_DEPO_TRANSFEREkleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Ekle\TBL_FATURAEkleView.xaml.cs">
+      <DependentUpon>TBL_FATURAEkleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Ekle\TBL_FATURA_TURUEkleView.xaml.cs">
+      <DependentUpon>TBL_FATURA_TURUEkleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Ekle\TBL_FISEkleView.xaml.cs">
+      <DependentUpon>TBL_FISEkleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Ekle\TBL_GIDEREkleView.xaml.cs">
+      <DependentUpon>TBL_GIDEREkleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Ekle\TBL_GIDER_BAKIYEEkleView.xaml.cs">
+      <DependentUpon>TBL_GIDER_BAKIYEEkleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Ekle\TBL_KASAEkleView.xaml.cs">
+      <DependentUpon>TBL_KASAEkleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Ekle\TBL_KASA_BAKIYEEkleView.xaml.cs">
+      <DependentUpon>TBL_KASA_BAKIYEEkleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Ekle\TBL_KDVEkleView.xaml.cs">
+      <DependentUpon>TBL_KDVEkleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Ekle\TBL_ODEMEEkleView.xaml.cs">
+      <DependentUpon>TBL_ODEMEEkleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Ekle\TBL_ODEME_TIPIEkleView.xaml.cs">
+      <DependentUpon>TBL_ODEME_TIPIEkleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Ekle\TBL_ODEME_TURUEkleView.xaml.cs">
+      <DependentUpon>TBL_ODEME_TURUEkleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Ekle\TBL_PARA_TIPIEkleView.xaml.cs">
+      <DependentUpon>TBL_PARA_TIPIEkleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Ekle\TBL_PERSONELEkleView.xaml.cs">
+      <DependentUpon>TBL_PERSONELEkleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Ekle\TBL_SIRKETEkleView.xaml.cs">
+      <DependentUpon>TBL_SIRKETEkleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Ekle\TBL_SIRKET_BAKIYEEkleView.xaml.cs">
+      <DependentUpon>TBL_SIRKET_BAKIYEEkleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Ekle\TBL_SIRKET_GRUBEkleView.xaml.cs">
+      <DependentUpon>TBL_SIRKET_GRUBEkleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Ekle\TBL_SIRKET_SINIFEkleView.xaml.cs">
+      <DependentUpon>TBL_SIRKET_SINIFEkleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Ekle\TBL_SIRKET_TIPIEkleView.xaml.cs">
+      <DependentUpon>TBL_SIRKET_TIPIEkleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Ekle\TBL_SPARISEkleView.xaml.cs">
+      <DependentUpon>TBL_SPARISEkleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Ekle\TBL_SPARIS_TURUEkleView.xaml.cs">
+      <DependentUpon>TBL_SPARIS_TURUEkleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Ekle\TBL_URUNEkleView.xaml.cs">
+      <DependentUpon>TBL_URUNEkleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Ekle\TBL_URUN_BIRIMEkleView.xaml.cs">
+      <DependentUpon>TBL_URUN_BIRIMEkleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Ekle\TBL_URUN_CINSIEkleView.xaml.cs">
+      <DependentUpon>TBL_URUN_CINSIEkleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Ekle\TBL_URUN_MARKAEkleView.xaml.cs">
+      <DependentUpon>TBL_URUN_MARKAEkleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Ekle\TBL_URUN_STOKEkleView.xaml.cs">
+      <DependentUpon>TBL_URUN_STOKEkleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Ekle\TBL_URUN_TIPIEkleView.xaml.cs">
+      <DependentUpon>TBL_URUN_TIPIEkleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Goruntule\AnaGoruntu.xaml.cs">
+      <DependentUpon>AnaGoruntu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Goruntule\KasaBakiyeGoruntu.xaml.cs">
+      <DependentUpon>KasaBakiyeGoruntu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\KullaniciGirisView.xaml.cs">
+      <DependentUpon>KullaniciGirisView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Listele\TBL_BANKADuzenleView.xaml.cs">
+      <DependentUpon>TBL_BANKADuzenleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Listele\TBL_BANKA_BAKIYEDuzenleView.xaml.cs">
+      <DependentUpon>TBL_BANKA_BAKIYEDuzenleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Listele\TBL_DEPODuzenleView.xaml.cs">
+      <DependentUpon>TBL_DEPODuzenleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Listele\TBL_DEPO_ISLEMDuzenleView.xaml.cs">
+      <DependentUpon>TBL_DEPO_ISLEMDuzenleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Listele\TBL_DEPO_TRANSFERDuzenleView.xaml.cs">
+      <DependentUpon>TBL_DEPO_TRANSFERDuzenleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Listele\TBL_FATURADuzenleView.xaml.cs">
+      <DependentUpon>TBL_FATURADuzenleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Listele\TBL_FATURA_TURUDuzenleView.xaml.cs">
+      <DependentUpon>TBL_FATURA_TURUDuzenleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Listele\TBL_FISDuzenleView.xaml.cs">
+      <DependentUpon>TBL_FISDuzenleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Listele\TBL_GIDERDuzenleView.xaml.cs">
+      <DependentUpon>TBL_GIDERDuzenleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Listele\TBL_GIDER_BAKIYEDuzenleView.xaml.cs">
+      <DependentUpon>TBL_GIDER_BAKIYEDuzenleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Listele\TBL_KASADuzenleView.xaml.cs">
+      <DependentUpon>TBL_KASADuzenleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Listele\TBL_KASA_BAKIYEDuzenleView.xaml.cs">
+      <DependentUpon>TBL_KASA_BAKIYEDuzenleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Listele\TBL_KDVDuzenleView.xaml.cs">
+      <DependentUpon>TBL_KDVDuzenleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Listele\TBL_ODEMEDuzenleView.xaml.cs">
+      <DependentUpon>TBL_ODEMEDuzenleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Listele\TBL_ODEME_TIPIDuzenleView.xaml.cs">
+      <DependentUpon>TBL_ODEME_TIPIDuzenleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Listele\TBL_ODEME_TURUDuzenleView.xaml.cs">
+      <DependentUpon>TBL_ODEME_TURUDuzenleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Listele\TBL_PARA_TIPIDuzenleView.xaml.cs">
+      <DependentUpon>TBL_PARA_TIPIDuzenleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Listele\TBL_PERSONELDuzenleView.xaml.cs">
+      <DependentUpon>TBL_PERSONELDuzenleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Listele\TBL_SIRKETDuzenleView.xaml.cs">
+      <DependentUpon>TBL_SIRKETDuzenleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Listele\TBL_SIRKET_BAKIYEDuzenleView.xaml.cs">
+      <DependentUpon>TBL_SIRKET_BAKIYEDuzenleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Listele\TBL_SIRKET_GRUBDuzenleView.xaml.cs">
+      <DependentUpon>TBL_SIRKET_GRUBDuzenleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Listele\TBL_SIRKET_SINIFDuzenleView.xaml.cs">
+      <DependentUpon>TBL_SIRKET_SINIFDuzenleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Listele\TBL_SIRKET_TIPIDuzenleView.xaml.cs">
+      <DependentUpon>TBL_SIRKET_TIPIDuzenleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Listele\TBL_SPARISDuzenleView.xaml.cs">
+      <DependentUpon>TBL_SPARISDuzenleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Listele\TBL_SPARIS_TURUDuzenleView.xaml.cs">
+      <DependentUpon>TBL_SPARIS_TURUDuzenleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Listele\TBL_URUNDuzenleView.xaml.cs">
+      <DependentUpon>TBL_URUNDuzenleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Listele\TBL_URUN_BIRIMDuzenleView.xaml.cs">
+      <DependentUpon>TBL_URUN_BIRIMDuzenleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Listele\TBL_URUN_CINSIDuzenleView.xaml.cs">
+      <DependentUpon>TBL_URUN_CINSIDuzenleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Listele\TBL_URUN_MARKADuzenleView.xaml.cs">
+      <DependentUpon>TBL_URUN_MARKADuzenleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Listele\TBL_URUN_STOKDuzenleView.xaml.cs">
+      <DependentUpon>TBL_URUN_STOKDuzenleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Listele\TBL_URUN_TIPIDuzenleView.xaml.cs">
+      <DependentUpon>TBL_URUN_TIPIDuzenleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Raporlar\Banka\BankaListesiRapor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\Raporlar\Banka\BankaListesiRapor.Designer.cs">
+      <DependentUpon>BankaListesiRapor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Raporlar\Banka\RaporBankaParaListele.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\Raporlar\Banka\RaporBankaParaListele.Designer.cs">
+      <DependentUpon>RaporBankaParaListele.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Raporlar\Banka\Raporbanka_bakıye.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\Raporlar\Banka\Raporbanka_bakıye.Designer.cs">
+      <DependentUpon>Raporbanka_bakıye.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Raporlar\Depo\Rapordepo_Islem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\Raporlar\Depo\Rapordepo_Islem.Designer.cs">
+      <DependentUpon>Rapordepo_Islem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Raporlar\Depo\Rapordepo_transfer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\Raporlar\Depo\Rapordepo_transfer.Designer.cs">
+      <DependentUpon>Rapordepo_transfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Raporlar\Gider\RaporgiderBakiye.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\Raporlar\Gider\RaporgiderBakiye.Designer.cs">
+      <DependentUpon>RaporgiderBakiye.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Raporlar\Kasa\RaporKasaBakiye.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\Raporlar\Kasa\RaporKasaBakiye.Designer.cs">
+      <DependentUpon>RaporKasaBakiye.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Raporlar\Kasa\RaporKasaParaListele.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\Raporlar\Kasa\RaporKasaParaListele.Designer.cs">
+      <DependentUpon>RaporKasaParaListele.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Raporlar\Odeme\RaporOdemeListe.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\Raporlar\Odeme\RaporOdemeListe.Designer.cs">
+      <DependentUpon>RaporOdemeListe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Raporlar\OnIzleme.xaml.cs">
+      <DependentUpon>OnIzleme.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Raporlar\Personel\RaporPersonelListesi.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\Raporlar\Personel\RaporPersonelListesi.Designer.cs">
+      <DependentUpon>RaporPersonelListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Raporlar\RaporSayfasi.xaml.cs">
+      <DependentUpon>RaporSayfasi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Raporlar\Siparis\RaporSiparisListesi.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\Raporlar\Siparis\RaporSiparisListesi.Designer.cs">
+      <DependentUpon>RaporSiparisListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Raporlar\Sirket\RaporSirketBakiye.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\Raporlar\Sirket\RaporSirketBakiye.Designer.cs">
+      <DependentUpon>RaporSirketBakiye.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Raporlar\Sirket\RaporSirketListesi.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\Raporlar\Sirket\RaporSirketListesi.Designer.cs">
+      <DependentUpon>RaporSirketListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Raporlar\Sirket\RaporSirketParaListele.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\Raporlar\Sirket\RaporSirketParaListele.Designer.cs">
+      <DependentUpon>RaporSirketParaListele.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Raporlar\Urun\RaporUrunDepoeAdetListele.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\Raporlar\Urun\RaporUrunDepoeAdetListele.Designer.cs">
+      <DependentUpon>RaporUrunDepoeAdetListele.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Raporlar\Urun\RaporUrunListesi.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\Raporlar\Urun\RaporUrunListesi.Designer.cs">
+      <DependentUpon>RaporUrunListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Raporlar\Urun\RaprUrunStokListesi.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\Raporlar\Urun\RaprUrunStokListesi.Designer.cs">
+      <DependentUpon>RaprUrunStokListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Raporlar\Urun\UrunListeRaporSayfasi.xaml.cs">
+      <DependentUpon>UrunListeRaporSayfasi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Raporlar\Urun\UrunListesiView.xaml.cs">
+      <DependentUpon>UrunListesiView.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Resources\Dictionaries\Buttons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Dictionaries\CheckBoxs.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Dictionaries\Colours.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Dictionaries\Combobox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Dictionaries\Controls.Buttons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Dictionaries\Controls.CheckBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Dictionaries\Controls.ComboBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Dictionaries\Controls.ContextMenu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Dictionaries\Controls.GroupBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Dictionaries\Controls.ListBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Dictionaries\Controls.ListView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Dictionaries\Controls.PasswordBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Dictionaries\Controls.ProgressBar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Dictionaries\Controls.RadioButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Dictionaries\Controls.Scrollbars.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Dictionaries\Controls.Slider.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Dictionaries\Controls.TabControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Dictionaries\Controls.TextBlock.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Dictionaries\Controls.TextBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Dictionaries\Controls.Tooltip.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Dictionaries\Controls.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Dictionaries\DataGrid.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Dictionaries\DatePicker.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Dictionaries\Fonts.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Dictionaries\HeaderTemplates.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Dictionaries\ListBoxStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Dictionaries\Rapor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Dictionaries\Simple Styles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Dictionaries\System.Windows.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Dictionaries\Textbox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Dictionaries\UstMenuButtons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Dictionaries\W8.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Dictionaries\Zinderud.Windows.Controls.Chart.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Dictionaries\Zinderud.Windows.Controls.Data.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Dictionaries\Zinderud.Windows.Controls.GridView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Dictionaries\Zinderud.Windows.Controls.Input.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Dictionaries\Zinderud.Windows.Controls.Navigation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Dictionaries\Zinderud.Windows.Controls.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\AnaMenuView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AraMenuView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AraSayfalar\Banka\BankaAnaSayfaView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AraSayfalar\Banka\BankaBakiyeEklemeSayfasi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AraSayfalar\Banka\BankaEkleSayfası.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AraSayfalar\Depo\DepoAnaSayfaView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AraSayfalar\Depo\DepoEkleSayfasi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AraSayfalar\Depo\DepoIslemEkleSayfasi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AraSayfalar\Depo\DepoTransferEkleSayfasi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AraSayfalar\Fatura\FaturaAnaSayfaView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AraSayfalar\Fatura\FaturaEkleSayfasi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AraSayfalar\Fatura\FaturaTuruEkleSayfasi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AraSayfalar\Fis\FisAnaSayfaView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AraSayfalar\Fis\FisEkleSayfasi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AraSayfalar\Gider\GiderAnaSayfaView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AraSayfalar\Gider\GiderBakiyeEkleSayfasi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AraSayfalar\Gider\GiderEkleSayfasi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AraSayfalar\Kasa\KasaAnaSayfaView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AraSayfalar\Kasa\KasaBakiyeEkleSayfasi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AraSayfalar\Kasa\KasaEkleSayfasiView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AraSayfalar\Kdv\KdvAnaSayfaView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AraSayfalar\Kdv\KdvEkleSayfasi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AraSayfalar\Odeme\OdemeAnaSayfaView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AraSayfalar\Odeme\OdemeEkleSayfasi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AraSayfalar\Odeme\OdemeTipiEkleSayfasi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AraSayfalar\Odeme\OdemeTuruEkleSayfsi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AraSayfalar\ParaTipi\ParaTipiAnaSayfaView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AraSayfalar\ParaTipi\ParaTipiEkleSayfasi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AraSayfalar\Personel\PersonelAnasayfaView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AraSayfalar\Personel\PERSONELEkleView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\AraSayfalar\Siparis\SiparisAnaSayfaView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AraSayfalar\Siparis\SiparisEkleSayfasi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AraSayfalar\Siparis\SiparisTuruEkleSayfasi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AraSayfalar\Sirket\SirketAnaSayfaView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AraSayfalar\Sirket\SirketBakiyeEkleSayfasi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AraSayfalar\Sirket\SirketEkleSayfasi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AraSayfalar\Sirket\SirketGrupEkleSayfasi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AraSayfalar\Sirket\SirketSinifEkleSayfasi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AraSayfalar\Sirket\SirketTipiEkleSayfasi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AraSayfalar\Urun\UrunAnaSayfaView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AraSayfalar\Urun\UrunBirimEkleSayfasi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AraSayfalar\Urun\UrunCinsiEkleSayfasi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AraSayfalar\Urun\UrunEkleSayfasi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AraSayfalar\Urun\UrunMarkaEkleSayfasi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AraSayfalar\Urun\UrunStokEkleSayfasi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AraSayfalar\Urun\UrunTipiEkleSayfasi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Baglantilar\Banka\BankaParaDurumuSayfasi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Baglantilar\Banka\BankaParaDurumuView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Baglantilar\Kasa\KasaParaDurumuSayfasi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Baglantilar\Kasa\KasaParaDurumuView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Baglantilar\Sirket\SirketParaDurumuSayfasi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Baglantilar\Sirket\SirketParaDurumuView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Baglantilar\Urun\UrunStokDepoİliskisiView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Baglantilar\Urun\UrunAdetListesiSayfasi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Bolumler\Depo\BolumDepoDuzenle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Bolumler\Depo\BolumDepoIslemView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Bolumler\Depo\BolumDepoTransferView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Bolumler\Satis\BolumFaturaEkleView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Bolumler\Satis\BolumSiparisDuzenleView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CustomerView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Views\Ekle\TBL_BANKAEkleView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Ekle\TBL_BANKA_BAKIYEEkleView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Ekle\TBL_DEPOEkleView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Ekle\TBL_DEPO_ISLEMEkleView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Ekle\TBL_DEPO_TRANSFEREkleView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Ekle\TBL_FATURAEkleView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Ekle\TBL_FATURA_TURUEkleView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Ekle\TBL_FISEkleView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Ekle\TBL_GIDEREkleView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Ekle\TBL_GIDER_BAKIYEEkleView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Ekle\TBL_KASAEkleView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Ekle\TBL_KASA_BAKIYEEkleView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Ekle\TBL_KDVEkleView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Ekle\TBL_ODEMEEkleView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Ekle\TBL_ODEME_TIPIEkleView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Ekle\TBL_ODEME_TURUEkleView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Ekle\TBL_PARA_TIPIEkleView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Ekle\TBL_PERSONELEkleView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Ekle\TBL_SIRKETEkleView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Ekle\TBL_SIRKET_BAKIYEEkleView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Ekle\TBL_SIRKET_GRUBEkleView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Ekle\TBL_SIRKET_SINIFEkleView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Ekle\TBL_SIRKET_TIPIEkleView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Ekle\TBL_SPARISEkleView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Ekle\TBL_SPARIS_TURUEkleView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Ekle\TBL_URUNEkleView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Ekle\TBL_URUN_BIRIMEkleView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Ekle\TBL_URUN_CINSIEkleView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Ekle\TBL_URUN_MARKAEkleView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Ekle\TBL_URUN_STOKEkleView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Ekle\TBL_URUN_TIPIEkleView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Goruntule\AnaGoruntu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Goruntule\KasaBakiyeGoruntu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\KullaniciGirisView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Listele\TBL_BANKADuzenleView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Listele\TBL_BANKA_BAKIYEDuzenleView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Listele\TBL_DEPODuzenleView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Listele\TBL_DEPO_ISLEMDuzenleView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Listele\TBL_DEPO_TRANSFERDuzenleView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Listele\TBL_FATURADuzenleView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Listele\TBL_FATURA_TURUDuzenleView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Listele\TBL_FISDuzenleView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Listele\TBL_GIDERDuzenleView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Listele\TBL_GIDER_BAKIYEDuzenleView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Listele\TBL_KASADuzenleView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Listele\TBL_KASA_BAKIYEDuzenleView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Listele\TBL_KDVDuzenleView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Listele\TBL_ODEMEDuzenleView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Listele\TBL_ODEME_TIPIDuzenleView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Listele\TBL_ODEME_TURUDuzenleView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Listele\TBL_PARA_TIPIDuzenleView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Listele\TBL_PERSONELDuzenleView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Listele\TBL_SIRKETDuzenleView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Listele\TBL_SIRKET_BAKIYEDuzenleView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Listele\TBL_SIRKET_GRUBDuzenleView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Listele\TBL_SIRKET_SINIFDuzenleView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Listele\TBL_SIRKET_TIPIDuzenleView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Listele\TBL_SPARISDuzenleView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Listele\TBL_SPARIS_TURUDuzenleView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Listele\TBL_URUNDuzenleView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Listele\TBL_URUN_BIRIMDuzenleView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Listele\TBL_URUN_CINSIDuzenleView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Listele\TBL_URUN_MARKADuzenleView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Listele\TBL_URUN_STOKDuzenleView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Listele\TBL_URUN_TIPIDuzenleView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Raporlar\OnIzleme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Raporlar\RaporSayfasi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Raporlar\Urun\UrunListeRaporSayfasi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Raporlar\Urun\UrunListesiView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Raporlar\Banka\BankaListesiRapor.resx">
+      <DependentUpon>BankaListesiRapor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Raporlar\Banka\RaporBankaParaListele.resx">
+      <DependentUpon>RaporBankaParaListele.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Raporlar\Banka\Raporbanka_bakıye.resx">
+      <DependentUpon>Raporbanka_bakıye.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Raporlar\Depo\Rapordepo_Islem.resx">
+      <DependentUpon>Rapordepo_Islem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Raporlar\Depo\Rapordepo_transfer.resx">
+      <DependentUpon>Rapordepo_transfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Raporlar\Gider\RaporgiderBakiye.resx">
+      <DependentUpon>RaporgiderBakiye.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Raporlar\Kasa\RaporKasaBakiye.resx">
+      <DependentUpon>RaporKasaBakiye.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Raporlar\Kasa\RaporKasaParaListele.resx">
+      <DependentUpon>RaporKasaParaListele.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Raporlar\Odeme\RaporOdemeListe.resx">
+      <DependentUpon>RaporOdemeListe.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="AnaEkran_TemporaryKey.pfx" />
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\datasource\AutoBusinessObjects.TBL_BANKADTO.datasource" />
+    <None Include="Properties\datasource\AutoBusinessObjects.TBL_BANKA_BAKIYEDTO.datasource" />
+    <None Include="Properties\datasource\AutoBusinessObjects.TBL_DEPODTO.datasource" />
+    <None Include="Properties\datasource\AutoBusinessObjects.TBL_DEPO_ISLEMDTO.datasource" />
+    <None Include="Properties\datasource\AutoBusinessObjects.TBL_DEPO_TRANSFERDTO.datasource" />
+    <None Include="Properties\datasource\AutoBusinessObjects.TBL_FATURADTO.datasource" />
+    <None Include="Properties\datasource\AutoBusinessObjects.TBL_FATURA_TURUDTO.datasource" />
+    <None Include="Properties\datasource\AutoBusinessObjects.TBL_FISDTO.datasource" />
+    <None Include="Properties\datasource\AutoBusinessObjects.TBL_GIDERDTO.datasource" />
+    <None Include="Properties\datasource\AutoBusinessObjects.TBL_GIDER_BAKIYEDTO.datasource" />
+    <None Include="Properties\datasource\AutoBusinessObjects.TBL_KASADTO.datasource" />
+    <None Include="Properties\datasource\AutoBusinessObjects.TBL_KASA_BAKIYEDTO.datasource" />
+    <None Include="Properties\datasource\AutoBusinessObjects.TBL_KDVDTO.datasource" />
+    <None Include="Properties\datasource\AutoBusinessObjects.TBL_ODEMEDTO.datasource" />
+    <None Include="Properties\datasource\AutoBusinessObjects.TBL_ODEME_TIPIDTO.datasource" />
+    <None Include="Properties\datasource\AutoBusinessObjects.TBL_ODEME_TURUDTO.datasource" />
+    <None Include="Properties\datasource\AutoBusinessObjects.TBL_PARA_TIPIDTO.datasource" />
+    <None Include="Properties\datasource\AutoBusinessObjects.TBL_PERSONELDTO.datasource" />
+    <None Include="Properties\datasource\AutoBusinessObjects.TBL_SIRKETDTO.datasource" />
+    <None Include="Properties\datasource\AutoBusinessObjects.TBL_SIRKET_BAKIYEDTO.datasource" />
+    <None Include="Properties\datasource\AutoBusinessObjects.TBL_SIRKET_GRUBDTO.datasource" />
+    <None Include="Properties\datasource\AutoBusinessObjects.TBL_SIRKET_SINIFDTO.datasource" />
+    <None Include="Properties\datasource\AutoBusinessObjects.TBL_SIRKET_TIPIDTO.datasource" />
+    <None Include="Properties\datasource\AutoBusinessObjects.TBL_SPARISDTO.datasource" />
+    <None Include="Properties\datasource\AutoBusinessObjects.TBL_SPARIS_TURUDTO.datasource" />
+    <None Include="Properties\datasource\AutoBusinessObjects.TBL_URUNDTO.datasource" />
+    <None Include="Properties\datasource\AutoBusinessObjects.TBL_URUN_BIRIMDTO.datasource" />
+    <None Include="Properties\datasource\AutoBusinessObjects.TBL_URUN_CINSIDTO.datasource" />
+    <None Include="Properties\datasource\AutoBusinessObjects.TBL_URUN_FATURADTO.datasource" />
+    <None Include="Properties\datasource\AutoBusinessObjects.TBL_URUN_MARKADTO.datasource" />
+    <None Include="Properties\datasource\AutoBusinessObjects.TBL_URUN_SPARISDTO.datasource" />
+    <None Include="Properties\datasource\AutoBusinessObjects.TBL_URUN_STOKDTO.datasource" />
+    <None Include="Properties\datasource\AutoBusinessObjects.TBL_URUN_TIPIDTO.datasource" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+    <None Include="Service References\ZindeServiceReference\AnaEkran.ZindeServiceReference.TBL_URUNDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ZindeServiceReference\AutoBusinessObjects1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ZindeServiceReference\service1.wsdl" />
+    <None Include="Service References\ZindeServiceReference\service2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ZindeServiceReference\service21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ZindeServiceReference\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ZindeServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ZindeServiceReference\configuration.svcinfo">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ZindeServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AutoBusinessObjects\AutoBusinessObjects.csproj">
+      <Project>{d40ebac3-9459-447a-b3ba-e7491a83534d}</Project>
+      <Name>AutoBusinessObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Zinderud\Zinderud.csproj">
+      <Project>{0f60e337-bb58-4def-8c59-10f3c22be9d9}</Project>
+      <Name>Zinderud</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Helpers\DurumBilgisi.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Resim\Galeri.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Resim\ArkaPlan.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="NOTLAR.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ViewModels\sil\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

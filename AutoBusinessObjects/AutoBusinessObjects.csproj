@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D40EBAC3-9459-447A-B3BA-E7491A83534D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AutoBusinessObjects</RootNamespace>
+    <AssemblyName>AutoBusinessObjects</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Reflection.Context" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dto.Model.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TBL_BANKADTO.cs" />
+    <Compile Include="TBL_BANKA_BAKIYEDTO.cs" />
+    <Compile Include="TBL_DEPODTO.cs" />
+    <Compile Include="TBL_DEPO_ISLEMDTO.cs" />
+    <Compile Include="TBL_DEPO_TRANSFERDTO.cs" />
+    <Compile Include="TBL_FATURADTO.cs" />
+    <Compile Include="TBL_FATURA_TURUDTO.cs" />
+    <Compile Include="TBL_FISDTO.cs" />
+    <Compile Include="TBL_GIDERDTO.cs" />
+    <Compile Include="TBL_GIDER_BAKIYEDTO.cs" />
+    <Compile Include="TBL_KASADTO.cs" />
+    <Compile Include="TBL_KASA_BAKIYEDTO.cs" />
+    <Compile Include="TBL_KDVDTO.cs" />
+    <Compile Include="TBL_ODEMEDTO.cs" />
+    <Compile Include="TBL_ODEME_TIPIDTO.cs" />
+    <Compile Include="TBL_ODEME_TURUDTO.cs" />
+    <Compile Include="TBL_PARA_TIPIDTO.cs" />
+    <Compile Include="TBL_PERSONELDTO.cs" />
+    <Compile Include="TBL_SIRKETDTO.cs" />
+    <Compile Include="TBL_SIRKET_BAKIYEDTO.cs" />
+    <Compile Include="TBL_SIRKET_GRUBDTO.cs" />
+    <Compile Include="TBL_SIRKET_SINIFDTO.cs" />
+    <Compile Include="TBL_SIRKET_TIPIDTO.cs" />
+    <Compile Include="TBL_SPARISDTO.cs" />
+    <Compile Include="TBL_SPARIS_TURUDTO.cs" />
+    <Compile Include="TBL_URUNDTO.cs" />
+    <Compile Include="TBL_URUN_BIRIMDTO.cs" />
+    <Compile Include="TBL_URUN_CINSIDTO.cs" />
+    <Compile Include="TBL_URUN_FATURADTO.cs" />
+    <Compile Include="TBL_URUN_MARKADTO.cs" />
+    <Compile Include="TBL_URUN_SPARISDTO.cs" />
+    <Compile Include="TBL_URUN_STOKDTO.cs" />
+    <Compile Include="TBL_URUN_TIPIDTO.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

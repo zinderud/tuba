@@ -1,0 +1,686 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/AutoBusinessObjects" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/AutoBusinessObjects" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="TBL_PERSONELDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BARKOD_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PERSONEL_ACIKLAMA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PERSONEL_AD_SOYAD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PERSONEL_AYAKKABI_NO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PERSONEL_CALISMA_DURUMU" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PERSONEL_CINSIYET" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PERSONEL_DOGUM_TARIHI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PERSONEL_DOGUM_YERI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PERSONEL_EGITIM_DURUMU" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PERSONEL_GOMLEK_NO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PERSONEL_GOREVI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PERSONEL_ISE_BASLAMA_TARIHI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PERSONEL_ISE_GELIS_SAATI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PERSONEL_ISTEN_AYRILMA_TARIHI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PERSONEL_ISTEN_CIKIS_SAATI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PERSONEL_KIMLIK_NO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PERSONEL_MAIL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PERSONEL_MONT_NO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PERSONEL_PANTOLON_NO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PERSONEL_SSK_NO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PERSONEL_TELEFON1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PERSONEL_TELEFON2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SIFRE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TBL_PERSONEL_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="YEDEK" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="YETKI_SEVIYESI" nillable="true" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="TBL_PERSONELDTO" nillable="true" type="tns:TBL_PERSONELDTO" />
+  <xs:complexType name="ArrayOfTBL_PERSONELDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TBL_PERSONELDTO" nillable="true" type="tns:TBL_PERSONELDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTBL_PERSONELDTO" nillable="true" type="tns:ArrayOfTBL_PERSONELDTO" />
+  <xs:complexType name="TBL_SIRKETDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SIRKET_ACIKLAMA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SIRKET_ADI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SIRKET_ADRES" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SIRKET_BANKA_ADI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SIRKET_BANKA_SUBE_ADI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SIRKET_FAX_1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SIRKET_FAX_2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SIRKET_HESAP_NO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SIRKET_IBAN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SIRKET_IL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SIRKET_ILCE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SIRKET_MAIL_1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SIRKET_MAIL_2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SIRKET_POSTA_KODU" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SIRKET_TELEFON_1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SIRKET_TELEFON_2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SIRKET_VERGI_DAIRESI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SIRKET_VERGI_NO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SIRKET_WEB_ADRES" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TBL_SIRKET_GRUB_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TBL_SIRKET_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="TBL_SIRKET_SINIF_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TBL_SIRKET_TIPI_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="YEDEK" nillable="true" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="TBL_SIRKETDTO" nillable="true" type="tns:TBL_SIRKETDTO" />
+  <xs:complexType name="ArrayOfTBL_SIRKETDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TBL_SIRKETDTO" nillable="true" type="tns:TBL_SIRKETDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTBL_SIRKETDTO" nillable="true" type="tns:ArrayOfTBL_SIRKETDTO" />
+  <xs:complexType name="TBL_SIRKET_BAKIYEDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ACIKLAMA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="KUR" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TARIH" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TBL_FIS_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TBL_PARA_TIPI_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TBL_SIRKET_BAKIYE_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="TBL_SIRKET_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TUTAR" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="YEDEK" nillable="true" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="TBL_SIRKET_BAKIYEDTO" nillable="true" type="tns:TBL_SIRKET_BAKIYEDTO" />
+  <xs:complexType name="ArrayOfTBL_SIRKET_BAKIYEDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TBL_SIRKET_BAKIYEDTO" nillable="true" type="tns:TBL_SIRKET_BAKIYEDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTBL_SIRKET_BAKIYEDTO" nillable="true" type="tns:ArrayOfTBL_SIRKET_BAKIYEDTO" />
+  <xs:complexType name="TBL_SIRKET_GRUBDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ACIKLAMA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SIRKET_GRUP_ADI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TBL_SIRKET_GRUB_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="YEDEK" nillable="true" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="TBL_SIRKET_GRUBDTO" nillable="true" type="tns:TBL_SIRKET_GRUBDTO" />
+  <xs:complexType name="ArrayOfTBL_SIRKET_GRUBDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TBL_SIRKET_GRUBDTO" nillable="true" type="tns:TBL_SIRKET_GRUBDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTBL_SIRKET_GRUBDTO" nillable="true" type="tns:ArrayOfTBL_SIRKET_GRUBDTO" />
+  <xs:complexType name="TBL_SIRKET_SINIFDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SIRKET_SINIF_ADI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TBL_SIRKET_SINIF_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="YEDEK" nillable="true" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="TBL_SIRKET_SINIFDTO" nillable="true" type="tns:TBL_SIRKET_SINIFDTO" />
+  <xs:complexType name="ArrayOfTBL_SIRKET_SINIFDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TBL_SIRKET_SINIFDTO" nillable="true" type="tns:TBL_SIRKET_SINIFDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTBL_SIRKET_SINIFDTO" nillable="true" type="tns:ArrayOfTBL_SIRKET_SINIFDTO" />
+  <xs:complexType name="TBL_SIRKET_TIPIDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SIRKET_TIPI_ADI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TBL_SIRKET_TIPI_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="YEDEK" nillable="true" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="TBL_SIRKET_TIPIDTO" nillable="true" type="tns:TBL_SIRKET_TIPIDTO" />
+  <xs:complexType name="ArrayOfTBL_SIRKET_TIPIDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TBL_SIRKET_TIPIDTO" nillable="true" type="tns:TBL_SIRKET_TIPIDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTBL_SIRKET_TIPIDTO" nillable="true" type="tns:ArrayOfTBL_SIRKET_TIPIDTO" />
+  <xs:complexType name="TBL_SPARISDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SPARIS_FATURA_SERI_NO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SPARIS_TARIH" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SPARIS_VADE_TARIH" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TBL_DEPO_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TBL_KASA_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TBL_ODEME_TIPI_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TBL_PARA_TIPI_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TBL_PERSONEL_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TBL_SIRKET_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TBL_SPARIS_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="TBL_SPARIS_TURU_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="YEDEK" nillable="true" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="TBL_SPARISDTO" nillable="true" type="tns:TBL_SPARISDTO" />
+  <xs:complexType name="ArrayOfTBL_SPARISDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TBL_SPARISDTO" nillable="true" type="tns:TBL_SPARISDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTBL_SPARISDTO" nillable="true" type="tns:ArrayOfTBL_SPARISDTO" />
+  <xs:complexType name="TBL_SPARIS_TURUDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SPARIS_TURU_ACIKLAMA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SPARIS_TURU_ADI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TBL_SPARIS_TURU_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="YEDEK" nillable="true" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="TBL_SPARIS_TURUDTO" nillable="true" type="tns:TBL_SPARIS_TURUDTO" />
+  <xs:complexType name="ArrayOfTBL_SPARIS_TURUDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TBL_SPARIS_TURUDTO" nillable="true" type="tns:TBL_SPARIS_TURUDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTBL_SPARIS_TURUDTO" nillable="true" type="tns:ArrayOfTBL_SPARIS_TURUDTO" />
+  <xs:complexType name="TBL_URUNDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="TBL_KDV_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TBL_PARA_TIPI_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TBL_URUN_BIRIM_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TBL_URUN_CINSI_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TBL_URUN_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="TBL_URUN_MARKA_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TBL_URUN_TIPI_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="URUN_ADI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="URUN_ALIS_FIYATI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="URUN_DURUM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="URUN_KODU" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="URUN_SATIS_FIYATI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="YEDEK" nillable="true" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="TBL_URUNDTO" nillable="true" type="tns:TBL_URUNDTO" />
+  <xs:complexType name="ArrayOfTBL_URUNDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TBL_URUNDTO" nillable="true" type="tns:TBL_URUNDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTBL_URUNDTO" nillable="true" type="tns:ArrayOfTBL_URUNDTO" />
+  <xs:complexType name="TBL_URUN_BIRIMDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="TBL_URUN_BIRIM_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="URUN_BIRIM_ACIKLAMA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="URUN_BIRIM_ADI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="YEDEK" nillable="true" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="TBL_URUN_BIRIMDTO" nillable="true" type="tns:TBL_URUN_BIRIMDTO" />
+  <xs:complexType name="ArrayOfTBL_URUN_BIRIMDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TBL_URUN_BIRIMDTO" nillable="true" type="tns:TBL_URUN_BIRIMDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTBL_URUN_BIRIMDTO" nillable="true" type="tns:ArrayOfTBL_URUN_BIRIMDTO" />
+  <xs:complexType name="TBL_URUN_CINSIDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="TBL_URUN_CINSI_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="TBL_URUN_TIPI_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="URUN_CINSI_ACIKLAMA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="URUN_CINSI_ADI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="YEDEK" nillable="true" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="TBL_URUN_CINSIDTO" nillable="true" type="tns:TBL_URUN_CINSIDTO" />
+  <xs:complexType name="ArrayOfTBL_URUN_CINSIDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TBL_URUN_CINSIDTO" nillable="true" type="tns:TBL_URUN_CINSIDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTBL_URUN_CINSIDTO" nillable="true" type="tns:ArrayOfTBL_URUN_CINSIDTO" />
+  <xs:complexType name="TBL_URUN_FATURADTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ACIKLAMA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TBL_FATURA_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TBL_URUN_FATURA_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="TBL_URUN_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="URUN_FATURA_MIKTAR" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="YEDEK" nillable="true" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="TBL_URUN_FATURADTO" nillable="true" type="tns:TBL_URUN_FATURADTO" />
+  <xs:complexType name="ArrayOfTBL_URUN_FATURADTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TBL_URUN_FATURADTO" nillable="true" type="tns:TBL_URUN_FATURADTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTBL_URUN_FATURADTO" nillable="true" type="tns:ArrayOfTBL_URUN_FATURADTO" />
+  <xs:complexType name="TBL_URUN_MARKADTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="TBL_URUN_CINSI_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="TBL_URUN_MARKA_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="TBL_URUN_TIPI_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="URUN_MARKA_ACIKLAMA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="URUN_MARKA_ADI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="YEDEK" nillable="true" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="TBL_URUN_MARKADTO" nillable="true" type="tns:TBL_URUN_MARKADTO" />
+  <xs:complexType name="ArrayOfTBL_URUN_MARKADTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TBL_URUN_MARKADTO" nillable="true" type="tns:TBL_URUN_MARKADTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTBL_URUN_MARKADTO" nillable="true" type="tns:ArrayOfTBL_URUN_MARKADTO" />
+  <xs:complexType name="TBL_URUN_SPARISDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ACIKLAMA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TBL_SIPARIS_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TBL_URUN_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TBL_URUN_SPARIS_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="URUN_SIPARIS_MIKTAR" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="YEDEK" nillable="true" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="TBL_URUN_SPARISDTO" nillable="true" type="tns:TBL_URUN_SPARISDTO" />
+  <xs:complexType name="ArrayOfTBL_URUN_SPARISDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TBL_URUN_SPARISDTO" nillable="true" type="tns:TBL_URUN_SPARISDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTBL_URUN_SPARISDTO" nillable="true" type="tns:ArrayOfTBL_URUN_SPARISDTO" />
+  <xs:complexType name="TBL_URUN_STOKDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ACIKLAMA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="STOK_DURUM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TBL_DEPO_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TBL_URUN_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TBL_URUN_STOK_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="URUN_BIRIM_MIKTARI" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="YEDEK" nillable="true" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="TBL_URUN_STOKDTO" nillable="true" type="tns:TBL_URUN_STOKDTO" />
+  <xs:complexType name="ArrayOfTBL_URUN_STOKDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TBL_URUN_STOKDTO" nillable="true" type="tns:TBL_URUN_STOKDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTBL_URUN_STOKDTO" nillable="true" type="tns:ArrayOfTBL_URUN_STOKDTO" />
+  <xs:complexType name="TBL_URUN_TIPIDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="TBL_URUN_TIPI_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="URUN_TIPI_ACIKLAMA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="URUN_TIPI_ADI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="YEDEK" nillable="true" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="TBL_URUN_TIPIDTO" nillable="true" type="tns:TBL_URUN_TIPIDTO" />
+  <xs:complexType name="ArrayOfTBL_URUN_TIPIDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TBL_URUN_TIPIDTO" nillable="true" type="tns:TBL_URUN_TIPIDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTBL_URUN_TIPIDTO" nillable="true" type="tns:ArrayOfTBL_URUN_TIPIDTO" />
+  <xs:complexType name="TBL_BANKADTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BANKA_ACIKLAMA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BANKA_ADI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BANKA_ADRES" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BANKA_IBAN_NO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BANKA_IL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BANKA_ILCE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BANKA_MAIL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BANKA_SUBE_ADI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BANKA_TELEFON_1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BANKA_TELEFON_2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TBL_BANKA_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="TBL_PARA_TIPI_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="YEDEK" nillable="true" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="TBL_BANKADTO" nillable="true" type="tns:TBL_BANKADTO" />
+  <xs:complexType name="ArrayOfTBL_BANKADTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TBL_BANKADTO" nillable="true" type="tns:TBL_BANKADTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTBL_BANKADTO" nillable="true" type="tns:ArrayOfTBL_BANKADTO" />
+  <xs:complexType name="TBL_BANKA_BAKIYEDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ACIKLAMA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="KUR" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TARIH" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TBL_BANKA_BAKIYE_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="TBL_BANKA_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TBL_FIS_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TBL_PARA_TIPI_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TUTAR" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="YEDEK" nillable="true" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="TBL_BANKA_BAKIYEDTO" nillable="true" type="tns:TBL_BANKA_BAKIYEDTO" />
+  <xs:complexType name="ArrayOfTBL_BANKA_BAKIYEDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TBL_BANKA_BAKIYEDTO" nillable="true" type="tns:TBL_BANKA_BAKIYEDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTBL_BANKA_BAKIYEDTO" nillable="true" type="tns:ArrayOfTBL_BANKA_BAKIYEDTO" />
+  <xs:complexType name="TBL_DEPODTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DEPO_ACIKLAMA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DEPO_ADI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TBL_DEPO_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="YEDEK" nillable="true" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="TBL_DEPODTO" nillable="true" type="tns:TBL_DEPODTO" />
+  <xs:complexType name="ArrayOfTBL_DEPODTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TBL_DEPODTO" nillable="true" type="tns:TBL_DEPODTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTBL_DEPODTO" nillable="true" type="tns:ArrayOfTBL_DEPODTO" />
+  <xs:complexType name="TBL_DEPO_ISLEMDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ACIKLAMA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DEPO_ISLEM_ADI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DEPO_ONAY" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TBL_DEPO_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TBL_DEPO_ISLEM_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="TBL_URUN_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="URUN_MIKTAR" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="YEDEK" nillable="true" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="TBL_DEPO_ISLEMDTO" nillable="true" type="tns:TBL_DEPO_ISLEMDTO" />
+  <xs:complexType name="ArrayOfTBL_DEPO_ISLEMDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TBL_DEPO_ISLEMDTO" nillable="true" type="tns:TBL_DEPO_ISLEMDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTBL_DEPO_ISLEMDTO" nillable="true" type="tns:ArrayOfTBL_DEPO_ISLEMDTO" />
+  <xs:complexType name="TBL_DEPO_TRANSFERDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DEPO_TRANSFER_ACIKLAMA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DEPO_TRANSFER_ADI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DEPO_TRANSFER_NEREDEN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DEPO_TRANSFER_NEREYE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DEPO_TRANSFER_TARIHI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TBL_DEPO_TRANSFER_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="TBL_URUN_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="YEDEK" nillable="true" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="TBL_DEPO_TRANSFERDTO" nillable="true" type="tns:TBL_DEPO_TRANSFERDTO" />
+  <xs:complexType name="ArrayOfTBL_DEPO_TRANSFERDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TBL_DEPO_TRANSFERDTO" nillable="true" type="tns:TBL_DEPO_TRANSFERDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTBL_DEPO_TRANSFERDTO" nillable="true" type="tns:ArrayOfTBL_DEPO_TRANSFERDTO" />
+  <xs:complexType name="TBL_FATURADTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ACIKLAMA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FATURA_FATURA_SERI_NO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FATURA_TARIH" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FATURA_VADE_TARIH" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TBL_DEPO_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TBL_FATURA_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="TBL_FATURA_TURU_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TBL_KASA_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TBL_ODEME_TIPI_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TBL_PARA_TIPI_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TBL_PERSONEL_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TBL_SIRKET_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TBL_SPARIS_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="YEDEK" nillable="true" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="TBL_FATURADTO" nillable="true" type="tns:TBL_FATURADTO" />
+  <xs:complexType name="ArrayOfTBL_FATURADTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TBL_FATURADTO" nillable="true" type="tns:TBL_FATURADTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTBL_FATURADTO" nillable="true" type="tns:ArrayOfTBL_FATURADTO" />
+  <xs:complexType name="TBL_FATURA_TURUDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FATURA_TURU_ACIKLAMA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FATURA_TURU_ADI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TBL_FATURA_TURU_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="YEDEK" nillable="true" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="TBL_FATURA_TURUDTO" nillable="true" type="tns:TBL_FATURA_TURUDTO" />
+  <xs:complexType name="ArrayOfTBL_FATURA_TURUDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TBL_FATURA_TURUDTO" nillable="true" type="tns:TBL_FATURA_TURUDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTBL_FATURA_TURUDTO" nillable="true" type="tns:ArrayOfTBL_FATURA_TURUDTO" />
+  <xs:complexType name="TBL_FISDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ACIKLAMA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TBL_FIS_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="YEDEK" nillable="true" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="TBL_FISDTO" nillable="true" type="tns:TBL_FISDTO" />
+  <xs:complexType name="ArrayOfTBL_FISDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TBL_FISDTO" nillable="true" type="tns:TBL_FISDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTBL_FISDTO" nillable="true" type="tns:ArrayOfTBL_FISDTO" />
+  <xs:complexType name="TBL_GIDERDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GİDER_ACIKLAMA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GİDER_ADI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TBL_GIDER_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="TBL_PARA_TIPI_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="YEDEK" nillable="true" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="TBL_GIDERDTO" nillable="true" type="tns:TBL_GIDERDTO" />
+  <xs:complexType name="ArrayOfTBL_GIDERDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TBL_GIDERDTO" nillable="true" type="tns:TBL_GIDERDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTBL_GIDERDTO" nillable="true" type="tns:ArrayOfTBL_GIDERDTO" />
+  <xs:complexType name="TBL_GIDER_BAKIYEDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ACIKLAMA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="KUR" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TARIH" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TBL_FIS_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TBL_GIDER_BAKIYE_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="TBL_GIDER_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TBL_PARA_TIPI_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TUTAR" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="YEDEK" nillable="true" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="TBL_GIDER_BAKIYEDTO" nillable="true" type="tns:TBL_GIDER_BAKIYEDTO" />
+  <xs:complexType name="ArrayOfTBL_GIDER_BAKIYEDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TBL_GIDER_BAKIYEDTO" nillable="true" type="tns:TBL_GIDER_BAKIYEDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTBL_GIDER_BAKIYEDTO" nillable="true" type="tns:ArrayOfTBL_GIDER_BAKIYEDTO" />
+  <xs:complexType name="TBL_KASADTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="KASA_ACIKLAMA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="KASA_ADI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TBL_KASA_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="TBL_PARA_TIPI_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="YEDEK" nillable="true" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="TBL_KASADTO" nillable="true" type="tns:TBL_KASADTO" />
+  <xs:complexType name="ArrayOfTBL_KASADTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TBL_KASADTO" nillable="true" type="tns:TBL_KASADTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTBL_KASADTO" nillable="true" type="tns:ArrayOfTBL_KASADTO" />
+  <xs:complexType name="TBL_KASA_BAKIYEDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ACIKLAMA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="KUR" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TARIH" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TBL_FIS_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TBL_KASA_BAKIYE_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="TBL_KASA_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TBL_PARA_TIPI_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TUTAR" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="YEDEK" nillable="true" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="TBL_KASA_BAKIYEDTO" nillable="true" type="tns:TBL_KASA_BAKIYEDTO" />
+  <xs:complexType name="ArrayOfTBL_KASA_BAKIYEDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TBL_KASA_BAKIYEDTO" nillable="true" type="tns:TBL_KASA_BAKIYEDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTBL_KASA_BAKIYEDTO" nillable="true" type="tns:ArrayOfTBL_KASA_BAKIYEDTO" />
+  <xs:complexType name="TBL_KDVDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="KDV_ACIKLAMA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="KDV_YUZDESI" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TBL_KDV_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="YEDEK" nillable="true" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="TBL_KDVDTO" nillable="true" type="tns:TBL_KDVDTO" />
+  <xs:complexType name="ArrayOfTBL_KDVDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TBL_KDVDTO" nillable="true" type="tns:TBL_KDVDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTBL_KDVDTO" nillable="true" type="tns:ArrayOfTBL_KDVDTO" />
+  <xs:complexType name="TBL_ODEMEDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BELGE_NO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ODEME_KAYIT_TARIHI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ODEME_VADE_TARIHI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TBL_KASA_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TBL_ODEME_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="TBL_ODEME_TIPI_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TBL_ODEME_TURU_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TBL_PARA_TIPI_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TBL_SIRKET_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TUTAR" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="YEDEK" nillable="true" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="TBL_ODEMEDTO" nillable="true" type="tns:TBL_ODEMEDTO" />
+  <xs:complexType name="ArrayOfTBL_ODEMEDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TBL_ODEMEDTO" nillable="true" type="tns:TBL_ODEMEDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTBL_ODEMEDTO" nillable="true" type="tns:ArrayOfTBL_ODEMEDTO" />
+  <xs:complexType name="TBL_ODEME_TIPIDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ODEME_TIPI_ACIKLAMA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ODEME_TIPI_ADI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TBL_ODEME_TIPI_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="YEDEK" nillable="true" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="TBL_ODEME_TIPIDTO" nillable="true" type="tns:TBL_ODEME_TIPIDTO" />
+  <xs:complexType name="ArrayOfTBL_ODEME_TIPIDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TBL_ODEME_TIPIDTO" nillable="true" type="tns:TBL_ODEME_TIPIDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTBL_ODEME_TIPIDTO" nillable="true" type="tns:ArrayOfTBL_ODEME_TIPIDTO" />
+  <xs:complexType name="TBL_ODEME_TURUDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ODEME_TURU_ACIKLAMA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ODEME_TURU_ADI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TBL_ODEME_TURU_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="YEDEK" nillable="true" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="TBL_ODEME_TURUDTO" nillable="true" type="tns:TBL_ODEME_TURUDTO" />
+  <xs:complexType name="ArrayOfTBL_ODEME_TURUDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TBL_ODEME_TURUDTO" nillable="true" type="tns:TBL_ODEME_TURUDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTBL_ODEME_TURUDTO" nillable="true" type="tns:ArrayOfTBL_ODEME_TURUDTO" />
+  <xs:complexType name="TBL_PARA_TIPIDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PARA_TIPI_ADI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TBL_PARA_TIPI_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="YEDEK" nillable="true" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="TBL_PARA_TIPIDTO" nillable="true" type="tns:TBL_PARA_TIPIDTO" />
+  <xs:complexType name="ArrayOfTBL_PARA_TIPIDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TBL_PARA_TIPIDTO" nillable="true" type="tns:TBL_PARA_TIPIDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTBL_PARA_TIPIDTO" nillable="true" type="tns:ArrayOfTBL_PARA_TIPIDTO" />
+</xs:schema>

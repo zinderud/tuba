@@ -1,0 +1,67 @@
+﻿<UserControl x:Class="AnaEkran.Views.AraSayfalar.Urun.UrunAnaSayfaView"
+                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+	       	 xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
+              xmlns:zinderud="http://schemas.zinderud.com/2008/xaml/presentation"
+              xmlns:listele="clr-namespace:AnaEkran.Views.Listele"
+              mc:Ignorable="d"  Background="DarkGray"
+             
+              >
+    <!--DataContext="{Binding Source={StaticResource Locator}, Path=TBL_DEPOViewModel}"-->
+
+    <Grid>
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+
+        </Grid.RowDefinitions>
+        <Border Grid.Row="0">
+            <TextBlock  Margin="2"    FontSize="25" Padding="10" FontWeight="Bold" TextAlignment="Center" Text="Ürün Ana Sayfa" Foreground="AntiqueWhite"/>
+        </Border>
+        <zinderud:SioTabControl  Grid.Row="1" TabStripPlacement="Top"  Margin="10" HeaderBackground="Bisque"  TabOrientation="Horizontal"   >
+            <zinderud:SioTabItem   Header="ÜRÜN DÜZENLE" FontSize="22" Margin="10" HeaderTemplate="{StaticResource ResourceKey=RaporKucult}" >
+
+                <zinderud:SioTabItem.Content>
+                    <listele:TBL_URUNDuzenleView/>
+                </zinderud:SioTabItem.Content>
+            </zinderud:SioTabItem>
+
+            <zinderud:SioTabItem   Header="ÜRÜN BİRİM" FontSize="22" Margin="10" HeaderTemplate="{StaticResource ResourceKey=RaporKucult}" >
+
+                <zinderud:SioTabItem.Content>
+                    <listele:TBL_URUN_BIRIMDuzenleView/>
+                </zinderud:SioTabItem.Content>
+            </zinderud:SioTabItem>
+            <zinderud:SioTabItem   Header="ÜRÜN CİNSİ" FontSize="22" Margin="10" HeaderTemplate="{StaticResource ResourceKey=RaporKucult}" >
+
+                <zinderud:SioTabItem.Content>
+                    <listele:TBL_URUN_CINSIDuzenleView/>
+                </zinderud:SioTabItem.Content>
+            </zinderud:SioTabItem>
+            <zinderud:SioTabItem   Header="ÜRÜN MARKA" FontSize="22" Margin="10" HeaderTemplate="{StaticResource ResourceKey=RaporKucult}" >
+
+                <zinderud:SioTabItem.Content>
+                    <listele:TBL_URUN_MARKADuzenleView/>
+                </zinderud:SioTabItem.Content>
+            </zinderud:SioTabItem>
+            <zinderud:SioTabItem   Header="ÜRÜN STOK" FontSize="22" Margin="10" HeaderTemplate="{StaticResource ResourceKey=RaporKucult}" >
+
+                <zinderud:SioTabItem.Content>
+                    <listele:TBL_URUN_STOKDuzenleView/>
+                </zinderud:SioTabItem.Content>
+            </zinderud:SioTabItem>
+            <zinderud:SioTabItem   Header="ÜRÜN TİPİ" FontSize="22" Margin="10" HeaderTemplate="{StaticResource ResourceKey=RaporKucult}" >
+
+                <zinderud:SioTabItem.Content>
+                    <listele:TBL_URUN_TIPIDuzenleView/>
+                </zinderud:SioTabItem.Content>
+            </zinderud:SioTabItem>
+
+        </zinderud:SioTabControl>
+
+    </Grid>
+</UserControl>

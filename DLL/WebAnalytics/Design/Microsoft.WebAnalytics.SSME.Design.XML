@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.WebAnalytics.SSME.Design</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.WebAnalytics.Media.Design.MetadataStore">
+            <summary>
+            Design-time metadata store
+            </summary>
+        </member>
+        <member name="P:Microsoft.WebAnalytics.Media.Design.MetadataStore.AttributeTable">
+            <summary>
+            Gets the attribute table for metadata about the Microsoft.WebAnalytics.SSME assembly
+            </summary>
+        </member>
+        <member name="T:Microsoft.WebAnalytics.Media.Design.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WebAnalytics.Media.Design.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WebAnalytics.Media.Design.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WebAnalytics.Media.Design.Properties.Resources.Analytics">
+            <summary>
+              Looks up a localized string similar to Analytics.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WebAnalytics.Media.Design.Properties.Resources.CustomProperties">
+            <summary>
+              Looks up a localized string similar to Custom Properties.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WebAnalytics.Media.Design.Properties.Resources.MediaEnded">
+            <summary>
+              Looks up a localized string similar to Media Ended.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WebAnalytics.Media.Design.Properties.Resources.TrackEventsForSSME">
+            <summary>
+              Looks up a localized string similar to Track web analytics events for the Smooth Streaming Media Element..
+            </summary>
+        </member>
+        <member name="P:Microsoft.WebAnalytics.Media.Design.Properties.Resources.TrackMediaEnded">
+            <summary>
+              Looks up a localized string similar to Track the Media ended event..
+            </summary>
+        </member>
+    </members>
+</doc>
