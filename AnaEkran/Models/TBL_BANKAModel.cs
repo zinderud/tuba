@@ -1,6 +1,7 @@
 //===================================================================================
 //  Murat onur karadeniz mvvm model a
 //  s
+
 //===================================================================================
 
 #region
@@ -61,6 +62,7 @@ namespace AnaEkran.Models
         public string BANKA_MAIL { get { return _bANKA_MAIL; } set { if (!Equals(value, _bANKA_MAIL)) { _bANKA_MAIL = value;  NotifyPropertyChanged(m=>m.BANKA_MAIL);} } }
     	private string _bANKA_MAIL;
     
+    	 
     	 
         public string BANKA_ACIKLAMA { get { return _bANKA_ACIKLAMA; } set { if (!Equals(value, _bANKA_ACIKLAMA)) { _bANKA_ACIKLAMA = value;  NotifyPropertyChanged(m=>m.BANKA_ACIKLAMA);} } }
     	private string _bANKA_ACIKLAMA;
